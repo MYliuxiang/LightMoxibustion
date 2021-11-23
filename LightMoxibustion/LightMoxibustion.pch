@@ -1,0 +1,117 @@
+//
+//  LightMoxibustion.pch
+//  LightMoxibustion
+//
+//  Created by flyliu on 2021/11/23.
+//
+
+#ifndef LightMoxibustion_pch
+#define LightMoxibustion_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define  kScreenHeight [[UIScreen mainScreen] bounds].size.height
+#define  kScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define  LxUserDefaults [NSUserDefaults standardUserDefaults]
+
+#define IS_iPhoneX (\
+{\
+BOOL isPhoneX = NO;\
+if (@available(iOS 11.0, *)) {\
+isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
+}\
+(isPhoneX);}\
+)
+#define kIs_iphone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define kIs_iPhoneX kScreenWidth >=375.0f && kScreenHeight >=812.0f&& kIs_iphone
+
+#define RCDLocalizedString(key) NSLocalizedStringFromTable(key, @"SealTalk", nil)
+
+
+
+/*状态栏高度*/
+#define Height_StatusBar (CGFloat)(IS_iPhoneX?(44.0):(20.0))
+/*导航栏高度*/
+#define kNavBarHeight (44)
+/*状态栏和导航栏总高度*/
+#define Height_NavBar (CGFloat)(IS_iPhoneX?(88.0):(64.0))
+/*TabBar高度*/
+#define Height_TabBar (CGFloat)(IS_iPhoneX?(49.0 + 34.0):(49.0))
+
+/*顶部安全区域远离高度*/
+#define kTopBarSafeHeight (CGFloat)(IS_iPhoneX?(44.0):(0))
+/*底部安全区域远离高度*/
+#define kBottomSafeHeight (CGFloat)(IS_iPhoneX?(34.0):(0))
+/*iPhoneX的状态栏高度差值*/
+#define kTopBarDifHeight (CGFloat)(IS_iPhoneX?(24.0):(0))
+/*导航条和Tabbar总高度*/
+#define kNavAndTabHeight (kNavBarAndStatusBarHeight + kTabBarHeight)
+
+#define lxWindow [UIApplication sharedApplication].keyWindow
+#define lxMbProgressView [HandTool getCurrentVC].view
+
+
+/** View 圆角和加边框 */
+#define KViewBorderRadius(View, Radius, Width, Color)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES];\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:[Color CGColor]]
+
+/** View 圆角*/
+#define LXViewBorder(View, Radius)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES];\
+
+
+
+//颜色
+#define Color_bg [UIColor colorWithHexString:@"#F6F6F6"]
+#define Color_line [UIColor colorWithHexString:@"#EFEFF4"]
+#define Color_Theme [UIColor colorWithHexString:@"#FB78A3"]
+#define Color_3 [UIColor colorWithHexString:@"#333333"]
+#define Color_6 [UIColor colorWithHexString:@"#666666"]
+#define Color_9 [UIColor colorWithHexString:@"#999999"]
+
+#define TextFieldTintColor [UIColor colorWithHexString:@"#282828"]
+
+//蓝牙相关
+typedef unsigned char U8;
+typedef unsigned short U16;
+typedef unsigned int U32;
+
+#define COMMON_PKG_LENGTH 20
+
+
+//第三方
+#import <AFNetworking.h>
+#import "Reachability.h"
+#import <Masonry/Masonry.h>
+#import "MJExtension.h"
+#import <YYCategories/YYCategories.h>
+
+//工具
+#import "NSObject+XWAdd.h"
+#import "UIButton+ImageTitleSpacing.h"
+#import "LxCustomAlert.h"
+#import "IQKeyboardManager.h"
+#import "WRNavigationBar.h"
+#import "WRCustomNavigationBar.h"
+#import "MBProgressHUD+Add.h"
+#import "UITextView+Placeholder.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
+#import "BANetManager_OC.h"
+#import "NSString+Handel.h"
+#import "LxRefreshFooter.h"
+#import "LxResfreshHeader.h"
+#import "MJRefresh.h"
+#import "UIColor+MyColor.h"
+#import "HandTool.h"
+#import "CRC16.h"
+
+
+
+
+#endif /* LightMoxibustion_pch */
