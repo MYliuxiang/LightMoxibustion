@@ -28,6 +28,9 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define RCDLocalizedString(key) NSLocalizedStringFromTable(key, @"SealTalk", nil)
 
 
+#define HeightScale  [UIScreen mainScreen].bounds.size.height/1600)
+#define WidthScale [UIScreen mainScreen].bounds.size.width/720)
+
 
 /*状态栏高度*/
 #define Height_StatusBar (CGFloat)(IS_iPhoneX?(44.0):(20.0))
@@ -76,6 +79,12 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define Color_9 [UIColor colorWithHexString:@"#999999"]
 
 #define TextFieldTintColor [UIColor colorWithHexString:@"#282828"]
+
+
+#define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
+
+#define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI))
+
 
 //蓝牙相关
 typedef unsigned char U8;
