@@ -9,9 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DevicesVC">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutVC">
             <connections>
-                <outlet property="tableView" destination="s9s-0k-Ngp" id="ggu-cD-QAI"/>
+                <outlet property="versionL" destination="UNI-ke-Kcp" id="Osx-gX-IEz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,24 +20,20 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="s9s-0k-Ngp">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="XjM-1O-rWh"/>
-                        <outlet property="delegate" destination="-1" id="IKD-Dp-Qpz"/>
-                    </connections>
-                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本：1.0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNI-ke-Kcp">
+                    <rect key="frame" x="163.5" y="437.5" width="87" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="s9s-0k-Ngp" secondAttribute="bottom" id="4Uw-vo-TL8"/>
-                <constraint firstItem="s9s-0k-Ngp" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="Fa8-II-er2"/>
-                <constraint firstItem="s9s-0k-Ngp" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="sjD-CB-erB"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="s9s-0k-Ngp" secondAttribute="trailing" id="uPZ-8Y-KQ5"/>
+                <constraint firstItem="UNI-ke-Kcp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dJk-JB-v8v"/>
+                <constraint firstItem="UNI-ke-Kcp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="orf-Qs-dI8"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="64"/>
+            <point key="canvasLocation" x="132" y="68"/>
         </view>
     </objects>
     <resources>

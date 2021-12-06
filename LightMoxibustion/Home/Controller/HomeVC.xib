@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC">
             <connections>
                 <outlet property="bgCE" destination="s5c-Yz-sLj" id="biU-ne-1HR"/>
+                <outlet property="blueB" destination="0Lc-IX-KWq" id="7F6-Tb-Uqm"/>
                 <outlet property="navCH" destination="CN3-Xa-i07" id="6ij-4j-CLQ"/>
                 <outlet property="quantityHC" destination="oUO-yz-2FZ" id="O1c-tf-wyT"/>
                 <outlet property="quantityWC" destination="G27-on-Lse" id="D9s-9p-eGQ"/>
@@ -67,9 +69,13 @@
                         <constraint firstAttribute="width" constant="25" id="Uf1-fs-B17"/>
                         <constraint firstAttribute="height" constant="25" id="u3U-Ec-UJT"/>
                     </constraints>
+                    <color key="tintColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" image="ble_bmp"/>
+                    <connections>
+                        <action selector="blueAC:" destination="-1" eventType="touchUpInside" id="b9O-hw-mna"/>
+                    </connections>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text_bel_connected" translatesAutoresizingMaskIntoConstraints="NO" id="WqH-XL-IJc">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text_no_connect" translatesAutoresizingMaskIntoConstraints="NO" id="WqH-XL-IJc">
                     <rect key="frame" x="315" y="90.666666666666671" width="45" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="Fc7-KG-9zu"/>
@@ -112,8 +118,8 @@
         <image name="bl0" width="128.5" height="58.5"/>
         <image name="ble_bmp" width="100" height="100"/>
         <image name="laser_bmp" width="100" height="100"/>
-        <image name="text_bel_connected" width="472.5" height="177"/>
         <image name="text_laser_off" width="472.5" height="118"/>
+        <image name="text_no_connect" width="472.5" height="177"/>
         <image name="text_title" width="127.5" height="42.5"/>
     </resources>
 </document>

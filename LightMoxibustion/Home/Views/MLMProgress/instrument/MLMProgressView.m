@@ -20,6 +20,9 @@
 
 @property(nonatomic,strong) TimeView *timeV;
 
+@property(nonatomic,strong) UIImageView *tipI;
+
+
 
 @end
 
@@ -107,6 +110,7 @@
     [_leftB addTarget:self action:@selector(leftBAC:) forControlEvents:UIControlEventTouchUpInside];
     [_incircle addSubview:_leftB];
     
+   
     _rightB = [UIButton buttonWithType:UIButtonTypeCustom];
     _rightB.frame = CGRectMake(_incircle.width + 12 * WidthScale - 67 * WidthScale, _incircle.height / 2.0 + 25 * WidthScale, 67 * WidthScale, 67 * WidthScale);
     [_rightB setImage:[UIImage imageNamed:@"arc_time_btn_inc"] forState:UIControlStateNormal];
@@ -147,6 +151,15 @@
     chacterI2.top = _currentTemV.bottom + 10 * WidthScale;
     chacterI2.centerX = _currentTemV.centerX;
     [_incircle addSubview:chacterI2];
+    
+    
+    self.tipI = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"waring_dilog_out_temp"]];
+    self.tipI.size = CGSizeMake(80 * 2.5 * WidthScale, 54 * 2.5 * WidthScale);
+    self.tipI.left = _leftB.centerX - 25 * WidthScale;
+    self.tipI.top = _leftB.centerY + 5 * WidthScale;
+//    self.tipI.hidden = YES;
+    [_incircle addSubview:self.tipI];
+    
     
     
     

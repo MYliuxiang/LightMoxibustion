@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22614481275E6F260029B1DE /* ConnectedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2261447F275E6F260029B1DE /* ConnectedVC.m */; };
+		22614482275E6F260029B1DE /* ConnectedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22614480275E6F260029B1DE /* ConnectedVC.xib */; };
+		22614487275E89CA0029B1DE /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22614485275E89CA0029B1DE /* AboutVC.m */; };
+		22614488275E89CA0029B1DE /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22614486275E89CA0029B1DE /* AboutVC.xib */; };
 		29739654274CC44B0030613D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29739653274CC44B0030613D /* AppDelegate.m */; };
 		2973965D274CC44B0030613D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2973965B274CC44B0030613D /* Main.storyboard */; };
 		2973965F274CC44C0030613D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2973965E274CC44C0030613D /* Assets.xcassets */; };
@@ -89,8 +93,6 @@
 		2975A9FA275DA9980097D72C /* QuantityPkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9E6275DA9980097D72C /* QuantityPkg.m */; };
 		2975A9FB275DA9980097D72C /* GetCurrentSetTimePkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9EB275DA9980097D72C /* GetCurrentSetTimePkg.m */; };
 		2975AA02275DA9A90097D72C /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2975A9FC275DA9A90097D72C /* DeviceCell.xib */; };
-		2975AA03275DA9A90097D72C /* DevicesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2975A9FD275DA9A90097D72C /* DevicesVC.xib */; };
-		2975AA04275DA9A90097D72C /* DevicesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975AA00275DA9A90097D72C /* DevicesVC.m */; };
 		2975AA05275DA9A90097D72C /* DeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975AA01275DA9A90097D72C /* DeviceCell.m */; };
 		2975AA11275DA9EB0097D72C /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975AA07275DA9EB0097D72C /* SVRadialGradientLayer.m */; };
 		2975AA12275DA9EB0097D72C /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975AA0A275DA9EB0097D72C /* SVProgressAnimatedView.m */; };
@@ -121,6 +123,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2261447E275E6F260029B1DE /* ConnectedVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectedVC.h; sourceTree = "<group>"; };
+		2261447F275E6F260029B1DE /* ConnectedVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectedVC.m; sourceTree = "<group>"; };
+		22614480275E6F260029B1DE /* ConnectedVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectedVC.xib; sourceTree = "<group>"; };
+		22614484275E89CA0029B1DE /* AboutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutVC.h; sourceTree = "<group>"; };
+		22614485275E89CA0029B1DE /* AboutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutVC.m; sourceTree = "<group>"; };
+		22614486275E89CA0029B1DE /* AboutVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutVC.xib; sourceTree = "<group>"; };
 		2973964F274CC44B0030613D /* LightMoxibustion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightMoxibustion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29739652274CC44B0030613D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		29739653274CC44B0030613D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -286,10 +294,7 @@
 		2975A9ED275DA9980097D72C /* LaserPkg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaserPkg.h; sourceTree = "<group>"; };
 		2975A9EE275DA9980097D72C /* SetWorkTimePkg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetWorkTimePkg.h; sourceTree = "<group>"; };
 		2975A9FC275DA9A90097D72C /* DeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
-		2975A9FD275DA9A90097D72C /* DevicesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DevicesVC.xib; sourceTree = "<group>"; };
-		2975A9FE275DA9A90097D72C /* DevicesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevicesVC.h; sourceTree = "<group>"; };
 		2975A9FF275DA9A90097D72C /* DeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceCell.h; sourceTree = "<group>"; };
-		2975AA00275DA9A90097D72C /* DevicesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevicesVC.m; sourceTree = "<group>"; };
 		2975AA01275DA9A90097D72C /* DeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceCell.m; sourceTree = "<group>"; };
 		2975AA07275DA9EB0097D72C /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		2975AA08275DA9EB0097D72C /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
@@ -355,6 +360,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22614483275E89800029B1DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				29739704274CCF9A0030613D /* HomeVC.h */,
+				29739705274CCF9A0030613D /* HomeVC.m */,
+				29739706274CCF9A0030613D /* HomeVC.xib */,
+				2261447E275E6F260029B1DE /* ConnectedVC.h */,
+				2261447F275E6F260029B1DE /* ConnectedVC.m */,
+				22614480275E6F260029B1DE /* ConnectedVC.xib */,
+				22614484275E89CA0029B1DE /* AboutVC.h */,
+				22614485275E89CA0029B1DE /* AboutVC.m */,
+				22614486275E89CA0029B1DE /* AboutVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		29739646274CC44B0030613D = {
 			isa = PBXGroup;
 			children = (
@@ -547,8 +568,8 @@
 			isa = PBXGroup;
 			children = (
 				297396E2274CCADB0030613D /* LxRefreshFooter.h */,
-				297396E3274CCADB0030613D /* LxResfreshHeader.h */,
 				297396E4274CCADB0030613D /* LxRefreshFooter.m */,
+				297396E3274CCADB0030613D /* LxResfreshHeader.h */,
 				297396E5274CCADB0030613D /* LxResfreshHeader.m */,
 			);
 			path = Mjrefresh;
@@ -566,46 +587,26 @@
 		29739703274CCF530030613D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				22614483275E89800029B1DE /* Controller */,
 				2975A9D4275DA9980097D72C /* Pkg */,
 				2975A9AF275DA98F0097D72C /* Model */,
 				29A560C32759FF5D0024847F /* Views */,
-				297D556C2758651000C1A385 /* LEDView */,
-				29FCE65D2754C69C003B0E7C /* MLMProgress */,
-				2973970E274CD5370030613D /* BlueTool */,
-				29739704274CCF9A0030613D /* HomeVC.h */,
-				29739705274CCF9A0030613D /* HomeVC.m */,
-				29739706274CCF9A0030613D /* HomeVC.xib */,
-				2975A9FF275DA9A90097D72C /* DeviceCell.h */,
-				2975AA01275DA9A90097D72C /* DeviceCell.m */,
-				2975A9FC275DA9A90097D72C /* DeviceCell.xib */,
-				2975A9FE275DA9A90097D72C /* DevicesVC.h */,
-				2975AA00275DA9A90097D72C /* DevicesVC.m */,
-				2975A9FD275DA9A90097D72C /* DevicesVC.xib */,
-				299157432756453400D17F66 /* Slider */,
-				29FCE68A2754E408003B0E7C /* 自定义Slider */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		2973970E274CD5370030613D /* BlueTool */ = {
-			isa = PBXGroup;
-			children = (
-				2973970F274CD5530030613D /* CRC16.h */,
-				29739710274CD5530030613D /* CRC16.m */,
-			);
-			path = BlueTool;
 			sourceTree = "<group>";
 		};
 		2975A9A4275DA9630097D72C /* HLBluetooth */ = {
 			isa = PBXGroup;
 			children = (
-				2975A9A5275DA9630097D72C /* SendData.h */,
+				2975A9AA275DA9630097D72C /* HandleData.h */,
 				2975A9A6275DA9630097D72C /* HandleData.m */,
 				2975A9A7275DA9630097D72C /* HLBLEConst.h */,
-				2975A9A8275DA9630097D72C /* HLBLEManager.m */,
-				2975A9A9275DA9630097D72C /* SendData.m */,
-				2975A9AA275DA9630097D72C /* HandleData.h */,
 				2975A9AB275DA9630097D72C /* HLBLEManager.h */,
+				2975A9A8275DA9630097D72C /* HLBLEManager.m */,
+				2975A9A5275DA9630097D72C /* SendData.h */,
+				2975A9A9275DA9630097D72C /* SendData.m */,
+				2973970F274CD5530030613D /* CRC16.h */,
+				29739710274CD5530030613D /* CRC16.m */,
 			);
 			path = HLBluetooth;
 			sourceTree = "<group>";
@@ -644,32 +645,32 @@
 		2975A9D4275DA9980097D72C /* Pkg */ = {
 			isa = PBXGroup;
 			children = (
-				2975A9D5275DA9980097D72C /* TemperaturePkg.h */,
-				2975A9D6275DA9980097D72C /* HeartbeatPkg.m */,
-				2975A9D7275DA9980097D72C /* CurrentTemPkg.m */,
-				2975A9D8275DA9980097D72C /* CurrentRatePkg.m */,
-				2975A9D9275DA9980097D72C /* CurrentLaserPkg.m */,
-				2975A9DA275DA9980097D72C /* QuestChargeStatePkg.m */,
-				2975A9DB275DA9980097D72C /* VersionPkg.m */,
-				2975A9DC275DA9980097D72C /* QuantityPkg.h */,
-				2975A9DD275DA9980097D72C /* GetCurrentSetTimePkg.h */,
-				2975A9DE275DA9980097D72C /* ChargeStatePkg.m */,
-				2975A9DF275DA9980097D72C /* SetWorkTimePkg.m */,
-				2975A9E0275DA9980097D72C /* LaserPkg.m */,
-				2975A9E1275DA9980097D72C /* RatePkg.m */,
-				2975A9E2275DA9980097D72C /* CurrentRatePkg.h */,
-				2975A9E3275DA9980097D72C /* CurrentTemPkg.h */,
-				2975A9E4275DA9980097D72C /* HeartbeatPkg.h */,
-				2975A9E5275DA9980097D72C /* TemperaturePkg.m */,
-				2975A9E6275DA9980097D72C /* QuantityPkg.m */,
-				2975A9E7275DA9980097D72C /* VersionPkg.h */,
-				2975A9E8275DA9980097D72C /* CurrentLaserPkg.h */,
-				2975A9E9275DA9980097D72C /* QuestChargeStatePkg.h */,
 				2975A9EA275DA9980097D72C /* ChargeStatePkg.h */,
+				2975A9DE275DA9980097D72C /* ChargeStatePkg.m */,
+				2975A9E8275DA9980097D72C /* CurrentLaserPkg.h */,
+				2975A9D9275DA9980097D72C /* CurrentLaserPkg.m */,
+				2975A9E2275DA9980097D72C /* CurrentRatePkg.h */,
+				2975A9D8275DA9980097D72C /* CurrentRatePkg.m */,
+				2975A9E3275DA9980097D72C /* CurrentTemPkg.h */,
+				2975A9D7275DA9980097D72C /* CurrentTemPkg.m */,
+				2975A9DD275DA9980097D72C /* GetCurrentSetTimePkg.h */,
 				2975A9EB275DA9980097D72C /* GetCurrentSetTimePkg.m */,
-				2975A9EC275DA9980097D72C /* RatePkg.h */,
+				2975A9E4275DA9980097D72C /* HeartbeatPkg.h */,
+				2975A9D6275DA9980097D72C /* HeartbeatPkg.m */,
 				2975A9ED275DA9980097D72C /* LaserPkg.h */,
+				2975A9E0275DA9980097D72C /* LaserPkg.m */,
+				2975A9DC275DA9980097D72C /* QuantityPkg.h */,
+				2975A9E6275DA9980097D72C /* QuantityPkg.m */,
+				2975A9E9275DA9980097D72C /* QuestChargeStatePkg.h */,
+				2975A9DA275DA9980097D72C /* QuestChargeStatePkg.m */,
+				2975A9EC275DA9980097D72C /* RatePkg.h */,
+				2975A9E1275DA9980097D72C /* RatePkg.m */,
 				2975A9EE275DA9980097D72C /* SetWorkTimePkg.h */,
+				2975A9DF275DA9980097D72C /* SetWorkTimePkg.m */,
+				2975A9D5275DA9980097D72C /* TemperaturePkg.h */,
+				2975A9E5275DA9980097D72C /* TemperaturePkg.m */,
+				2975A9E7275DA9980097D72C /* VersionPkg.h */,
+				2975A9DB275DA9980097D72C /* VersionPkg.m */,
 			);
 			path = Pkg;
 			sourceTree = "<group>";
@@ -716,6 +717,13 @@
 		29A560C32759FF5D0024847F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				297D556C2758651000C1A385 /* LEDView */,
+				29FCE65D2754C69C003B0E7C /* MLMProgress */,
+				299157432756453400D17F66 /* Slider */,
+				29FCE68A2754E408003B0E7C /* 自定义Slider */,
+				2975A9FF275DA9A90097D72C /* DeviceCell.h */,
+				2975AA01275DA9A90097D72C /* DeviceCell.m */,
+				2975A9FC275DA9A90097D72C /* DeviceCell.xib */,
 				29A560C42759FF840024847F /* NumberView.h */,
 				29A560C52759FF840024847F /* NumberView.m */,
 				29A560C7275A0E610024847F /* TimeView.h */,
@@ -887,9 +895,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22614482275E6F260029B1DE /* ConnectedVC.xib in Resources */,
 				297396D4274CCACE0030613D /* README.md in Resources */,
+				22614488275E89CA0029B1DE /* AboutVC.xib in Resources */,
 				29739662274CC44C0030613D /* LaunchScreen.storyboard in Resources */,
-				2975AA03275DA9A90097D72C /* DevicesVC.xib in Resources */,
 				29739671274CC9240030613D /* BaseViewController.xib in Resources */,
 				2973965F274CC44C0030613D /* Assets.xcassets in Resources */,
 				2973965D274CC44B0030613D /* Main.storyboard in Resources */,
@@ -964,6 +973,7 @@
 				2975A9F3275DA9980097D72C /* QuestChargeStatePkg.m in Sources */,
 				29739707274CCF9A0030613D /* HomeVC.m in Sources */,
 				2975A9AD275DA9630097D72C /* HLBLEManager.m in Sources */,
+				22614487275E89CA0029B1DE /* AboutVC.m in Sources */,
 				2975A9CD275DA98F0097D72C /* QuantityModel.m in Sources */,
 				297396BB274CCAC40030613D /* UITextView+WZB.m in Sources */,
 				29739665274CC44C0030613D /* main.m in Sources */,
@@ -994,6 +1004,7 @@
 				2975A9FA275DA9980097D72C /* QuantityPkg.m in Sources */,
 				2975A9F6275DA9980097D72C /* SetWorkTimePkg.m in Sources */,
 				2975A9F2275DA9980097D72C /* CurrentLaserPkg.m in Sources */,
+				22614481275E6F260029B1DE /* ConnectedVC.m in Sources */,
 				2975AA13275DA9EB0097D72C /* SVProgressHUD.m in Sources */,
 				2975A9C9275DA98F0097D72C /* CurrentTemModel.m in Sources */,
 				297396D5274CCACE0030613D /* TXMatchManager.m in Sources */,
@@ -1035,7 +1046,6 @@
 				29739690274CCABB0030613D /* UIView+Empty.m in Sources */,
 				297396BE274CCAC40030613D /* UIScrollView+Gesture.m in Sources */,
 				297396F5274CCB3C0030613D /* LxCustomAlert.m in Sources */,
-				2975AA04275DA9A90097D72C /* DevicesVC.m in Sources */,
 				29739672274CC9240030613D /* BaseNavigationController.m in Sources */,
 				297396D6274CCACE0030613D /* TXDynamicDelegate.m in Sources */,
 				29739711274CD5530030613D /* CRC16.m in Sources */,
@@ -1193,13 +1203,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				GCC_PREFIX_HEADER = /Users/flyliu/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
+				DEVELOPMENT_TEAM = V5HRKRDUCX;
+				GCC_PREFIX_HEADER = /Users/liuxiang/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
 				INFOPLIST_FILE = LightMoxibustion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tenvine.LightMoxibustion;
+				PRODUCT_BUNDLE_IDENTIFIER = tenvine.LightMoxibustion2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1212,13 +1223,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				GCC_PREFIX_HEADER = /Users/flyliu/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
+				DEVELOPMENT_TEAM = V5HRKRDUCX;
+				GCC_PREFIX_HEADER = /Users/liuxiang/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
 				INFOPLIST_FILE = LightMoxibustion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tenvine.LightMoxibustion;
+				PRODUCT_BUNDLE_IDENTIFIER = tenvine.LightMoxibustion2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

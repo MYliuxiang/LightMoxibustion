@@ -8,12 +8,11 @@
 #import "HomeVC.h"
 
 #import "CRC16.h"
-#import "IntToByte.h"
 #import "MLMProgressView.h"
 #import "CustomSliderView.h"
 #import "LxUnitSlider.h"
 #import "HRNumberUnitView.h"
-#import "DevicesVC.h"
+#import "ConnectedVC.h"
 
 
 #define PROGRESS_HEIGHT 200
@@ -43,6 +42,11 @@
 @property (nonatomic, strong) LxUnitSlider *temSlider;
 @property (nonatomic, strong) MLMProgressView *progress;
 
+@property (nonatomic, strong) UIView *meumView;
+@property (weak, nonatomic) IBOutlet UIButton *blueB;
+
+@property (nonatomic, assign) BOOL autoDisconnect;
+
 
 
 
@@ -58,25 +62,28 @@
     self.deviceArray = [NSMutableArray array];
     [self creatSubViews];
     [self sizeofWidth];
+        
+
     
         
-//蓝牙模块
-//    [self scanDevice];
-//    self.timer =  [NSTimer scheduledTimerWithTimeInterval:1
-//                                                   target:self
-//                                                 selector:@selector(sendHeartBeat:)
-//                                                   userInfo:nil
-//                                                  repeats:YES];
-//    [self.timer setFireDate:[NSDate distantFuture]];
-//
-//    [self setBlueCallBack];
+    [self checkBluethState];
+    //蓝牙模块
+    [self scanDevice];
+    self.timer =  [NSTimer scheduledTimerWithTimeInterval:1
+                                                   target:self
+                                                 selector:@selector(sendHeartBeat:)
+                                                   userInfo:nil
+                                                  repeats:YES];
+    [self.timer setFireDate:[NSDate distantFuture]];
+
+    [self setBlueCallBack];
 
 }
 
 #pragma mark ----------- LxUnitSliderDelegate -----------
 - (void)unitSliderView:(LxUnitSlider *)slider didChangePercent:(NSInteger)percent
 {
-    NSLog(@"percent:%d",percent);
+//    NSLog(@"percent:%ld",(long)percent);
     
 }
 
@@ -88,7 +95,7 @@
         self.rxcharacter = nil;
         self.txcharacter = nil;
         [self.timer setFireDate:[NSDate distantFuture]];
-        [self scanDevice];
+//        [self scanDevice];
 
     };
     manager.receiveDataBlock = ^(NSData *data) {
@@ -132,14 +139,14 @@
                 break;
             case 9:
             {
-                CurrentTemModel *tem = [[CurrentTemModel alloc] initWithData:data];
+//                CurrentTemModel *tem = [[CurrentTemModel alloc] initWithData:data];
 //                NSLog(@"实时温度:%d",tem.currentTem);
 
             }
                 break;
             case 10:
             {
-                WorkCountdownModel *workCuountdown = [[WorkCountdownModel alloc] initWithData:data];
+//                WorkCountdownModel *workCuountdown = [[WorkCountdownModel alloc] initWithData:data];
 //                NSLog(@"工作倒计时:%ds",workCuountdown.second);
             }
                 break;
@@ -166,7 +173,9 @@
             case 15:
             {
                 VersionModel *version = [[VersionModel alloc] initWithData:data];
-                NSLog(@"获取仪器的固件版本号:%@",version.version);
+                AboutVC *vc = [[AboutVC alloc] init];
+                vc.version = version.version;
+                [self.navigationController pushViewController:vc animated:YES];
             }
                 break;
             case 16:
@@ -197,10 +206,8 @@
     };
 }
 
-- (void)scanDevice{
-    //开始扫描
+- (void)checkBluethState{
     HLBLEManager *manager = [HLBLEManager sharedInstance];
-    
     __weak HLBLEManager *weakManager = manager;
     manager.stateUpdateBlock = ^(CBCentralManager *central) {
         NSString *info = nil;
@@ -240,9 +247,33 @@
                 break;
         }
     };
+}
+
+- (void)scanDevice{
+    //开始扫描
+    HLBLEManager *manager = [HLBLEManager sharedInstance];
+    if (manager.connectedPerpheral == nil) {
+        [self.deviceArray removeAllObjects];
+    }else{
+        BleDevice *connectedDevice;
+        for (BleDevice *device in self.deviceArray) {
+            if ([device.peripheral.identifier.UUIDString isEqualToString:manager.connectedPerpheral.identifier.UUIDString]) {
+                connectedDevice = device;
+            }
+        }
+        [self.deviceArray removeAllObjects];
+        if (connectedDevice) {
+            [self.deviceArray addObject:connectedDevice];
+        }
+    }
     
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:DeviceChange object:@{@"devices":self.deviceArray}];
+   
+    [manager stopScan];
+    [manager scanForPeripheralsWithServiceUUIDs:nil options:nil];
+    __weak HLBLEManager *weakManager = manager;
     manager.discoverPeripheralBlcok = ^(CBCentralManager *central, CBPeripheral *peripheral, NSDictionary *advertisementData, NSNumber *RSSI) {
+        
         if (peripheral.name.length <= 0 || [peripheral.name rangeOfString:@"PEL-IR_ACUPUNCTURE"].location == NSNotFound) {
             return ;
         }
@@ -258,10 +289,11 @@
         per.RSSI = RSSI;
         
         NSString *lastMac = [NSString stringWithFormat:@"%@",[LxUserDefaults objectForKey:MACADRESS]];
-        if ([lastMac isEqualToString:per.uuidString]) {
+        if ([lastMac isEqualToString:per.uuidString] && weakManager.connectedPerpheral == nil && !self.autoDisconnect ) {
+               
             [self connectDevice:per];
         }
-        
+
         if (self.deviceArray.count == 0) {
             [self.deviceArray addObject:per];
         } else {
@@ -270,9 +302,8 @@
                 BleDevice *device = [self.deviceArray objectAtIndex:i];
                 if([device.uuidString isEqualToString:peripheral.identifier.UUIDString]){
                     isExist = YES;
-                    [_deviceArray replaceObjectAtIndex:i withObject:device];
+                    [self.deviceArray replaceObjectAtIndex:i withObject:per];
                 }
-                
             }
             
             if (!isExist) {
@@ -289,7 +320,7 @@
     HLBLEManager *manager = [HLBLEManager sharedInstance];
     [manager connectPeripheral:device.peripheral
                 connectOptions:@{CBConnectPeripheralOptionNotifyOnDisconnectionKey:@(YES)}
-        stopScanAfterConnected:YES
+        stopScanAfterConnected:NO
                servicesOptions:nil
         characteristicsOptions:nil
                  completeBlock:^(HLOptionStage stage, CBPeripheral *peripheral, CBService *service, CBCharacteristic *character, NSError *error) {
@@ -298,15 +329,16 @@
                          {
                              if (error) {
                                  [SVProgressHUD showErrorWithStatus:@"连接失败"];
-                                 
                              } else {
                                  //连接成功
                                  //需要每隔两秒发送心跳包
                                  NSLog(@"连接成功");
                                  [LxUserDefaults setObject:peripheral.identifier.UUIDString forKey:MACADRESS];
-                                 if (self.navigationController.viewControllers.count > 1) {
-                                     [self.navigationController popToRootViewControllerAnimated:YES];
-                                 }
+                                 [[NSNotificationCenter defaultCenter] postNotificationName:DeviceChange object:@{@"devices":self.deviceArray}];
+                                 self.autoDisconnect = NO;
+//                                 if (self.navigationController.viewControllers.count > 1) {
+//                                     [self.navigationController popToRootViewControllerAnimated:YES];
+//                                 }
 
                              }
                              break;
@@ -360,16 +392,6 @@
 
 #pragma mark --------------发送蓝牙数据--------------
 
-- (IBAction)connectDeviceAC:(id)sender {
-    DevicesVC *vc = [[DevicesVC alloc] init];
-    vc.deviceArray = self.deviceArray;
-    
-    __weak typeof(self) weakSelf = self;
-    vc.connetcBleDeviceblock = ^(BleDevice * _Nonnull device) {
-        [weakSelf connectDevice:device];
-    };
-    [self.navigationController pushViewController:vc animated:YES];
-}
 
 - (IBAction)setTem:(id)sender {
     
@@ -422,6 +444,9 @@
 }
 
 
+- (IBAction)blueAC:(id)sender {
+    [self annimationMenumIsHidden:NO];
+}
 
 - (void)creatSubViews{
     _progress = [[MLMProgressView alloc] initWithFrame:CGRectMake(LEFT_MAGAN , Height_StatusBar + 44 * WidthScale + 28 * WidthScale, (kScreenWidth - 2 * LEFT_MAGAN), kScreenWidth - 2 * LEFT_MAGAN)];
@@ -452,6 +477,28 @@
     [self.view addSubview:_redSlider];
     _redSlider.left = kScreenWidth / 2.0 + 80 * WidthScale / 2;
     
+    _meumView = [[UIView alloc] initWithFrame:CGRectMake(kScreenWidth - 135 * WidthScale, self.blueB.bottom + 20 * WidthScale, 135 * WidthScale, 193 * WidthScale)];
+    _meumView.backgroundColor = [UIColor colorWithHexString:@"#FAFAFA"];
+    _meumView.layer.cornerRadius = 2;
+    [self.view addSubview:_meumView];
+    
+    NSArray *titles = @[@"连接设备",@"断开连接",@"关于",@"退出应用"];
+    
+    for (int i = 0; i < titles.count; i++) {
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.frame = CGRectMake(0, 193 * WidthScale / 4.0 * i, 135 * WidthScale, 193 * WidthScale / 4.0);
+        btn.titleLabel.font = [UIFont systemFontOfSize:20];
+        btn.tag = i + 100;
+        btn.titleEdgeInsets = UIEdgeInsetsMake(0, 20 * WidthScale, 0, 0);
+        btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        [btn setTitle:titles[i] forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [_meumView addSubview:btn];
+    }
+    _meumView.hidden = YES;
+    
+    
 }
 
 - (void)sizeofWidth{
@@ -461,8 +508,89 @@
     _quantityWC.constant = _quantityWC.constant * WidthScale;
     _navCH.constant = _navCH.constant * WidthScale;
     _bgCE.constant = - (fabs(_bgCE.constant) * WidthScale);
-    
 
+}
+
+- (void)buttonClicked:(UIButton *)btn{
+    NSInteger index = btn.tag - 100;
+    switch (index) {
+        case 0:
+        {
+            //连接设备
+            ConnectedVC *vc = [[ConnectedVC alloc] init];
+            vc.deviceArray = self.deviceArray;
+            if ([HLBLEManager sharedInstance].connectedPerpheral == nil) {
+                [self scanDevice];
+            }
+
+            __weak typeof(self) weakSelf = self;
+            vc.connetcBleDeviceblock = ^(BleDevice * _Nonnull device) {
+                [weakSelf connectDevice:device];
+            };
+            vc.reScanBleDeviceblock = ^{
+                [weakSelf scanDevice];
+            };
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 1:
+        {
+            //断开连接
+            NSLog(@"断开连接");
+            self.autoDisconnect = YES;
+            [[HLBLEManager sharedInstance] cancelPeripheralConnection];
+        }
+            break;
+        case 2:
+        {
+            //关于
+            if ([HLBLEManager sharedInstance].connectedPerpheral == nil){
+              
+                [SVProgressHUD showErrorWithStatus:@"请先连接蓝牙"];
+            }else{
+                [SendData getVersion];
+            }
+        }
+            break;
+        case 3:
+        {
+//            [self exitApplication];
+            exit(0);
+
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self annimationMenumIsHidden:YES];
+    
+}
+
+- (void)annimationMenumIsHidden:(BOOL)isHidden{
+    [UIView animateWithDuration:0.35 animations:^{
+        self.meumView.hidden = isHidden;
+    }];
+}
+
+- (void)exitApplication {
+    //直接退，看起来好像是 crash 所以做个动画
+    [UIView beginAnimations:@"exitApplication" context:nil];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.view.window cache:NO];
+    [UIView setAnimationDidStopSelector:@selector(animationFinished:finished:context:)];
+    self.view.window.bounds = CGRectMake(0, 0, 0, 0);
+    [UIView commitAnimations];
+}
+
+- (void)animationFinished:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
+     if ([animationID compare:@"exitApplication"] == 0) {
+        //退出代码
+        exit(0);
+    }
 }
 
 @end

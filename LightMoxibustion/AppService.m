@@ -61,6 +61,12 @@
     
 //    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:16],
 //                                                           NSForegroundColorAttributeName:[UIColor orangeColor]}];
+    
+    
+    [SVProgressHUD setErrorImage:nil];
+//    [SVProgressHUD setBackgroundColor:[[UIColor colorWithHexString:@"#E6E9EA"] colorWithAlphaComponent:0.3]];
+    [SVProgressHUD setBackgroundColor:[UIColor redColor]];
+    
 }
 
 @end

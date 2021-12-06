@@ -104,7 +104,7 @@
     self.customNavBar.titleLabelColor = [UIColor blackColor];
 
     if (self.navigationController.childViewControllers.count != 1) {
-        [self.customNavBar wr_setLeftButtonWithImage:[UIImage imageNamed:@"组 30"]];
+        [self.customNavBar wr_setLeftButtonWithImage:[UIImage imageNamed:@"back"]];
     }
     
     //右边按钮
