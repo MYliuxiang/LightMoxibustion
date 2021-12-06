@@ -30,20 +30,23 @@
 
 - (void)creatSubView{
     
-    _minute1I = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.width / 6.0 , self.height)];
+    CGFloat width = (self.width - 12) / 6.0;
+    
+    _minute1I = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width , self.height)];
     [self addSubview:_minute1I];
     
-    _minute2I = [[UIImageView alloc] initWithFrame:CGRectMake(self.width /6.0 + 2, 0, self.width /6.0, self.height)];
+    _minute2I = [[UIImageView alloc] initWithFrame:CGRectMake(self.width /6.0, 0, width, self.height)];
     [self addSubview:_minute2I];
     
-    _colonI = [[UIImageView alloc] initWithFrame:CGRectMake(self.width /6.0 * 2 + (self.width / 3.0 - self.height / 3.0) / 2.0, self.height / 4.0, self.height / 3.0, self.height / 2.0)];
+    _colonI = [[UIImageView alloc] initWithFrame:CGRectMake(self.width /6.0 * 3, self.height / 4.0, self.height / 4.0, self.height / 2.0)];
+    _colonI.centerX = self.width / 2.0;
     _colonI.image = [UIImage imageNamed:@"b_num_seg_point"];
     [self addSubview:_colonI];
     
-    _second1I = [[UIImageView alloc] initWithFrame:CGRectMake(self.width /6.0 * 4 - 2, 0, self.width / 6.0, self.height)];
+    _second1I = [[UIImageView alloc] initWithFrame:CGRectMake(self.width /6.0 * 4, 0, width, self.height)];
     [self addSubview:_second1I];
     
-    _second2I = [[UIImageView alloc] initWithFrame:CGRectMake(self.width /6.0 * 5, 0, self.width / 6.0, self.height)];
+    _second2I = [[UIImageView alloc] initWithFrame:CGRectMake(self.width /6.0 * 5, 0, width, self.height)];
     [self addSubview:_second2I];
     
     self.time = 0;

@@ -20,53 +20,5 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8B89B085-C474-4D34-BA54-31DB7B24C31D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LightMoxibustion/Home/MLMProgress/instrument/circle/MLMCircleView.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "-drawProgress"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8B89B085-C474-4D34-BA54-31DB7B24C31D - c86c1b61bd4b0758"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MLMCircleView drawProgress]"
-                  moduleName = "LightMoxibustion"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/flyliu/Desktop/LightMoxibustion/LightMoxibustion/Home/MLMProgress/instrument/circle/MLMCircleView.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "104">
-               </Location>
-               <Location
-                  uuid = "8B89B085-C474-4D34-BA54-31DB7B24C31D - c86c1b61bd4b0758"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MLMCircleView drawProgress]"
-                  moduleName = "LightMoxibustion"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/flyliu/Desktop/LightMoxibustion/LightMoxibustion/Home/MLMProgress/instrument/circle/MLMCircleView.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "113">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

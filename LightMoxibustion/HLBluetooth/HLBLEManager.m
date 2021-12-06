@@ -9,12 +9,16 @@
 #import "HLBLEManager.h"
 
 // 发送数据时，需要分段的长度，部分打印机一次发送数据过长就会乱码，需要分段发送。这个长度值不同的打印机可能不一样，你需要调试设置一个合适的值（最好是偶数）
-#define kLimitLength    146
+#define kLimitLength    20
 
 @interface HLBLEManager ()<CBCentralManagerDelegate,CBPeripheralDelegate>
 
 @property (strong, nonatomic)   CBCentralManager            *centralManager;        /**< 中心管理器 */
 @property (strong, nonatomic)   CBPeripheral                *connectedPerpheral;    /**< 当前连接的外设 */
+
+@property(nonatomic,strong) CBCharacteristic *txcharacter;
+
+@property(nonatomic,strong) CBCharacteristic *rxcharacter;
 
 @property (strong, nonatomic)   NSArray<CBUUID *>           *serviceUUIDs;          /**< 要查找服务的UUIDs */
 @property (strong, nonatomic)   NSArray<CBUUID *>           *characteristicUUIDs;   /**< 要查找特性的UUIDs */
@@ -29,6 +33,38 @@
 static HLBLEManager *instance = nil;
 
 @implementation HLBLEManager
+
+
+//周边设备 (外设) 服务的UUID
++ (CBUUID *) servicesUUID
+{
+    return [CBUUID UUIDWithString:@"0783B03E-8535-B5A0-7140-A304D2495CB7"];
+}
+
+
+//写特征值
++ (CBUUID *) txCharacteristicUUID   //data going to the module
+{
+    return [CBUUID UUIDWithString:@"0783b03e-8535-b5a0-7140-a304d2495cba"];
+}
+
+
+
+//读特性值
++ (CBUUID *) rxCharacteristicUUID  //data coming from the module
+{
+    return [CBUUID UUIDWithString:@"0783b03e-8535-b5a0-7140-a304d2495cb8"];
+}
+
+
+
+
+//设备信息的服务UUID
++ (CBUUID *) deviceInformationServiceUUID
+{
+    return [CBUUID UUIDWithString:@"180A"];
+}
+
 
 + (instancetype)sharedInstance
 {
@@ -243,8 +279,12 @@ static HLBLEManager *instance = nil;
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error
 {
     _connectedPerpheral = nil;
+    _rxcharacter = nil;
+    _txcharacter = nil;
     
-    NSLog(@"断开连接了，断开连接了 %@",error);
+    if (_didDisconnectBlock) {
+        _didDisconnectBlock(peripheral,error);
+    }
 }
 
 #pragma mark ---------------- 发现服务的代理 -----------------
@@ -290,6 +330,7 @@ static HLBLEManager *instance = nil;
         return;
     }
     
+    
     if (_discoverCharacteristicsBlock) {
         _discoverCharacteristicsBlock(peripheral,service,service.characteristics,nil);
     }
@@ -327,9 +368,19 @@ static HLBLEManager *instance = nil;
         }
         return;
     }
+//
     
-//    
+    if ([[self.class rxCharacteristicUUID].UUIDString isEqualToString:characteristic.UUID.UUIDString]) {
+        //蓝牙返回数据
+        NSData *data = characteristic.value;
+
+        if (_receiveDataBlock) {
+            _receiveDataBlock(data);
+        }
+    }
     NSData *data = characteristic.value;
+    
+   
 //    if (data.length > 0) {
 //        const unsigned char *hexBytesLight = [data bytes];
 //        
@@ -352,6 +403,15 @@ static HLBLEManager *instance = nil;
         }
         return;
     }
+    
+    if ([characteristic.UUID.UUIDString isEqualToString: [self.class rxCharacteristicUUID].UUIDString]
+        ) {
+        self.rxcharacter = characteristic;
+        [peripheral setNotifyValue:YES forCharacteristic:characteristic];
+    }else if ([characteristic.UUID.UUIDString isEqualToString:[self.class txCharacteristicUUID].UUIDString]){
+        self.txcharacter = characteristic;
+    }
+    
     
     if (_completionBlock) {
         _completionBlock(HLOptionStageSeekdescriptors,peripheral,nil,characteristic,nil);
@@ -386,6 +446,15 @@ static HLBLEManager *instance = nil;
         _writeToDescriptorBlock(descriptor, nil);
     }
 }
+
+- (void)writeValue:(NSData *)data{
+    if (self.txcharacter == nil || self.connectedPerpheral == nil) {
+        return;
+    }
+    [self writeValue:data forCharacteristic:self.txcharacter type:CBCharacteristicWriteWithoutResponse];
+    
+}
+
 
 #pragma mark ---------------- 写入数据的回调 --------------------
 - (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(nullable NSError *)error

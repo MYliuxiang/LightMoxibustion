@@ -2,14 +2,14 @@
 //  ChargeStatePkg.h
 //  LightMoxibustion
 //
-//  Created by flyliu on 2021/11/23.
+//  Created by 刘翔 on 2021/12/5.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 /*
- 充电IC状态更新通知：此数据包由仪器主动返回，命令码为16，CHG和STANDBY信号各占一字节。当CHG为0 与SATANDBY 为1时表示正在充电，CHG为1与STANDBY为0表示充电完成。其它情况表示没有插入充电器。
+ 请求返回充电IC状态：手机发出此指令，可立即返回充电IC的状态。手机发出的命令码为17，设备返回数据命令码为16，组成和上一条指令一样。
  */
 @interface ChargeStatePkg : NSObject
 @property(nonatomic, strong) NSData *buf;

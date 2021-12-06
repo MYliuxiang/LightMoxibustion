@@ -14,7 +14,7 @@
     if (self) {
         U8 buf[COMMON_PKG_LENGTH];
         memset(buf, 0, COMMON_PKG_LENGTH);
-        buf[0] = 0x05;
+        buf[0] = '5';
         buf[1] = '#';//包头
         buf[2] = (Byte)(14 & 0XFF); //命令码
         buf[3] = 'I';
@@ -29,7 +29,6 @@
         buf[12] = 'e';
         buf[13] = 'a';
         buf[14] = 't';
-
 
         int crc16 = CRC16_CCITT(buf, COMMON_PKG_LENGTH-2);
         buf[COMMON_PKG_LENGTH-2] = (Byte)(crc16>>8 & 0XFF);

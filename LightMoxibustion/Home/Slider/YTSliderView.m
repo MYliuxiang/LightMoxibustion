@@ -25,7 +25,6 @@
 
 @property (strong, nonatomic)UIView *thumbView;
 
-@property (strong, nonatomic)UILabel *thumbL;
 
 
 
@@ -49,7 +48,7 @@
 - (void)initData {
     trackWidth = self.frame.size.width - 2*_setting.progressInset;
     trackHeight = self.frame.size.height - 2*_setting.progressInset;
-    
+
     if(_setting.layoutDirection == YTSliderLayoutDirectionHorizontal) {
         thumbSizeValue = trackHeight;
         min_thumbArea_v = thumbSizeValue/2;
@@ -59,14 +58,16 @@
         }
     }
     else {
-        thumbSizeValue = trackWidth;
-        min_thumbArea_v = thumbSizeValue/2;
-        max_thumbArea_v = trackHeight - thumbSizeValue/2;;
+        thumbSizeValue = 35 * WidthScale;
+        min_thumbArea_v = 0;
+        max_thumbArea_v = trackHeight ;
         self.transform = CGAffineTransformScale(self.transform, 1.0, -1.0);
-        self.thumbL.transform = CGAffineTransformScale(self.transform, 1.0, 1.0);
+        self.thumbView.transform = CGAffineTransformScale(self.transform, 1.0, 1.0);
+
     }
+    thumbSizeValue = 35 * WidthScale;
+    thumbArea_length = self.backgroundView.height;
     
-    thumbArea_length = fabs(max_thumbArea_v - min_thumbArea_v);
 }
 
 - (void)initSubView {
@@ -81,7 +82,14 @@
             
 }
 
-
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    UIView *view = [super hitTest:point withEvent:event];
+    CGPoint tempPoint = [self.thumbView convertPoint:point fromView:self];
+    if ([self.thumbView pointInside:tempPoint withEvent:event]) {
+        return self.thumbView;
+    }
+    return view;
+}
 
 - (void)configView {
     self.backgroundView.backgroundColor = _setting.backgroundColor;
@@ -89,34 +97,30 @@
     self.thumbView.backgroundColor = _setting.thumbColor;
     self.thumbView.layer.borderColor = _setting.thumbBorderColor.CGColor;
     self.thumbView.layer.borderWidth = _setting.borderWidth;
+    if ([_setting.thumbTitle isEqualToString:@"温度"]) {
+        UIImage *thumbImage = [UIImage imageNamed:@"thumb_temp"];
+        self.thumbView.layer.contents = (id)thumbImage.CGImage;
+
+    }else if ([_setting.thumbTitle isEqualToString:@"频率"]){
+        UIImage *thumbImage = [UIImage imageNamed:@"thumb_fre"];
+        self.thumbView.layer.contents = (id)thumbImage.CGImage;
+
+    }else if ([_setting.thumbTitle isEqualToString:@"红光"]){
+        UIImage *thumbImage = [UIImage imageNamed:@"thumb_laser"];
+        self.thumbView.layer.contents = (id)thumbImage.CGImage;
+    }
     
-    self.thumbL.text = _setting.thumbTitle;
+    
     
     self.backgroundView.frame = self.bounds;
     self.progressView.frame = CGRectMake(0, 0, 0, trackHeight);
     self.trackContView.frame = CGRectMake(_setting.progressInset, _setting.progressInset,trackWidth, trackHeight);
-    self.thumbView.frame = CGRectMake(0, 0, thumbSizeValue, thumbSizeValue);
-    self.thumbL.frame = CGRectMake(0, 0, thumbSizeValue, thumbSizeValue);
+    self.thumbView.frame = CGRectMake( - thumbSizeValue / 2.0, - thumbSizeValue / 2.0, thumbSizeValue, thumbSizeValue);
     
     
     self.backgroundView.layer.cornerRadius = trackWidth/2.0;
     self.progressView.layer.cornerRadius = trackWidth/2.0;
     self.thumbView.layer.cornerRadius = _thumbView.frame.size.width/2;
-    
-    self.thumbL.layer.cornerRadius = thumbSizeValue / 2.0;
-    self.thumbL.layer.masksToBounds = YES;
-    
-    CAGradientLayer *gradientLayer = [[CAGradientLayer alloc] init];
-    gradientLayer.frame = CGRectMake(0, 0, trackWidth, trackHeight);
-    gradientLayer.startPoint = CGPointMake(0.5, 1);
-    gradientLayer.endPoint = CGPointMake(0.5, 0);
-    CGColorRef color3 = [UIColor whiteColor].CGColor;
-    CGColorRef color4 = [UIColor redColor].CGColor;
-
-    gradientLayer.colors = @[(__bridge id)color3, (__bridge id)color4];
-    gradientLayer.mask = self.progressView.layer;
-    [self.trackContView.layer insertSublayer:gradientLayer atIndex:0];
-    
     
     for (int i = 0; i < _setting.step; i++) {
         UIView *pView = [[UIView alloc] initWithFrame:CGRectMake(0, trackHeight / (_setting.step + 1) * (i + 1) - 1 , trackWidth, 2)];
@@ -125,7 +129,10 @@
        
     }
     
- 
+    UIImage *image = [[UIImage imageNamed:@"21681638779219"] imageByRotate180];
+    self.progressView.layer.contents = (id)image.CGImage;
+    self.progressView.clipsToBounds = YES;
+    
 }
 
 - (void)setSetting:(YTSliderSetting *)setting {
@@ -164,6 +171,7 @@
             percent = (self.thumbView.center.x - anchorPosition)/thumbArea_length ;
         }
         else {
+           
             movePosition = MAX(minPosition, point.y);
             movePosition = MIN(maxPosition, movePosition);
             self.thumbView.center = CGPointMake(self.thumbView.center.x, movePosition);
@@ -195,14 +203,12 @@
         self.progressView.frame = CGRectMake(progressStart, self.progressView.frame.origin.y,progressEnd - progressStart,trackHeight);
     }
     else {
-        CGFloat progressStart = MIN(_anchorPercent*trackHeight, CGRectGetMinY(self.thumbView.frame));
-        CGFloat progressEnd = MAX(_anchorPercent*trackHeight, CGRectGetMaxY(self.thumbView.frame));
-        self.progressView.frame = CGRectMake(self.progressView.frame.origin.x, progressStart,trackWidth,progressEnd - progressStart);
+//        CGFloat progressStart = MIN(_anchorPercent*trackHeight, CGRectGetMinY(self.thumbView.frame));
+//        CGFloat progressEnd = MAX(_anchorPercent*trackHeight, CGRectGetMaxY(self.thumbView.frame));
         
+        self.progressView.frame = CGRectMake(self.progressView.frame.origin.x, 0,trackWidth,_currentPercent * trackHeight);
     }
-    
-
-    
+        
 }
 
 
@@ -211,14 +217,12 @@
         anchorPosition = min_thumbArea_v + (trackWidth - thumbSizeValue)*_anchorPercent;
         self.trackContView.center = CGPointMake(self.trackContView.center.x, self.frame.size.height/2);
         self.thumbView.center = CGPointMake(anchorPosition, trackHeight/2);
-        self.thumbL.center = CGPointMake(trackWidth/2, anchorPosition);
 
     }
     else {
         anchorPosition = min_thumbArea_v + (trackHeight - thumbSizeValue)*_anchorPercent;
         self.trackContView.center = CGPointMake(self.trackContView.center.x, self.frame.size.height/2);
-        self.thumbView.center = CGPointMake(trackWidth/2, anchorPosition);
-        self.thumbL.center = CGPointMake(trackWidth/2, anchorPosition);
+        self.thumbView.center = CGPointMake(trackWidth/2, 0);
 
     }
 }
@@ -233,12 +237,13 @@
     _currentPercent = MAX(minPercent, _currentPercent);
     _currentPercent = MIN(maXPercent, _currentPercent);
     
-    CGFloat center_v = thumbArea_length*_currentPercent+anchorPosition;
+    CGFloat center_v = thumbArea_length * _currentPercent+anchorPosition;
     if(_setting.layoutDirection == YTSliderLayoutDirectionHorizontal) {
         self.thumbView.center = CGPointMake(center_v, self.thumbView.center.y);
     }
     else {
-        self.thumbView.center = CGPointMake(self.thumbView.center.x, center_v);
+       
+        self.thumbView.center = CGPointMake(self.thumbView.center.x, _currentPercent * self.height);
     }
     
     [self layoutProgress];
@@ -257,6 +262,7 @@
         _backgroundView = [[UIView alloc]initWithFrame:self.bounds];
         _backgroundView.backgroundColor = [UIColor whiteColor];
         _backgroundView.layer.cornerRadius = thumbSizeValue/2;
+       
     }
     return _backgroundView;
 }
@@ -287,23 +293,9 @@
         _thumbView.backgroundColor = [UIColor whiteColor];
         _thumbView.layer.cornerRadius = _thumbView.frame.size.width/2;
         
-       
-        [_thumbView addSubview:self.thumbL];
-        
-        
     }
     return _thumbView;
 }
 
-- (UILabel *)thumbL{
-    if (!_thumbL) {
-        _thumbL = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, thumbSizeValue, thumbSizeValue)];
-        _thumbL.font = [UIFont systemFontOfSize:8];
-        _thumbL.textColor = [UIColor whiteColor];
-        _thumbL.textAlignment = NSTextAlignmentCenter;
-//        _thumbL.adjustsFontSizeToFitWidth = YES;
-//        _thumbL.minimumScaleFactor = 0.1;
-    }
-    return _thumbL;
-}
+
 @end

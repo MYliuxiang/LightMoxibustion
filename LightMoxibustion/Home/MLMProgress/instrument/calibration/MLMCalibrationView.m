@@ -71,7 +71,7 @@ typedef enum {
 #pragma mark - 绘画
 - (void)drawCalibration {
     bottomWidth = _majorScaleLength>_smallScaleLength?_majorScaleLength:_smallScaleLength;
-    circleRadius = self.width/2 - bottomWidth/2 - _edgeSpace;
+    circleRadius = self.width/2 - bottomWidth/2 - _edgeSpace - self.majorScaleWidth / 2.0;
     //画背景
 //    [self drawBottom];
     //画刻度
@@ -209,6 +209,7 @@ typedef enum {
     //每个大刻度对应的角度
     CGFloat singleAngle = (_endAngle - _startAngle)/(textArray.count - 1);
     for (NSInteger i = 0; i < textArray.count; i ++) {
+
         //每个大刻度对应的角度
         CGFloat degree = _startAngle + i * singleAngle;
         CGFloat angle = DEGREES_TO_RADIANS(degree);
@@ -226,7 +227,10 @@ typedef enum {
         scaleLable.text          = [NSString stringWithFormat:@"%@",textArray[i]];
         scaleLable.font          = _scaleFont;
         scaleLable.textColor     = _majorTextColor;
-        [self addSubview:scaleLable];
+        if (i % 2 == 0) {
+            [self addSubview:scaleLable];
+            
+        }
         
         if (_textType == MLMCalibrationViewCustom) {
             //使用中心点
@@ -239,11 +243,15 @@ typedef enum {
             NSInteger angleCos = (10000 * cosf(angle));
             if (angleCos == 0) {
                 offx = -textSize.width/2;
+                offy = -textSize.width;
+
             } else if (angleCos < 0) {
-                offy = -textSize.height/2;
+                offy = -textSize.height / 2;
+                offx = -textSize.height / 2;
+
             } else {
                 offy = -textSize.height/2;
-                offx = -textSize.width;
+                offx = 0;
             }
             
             scaleLable.frame = CGRectMake(majorCenter.x+offx, majorCenter.y+offy, textSize.width, _scaleFont.lineHeight);

@@ -10,8 +10,8 @@
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-#define  kScreenHeight [[UIScreen mainScreen] bounds].size.height
-#define  kScreenWidth [[UIScreen mainScreen] bounds].size.width
+//#define  kScreenHeight [[UIScreen mainScreen] bounds].size.height
+//#define  kScreenWidth [[UIScreen mainScreen] bounds].size.width
 #define  LxUserDefaults [NSUserDefaults standardUserDefaults]
 
 #define IS_iPhoneX (\
@@ -28,8 +28,8 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define RCDLocalizedString(key) NSLocalizedStringFromTable(key, @"SealTalk", nil)
 
 
-#define HeightScale  [UIScreen mainScreen].bounds.size.height/1600)
-#define WidthScale [UIScreen mainScreen].bounds.size.width/720)
+#define HeightScale  ([UIScreen mainScreen].bounds.size.height/800)
+#define WidthScale ([UIScreen mainScreen].bounds.size.width/360)
 
 
 /*状态栏高度*/
@@ -92,6 +92,35 @@ typedef unsigned short U16;
 typedef unsigned int U32;
 
 #define COMMON_PKG_LENGTH 20
+
+#define DeviceChange @"DeviceChange"
+
+#define MACADRESS @"macAdress"
+
+
+
+#import "BleDevice.h"
+
+#import "SVProgressHUD.h"
+
+#import "HLBLEManager.h"
+
+#import "HandleData.h"
+
+#import "SendData.h"
+
+#import "TemperatureModel.h"
+#import "CurrentTemModel.h"
+#import "WorkCountdownModel.h"
+#import "QuantityModel.h"
+#import "CurrentLaserModel.h"
+#import "CurrentRateModel.h"
+#import "CurrentTemModel.h"
+#import "VersionModel.h"
+#import "ChargeStateModel.h"
+#import "CurrentSetTimeModel.h"
+
+
 
 
 //第三方

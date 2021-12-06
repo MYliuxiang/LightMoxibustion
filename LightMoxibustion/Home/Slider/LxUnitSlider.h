@@ -7,10 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LxUnitSlider;
+@protocol LxUnitSliderDelegate <NSObject>
+
+@optional
+
+- (void)unitSliderView:(LxUnitSlider *)slider didChangePercent:(NSInteger)percent;
+
+@end
+
 
 @interface LxUnitSlider : UIView
 
 @property (assign, nonatomic) NSInteger currentPercent;
+@property (weak, nonatomic) id<LxUnitSliderDelegate> delegate;
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titles total:(float)totalValue thumbTitle:(NSString *)thumbTitle;
 @end

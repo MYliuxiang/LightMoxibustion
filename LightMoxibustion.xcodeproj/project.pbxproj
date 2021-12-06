@@ -59,25 +59,45 @@
 		29739702274CCE6D0030613D /* HandTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 29739701274CCE6D0030613D /* HandTool.m */; };
 		29739707274CCF9A0030613D /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29739705274CCF9A0030613D /* HomeVC.m */; };
 		29739708274CCF9A0030613D /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29739706274CCF9A0030613D /* HomeVC.xib */; };
-		2973970D274CD4720030613D /* HLBLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2973970B274CD4720030613D /* HLBLEManager.m */; };
 		29739711274CD5530030613D /* CRC16.m in Sources */ = {isa = PBXBuildFile; fileRef = 29739710274CD5530030613D /* CRC16.m */; };
-		29739715274CD7050030613D /* TemperaturePkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 29739714274CD7050030613D /* TemperaturePkg.m */; };
-		2973971B274CE4A90030613D /* RatePkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2973971A274CE4A90030613D /* RatePkg.m */; };
-		2973971E274CE4D70030613D /* LaserPkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2973971D274CE4D70030613D /* LaserPkg.m */; };
-		29739721274CE4FF0030613D /* QuantityPkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 29739720274CE4FF0030613D /* QuantityPkg.m */; };
-		29739724274CE5210030613D /* RealTimeTem.m in Sources */ = {isa = PBXBuildFile; fileRef = 29739723274CE5210030613D /* RealTimeTem.m */; };
-		29739727274CE58F0030613D /* WorkCountdownPkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 29739726274CE58F0030613D /* WorkCountdownPkg.m */; };
-		2973972A274CE5BE0030613D /* CurrentLaserPkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 29739729274CE5BE0030613D /* CurrentLaserPkg.m */; };
-		2973972D274CE5D10030613D /* CurrentRatePkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2973972C274CE5D10030613D /* CurrentRatePkg.m */; };
-		29739730274CE5E50030613D /* CurrentTemPkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2973972F274CE5E50030613D /* CurrentTemPkg.m */; };
-		29739733274CE6050030613D /* HeartbeatPkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 29739732274CE6050030613D /* HeartbeatPkg.m */; };
-		29739736274CE6150030613D /* VersionPkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 29739735274CE6150030613D /* VersionPkg.m */; };
-		29739739274CE6480030613D /* ChargeStatePkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 29739738274CE6480030613D /* ChargeStatePkg.m */; };
-		2973973C274CE66F0030613D /* QuestChargeStatePkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2973973B274CE66F0030613D /* QuestChargeStatePkg.m */; };
-		2973973F274CE67D0030613D /* SetWorkTimePkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2973973E274CE67D0030613D /* SetWorkTimePkg.m */; };
-		29739742274CE69F0030613D /* QuestTemPkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 29739741274CE69F0030613D /* QuestTemPkg.m */; };
+		2975A9AC275DA9630097D72C /* HandleData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9A6275DA9630097D72C /* HandleData.m */; };
+		2975A9AD275DA9630097D72C /* HLBLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9A8275DA9630097D72C /* HLBLEManager.m */; };
+		2975A9AE275DA9630097D72C /* SendData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9A9275DA9630097D72C /* SendData.m */; };
+		2975A9C8275DA98F0097D72C /* RealTimeTemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9B1275DA98F0097D72C /* RealTimeTemModel.m */; };
+		2975A9C9275DA98F0097D72C /* CurrentTemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9B3275DA98F0097D72C /* CurrentTemModel.m */; };
+		2975A9CA275DA98F0097D72C /* BleDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9B8275DA98F0097D72C /* BleDevice.m */; };
+		2975A9CB275DA98F0097D72C /* VersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9B9275DA98F0097D72C /* VersionModel.m */; };
+		2975A9CC275DA98F0097D72C /* ChargeStateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9BA275DA98F0097D72C /* ChargeStateModel.m */; };
+		2975A9CD275DA98F0097D72C /* QuantityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9BC275DA98F0097D72C /* QuantityModel.m */; };
+		2975A9CE275DA98F0097D72C /* TemperatureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9BE275DA98F0097D72C /* TemperatureModel.m */; };
+		2975A9CF275DA98F0097D72C /* QuestTemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9BF275DA98F0097D72C /* QuestTemModel.m */; };
+		2975A9D0275DA98F0097D72C /* CurrentLaserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9C0275DA98F0097D72C /* CurrentLaserModel.m */; };
+		2975A9D1275DA98F0097D72C /* CurrentRateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9C4275DA98F0097D72C /* CurrentRateModel.m */; };
+		2975A9D2275DA98F0097D72C /* WorkCountdownModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9C5275DA98F0097D72C /* WorkCountdownModel.m */; };
+		2975A9D3275DA98F0097D72C /* CurrentSetTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9C6275DA98F0097D72C /* CurrentSetTimeModel.m */; };
+		2975A9EF275DA9980097D72C /* HeartbeatPkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9D6275DA9980097D72C /* HeartbeatPkg.m */; };
+		2975A9F0275DA9980097D72C /* CurrentTemPkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9D7275DA9980097D72C /* CurrentTemPkg.m */; };
+		2975A9F1275DA9980097D72C /* CurrentRatePkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9D8275DA9980097D72C /* CurrentRatePkg.m */; };
+		2975A9F2275DA9980097D72C /* CurrentLaserPkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9D9275DA9980097D72C /* CurrentLaserPkg.m */; };
+		2975A9F3275DA9980097D72C /* QuestChargeStatePkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9DA275DA9980097D72C /* QuestChargeStatePkg.m */; };
+		2975A9F4275DA9980097D72C /* VersionPkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9DB275DA9980097D72C /* VersionPkg.m */; };
+		2975A9F5275DA9980097D72C /* ChargeStatePkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9DE275DA9980097D72C /* ChargeStatePkg.m */; };
+		2975A9F6275DA9980097D72C /* SetWorkTimePkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9DF275DA9980097D72C /* SetWorkTimePkg.m */; };
+		2975A9F7275DA9980097D72C /* LaserPkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9E0275DA9980097D72C /* LaserPkg.m */; };
+		2975A9F8275DA9980097D72C /* RatePkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9E1275DA9980097D72C /* RatePkg.m */; };
+		2975A9F9275DA9980097D72C /* TemperaturePkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9E5275DA9980097D72C /* TemperaturePkg.m */; };
+		2975A9FA275DA9980097D72C /* QuantityPkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9E6275DA9980097D72C /* QuantityPkg.m */; };
+		2975A9FB275DA9980097D72C /* GetCurrentSetTimePkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9EB275DA9980097D72C /* GetCurrentSetTimePkg.m */; };
+		2975AA02275DA9A90097D72C /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2975A9FC275DA9A90097D72C /* DeviceCell.xib */; };
+		2975AA03275DA9A90097D72C /* DevicesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2975A9FD275DA9A90097D72C /* DevicesVC.xib */; };
+		2975AA04275DA9A90097D72C /* DevicesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975AA00275DA9A90097D72C /* DevicesVC.m */; };
+		2975AA05275DA9A90097D72C /* DeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975AA01275DA9A90097D72C /* DeviceCell.m */; };
+		2975AA11275DA9EB0097D72C /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975AA07275DA9EB0097D72C /* SVRadialGradientLayer.m */; };
+		2975AA12275DA9EB0097D72C /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975AA0A275DA9EB0097D72C /* SVProgressAnimatedView.m */; };
+		2975AA13275DA9EB0097D72C /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975AA0D275DA9EB0097D72C /* SVProgressHUD.m */; };
+		2975AA14275DA9EB0097D72C /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975AA0E275DA9EB0097D72C /* SVIndefiniteAnimatedView.m */; };
+		2975AA15275DA9EB0097D72C /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2975AA0F275DA9EB0097D72C /* SVProgressHUD.bundle */; };
 		297D556F2758651F00C1A385 /* HRNumberUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 297D556E2758651F00C1A385 /* HRNumberUnitView.m */; };
-		299157482756453400D17F66 /* PPColorfulSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 299157442756453400D17F66 /* PPColorfulSlider.m */; };
 		299157492756453400D17F66 /* LxUnitSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 299157472756453400D17F66 /* LxUnitSlider.m */; };
 		29A560C62759FF840024847F /* NumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A560C52759FF840024847F /* NumberView.m */; };
 		29A560C9275A0E610024847F /* TimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A560C8275A0E610024847F /* TimeView.m */; };
@@ -205,47 +225,85 @@
 		29739704274CCF9A0030613D /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		29739705274CCF9A0030613D /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
 		29739706274CCF9A0030613D /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
-		2973970A274CD4720030613D /* HLBLEConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBLEConst.h; sourceTree = "<group>"; };
-		2973970B274CD4720030613D /* HLBLEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLBLEManager.m; sourceTree = "<group>"; };
-		2973970C274CD4720030613D /* HLBLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBLEManager.h; sourceTree = "<group>"; };
 		2973970F274CD5530030613D /* CRC16.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRC16.h; sourceTree = "<group>"; };
 		29739710274CD5530030613D /* CRC16.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRC16.m; sourceTree = "<group>"; };
-		29739713274CD7050030613D /* TemperaturePkg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TemperaturePkg.h; sourceTree = "<group>"; };
-		29739714274CD7050030613D /* TemperaturePkg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TemperaturePkg.m; sourceTree = "<group>"; };
-		29739719274CE4A90030613D /* RatePkg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RatePkg.h; sourceTree = "<group>"; };
-		2973971A274CE4A90030613D /* RatePkg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RatePkg.m; sourceTree = "<group>"; };
-		2973971C274CE4D70030613D /* LaserPkg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaserPkg.h; sourceTree = "<group>"; };
-		2973971D274CE4D70030613D /* LaserPkg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaserPkg.m; sourceTree = "<group>"; };
-		2973971F274CE4FF0030613D /* QuantityPkg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuantityPkg.h; sourceTree = "<group>"; };
-		29739720274CE4FF0030613D /* QuantityPkg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuantityPkg.m; sourceTree = "<group>"; };
-		29739722274CE5210030613D /* RealTimeTem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealTimeTem.h; sourceTree = "<group>"; };
-		29739723274CE5210030613D /* RealTimeTem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealTimeTem.m; sourceTree = "<group>"; };
-		29739725274CE58F0030613D /* WorkCountdownPkg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkCountdownPkg.h; sourceTree = "<group>"; };
-		29739726274CE58F0030613D /* WorkCountdownPkg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkCountdownPkg.m; sourceTree = "<group>"; };
-		29739728274CE5BE0030613D /* CurrentLaserPkg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentLaserPkg.h; sourceTree = "<group>"; };
-		29739729274CE5BE0030613D /* CurrentLaserPkg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentLaserPkg.m; sourceTree = "<group>"; };
-		2973972B274CE5D10030613D /* CurrentRatePkg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentRatePkg.h; sourceTree = "<group>"; };
-		2973972C274CE5D10030613D /* CurrentRatePkg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentRatePkg.m; sourceTree = "<group>"; };
-		2973972E274CE5E50030613D /* CurrentTemPkg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentTemPkg.h; sourceTree = "<group>"; };
-		2973972F274CE5E50030613D /* CurrentTemPkg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentTemPkg.m; sourceTree = "<group>"; };
-		29739731274CE6050030613D /* HeartbeatPkg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeartbeatPkg.h; sourceTree = "<group>"; };
-		29739732274CE6050030613D /* HeartbeatPkg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeartbeatPkg.m; sourceTree = "<group>"; };
-		29739734274CE6150030613D /* VersionPkg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VersionPkg.h; sourceTree = "<group>"; };
-		29739735274CE6150030613D /* VersionPkg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VersionPkg.m; sourceTree = "<group>"; };
-		29739737274CE6480030613D /* ChargeStatePkg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChargeStatePkg.h; sourceTree = "<group>"; };
-		29739738274CE6480030613D /* ChargeStatePkg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChargeStatePkg.m; sourceTree = "<group>"; };
-		2973973A274CE66F0030613D /* QuestChargeStatePkg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestChargeStatePkg.h; sourceTree = "<group>"; };
-		2973973B274CE66F0030613D /* QuestChargeStatePkg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestChargeStatePkg.m; sourceTree = "<group>"; };
-		2973973D274CE67D0030613D /* SetWorkTimePkg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetWorkTimePkg.h; sourceTree = "<group>"; };
-		2973973E274CE67D0030613D /* SetWorkTimePkg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetWorkTimePkg.m; sourceTree = "<group>"; };
-		29739740274CE69F0030613D /* QuestTemPkg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestTemPkg.h; sourceTree = "<group>"; };
-		29739741274CE69F0030613D /* QuestTemPkg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestTemPkg.m; sourceTree = "<group>"; };
 		2973F8B5B99BA3E93764E1C0 /* Pods-LightMoxibustion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightMoxibustion.debug.xcconfig"; path = "Target Support Files/Pods-LightMoxibustion/Pods-LightMoxibustion.debug.xcconfig"; sourceTree = "<group>"; };
+		2975A9A5275DA9630097D72C /* SendData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendData.h; sourceTree = "<group>"; };
+		2975A9A6275DA9630097D72C /* HandleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleData.m; sourceTree = "<group>"; };
+		2975A9A7275DA9630097D72C /* HLBLEConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBLEConst.h; sourceTree = "<group>"; };
+		2975A9A8275DA9630097D72C /* HLBLEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLBLEManager.m; sourceTree = "<group>"; };
+		2975A9A9275DA9630097D72C /* SendData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendData.m; sourceTree = "<group>"; };
+		2975A9AA275DA9630097D72C /* HandleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleData.h; sourceTree = "<group>"; };
+		2975A9AB275DA9630097D72C /* HLBLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBLEManager.h; sourceTree = "<group>"; };
+		2975A9B0275DA98F0097D72C /* TemperatureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureModel.h; sourceTree = "<group>"; };
+		2975A9B1275DA98F0097D72C /* RealTimeTemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealTimeTemModel.m; sourceTree = "<group>"; };
+		2975A9B2275DA98F0097D72C /* QuantityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuantityModel.h; sourceTree = "<group>"; };
+		2975A9B3275DA98F0097D72C /* CurrentTemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentTemModel.m; sourceTree = "<group>"; };
+		2975A9B4275DA98F0097D72C /* CurrentLaserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentLaserModel.h; sourceTree = "<group>"; };
+		2975A9B5275DA98F0097D72C /* QuestTemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestTemModel.h; sourceTree = "<group>"; };
+		2975A9B6275DA98F0097D72C /* WorkCountdownModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkCountdownModel.h; sourceTree = "<group>"; };
+		2975A9B7275DA98F0097D72C /* CurrentRateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentRateModel.h; sourceTree = "<group>"; };
+		2975A9B8275DA98F0097D72C /* BleDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BleDevice.m; sourceTree = "<group>"; };
+		2975A9B9275DA98F0097D72C /* VersionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionModel.m; sourceTree = "<group>"; };
+		2975A9BA275DA98F0097D72C /* ChargeStateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeStateModel.m; sourceTree = "<group>"; };
+		2975A9BB275DA98F0097D72C /* CurrentSetTimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentSetTimeModel.h; sourceTree = "<group>"; };
+		2975A9BC275DA98F0097D72C /* QuantityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuantityModel.m; sourceTree = "<group>"; };
+		2975A9BD275DA98F0097D72C /* RealTimeTemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTimeTemModel.h; sourceTree = "<group>"; };
+		2975A9BE275DA98F0097D72C /* TemperatureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureModel.m; sourceTree = "<group>"; };
+		2975A9BF275DA98F0097D72C /* QuestTemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestTemModel.m; sourceTree = "<group>"; };
+		2975A9C0275DA98F0097D72C /* CurrentLaserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentLaserModel.m; sourceTree = "<group>"; };
+		2975A9C1275DA98F0097D72C /* CurrentTemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentTemModel.h; sourceTree = "<group>"; };
+		2975A9C2275DA98F0097D72C /* VersionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionModel.h; sourceTree = "<group>"; };
+		2975A9C3275DA98F0097D72C /* BleDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BleDevice.h; sourceTree = "<group>"; };
+		2975A9C4275DA98F0097D72C /* CurrentRateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentRateModel.m; sourceTree = "<group>"; };
+		2975A9C5275DA98F0097D72C /* WorkCountdownModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkCountdownModel.m; sourceTree = "<group>"; };
+		2975A9C6275DA98F0097D72C /* CurrentSetTimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentSetTimeModel.m; sourceTree = "<group>"; };
+		2975A9C7275DA98F0097D72C /* ChargeStateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeStateModel.h; sourceTree = "<group>"; };
+		2975A9D5275DA9980097D72C /* TemperaturePkg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperaturePkg.h; sourceTree = "<group>"; };
+		2975A9D6275DA9980097D72C /* HeartbeatPkg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartbeatPkg.m; sourceTree = "<group>"; };
+		2975A9D7275DA9980097D72C /* CurrentTemPkg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentTemPkg.m; sourceTree = "<group>"; };
+		2975A9D8275DA9980097D72C /* CurrentRatePkg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentRatePkg.m; sourceTree = "<group>"; };
+		2975A9D9275DA9980097D72C /* CurrentLaserPkg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentLaserPkg.m; sourceTree = "<group>"; };
+		2975A9DA275DA9980097D72C /* QuestChargeStatePkg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestChargeStatePkg.m; sourceTree = "<group>"; };
+		2975A9DB275DA9980097D72C /* VersionPkg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionPkg.m; sourceTree = "<group>"; };
+		2975A9DC275DA9980097D72C /* QuantityPkg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuantityPkg.h; sourceTree = "<group>"; };
+		2975A9DD275DA9980097D72C /* GetCurrentSetTimePkg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetCurrentSetTimePkg.h; sourceTree = "<group>"; };
+		2975A9DE275DA9980097D72C /* ChargeStatePkg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeStatePkg.m; sourceTree = "<group>"; };
+		2975A9DF275DA9980097D72C /* SetWorkTimePkg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetWorkTimePkg.m; sourceTree = "<group>"; };
+		2975A9E0275DA9980097D72C /* LaserPkg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaserPkg.m; sourceTree = "<group>"; };
+		2975A9E1275DA9980097D72C /* RatePkg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatePkg.m; sourceTree = "<group>"; };
+		2975A9E2275DA9980097D72C /* CurrentRatePkg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentRatePkg.h; sourceTree = "<group>"; };
+		2975A9E3275DA9980097D72C /* CurrentTemPkg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentTemPkg.h; sourceTree = "<group>"; };
+		2975A9E4275DA9980097D72C /* HeartbeatPkg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartbeatPkg.h; sourceTree = "<group>"; };
+		2975A9E5275DA9980097D72C /* TemperaturePkg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperaturePkg.m; sourceTree = "<group>"; };
+		2975A9E6275DA9980097D72C /* QuantityPkg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuantityPkg.m; sourceTree = "<group>"; };
+		2975A9E7275DA9980097D72C /* VersionPkg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionPkg.h; sourceTree = "<group>"; };
+		2975A9E8275DA9980097D72C /* CurrentLaserPkg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentLaserPkg.h; sourceTree = "<group>"; };
+		2975A9E9275DA9980097D72C /* QuestChargeStatePkg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestChargeStatePkg.h; sourceTree = "<group>"; };
+		2975A9EA275DA9980097D72C /* ChargeStatePkg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeStatePkg.h; sourceTree = "<group>"; };
+		2975A9EB275DA9980097D72C /* GetCurrentSetTimePkg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetCurrentSetTimePkg.m; sourceTree = "<group>"; };
+		2975A9EC275DA9980097D72C /* RatePkg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatePkg.h; sourceTree = "<group>"; };
+		2975A9ED275DA9980097D72C /* LaserPkg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaserPkg.h; sourceTree = "<group>"; };
+		2975A9EE275DA9980097D72C /* SetWorkTimePkg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetWorkTimePkg.h; sourceTree = "<group>"; };
+		2975A9FC275DA9A90097D72C /* DeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
+		2975A9FD275DA9A90097D72C /* DevicesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DevicesVC.xib; sourceTree = "<group>"; };
+		2975A9FE275DA9A90097D72C /* DevicesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevicesVC.h; sourceTree = "<group>"; };
+		2975A9FF275DA9A90097D72C /* DeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceCell.h; sourceTree = "<group>"; };
+		2975AA00275DA9A90097D72C /* DevicesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevicesVC.m; sourceTree = "<group>"; };
+		2975AA01275DA9A90097D72C /* DeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceCell.m; sourceTree = "<group>"; };
+		2975AA07275DA9EB0097D72C /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		2975AA08275DA9EB0097D72C /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		2975AA09275DA9EB0097D72C /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		2975AA0A275DA9EB0097D72C /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		2975AA0B275DA9EB0097D72C /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		2975AA0C275DA9EB0097D72C /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		2975AA0D275DA9EB0097D72C /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		2975AA0E275DA9EB0097D72C /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		2975AA0F275DA9EB0097D72C /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		2975AA10275DA9EB0097D72C /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
 		297D556D2758651F00C1A385 /* HRNumberUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRNumberUnitView.h; sourceTree = "<group>"; };
 		297D556E2758651F00C1A385 /* HRNumberUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRNumberUnitView.m; sourceTree = "<group>"; };
-		299157442756453400D17F66 /* PPColorfulSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPColorfulSlider.m; sourceTree = "<group>"; };
 		299157452756453400D17F66 /* LxUnitSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxUnitSlider.h; sourceTree = "<group>"; };
-		299157462756453400D17F66 /* PPColorfulSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPColorfulSlider.h; sourceTree = "<group>"; };
 		299157472756453400D17F66 /* LxUnitSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxUnitSlider.m; sourceTree = "<group>"; };
 		29A560C42759FF840024847F /* NumberView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberView.h; sourceTree = "<group>"; };
 		29A560C52759FF840024847F /* NumberView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberView.m; sourceTree = "<group>"; };
@@ -322,7 +380,7 @@
 				29739653274CC44B0030613D /* AppDelegate.m */,
 				297396FD274CCCFB0030613D /* AppService.h */,
 				297396FC274CCCFA0030613D /* AppService.m */,
-				29739709274CD4720030613D /* HLBluetooth */,
+				2975A9A4275DA9630097D72C /* HLBluetooth */,
 				29739703274CCF530030613D /* Home */,
 				2973966B274CC9100030613D /* Base */,
 				29739674274CC95E0030613D /* Tool */,
@@ -351,6 +409,7 @@
 		29739674274CC95E0030613D /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				2975AA06275DA9EB0097D72C /* SVProgressHUD */,
 				297396F0274CCB3C0030613D /* LxCustomAlert.h */,
 				297396ED274CCB3C0030613D /* LxCustomAlert.m */,
 				297396F1274CCB3C0030613D /* LxDelayed.h */,
@@ -507,28 +566,25 @@
 		29739703274CCF530030613D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				2975A9D4275DA9980097D72C /* Pkg */,
+				2975A9AF275DA98F0097D72C /* Model */,
 				29A560C32759FF5D0024847F /* Views */,
 				297D556C2758651000C1A385 /* LEDView */,
 				29FCE65D2754C69C003B0E7C /* MLMProgress */,
-				29739712274CD6930030613D /* Pkg */,
 				2973970E274CD5370030613D /* BlueTool */,
 				29739704274CCF9A0030613D /* HomeVC.h */,
 				29739705274CCF9A0030613D /* HomeVC.m */,
 				29739706274CCF9A0030613D /* HomeVC.xib */,
+				2975A9FF275DA9A90097D72C /* DeviceCell.h */,
+				2975AA01275DA9A90097D72C /* DeviceCell.m */,
+				2975A9FC275DA9A90097D72C /* DeviceCell.xib */,
+				2975A9FE275DA9A90097D72C /* DevicesVC.h */,
+				2975AA00275DA9A90097D72C /* DevicesVC.m */,
+				2975A9FD275DA9A90097D72C /* DevicesVC.xib */,
 				299157432756453400D17F66 /* Slider */,
 				29FCE68A2754E408003B0E7C /* 自定义Slider */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		29739709274CD4720030613D /* HLBluetooth */ = {
-			isa = PBXGroup;
-			children = (
-				2973970A274CD4720030613D /* HLBLEConst.h */,
-				2973970B274CD4720030613D /* HLBLEManager.m */,
-				2973970C274CD4720030613D /* HLBLEManager.h */,
-			);
-			path = HLBluetooth;
 			sourceTree = "<group>";
 		};
 		2973970E274CD5370030613D /* BlueTool */ = {
@@ -540,41 +596,99 @@
 			path = BlueTool;
 			sourceTree = "<group>";
 		};
-		29739712274CD6930030613D /* Pkg */ = {
+		2975A9A4275DA9630097D72C /* HLBluetooth */ = {
 			isa = PBXGroup;
 			children = (
-				29739713274CD7050030613D /* TemperaturePkg.h */,
-				29739714274CD7050030613D /* TemperaturePkg.m */,
-				29739719274CE4A90030613D /* RatePkg.h */,
-				2973971A274CE4A90030613D /* RatePkg.m */,
-				2973971C274CE4D70030613D /* LaserPkg.h */,
-				2973971D274CE4D70030613D /* LaserPkg.m */,
-				2973971F274CE4FF0030613D /* QuantityPkg.h */,
-				29739720274CE4FF0030613D /* QuantityPkg.m */,
-				29739722274CE5210030613D /* RealTimeTem.h */,
-				29739723274CE5210030613D /* RealTimeTem.m */,
-				29739725274CE58F0030613D /* WorkCountdownPkg.h */,
-				29739726274CE58F0030613D /* WorkCountdownPkg.m */,
-				29739728274CE5BE0030613D /* CurrentLaserPkg.h */,
-				29739729274CE5BE0030613D /* CurrentLaserPkg.m */,
-				2973972B274CE5D10030613D /* CurrentRatePkg.h */,
-				2973972C274CE5D10030613D /* CurrentRatePkg.m */,
-				2973972E274CE5E50030613D /* CurrentTemPkg.h */,
-				2973972F274CE5E50030613D /* CurrentTemPkg.m */,
-				29739731274CE6050030613D /* HeartbeatPkg.h */,
-				29739732274CE6050030613D /* HeartbeatPkg.m */,
-				29739734274CE6150030613D /* VersionPkg.h */,
-				29739735274CE6150030613D /* VersionPkg.m */,
-				29739737274CE6480030613D /* ChargeStatePkg.h */,
-				29739738274CE6480030613D /* ChargeStatePkg.m */,
-				2973973A274CE66F0030613D /* QuestChargeStatePkg.h */,
-				2973973B274CE66F0030613D /* QuestChargeStatePkg.m */,
-				2973973D274CE67D0030613D /* SetWorkTimePkg.h */,
-				2973973E274CE67D0030613D /* SetWorkTimePkg.m */,
-				29739740274CE69F0030613D /* QuestTemPkg.h */,
-				29739741274CE69F0030613D /* QuestTemPkg.m */,
+				2975A9A5275DA9630097D72C /* SendData.h */,
+				2975A9A6275DA9630097D72C /* HandleData.m */,
+				2975A9A7275DA9630097D72C /* HLBLEConst.h */,
+				2975A9A8275DA9630097D72C /* HLBLEManager.m */,
+				2975A9A9275DA9630097D72C /* SendData.m */,
+				2975A9AA275DA9630097D72C /* HandleData.h */,
+				2975A9AB275DA9630097D72C /* HLBLEManager.h */,
+			);
+			path = HLBluetooth;
+			sourceTree = "<group>";
+		};
+		2975A9AF275DA98F0097D72C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2975A9B0275DA98F0097D72C /* TemperatureModel.h */,
+				2975A9B1275DA98F0097D72C /* RealTimeTemModel.m */,
+				2975A9B2275DA98F0097D72C /* QuantityModel.h */,
+				2975A9B3275DA98F0097D72C /* CurrentTemModel.m */,
+				2975A9B4275DA98F0097D72C /* CurrentLaserModel.h */,
+				2975A9B5275DA98F0097D72C /* QuestTemModel.h */,
+				2975A9B6275DA98F0097D72C /* WorkCountdownModel.h */,
+				2975A9B7275DA98F0097D72C /* CurrentRateModel.h */,
+				2975A9B8275DA98F0097D72C /* BleDevice.m */,
+				2975A9B9275DA98F0097D72C /* VersionModel.m */,
+				2975A9BA275DA98F0097D72C /* ChargeStateModel.m */,
+				2975A9BB275DA98F0097D72C /* CurrentSetTimeModel.h */,
+				2975A9BC275DA98F0097D72C /* QuantityModel.m */,
+				2975A9BD275DA98F0097D72C /* RealTimeTemModel.h */,
+				2975A9BE275DA98F0097D72C /* TemperatureModel.m */,
+				2975A9BF275DA98F0097D72C /* QuestTemModel.m */,
+				2975A9C0275DA98F0097D72C /* CurrentLaserModel.m */,
+				2975A9C1275DA98F0097D72C /* CurrentTemModel.h */,
+				2975A9C2275DA98F0097D72C /* VersionModel.h */,
+				2975A9C3275DA98F0097D72C /* BleDevice.h */,
+				2975A9C4275DA98F0097D72C /* CurrentRateModel.m */,
+				2975A9C5275DA98F0097D72C /* WorkCountdownModel.m */,
+				2975A9C6275DA98F0097D72C /* CurrentSetTimeModel.m */,
+				2975A9C7275DA98F0097D72C /* ChargeStateModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2975A9D4275DA9980097D72C /* Pkg */ = {
+			isa = PBXGroup;
+			children = (
+				2975A9D5275DA9980097D72C /* TemperaturePkg.h */,
+				2975A9D6275DA9980097D72C /* HeartbeatPkg.m */,
+				2975A9D7275DA9980097D72C /* CurrentTemPkg.m */,
+				2975A9D8275DA9980097D72C /* CurrentRatePkg.m */,
+				2975A9D9275DA9980097D72C /* CurrentLaserPkg.m */,
+				2975A9DA275DA9980097D72C /* QuestChargeStatePkg.m */,
+				2975A9DB275DA9980097D72C /* VersionPkg.m */,
+				2975A9DC275DA9980097D72C /* QuantityPkg.h */,
+				2975A9DD275DA9980097D72C /* GetCurrentSetTimePkg.h */,
+				2975A9DE275DA9980097D72C /* ChargeStatePkg.m */,
+				2975A9DF275DA9980097D72C /* SetWorkTimePkg.m */,
+				2975A9E0275DA9980097D72C /* LaserPkg.m */,
+				2975A9E1275DA9980097D72C /* RatePkg.m */,
+				2975A9E2275DA9980097D72C /* CurrentRatePkg.h */,
+				2975A9E3275DA9980097D72C /* CurrentTemPkg.h */,
+				2975A9E4275DA9980097D72C /* HeartbeatPkg.h */,
+				2975A9E5275DA9980097D72C /* TemperaturePkg.m */,
+				2975A9E6275DA9980097D72C /* QuantityPkg.m */,
+				2975A9E7275DA9980097D72C /* VersionPkg.h */,
+				2975A9E8275DA9980097D72C /* CurrentLaserPkg.h */,
+				2975A9E9275DA9980097D72C /* QuestChargeStatePkg.h */,
+				2975A9EA275DA9980097D72C /* ChargeStatePkg.h */,
+				2975A9EB275DA9980097D72C /* GetCurrentSetTimePkg.m */,
+				2975A9EC275DA9980097D72C /* RatePkg.h */,
+				2975A9ED275DA9980097D72C /* LaserPkg.h */,
+				2975A9EE275DA9980097D72C /* SetWorkTimePkg.h */,
 			);
 			path = Pkg;
+			sourceTree = "<group>";
+		};
+		2975AA06275DA9EB0097D72C /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				2975AA07275DA9EB0097D72C /* SVRadialGradientLayer.m */,
+				2975AA08275DA9EB0097D72C /* SVIndefiniteAnimatedView.h */,
+				2975AA09275DA9EB0097D72C /* SVProgressHUD.h */,
+				2975AA0A275DA9EB0097D72C /* SVProgressAnimatedView.m */,
+				2975AA0B275DA9EB0097D72C /* SVProgressHUD-Prefix.pch */,
+				2975AA0C275DA9EB0097D72C /* SVRadialGradientLayer.h */,
+				2975AA0D275DA9EB0097D72C /* SVProgressHUD.m */,
+				2975AA0E275DA9EB0097D72C /* SVIndefiniteAnimatedView.m */,
+				2975AA0F275DA9EB0097D72C /* SVProgressHUD.bundle */,
+				2975AA10275DA9EB0097D72C /* SVProgressAnimatedView.h */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		297D556C2758651000C1A385 /* LEDView */ = {
@@ -589,8 +703,6 @@
 		299157432756453400D17F66 /* Slider */ = {
 			isa = PBXGroup;
 			children = (
-				299157462756453400D17F66 /* PPColorfulSlider.h */,
-				299157442756453400D17F66 /* PPColorfulSlider.m */,
 				299157452756453400D17F66 /* LxUnitSlider.h */,
 				299157472756453400D17F66 /* LxUnitSlider.m */,
 				29E42C9C27576EF600A8973A /* YTSliderView.h */,
@@ -777,14 +889,17 @@
 			files = (
 				297396D4274CCACE0030613D /* README.md in Resources */,
 				29739662274CC44C0030613D /* LaunchScreen.storyboard in Resources */,
+				2975AA03275DA9A90097D72C /* DevicesVC.xib in Resources */,
 				29739671274CC9240030613D /* BaseViewController.xib in Resources */,
 				2973965F274CC44C0030613D /* Assets.xcassets in Resources */,
 				2973965D274CC44B0030613D /* Main.storyboard in Resources */,
 				29FCE67D2754C69C003B0E7C /* redDot.png in Resources */,
 				297396D3274CCACE0030613D /* LICENSE in Resources */,
+				2975AA15275DA9EB0097D72C /* SVProgressHUD.bundle in Resources */,
 				29FCE67A2754C69C003B0E7C /* blueDot.png in Resources */,
 				29739708274CCF9A0030613D /* HomeVC.xib in Resources */,
 				29FCE6782754C69C003B0E7C /* brightDot.png in Resources */,
+				2975AA02275DA9A90097D72C /* DeviceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -841,80 +956,97 @@
 				299157492756453400D17F66 /* LxUnitSlider.m in Sources */,
 				29739654274CC44B0030613D /* AppDelegate.m in Sources */,
 				29FCE67B2754C69C003B0E7C /* MLMProgressView.m in Sources */,
+				2975A9F8275DA9980097D72C /* RatePkg.m in Sources */,
 				297396B8274CCAC40030613D /* NSString+Handel.m in Sources */,
 				297D556F2758651F00C1A385 /* HRNumberUnitView.m in Sources */,
+				2975A9F5275DA9980097D72C /* ChargeStatePkg.m in Sources */,
 				29739673274CC9240030613D /* BaseViewController.m in Sources */,
+				2975A9F3275DA9980097D72C /* QuestChargeStatePkg.m in Sources */,
 				29739707274CCF9A0030613D /* HomeVC.m in Sources */,
+				2975A9AD275DA9630097D72C /* HLBLEManager.m in Sources */,
+				2975A9CD275DA98F0097D72C /* QuantityModel.m in Sources */,
 				297396BB274CCAC40030613D /* UITextView+WZB.m in Sources */,
 				29739665274CC44C0030613D /* main.m in Sources */,
 				297396B7274CCAC40030613D /* NSDate+Utilities.m in Sources */,
-				29739724274CE5210030613D /* RealTimeTem.m in Sources */,
 				297396B6274CCAC40030613D /* UIView+ViewController.m in Sources */,
 				297396C3274CCAC40030613D /* UIView+Corners.m in Sources */,
 				29739683274CC9780030613D /* BADataEntity.m in Sources */,
+				2975AA14275DA9EB0097D72C /* SVIndefiniteAnimatedView.m in Sources */,
+				2975A9F4275DA9980097D72C /* VersionPkg.m in Sources */,
 				29739691274CCABB0030613D /* UIView+LYExtension.m in Sources */,
 				29FCE67F2754C69C003B0E7C /* UIView+MLMBorderPath.m in Sources */,
 				297396F7274CCB3C0030613D /* NibView.m in Sources */,
 				29FCE6822754C69C003B0E7C /* UIView+TapAction.m in Sources */,
+				2975A9D1275DA98F0097D72C /* CurrentRateModel.m in Sources */,
 				297396EB274CCAEE0030613D /* Reachability.m in Sources */,
+				2975A9D2275DA98F0097D72C /* WorkCountdownModel.m in Sources */,
 				29FCE6912754E408003B0E7C /* UIView+Extensionss.m in Sources */,
-				2973972A274CE5BE0030613D /* CurrentLaserPkg.m in Sources */,
 				297396E6274CCADB0030613D /* LxRefreshFooter.m in Sources */,
 				297396C2274CCAC40030613D /* NSDecimalNumber+Addtion.m in Sources */,
 				297396D9274CCACE0030613D /* TXLimitedTextView.m in Sources */,
+				2975A9EF275DA9980097D72C /* HeartbeatPkg.m in Sources */,
 				297396E0274CCAD40030613D /* WRCustomNavigationBar.m in Sources */,
 				29739680274CC9780030613D /* BANetManagerCache.m in Sources */,
 				297396D8274CCACE0030613D /* TXLimitedTextField.m in Sources */,
-				29739727274CE58F0030613D /* WorkCountdownPkg.m in Sources */,
-				29739742274CE69F0030613D /* QuestTemPkg.m in Sources */,
+				2975A9AE275DA9630097D72C /* SendData.m in Sources */,
 				29FCE67C2754C69C003B0E7C /* MLMCircleView.m in Sources */,
 				29739702274CCE6D0030613D /* HandTool.m in Sources */,
-				299157482756453400D17F66 /* PPColorfulSlider.m in Sources */,
-				2973971B274CE4A90030613D /* RatePkg.m in Sources */,
+				2975A9FA275DA9980097D72C /* QuantityPkg.m in Sources */,
+				2975A9F6275DA9980097D72C /* SetWorkTimePkg.m in Sources */,
+				2975A9F2275DA9980097D72C /* CurrentLaserPkg.m in Sources */,
+				2975AA13275DA9EB0097D72C /* SVProgressHUD.m in Sources */,
+				2975A9C9275DA98F0097D72C /* CurrentTemModel.m in Sources */,
 				297396D5274CCACE0030613D /* TXMatchManager.m in Sources */,
-				2973970D274CD4720030613D /* HLBLEManager.m in Sources */,
+				2975A9F9275DA9980097D72C /* TemperaturePkg.m in Sources */,
 				2973968F274CCABB0030613D /* LYEmptyBaseView.m in Sources */,
 				29E42C9D27576EF600A8973A /* YTSliderView.m in Sources */,
+				2975AA12275DA9EB0097D72C /* SVProgressAnimatedView.m in Sources */,
 				297396D7274CCACE0030613D /* TXMatchConst.m in Sources */,
+				2975A9CF275DA98F0097D72C /* QuestTemModel.m in Sources */,
+				2975AA11275DA9EB0097D72C /* SVRadialGradientLayer.m in Sources */,
+				2975A9C8275DA98F0097D72C /* RealTimeTemModel.m in Sources */,
+				2975A9D3275DA98F0097D72C /* CurrentSetTimeModel.m in Sources */,
 				297396E7274CCADB0030613D /* LxResfreshHeader.m in Sources */,
 				297396C0274CCAC40030613D /* UISwitch+Custom.m in Sources */,
 				297396B5274CCAC40030613D /* UIImage+None.m in Sources */,
-				2973973C274CE66F0030613D /* QuestChargeStatePkg.m in Sources */,
 				297396F6274CCB3C0030613D /* LxEmptyView.m in Sources */,
+				2975A9CC275DA98F0097D72C /* ChargeStateModel.m in Sources */,
 				29FCE6922754E408003B0E7C /* CustomSliderView.m in Sources */,
-				29739733274CE6050030613D /* HeartbeatPkg.m in Sources */,
+				2975A9F7275DA9980097D72C /* LaserPkg.m in Sources */,
+				2975A9D0275DA98F0097D72C /* CurrentLaserModel.m in Sources */,
 				29A560C62759FF840024847F /* NumberView.m in Sources */,
 				29A560C9275A0E610024847F /* TimeView.m in Sources */,
-				29739736274CE6150030613D /* VersionPkg.m in Sources */,
+				2975A9CE275DA98F0097D72C /* TemperatureModel.m in Sources */,
 				297396B9274CCAC40030613D /* UIWindow+JXSafeArea.m in Sources */,
 				29FCE67E2754C69C003B0E7C /* MLMWaveWaterView.m in Sources */,
+				2975A9F0275DA9980097D72C /* CurrentTemPkg.m in Sources */,
 				297396BA274CCAC40030613D /* UIDevice+VKKeychainIDFV.m in Sources */,
 				297396BD274CCAC40030613D /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				297396DF274CCAD40030613D /* WRNavigationBar.m in Sources */,
-				2973973F274CE67D0030613D /* SetWorkTimePkg.m in Sources */,
 				297396BC274CCAC40030613D /* UIButton+ImageTitleSpacing.m in Sources */,
 				29FCE6932754E408003B0E7C /* UIColor+Extension.m in Sources */,
-				2973971E274CE4D70030613D /* LaserPkg.m in Sources */,
 				29E42CA027576F9B00A8973A /* YTSliderSetting.m in Sources */,
+				2975A9F1275DA9980097D72C /* CurrentRatePkg.m in Sources */,
 				297396B4274CCAC40030613D /* MBProgressHUD+Add.m in Sources */,
+				2975A9FB275DA9980097D72C /* GetCurrentSetTimePkg.m in Sources */,
+				2975A9CA275DA98F0097D72C /* BleDevice.m in Sources */,
 				29739682274CC9780030613D /* UIImage+CompressImage.m in Sources */,
 				29739681274CC9780030613D /* BANetManager.m in Sources */,
-				29739739274CE6480030613D /* ChargeStatePkg.m in Sources */,
-				29739721274CE4FF0030613D /* QuantityPkg.m in Sources */,
 				29739690274CCABB0030613D /* UIView+Empty.m in Sources */,
 				297396BE274CCAC40030613D /* UIScrollView+Gesture.m in Sources */,
 				297396F5274CCB3C0030613D /* LxCustomAlert.m in Sources */,
-				29739730274CE5E50030613D /* CurrentTemPkg.m in Sources */,
+				2975AA04275DA9A90097D72C /* DevicesVC.m in Sources */,
 				29739672274CC9240030613D /* BaseNavigationController.m in Sources */,
 				297396D6274CCACE0030613D /* TXDynamicDelegate.m in Sources */,
-				2973972D274CE5D10030613D /* CurrentRatePkg.m in Sources */,
 				29739711274CD5530030613D /* CRC16.m in Sources */,
 				297396C1274CCAC40030613D /* UIColor+MyColor.m in Sources */,
-				29739715274CD7050030613D /* TemperaturePkg.m in Sources */,
 				297396BF274CCAC40030613D /* NSObject+XWAdd.m in Sources */,
 				297396FE274CCCFB0030613D /* AppService.m in Sources */,
 				29FCE6802754C69C003B0E7C /* MLMStatisticalView.m in Sources */,
 				29739692274CCABB0030613D /* LYEmptyView.m in Sources */,
+				2975A9CB275DA98F0097D72C /* VersionModel.m in Sources */,
+				2975A9AC275DA9630097D72C /* HandleData.m in Sources */,
+				2975AA05275DA9A90097D72C /* DeviceCell.m in Sources */,
 				29FCE6812754C69C003B0E7C /* UIView+Extensions.m in Sources */,
 				297396F4274CCB3C0030613D /* LxDelayed.m in Sources */,
 			);

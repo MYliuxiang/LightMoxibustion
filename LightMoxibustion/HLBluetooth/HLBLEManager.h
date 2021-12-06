@@ -40,8 +40,15 @@
 @property (copy, nonatomic) HLWriteToCharacteristicBlock            writeToCharacteristicBlock;
 /** 将数据写入描述中的回调*/
 @property (copy, nonatomic) HLWriteToDescriptorBlock                writeToDescriptorBlock;
+
+@property (copy, nonatomic) HLReceiveDataBlock  receiveDataBlock;
+
+
+
 /** 获取蓝牙外设信号强度的回调  */
 @property (copy, nonatomic) HLGetRSSIBlock                          getRSSIBlock;
+
+@property (copy, nonatomic) HLDidDisconnectBlock                          didDisconnectBlock;
 
 @property (strong, nonatomic, readonly)   CBPeripheral            *connectedPerpheral;  /**< 当前连接的外设 */
 
@@ -52,6 +59,15 @@
  * 所以，如果你打印乱码，你考虑将该值设置小一点再试试。
  */
 @property (assign, nonatomic)   NSInteger             limitLength;
+
++ (CBUUID *) servicesUUID;
+
+//写特征值
++ (CBUUID *) txCharacteristicUUID;
+
+//读特性值
++ (CBUUID *) rxCharacteristicUUID;
+
 
 #pragma mark - method
 + (instancetype)sharedInstance;
@@ -121,6 +137,14 @@
  *  @param type           写入类型
  */
 - (void)writeValue:(NSData *)data forCharacteristic:(CBCharacteristic *)characteristic type:(CBCharacteristicWriteType)type;
+
+
+/**
+ * 往固定写特征中写入数据
+ *
+ * @param data           写入的数据
+ */
+- (void)writeValue:(NSData *)data;
 
 
 /**

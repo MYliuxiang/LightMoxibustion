@@ -63,4 +63,9 @@ typedef void(^HLWriteToDescriptorBlock)(CBDescriptor *descriptor, NSError *error
 /** 获取蓝牙外设信号的回调 */
 typedef void(^HLGetRSSIBlock)(CBPeripheral *peripheral,NSNumber *RSSI, NSError *error);
 
+/** 获取蓝牙蓝牙的回调 */
+typedef void(^HLDidDisconnectBlock)(CBPeripheral *peripheral, NSError *error);
+/** 获取蓝牙蓝牙的回调 */
+typedef void(^HLReceiveDataBlock)(NSData *data);
+
 #endif /* HLBLEConst_h */

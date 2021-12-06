@@ -2,7 +2,7 @@
 //  ChargeStatePkg.m
 //  LightMoxibustion
 //
-//  Created by flyliu on 2021/11/23.
+//  Created by 刘翔 on 2021/12/5.
 //
 
 #import "ChargeStatePkg.h"
@@ -14,9 +14,9 @@
     if (self) {
         U8 buf[COMMON_PKG_LENGTH];
         memset(buf, 0, COMMON_PKG_LENGTH);
-        buf[0] = 0x05;
+        buf[0] = '5';
         buf[1] = '#';//包头
-        buf[2] = (Byte)(16 & 0XFF); //命令码
+        buf[2] = (Byte)(17 & 0XFF); //命令码
 
         int crc16 = CRC16_CCITT(buf, COMMON_PKG_LENGTH-2);
         buf[COMMON_PKG_LENGTH-2] = (Byte)(crc16>>8 & 0XFF);

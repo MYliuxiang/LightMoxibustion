@@ -9,11 +9,10 @@
 #import "LxUnitSlider.h"
 
 #import "Masonry.h"
-#import "PPColorfulSlider.h"
 #import "YTSliderView.h"
 #import "YTSliderSetting.h"
 
-@interface LxUnitSlider()<PPColorfulSliderDelegate,YTSliderViewDelegate>
+@interface LxUnitSlider()<YTSliderViewDelegate>
 //slider相关
 @property (nonatomic, strong) YTSliderView *slider;                     //滑块
 @property (nonatomic, strong) UIColor *startColor;                          //滑块渐变色，起始
@@ -48,8 +47,8 @@
         _minSliderUnit = 1;
         
         
-        _startColor = PPCOLOR(0xFFDA9B);
-        _endColor = PPCOLOR(0xFFAB3D);
+//        _startColor = PPCOLOR(0xFFDA9B);
+//        _endColor = PPCOLOR(0xFFAB3D);
         _titles = titles;
         _totalValue = totalValue;
         _thumbTitle = thumbTitle;
@@ -65,16 +64,16 @@
         UILabel *label = [[UILabel alloc] init];
         label.text = self.titles[i];
         label.textColor = [UIColor darkGrayColor];
-        label.font = [UIFont systemFontOfSize:10];
-        label.left = self.slider.right + 8;
+        label.font = [UIFont systemFontOfSize:8 * WidthScale];
+        label.left = self.slider.right + 10 * WidthScale;
         [label sizeToFit];
         if (i == 0) {
-            label.bottom = self.slider.height + 50 - (self.slider.height / (self.titles.count - 1)) * i;
+            label.bottom = self.slider.height + 57 * WidthScale - (self.slider.height / (self.titles.count - 1)) * i;
         }else if (i == self.titles.count - 1){
-            label.top = self.slider.height + 50 - (self.slider.height / (self.titles.count - 1)) * i;
+            label.top = self.slider.height + 57 * WidthScale - (self.slider.height / (self.titles.count - 1)) * i;
 
         }else{
-            label.centerY = self.slider.height + 50 - (self.slider.height / (self.titles.count - 1)) * i;
+            label.centerY = self.slider.height + 57 * WidthScale - (self.slider.height / (self.titles.count - 1)) * i;
         }
         [self addSubview:label];
     }
@@ -83,50 +82,39 @@
 
 - (void)creatButtom{
     _sliderDownBtn = [[UIButton alloc]init];
-    [_sliderDownBtn setTitle:@"-" forState:UIControlStateNormal];
-    _sliderDownBtn.titleLabel.font = [UIFont boldSystemFontOfSize:50];
     [_sliderDownBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [_sliderDownBtn setImage:[UIImage imageNamed:@"slider_min_Unablebtn"] forState:UIControlStateNormal];
-    [_sliderDownBtn setImage:[UIImage imageNamed:@"slider_min_Unablebtn"] forState:UIControlStateHighlighted];
+    [_sliderDownBtn setImage:[UIImage imageNamed:@"proc_btn_dec"] forState:UIControlStateNormal];
+    [_sliderDownBtn setImage:[UIImage imageNamed:@"proc_btn_dec_press"] forState:UIControlStateHighlighted];
 
-    [_sliderDownBtn addTarget:self action:@selector(startLetfBtnTimer) forControlEvents:UIControlEventTouchDown];
-    [_sliderDownBtn addTarget:self action:@selector(stopLeftTimer) forControlEvents:UIControlEventTouchCancel];
-    [_sliderDownBtn addTarget:self action:@selector(stopLeftTimer) forControlEvents:UIControlEventTouchUpOutside];
-    [_sliderDownBtn addTarget:self action:@selector(stopLeftTimer) forControlEvents:UIControlEventTouchUpInside];
+
+    [_sliderDownBtn addTarget:self action:@selector(clickMinBtn) forControlEvents:UIControlEventTouchUpInside];
 
     [self addSubview:_sliderDownBtn];
     [_sliderDownBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self);
-        make.size.mas_equalTo(CGSizeMake(50, 50));
+        make.size.mas_equalTo(CGSizeMake(37 * WidthScale, 37 * WidthScale));
         make.bottom.mas_equalTo(self);
     }];
     _sliderUpBtn = [[UIButton alloc]init];
-    [_sliderUpBtn setTitle:@"+" forState:UIControlStateNormal];
-    _sliderUpBtn.titleLabel.font = [UIFont boldSystemFontOfSize:50];
     [_sliderUpBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [_sliderUpBtn setImage:[UIImage imageNamed:@"slider_plus_btn"] forState:UIControlStateNormal];
-    [_sliderUpBtn setImage:[UIImage imageNamed:@"slider_plus_btn_hl"] forState:UIControlStateHighlighted];
+    [_sliderUpBtn setImage:[UIImage imageNamed:@"proc_btn_inc"] forState:UIControlStateNormal];
+    [_sliderUpBtn setImage:[UIImage imageNamed:@"proc_btn_inc_press"] forState:UIControlStateHighlighted];
     if (_maxNumber == _minCouldSliderNumber) {
         [_sliderUpBtn setImage:[UIImage imageNamed:@"slider_plus_Unablebtn"] forState:UIControlStateNormal];
         [_sliderUpBtn setImage:[UIImage imageNamed:@"slider_plus_Unablebtn"] forState:UIControlStateHighlighted];
     }
-    [_sliderUpBtn addTarget:self action:@selector(startRightBtnTimer) forControlEvents:UIControlEventTouchDown];
-    [_sliderUpBtn addTarget:self action:@selector(stopRightTimer) forControlEvents:UIControlEventTouchCancel];
-    [_sliderUpBtn addTarget:self action:@selector(stopRightTimer) forControlEvents:UIControlEventTouchUpOutside];
-    [_sliderUpBtn addTarget:self action:@selector(stopRightTimer) forControlEvents:UIControlEventTouchUpInside];
+  
+    [_sliderUpBtn addTarget:self action:@selector(clickPlusBtn) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_sliderUpBtn];
     [_sliderUpBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self);
-        make.size.mas_equalTo(CGSizeMake(50, 50));
+        make.size.mas_equalTo(CGSizeMake(37 * WidthScale, 37 * WidthScale));
         make.top.mas_equalTo(self);
     }];
 }
 
 - (void)initSubView{
 
-    
-    self.backgroundColor = [UIColor whiteColor];
-    
     [self creatButtom];
 
     
@@ -134,13 +122,16 @@
     setting.borderWidth = 0;
     setting.progressInset = 0;
     setting.layoutDirection = YTSliderLayoutDirectionVertical;
-    setting.backgroundColor = [UIColor grayColor];
-    setting.progressColor = [UIColor colorWithRed:43/255.0 green:157/255.0 blue:247/255.0 alpha:1.0];
-    setting.thumbColor = [UIColor blueColor];
+    setting.backgroundColor = [UIColor colorWithHexString:@"#E6E9EA"];
+    setting.progressColor = [UIColor clearColor];
+    setting.thumbColor = [UIColor clearColor];
+
     setting.shouldShowProgress = YES;
     setting.thumbTitle = self.thumbTitle;
     setting.step = self.titles.count > 2 ? self.titles.count - 2 : 0;
-    _slider = [[YTSliderView alloc]initWithFrame:CGRectMake((100 - 30) / 2, 50, 20, self.height - 100) setting: setting];
+    _slider = [[YTSliderView alloc]initWithFrame:CGRectMake((100 - 30) / 2, 57 * WidthScale, 24 * WidthScale, self.height - (57 * WidthScale * 2)) setting: setting];
+    _slider.delegate = self;
+    _slider.centerX = self.width / 2.0;
     _slider.delegate = self;
     [self addSubview:_slider];
     
@@ -151,20 +142,18 @@
 
 - (void)setCurrentPercent:(NSInteger)currentPercent
 {
-    if (currentPercent > _maxNumber, currentPercent < _minNumber) {
+    if (currentPercent > _maxNumber || currentPercent < _minNumber) {
         return;
     }
-    _slider.currentPercent = (_minNumber + _currentPercent) / _totalValue;
     _currentPercent = currentPercent;
-
-   
+    _slider.currentPercent = _currentPercent / _totalValue;
     
 }
 
 #pragma mark ---------- YTSliderViewDelegate
 
 - (void)ytSliderView:(YTSliderView *)view didChangePercent:(CGFloat)percent{
-    _currentPercent = (int)percent * _totalValue;
+//    _currentPercent = roundf(percent * _totalValue);
 }
 
 - (void)ytSliderViewDidBeginDrag:(YTSliderView *)view{
@@ -173,21 +162,15 @@
 
 - (void)ytSliderViewDidEndDrag:(YTSliderView *)view{
     
+    view.currentPercent = roundf(view.currentPercent * _totalValue) / _totalValue;
+    _currentPercent = roundf(view.currentPercent * _totalValue);
+    if([self.delegate respondsToSelector:@selector(unitSliderView:didChangePercent:)]) {
+        [self.delegate unitSliderView:self didChangePercent:_currentPercent];
+    }
 }
 
 #pragma mark - 点击积分增加按钮
-- (void)startRightBtnTimer{
-    if (!_rightBtnTimer) {
-        _rightBtnTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(clickPlusBtn) userInfo:nil repeats:YES];
-        [[NSRunLoop currentRunLoop] addTimer:_rightBtnTimer forMode:NSRunLoopCommonModes];
-    }
-}
-- (void)stopRightTimer{
-    if (_rightBtnTimer) {
-        [_rightBtnTimer invalidate];
-        _rightBtnTimer = nil;
-    }
-}
+
 - (void)clickPlusBtn{
     
     if (_slider.currentPercent * _totalValue >= _maxCouldSliderNumber) {
@@ -195,23 +178,16 @@
     }else if(_slider.currentPercent * _totalValue + _minSliderUnit >= _maxCouldSliderNumber){
         _slider.currentPercent = _maxCouldSliderNumber / _totalValue;
     }else{
-        _slider.currentPercent = (_slider.currentPercent * _totalValue + _minSliderUnit ) / _totalValue;
+        _slider.currentPercent = (_slider.currentPercent * _totalValue + _minSliderUnit) / _totalValue;
+    }
+    
+    _currentPercent = _slider.currentPercent * _totalValue;
+    if([self.delegate respondsToSelector:@selector(unitSliderView:didChangePercent:)]) {
+        [self.delegate unitSliderView:self didChangePercent:_currentPercent];
     }
 }
 
 #pragma mark - 点击积分减少按钮
-- (void)startLetfBtnTimer{
-    if (!_leftBtnTimer) {
-        _leftBtnTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(clickMinBtn) userInfo:nil repeats:YES];
-        [[NSRunLoop currentRunLoop] addTimer:_leftBtnTimer forMode:NSRunLoopCommonModes];
-    }
-}
-- (void)stopLeftTimer{
-    if (_leftBtnTimer) {
-        [_leftBtnTimer invalidate];
-        _leftBtnTimer = nil;
-    }
-}
 - (void)clickMinBtn{
     if (_slider.currentPercent * _totalValue <= 0 ) {
         return;
@@ -220,25 +196,14 @@
     }else{
         _slider.currentPercent = (_slider.currentPercent * _totalValue - _minSliderUnit) / _totalValue;
     }
+    
+    _currentPercent = _slider.currentPercent * _totalValue;
+    if([self.delegate respondsToSelector:@selector(unitSliderView:didChangePercent:)]) {
+        [self.delegate unitSliderView:self didChangePercent:_currentPercent];
+    }
 }
 
-#pragma mark - MFScorePurchaseSliderDelegate，监听导轨值改变
-- (void)sliderChangedValue:(NSInteger)value{
-    if (value <= _minCouldSliderNumber) {
-        [_sliderDownBtn setImage:[UIImage imageNamed:@"slider_min_Unablebtn"] forState:UIControlStateNormal];
-        [_sliderDownBtn setImage:[UIImage imageNamed:@"slider_min_Unablebtn"] forState:UIControlStateHighlighted];
-    }else{
-        [_sliderDownBtn setImage:[UIImage imageNamed:@"slider_min_btn"] forState:UIControlStateNormal];
-        [_sliderDownBtn setImage:[UIImage imageNamed:@"slider_min_btn_hl"] forState:UIControlStateHighlighted];
-    }
-    if (value >= _maxCouldSliderNumber) {
-        [_sliderUpBtn setImage:[UIImage imageNamed:@"slider_plus_Unablebtn"] forState:UIControlStateNormal];
-        [_sliderUpBtn setImage:[UIImage imageNamed:@"slider_plus_Unablebtn"] forState:UIControlStateHighlighted];
-    }else{
-        [_sliderUpBtn setImage:[UIImage imageNamed:@"slider_plus_btn"] forState:UIControlStateNormal];
-        [_sliderUpBtn setImage:[UIImage imageNamed:@"slider_plus_btn_hl"] forState:UIControlStateHighlighted];
-    }
-}
+
 
 #pragma mark - 处理渐变色圆角滑轨
 - (UIImage *)getGradientImageWithColors:(NSArray*)colors imgSize:(CGSize)imgSize{

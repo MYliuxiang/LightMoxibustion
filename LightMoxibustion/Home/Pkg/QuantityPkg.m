@@ -2,20 +2,19 @@
 //  QuantityPkg.m
 //  LightMoxibustion
 //
-//  Created by flyliu on 2021/11/23.
+//  Created by 刘翔 on 2021/12/5.
 //
 
 #import "QuantityPkg.h"
 
 @implementation QuantityPkg
-
 - (instancetype)init
 {
     self = [super init];
     if (self) {
         U8 buf[COMMON_PKG_LENGTH];
         memset(buf, 0, COMMON_PKG_LENGTH);
-        buf[0] = 0x05;
+        buf[0] = '5';
         buf[1] = '#';//包头
         buf[2] = (Byte)(8 & 0XFF); //命令码
 
@@ -27,6 +26,4 @@
     }
     return self;
 }
-
-
 @end
