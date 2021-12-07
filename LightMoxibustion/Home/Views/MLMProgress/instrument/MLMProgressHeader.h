@@ -30,9 +30,9 @@
 #import "UIView+Extensions.h"
 #import "UIView+TapAction.h"
 
-#define DEGREES_TO_RADIANS(degrees) ((degrees)*M_PI)/180
+//#define DEGREES_TO_RADIANS(degrees) ((degrees)*M_PI)/180
 
-static const CGFloat kAnimationTime = 2.f;
+static const CGFloat kAnimationTime = 0.1f;
 
 
 #endif /* MLMProgressHeader_h */

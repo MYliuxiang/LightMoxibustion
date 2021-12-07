@@ -117,21 +117,21 @@
                 break;
             case 3:
             {
-                NSLog(@"设置温度成功");
+//                NSLog(@"设置温度成功");
 //                NSLog(@"第三位：%d,第四位：%d",mbuf[3],mbuf[4]);
                 
             }
                 break;
             case 4:
             {
-                NSLog(@"设置频率成功");
+//                NSLog(@"设置频率成功");
 //                NSLog(@"第三位：%d,第四位：%d",mbuf[3],mbuf[4]);
 
             }
                 break;
             case 6:
             {
-                NSLog(@"设置激光档位成功");
+//                NSLog(@"设置激光档位成功");
 //                NSLog(@"第三位：%d,第四位：%d",mbuf[3],mbuf[4]);
 
             }
@@ -180,8 +180,9 @@
                 break;
             case 10:
             {
-//                WorkCountdownModel *workCuountdown = [[WorkCountdownModel alloc] initWithData:data];
-//                NSLog(@"工作倒计时:%ds",workCuountdown.second);
+                WorkCountdownModel *workCuountdown = [[WorkCountdownModel alloc] initWithData:data];
+                [self.progress configWorkDownSencond:workCuountdown.second];
+                
             }
                 break;
             case 11:
@@ -212,7 +213,6 @@
                 [self.progress configSetTem:currentTem.currentTem];
                 NSLog(@"当前设置温度：%d",currentTem.currentTem);
                 
-                
             }
                 break;
             case 15:
@@ -240,7 +240,11 @@
             case 20:
             {
                 CurrentSetTimeModel *setTime = [[CurrentSetTimeModel alloc] initWithData:data];
+                [self.progress configSetTime:setTime.second];
+
                 NSLog(@"获取仪器当前的设置时间:%d",setTime.second);
+                NSLog(@"获取仪器当前的设置时间:%@",data);
+
             }
                 break;
                 
@@ -262,7 +266,8 @@
                 //三种种方式
                 // 方式1
                 //                [weakManager scanForPeripheralsWithServiceUUIDs:@[[HLBLEManager devServiceUUID]] options:nil];
-                [weakManager scanForPeripheralsWithServiceUUIDs:nil options:nil];
+//                [weakManager scanForPeripheralsWithServiceUUIDs:nil options:nil];
+                [self scanDevice];
                 break;
                 
             case CBManagerStatePoweredOff:
@@ -461,6 +466,7 @@
     [SendData getCurrentTem];
     
     [SendData getCurrentSetTime];
+            
 
 }
 
@@ -488,7 +494,8 @@
         
         [self.progress configSetTem:-1];
         [self.progress configCurrentTem:-1];
-        
+        [self.progress configWorkDownSencond:0];
+        [self.progress configSetTime:0];
         
     }else{
         
@@ -508,15 +515,20 @@
 
 - (void)creatSubViews{
     
-    _progress = [[MLMProgressView alloc] initWithFrame:CGRectMake(LEFT_MAGAN , Height_StatusBar + 44 * WidthScale + 28 * WidthScale, (kScreenWidth - 2 * LEFT_MAGAN), kScreenWidth - 2 * LEFT_MAGAN)];
-    [self.view addSubview:[_progress speedDialType]];
     __weak typeof(self) weakSelf = self;
 
-//    [_progress tapHandle:^{
-//        [weakSelf.progress.circle setProgress:1];
-//        [weakSelf.progress.incircle setProgress:1];
-//
-//    }];
+    _progress = [[MLMProgressView alloc] initWithFrame:CGRectMake(LEFT_MAGAN , Height_StatusBar + 44 * WidthScale + 28 * WidthScale, (kScreenWidth - 2 * LEFT_MAGAN), kScreenWidth - 2 * LEFT_MAGAN)];
+    _progress.cancleBlock = ^{
+        weakSelf.highTemTip = NO;
+    };
+    
+    [_progress tapHandle:^{
+        [weakSelf.progress.incircle setProgress:0.6];
+    }];
+   
+    [self.view addSubview:[_progress speedDialType]];
+    _progress.progress = 0.5;
+    [_progress configSetTime:10 * 60];
     
     
     _rateSlider = [[LxUnitSlider alloc]initWithFrame:CGRectMake(100, (kScreenHeight + 100) / 2.0 + 10 * WidthScale, 80 * WidthScale, kScreenHeight - (kScreenHeight + 100) / 2.0 - kBottomSafeHeight - 10 * WidthScale) titles:@[@"常亮",@"1",@"2",@"3",@"4",@"5"] total:5.0 thumbTitle:@"频率"];
@@ -534,6 +546,8 @@
         if (!weakSelf.highTemTip) {
             [weakSelf.progress hightTemTip:tem];
             weakSelf.highTemTip = YES;
+        }else{
+            [SendData setTemperature:tem];
         }
     };
 

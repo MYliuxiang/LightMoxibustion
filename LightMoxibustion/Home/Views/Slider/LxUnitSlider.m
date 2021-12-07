@@ -144,7 +144,7 @@
 
 - (void)setCurrentPercent:(NSInteger)currentPercent
 {
-    if (currentPercent > _maxNumber || currentPercent < _minNumber) {
+    if (currentPercent > _maxNumber) {
         return;
     }
     _currentPercent = currentPercent;

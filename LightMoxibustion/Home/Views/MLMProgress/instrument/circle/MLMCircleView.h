@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "MLMProgressHeader.h"
+@class MLMCircleView;
+
+@protocol MLMCircleViewDelegate <NSObject>
+
+@optional
+
+- (void)mLMCircleView:(MLMCircleView *)view didChangePercent:(CGFloat)percent;
+
+- (void)mLMCircleViewDidBeginDrag:(MLMCircleView *)view;
+
+- (void)mLMCircleViewDidEndDrag:(MLMCircleView *)view;
+@end
 
 @interface MLMCircleView : UIView
 
@@ -40,6 +52,10 @@
 
 @property (nonatomic, assign) BOOL isTransparent;
 
+@property (nonatomic, weak) id<MLMCircleViewDelegate> delegate;
+
+@property (nonatomic, assign) CGFloat progress;
+
 
 
 @property (nonatomic, strong) UIImageView *dotImageView;//光标
@@ -51,8 +67,7 @@
 - (instancetype)initWithFrame:(CGRect)frame
                    startAngle:(CGFloat)start
                      endAngle:(CGFloat)end;
-///设置进度
-- (void)setProgress:(CGFloat)progress;
+
 
 ///图片隐藏
 - (void)dotHidden:(BOOL)hidden;

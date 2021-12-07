@@ -67,7 +67,7 @@
     [self layoutImgswithNumber:minute % 10 imagView:self.minute2I];
     
     int second = _time % 60;
-    [self layoutImgswithNumber:second % 10 imagView:self.second1I];
+    [self layoutImgswithNumber:second / 10 imagView:self.second1I];
     [self layoutImgswithNumber:second % 10 imagView:self.second2I];
 
 }

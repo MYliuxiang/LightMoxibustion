@@ -27,6 +27,9 @@
 
 @property(nonatomic,strong) UIButton *doneB;
 
+@property(nonatomic,strong) UIView *maskView;
+
+
 
 
 @end
@@ -105,22 +108,22 @@
     centerV.layer.masksToBounds = YES;
     centerV.backgroundColor = [UIColor colorWithHexString:@"D8DDFC"];
     [_incircle addSubview:centerV];
-    
-    
+
+
     _timeV = [[TimeView alloc] initWithFrame:CGRectMake(0, 0, 100 * WidthScale, 35 * WidthScale)];
     _timeV.top = centerV.height / 2.0 ;
     _timeV.centerX = centerV.width / 2.0;
     [centerV addSubview:_timeV];
-        
+
     UIImageView *timeNameI = [[UIImageView alloc] initWithFrame:CGRectMake(20, 0, 90 * WidthScale, 22 * WidthScale)];
     timeNameI.image = [UIImage imageNamed:@"text_zhi_liao_shi_jian"];
     timeNameI.bottom = centerV.height / 2.0 - 20 * WidthScale;
     timeNameI.centerX = centerV.width / 2.0;
     [centerV addSubview:timeNameI];
-    
-    
-    
-    
+
+
+
+
     _leftB = [UIButton buttonWithType:UIButtonTypeCustom];
     _leftB.frame = CGRectMake(- 12 * WidthScale, _incircle.height / 2.0 + 25 * WidthScale, 67 * WidthScale, 67 * WidthScale);
     [_leftB setImage:[UIImage imageNamed:@"arc_time_btn_dec"] forState:UIControlStateNormal];
@@ -128,8 +131,8 @@
 
     [_leftB addTarget:self action:@selector(leftBAC:) forControlEvents:UIControlEventTouchUpInside];
     [_incircle addSubview:_leftB];
-    
-   
+
+
     _rightB = [UIButton buttonWithType:UIButtonTypeCustom];
     _rightB.frame = CGRectMake(_incircle.width + 12 * WidthScale - 67 * WidthScale, _incircle.height / 2.0 + 25 * WidthScale, 67 * WidthScale, 67 * WidthScale);
     [_rightB setImage:[UIImage imageNamed:@"arc_time_btn_inc"] forState:UIControlStateNormal];
@@ -137,20 +140,20 @@
 
     [_rightB addTarget:self action:@selector(rightBAC:) forControlEvents:UIControlEventTouchUpInside];
     [_incircle addSubview:_rightB];
-    
+
     _setTemV = [[NumberView alloc] initWithFrame:CGRectMake((centerV.width - 30 * WidthScale) / 2 - 10 * WidthScale, centerV.bottom + 10 * WidthScale, 30 * WidthScale, 27 * WidthScale) withTemType:TemperatureTypeSet];
     [_incircle addSubview:_setTemV];
-    
+
     _currentTemV = [[NumberView alloc] initWithFrame:CGRectMake(centerV.width / 2.0 + (centerV.width - 30 * WidthScale) / 2.0  + 10 * WidthScale, centerV.bottom + 10 * WidthScale, 30 * WidthScale, 27 * WidthScale) withTemType:TemperatureTypeCurrent];
     [_incircle addSubview:_currentTemV];
-    
+
     _symbolI1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 18 * WidthScale, 14 * WidthScale)];
     _symbolI1.image = [UIImage imageNamed:@"temp_unit_symbo2"];
     _symbolI1.top = _setTemV.top;
     _symbolI1.left = _setTemV.right + 2;
     _symbolI1.hidden = YES;
     [_incircle addSubview:_symbolI1];
-    
+
     _symbolI2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 18 * WidthScale, 14 * WidthScale)];
     _symbolI2.image = [[UIImage imageNamed:@"temp_unit_symbo2"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     _symbolI2.tintColor = [UIColor redColor];
@@ -159,70 +162,98 @@
     _symbolI2.left = _currentTemV.right + 2;
     _symbolI2.hidden = YES;
     [_incircle addSubview:_symbolI2];
-    
-    
+
+
     UIImageView *chacterI1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 55 * WidthScale, 15 * WidthScale)];
     chacterI1.image = [UIImage imageNamed:@"text_set_temp"];
     chacterI1.top = _setTemV.bottom + 10 * WidthScale;
     chacterI1.centerX = _setTemV.centerX;
     [_incircle addSubview:chacterI1];
-    
+
     UIImageView *chacterI2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 55 * WidthScale, 15 * WidthScale)];
     chacterI2.image = [UIImage imageNamed:@"text_cure_temp"];
     chacterI2.top = _currentTemV.bottom + 10 * WidthScale;
     chacterI2.centerX = _currentTemV.centerX;
     [_incircle addSubview:chacterI2];
-    
+
     self.tipV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80 * 2.5 * WidthScale, 54 * 2.5 * WidthScale)];
     self.tipV.left = _leftB.centerX - 25 * WidthScale;
     self.tipV.top = _leftB.centerY + 5 * WidthScale;
-    [_incircle addSubview:self.tipV];
+
+//    [_incircle addSubview:self.tipV];
     self.tipV.hidden = YES;
 
-    
+//    CGPoint point = [self.tipV.frame.origin conver]
+    CGPoint point = [self.incircle convertPoint:CGPointMake(_leftB.centerX - 25 * WidthScale, _leftB.centerY + 5 * WidthScale) toView:lxWindow];
+    self.tipV.left = point.x;
+    self.tipV.top = point.y;
+    [lxWindow addSubview:self.tipV];
+
+
+
+
     UIImageView *tipI = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"waring_dilog_out_temp"]];
     tipI.size = CGSizeMake(80 * 2.5 * WidthScale, 54 * 2.5 * WidthScale);
     tipI.left = 0;
     tipI.top = 0;
     tipI.userInteractionEnabled = YES;
     [self.tipV addSubview:tipI];
-    
+
     _cancleB = [UIButton buttonWithType:UIButtonTypeCustom];
     _cancleB.frame = CGRectMake(0, 54 * 2.5 * WidthScale - 30 * WidthScale, 30 * WidthScale, 14 * WidthScale);
     _cancleB.right = self.tipV.width / 2.0 - 20 * WidthScale;
     [_cancleB setImage:[UIImage imageNamed:@"btn_no_red_back"] forState:UIControlStateNormal];
     [_cancleB addTarget:self action:@selector(cancleAC:) forControlEvents:UIControlEventTouchUpInside];
     [self.tipV addSubview:_cancleB];
-    
+
     _doneB = [UIButton buttonWithType:UIButtonTypeCustom];
     _doneB.frame = CGRectMake(0, 54 * 2.5 * WidthScale - 30 * WidthScale, 30 * WidthScale, 14 * WidthScale);
     _doneB.left = self.tipV.width / 2.0 + 20 * WidthScale;
     [_doneB setImage:[UIImage imageNamed:@"btn_yes_red_back"] forState:UIControlStateNormal];
     [_doneB addTarget:self action:@selector(doneAC:) forControlEvents:UIControlEventTouchUpInside];
-    _doneB.backgroundColor = [UIColor whiteColor];
     [self.tipV addSubview:_doneB];
+
+    
     return self;
 }
 
 - (void)hightTemTip:(int)tem{
     self.hightTem = tem;
+    [lxWindow insertSubview:self.maskView belowSubview:self.tipV];
     [UIView animateWithDuration:0.35 animations:^{
         self.tipV.hidden = NO;
     }];
+}
+
+- (UIView *)maskView{
+    if (_maskView == nil) {
+        _maskView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+        _maskView.backgroundColor = [UIColor clearColor];
+    }
+    return _maskView;
 }
 
 - (void)cancleAC:(UIButton *)sender{
     [UIView animateWithDuration:0.35 animations:^{
         self.tipV.hidden = YES;
     }];
+    [self.maskView removeFromSuperview];
     self.hightTem = 0;
-
+    if (self.cancleBlock) {
+        self.cancleBlock();
+    }
+    if ([HLBLEManager sharedInstance].connectedPerpheral != nil) {
+        [SendData getCurrentTem];
+    }
+    
 }
 
 - (void)doneAC:(UIButton *)sender{
     [UIView animateWithDuration:0.35 animations:^{
         self.tipV.hidden = YES;
     }];
+    [self.maskView removeFromSuperview];
+
     
     if ([HLBLEManager sharedInstance].connectedPerpheral != nil) {
         [SendData setTemperature:self.hightTem];
@@ -232,11 +263,25 @@
 
 
 - (void)leftBAC:(UIButton *)sender{
-    
+    if (self.progress * 20 <= 0) {
+        return;
+    }
+    [self setWorkTime:(self.progress * 20) - 1];
+
 }
 
 - (void)rightBAC:(UIButton *)sender{
-    
+    if (self.progress * 20 >= 20) {
+        return;
+    }
+    [self setWorkTime:(self.progress * 20) + 1];
+}
+
+- (void)setWorkTime:(int)time{
+    if ([HLBLEManager sharedInstance].connectedPerpheral == nil) {
+        return;
+    }
+    [SendData setCurrentWorkTime:time];
 }
 
 
@@ -261,6 +306,26 @@
     }
    
 
+}
+
+- (void)configWorkDownSencond:(int)sencond{
+    self.timeV.time = sencond;
+   
+    
+}
+
+- (void)setProgress:(CGFloat)progress{
+    _progress = progress;
+//    [self.circle setProgress:progress];
+//    [self.incircle setProgress:progress];
+}
+
+- (void)configSetTime:(int)time{
+    
+    CGFloat progress = time / (20 * 60.0);
+    [self.circle setProgress:progress];
+    [self.incircle setProgress:progress];
+    self.progress = progress;
 }
 
 

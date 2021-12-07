@@ -11,9 +11,7 @@
 @interface MLMCircleView () {
     CGFloat circleRadius;//bottom半径
     CGFloat progressRadius;//进度半径
-    
-    CGFloat _progress;//进度
-    
+        
     ///起点
     CGFloat _startAngle;
     ///终点
@@ -48,8 +46,6 @@
     return self;
 }
 
-- (void)layoutSubviews{
-}
 
 #pragma mark - 默认数据
 - (void)initData {
@@ -80,14 +76,59 @@
     _dotImageView.center = CGPointMake(centerX, centerY);
     _dotImageView.layer.cornerRadius = self.dotDiameter/2;
     [_dotImageView setImage:self.dotImage];
+    _dotImageView.userInteractionEnabled = YES;
     [self addSubview:_dotImageView];
+    
+    UIPanGestureRecognizer *longGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(longGestureAction:)];
+    [self.dotImageView addGestureRecognizer:longGesture];
+    
+    
+}
+
+- (void)longGestureAction:(UIPanGestureRecognizer *)gesture {
+    if(gesture.state == UIGestureRecognizerStateBegan) {
+        if([self.delegate respondsToSelector:@selector(mLMCircleViewDidBeginDrag:)]) {
+            [self.delegate mLMCircleViewDidBeginDrag:self];
+        }
+    }
+    else if(gesture.state == UIGestureRecognizerStateChanged)
+    {
+        CGPoint point = [gesture locationInView:self];
+        CGFloat radius = progressRadius - (_progressWidth - _dotDiameter) / 2.0;
+        CGFloat x = MAX(point.x, self.width / 2.0 - radius);
+        x = MIN(x, self.width / 2.0 + radius);
+       
+        if (x < self.width / 2.0) {
+            float cos = (self.width / 2.0 - x) / radius;
+            float anle = acosf(cos);
+            self.progress = anle / M_PI;
+            NSLog(@"%f",anle);
+        }else{
+            float cos = (x - self.width / 2.0) / radius;
+            float anle = acosf(cos);
+            self.progress = 1 - anle / M_PI;
+            NSLog(@"%f",anle);
+
+        }
+        
+            
+        if([self.delegate respondsToSelector:@selector(mLMCircleView:didChangePercent:)]) {
+            ;
+        }
+        
+    }
+    else if(gesture.state == UIGestureRecognizerStateEnded) {
+        if([self.delegate respondsToSelector:@selector(mLMCircleViewDidEndDrag:)]) {
+           [self.delegate mLMCircleViewDidEndDrag:self];
+       }
+        
+    }
 }
 
 - (void)drawRect:(CGRect)rect {
     
     [super drawRect:rect];
     [self drawProgress];
-
     
 }
 
@@ -178,7 +219,6 @@
         [self.layer addSublayer:self.progressLayer];
     }
             
-    //add image.layer to progressLayer
 }
 
 
@@ -246,6 +286,7 @@
     animation.toValue = @(_progress);
     animation.fillMode = kCAFillModeForwards;
     animation.removedOnCompletion = NO;
+    animation.duration = 0.1;
     [self.progressLayer addAnimation:animation forKey:@"strokeEndAni"];
     lastProgress = _progress;
 }

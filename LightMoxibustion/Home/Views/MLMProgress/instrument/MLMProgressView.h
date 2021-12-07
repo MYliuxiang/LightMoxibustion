@@ -17,6 +17,9 @@
 @property (nonatomic, strong) MLMCircleView *incircle;
 @property(nonatomic,strong) NumberView *setTemV;
 @property(nonatomic,strong) NumberView *currentTemV;
+@property(nonatomic,assign) CGFloat progress;
+@property (nonatomic,copy) void (^cancleBlock)(void);
+
 //这里只是简单写两种进度盘的风格，具体使用的时候请自己组合
 
 
@@ -28,5 +31,11 @@
 - (void)configCurrentTem:(int)tem;
 
 - (void)configSetTem:(int)tem;
+
+- (void)configWorkDownSencond:(int)sencond;
+
+- (void)configSetTime:(int)time;
+
+
 
 @end

@@ -1178,13 +1178,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V5HRKRDUCX;
-				GCC_PREFIX_HEADER = /Users/flyliu/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
+				GCC_PREFIX_HEADER = /Users/liuxiang/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
 				INFOPLIST_FILE = LightMoxibustion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tenvine.LightMoxibustion2;
+				PRODUCT_BUNDLE_IDENTIFIER = tenvine.LightMoxibustion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1198,13 +1198,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V5HRKRDUCX;
-				GCC_PREFIX_HEADER = /Users/flyliu/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
+				GCC_PREFIX_HEADER = /Users/liuxiang/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
 				INFOPLIST_FILE = LightMoxibustion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tenvine.LightMoxibustion2;
+				PRODUCT_BUNDLE_IDENTIFIER = tenvine.LightMoxibustion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
