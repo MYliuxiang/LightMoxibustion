@@ -30,6 +30,8 @@
 @property(nonatomic,strong) NSArray *titles;
 @property(nonatomic,assign) float totalValue;
 @property(nonatomic,copy) NSString *thumbTitle;
+
+
 @end
 
 
@@ -157,22 +159,20 @@
 }
 
 - (void)ytSliderViewDidBeginDrag:(YTSliderView *)view{
-    
 }
 
 - (void)ytSliderViewDidEndDrag:(YTSliderView *)view{
     
-    view.currentPercent = roundf(view.currentPercent * _totalValue) / _totalValue;
-    _currentPercent = roundf(view.currentPercent * _totalValue);
-    if([self.delegate respondsToSelector:@selector(unitSliderView:didChangePercent:)]) {
-        [self.delegate unitSliderView:self didChangePercent:_currentPercent];
-    }
+    [self bluePercent:roundf(view.currentPercent * _totalValue)];
+//    view.currentPercent = self.currentPercent / _totalValue;
+
+
 }
 
 #pragma mark - 点击积分增加按钮
 
 - (void)clickPlusBtn{
-    
+
     if (_slider.currentPercent * _totalValue >= _maxCouldSliderNumber) {
         return;
     }else if(_slider.currentPercent * _totalValue + _minSliderUnit >= _maxCouldSliderNumber){
@@ -181,14 +181,34 @@
         _slider.currentPercent = (_slider.currentPercent * _totalValue + _minSliderUnit) / _totalValue;
     }
     
-    _currentPercent = _slider.currentPercent * _totalValue;
-    if([self.delegate respondsToSelector:@selector(unitSliderView:didChangePercent:)]) {
-        [self.delegate unitSliderView:self didChangePercent:_currentPercent];
+    [self bluePercent:_slider.currentPercent * _totalValue];
+
+}
+
+- (void)bluePercent:(NSInteger)percent{
+    HLBLEManager *manger = [HLBLEManager sharedInstance];
+    if (manger.connectedPerpheral == nil) {
+        self.currentPercent = 0;
+        return;
+    }
+    if ([self.thumbTitle isEqualToString:@"温度"]) {
+        if ((percent + 29) < 45) {
+          [SendData setTemperature:(int)(percent + 29)];
+        }else{
+            if (self.hightTemTipBlock) {
+                self.hightTemTipBlock((int)(percent + 29));
+            }
+        }
+    }else if ([self.thumbTitle isEqualToString:@"频率"]){
+        [SendData setRate:(int)percent];
+    }else{
+        [SendData setLaser:(int)percent];
     }
 }
 
 #pragma mark - 点击积分减少按钮
 - (void)clickMinBtn{
+      
     if (_slider.currentPercent * _totalValue <= 0 ) {
         return;
     }else if(_slider.currentPercent * _totalValue - _minSliderUnit <= 0){
@@ -197,10 +217,8 @@
         _slider.currentPercent = (_slider.currentPercent * _totalValue - _minSliderUnit) / _totalValue;
     }
     
-    _currentPercent = _slider.currentPercent * _totalValue;
-    if([self.delegate respondsToSelector:@selector(unitSliderView:didChangePercent:)]) {
-        [self.delegate unitSliderView:self didChangePercent:_currentPercent];
-    }
+    [self bluePercent:_slider.currentPercent * _totalValue];
+       
 }
 
 

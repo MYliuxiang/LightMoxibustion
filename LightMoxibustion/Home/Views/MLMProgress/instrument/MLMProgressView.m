@@ -13,14 +13,19 @@
 @interface MLMProgressView ()
 @property(nonatomic,strong) UIButton *leftB;
 @property(nonatomic,strong) UIButton *rightB;
-@property(nonatomic,strong) NumberView *setTemV;
-@property(nonatomic,strong) NumberView *currentTemV;
+
 @property(nonatomic,strong) UIImageView *symbolI1;
 @property(nonatomic,strong) UIImageView *symbolI2;
 
 @property(nonatomic,strong) TimeView *timeV;
 
-@property(nonatomic,strong) UIImageView *tipI;
+@property(nonatomic,strong) UIView *tipV;
+
+@property(nonatomic,assign) int hightTem;
+
+@property(nonatomic,strong) UIButton *cancleB;
+
+@property(nonatomic,strong) UIButton *doneB;
 
 
 
@@ -28,6 +33,20 @@
 
 @implementation MLMProgressView
 
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    UIView *view = [super hitTest:point withEvent:event];
+    CGPoint doneBPoint = [self.doneB convertPoint:point fromView:self];
+    if ([self.doneB pointInside:doneBPoint withEvent:event]) {
+        return self.doneB;
+    }
+    
+    CGPoint cancleBPoint = [self.cancleB convertPoint:point fromView:self];
+    if ([self.doneB pointInside:cancleBPoint withEvent:event]) {
+        return self.cancleB;
+    }
+   
+    return view;
+}
 
 //速度表盘
 - (UIView *)speedDialType {
@@ -129,6 +148,7 @@
     _symbolI1.image = [UIImage imageNamed:@"temp_unit_symbo2"];
     _symbolI1.top = _setTemV.top;
     _symbolI1.left = _setTemV.right + 2;
+    _symbolI1.hidden = YES;
     [_incircle addSubview:_symbolI1];
     
     _symbolI2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 18 * WidthScale, 14 * WidthScale)];
@@ -137,6 +157,7 @@
 
     _symbolI2.top = _currentTemV.top;
     _symbolI2.left = _currentTemV.right + 2;
+    _symbolI2.hidden = YES;
     [_incircle addSubview:_symbolI2];
     
     
@@ -152,20 +173,63 @@
     chacterI2.centerX = _currentTemV.centerX;
     [_incircle addSubview:chacterI2];
     
+    self.tipV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80 * 2.5 * WidthScale, 54 * 2.5 * WidthScale)];
+    self.tipV.left = _leftB.centerX - 25 * WidthScale;
+    self.tipV.top = _leftB.centerY + 5 * WidthScale;
+    [_incircle addSubview:self.tipV];
+    self.tipV.hidden = YES;
+
     
-    self.tipI = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"waring_dilog_out_temp"]];
-    self.tipI.size = CGSizeMake(80 * 2.5 * WidthScale, 54 * 2.5 * WidthScale);
-    self.tipI.left = _leftB.centerX - 25 * WidthScale;
-    self.tipI.top = _leftB.centerY + 5 * WidthScale;
-//    self.tipI.hidden = YES;
-    [_incircle addSubview:self.tipI];
+    UIImageView *tipI = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"waring_dilog_out_temp"]];
+    tipI.size = CGSizeMake(80 * 2.5 * WidthScale, 54 * 2.5 * WidthScale);
+    tipI.left = 0;
+    tipI.top = 0;
+    tipI.userInteractionEnabled = YES;
+    [self.tipV addSubview:tipI];
     
+    _cancleB = [UIButton buttonWithType:UIButtonTypeCustom];
+    _cancleB.frame = CGRectMake(0, 54 * 2.5 * WidthScale - 30 * WidthScale, 30 * WidthScale, 14 * WidthScale);
+    _cancleB.right = self.tipV.width / 2.0 - 20 * WidthScale;
+    [_cancleB setImage:[UIImage imageNamed:@"btn_no_red_back"] forState:UIControlStateNormal];
+    [_cancleB addTarget:self action:@selector(cancleAC:) forControlEvents:UIControlEventTouchUpInside];
+    [self.tipV addSubview:_cancleB];
     
-    
-    
-  
+    _doneB = [UIButton buttonWithType:UIButtonTypeCustom];
+    _doneB.frame = CGRectMake(0, 54 * 2.5 * WidthScale - 30 * WidthScale, 30 * WidthScale, 14 * WidthScale);
+    _doneB.left = self.tipV.width / 2.0 + 20 * WidthScale;
+    [_doneB setImage:[UIImage imageNamed:@"btn_yes_red_back"] forState:UIControlStateNormal];
+    [_doneB addTarget:self action:@selector(doneAC:) forControlEvents:UIControlEventTouchUpInside];
+    _doneB.backgroundColor = [UIColor whiteColor];
+    [self.tipV addSubview:_doneB];
     return self;
 }
+
+- (void)hightTemTip:(int)tem{
+    self.hightTem = tem;
+    [UIView animateWithDuration:0.35 animations:^{
+        self.tipV.hidden = NO;
+    }];
+}
+
+- (void)cancleAC:(UIButton *)sender{
+    [UIView animateWithDuration:0.35 animations:^{
+        self.tipV.hidden = YES;
+    }];
+    self.hightTem = 0;
+
+}
+
+- (void)doneAC:(UIButton *)sender{
+    [UIView animateWithDuration:0.35 animations:^{
+        self.tipV.hidden = YES;
+    }];
+    
+    if ([HLBLEManager sharedInstance].connectedPerpheral != nil) {
+        [SendData setTemperature:self.hightTem];
+    }
+    self.hightTem = 0;
+}
+
 
 - (void)leftBAC:(UIButton *)sender{
     
@@ -173,6 +237,30 @@
 
 - (void)rightBAC:(UIButton *)sender{
     
+}
+
+
+- (void)configCurrentTem:(int)tem{
+    if (tem == -1) {
+        self.symbolI2.hidden = YES;
+
+    }
+    self.currentTemV.number = tem;
+    self.symbolI2.hidden = NO;
+
+}
+
+- (void)configSetTem:(int)tem{
+    
+    if (tem < 30) {
+        self.symbolI1.hidden = YES;
+        self.setTemV.number = -1;
+    }else{
+        self.setTemV.number = tem;
+        self.symbolI1.hidden = NO;
+    }
+   
+
 }
 
 

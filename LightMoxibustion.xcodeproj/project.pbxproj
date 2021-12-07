@@ -116,9 +116,6 @@
 		29FCE6802754C69C003B0E7C /* MLMStatisticalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FCE6722754C69C003B0E7C /* MLMStatisticalView.m */; };
 		29FCE6812754C69C003B0E7C /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FCE6742754C69C003B0E7C /* UIView+Extensions.m */; };
 		29FCE6822754C69C003B0E7C /* UIView+TapAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FCE6752754C69C003B0E7C /* UIView+TapAction.m */; };
-		29FCE6912754E408003B0E7C /* UIView+Extensionss.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FCE68D2754E408003B0E7C /* UIView+Extensionss.m */; };
-		29FCE6922754E408003B0E7C /* CustomSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FCE68E2754E408003B0E7C /* CustomSliderView.m */; };
-		29FCE6932754E408003B0E7C /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FCE68F2754E408003B0E7C /* UIColor+Extension.m */; };
 		4E5214042058755437F78350 /* Pods_LightMoxibustion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96AF237B8954F20D04CCA847 /* Pods_LightMoxibustion.framework */; };
 /* End PBXBuildFile section */
 
@@ -338,12 +335,6 @@
 		29FCE6752754C69C003B0E7C /* UIView+TapAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TapAction.m"; sourceTree = "<group>"; };
 		29FCE6762754C69C003B0E7C /* UIView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extensions.h"; sourceTree = "<group>"; };
 		29FCE6772754C69C003B0E7C /* UIView+TapAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TapAction.h"; sourceTree = "<group>"; };
-		29FCE68B2754E408003B0E7C /* CustomSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSliderView.h; sourceTree = "<group>"; };
-		29FCE68C2754E408003B0E7C /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
-		29FCE68D2754E408003B0E7C /* UIView+Extensionss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extensionss.m"; sourceTree = "<group>"; };
-		29FCE68E2754E408003B0E7C /* CustomSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSliderView.m; sourceTree = "<group>"; };
-		29FCE68F2754E408003B0E7C /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
-		29FCE6902754E408003B0E7C /* UIView+Extensionss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extensionss.h"; sourceTree = "<group>"; };
 		96AF237B8954F20D04CCA847 /* Pods_LightMoxibustion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightMoxibustion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8CEC5D57DCAF0AB545B38B /* Pods-LightMoxibustion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightMoxibustion.release.xcconfig"; path = "Target Support Files/Pods-LightMoxibustion/Pods-LightMoxibustion.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -614,30 +605,30 @@
 		2975A9AF275DA98F0097D72C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2975A9B0275DA98F0097D72C /* TemperatureModel.h */,
-				2975A9B1275DA98F0097D72C /* RealTimeTemModel.m */,
-				2975A9B2275DA98F0097D72C /* QuantityModel.h */,
-				2975A9B3275DA98F0097D72C /* CurrentTemModel.m */,
-				2975A9B4275DA98F0097D72C /* CurrentLaserModel.h */,
-				2975A9B5275DA98F0097D72C /* QuestTemModel.h */,
-				2975A9B6275DA98F0097D72C /* WorkCountdownModel.h */,
-				2975A9B7275DA98F0097D72C /* CurrentRateModel.h */,
-				2975A9B8275DA98F0097D72C /* BleDevice.m */,
-				2975A9B9275DA98F0097D72C /* VersionModel.m */,
-				2975A9BA275DA98F0097D72C /* ChargeStateModel.m */,
-				2975A9BB275DA98F0097D72C /* CurrentSetTimeModel.h */,
-				2975A9BC275DA98F0097D72C /* QuantityModel.m */,
-				2975A9BD275DA98F0097D72C /* RealTimeTemModel.h */,
-				2975A9BE275DA98F0097D72C /* TemperatureModel.m */,
-				2975A9BF275DA98F0097D72C /* QuestTemModel.m */,
-				2975A9C0275DA98F0097D72C /* CurrentLaserModel.m */,
-				2975A9C1275DA98F0097D72C /* CurrentTemModel.h */,
-				2975A9C2275DA98F0097D72C /* VersionModel.h */,
 				2975A9C3275DA98F0097D72C /* BleDevice.h */,
-				2975A9C4275DA98F0097D72C /* CurrentRateModel.m */,
-				2975A9C5275DA98F0097D72C /* WorkCountdownModel.m */,
-				2975A9C6275DA98F0097D72C /* CurrentSetTimeModel.m */,
+				2975A9B8275DA98F0097D72C /* BleDevice.m */,
 				2975A9C7275DA98F0097D72C /* ChargeStateModel.h */,
+				2975A9BA275DA98F0097D72C /* ChargeStateModel.m */,
+				2975A9B4275DA98F0097D72C /* CurrentLaserModel.h */,
+				2975A9C0275DA98F0097D72C /* CurrentLaserModel.m */,
+				2975A9B7275DA98F0097D72C /* CurrentRateModel.h */,
+				2975A9C4275DA98F0097D72C /* CurrentRateModel.m */,
+				2975A9BB275DA98F0097D72C /* CurrentSetTimeModel.h */,
+				2975A9C6275DA98F0097D72C /* CurrentSetTimeModel.m */,
+				2975A9C1275DA98F0097D72C /* CurrentTemModel.h */,
+				2975A9B3275DA98F0097D72C /* CurrentTemModel.m */,
+				2975A9B2275DA98F0097D72C /* QuantityModel.h */,
+				2975A9BC275DA98F0097D72C /* QuantityModel.m */,
+				2975A9B5275DA98F0097D72C /* QuestTemModel.h */,
+				2975A9BF275DA98F0097D72C /* QuestTemModel.m */,
+				2975A9BD275DA98F0097D72C /* RealTimeTemModel.h */,
+				2975A9B1275DA98F0097D72C /* RealTimeTemModel.m */,
+				2975A9B0275DA98F0097D72C /* TemperatureModel.h */,
+				2975A9BE275DA98F0097D72C /* TemperatureModel.m */,
+				2975A9C2275DA98F0097D72C /* VersionModel.h */,
+				2975A9B9275DA98F0097D72C /* VersionModel.m */,
+				2975A9B6275DA98F0097D72C /* WorkCountdownModel.h */,
+				2975A9C5275DA98F0097D72C /* WorkCountdownModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -720,7 +711,6 @@
 				297D556C2758651000C1A385 /* LEDView */,
 				29FCE65D2754C69C003B0E7C /* MLMProgress */,
 				299157432756453400D17F66 /* Slider */,
-				29FCE68A2754E408003B0E7C /* 自定义Slider */,
 				2975A9FF275DA9A90097D72C /* DeviceCell.h */,
 				2975AA01275DA9A90097D72C /* DeviceCell.m */,
 				2975A9FC275DA9A90097D72C /* DeviceCell.xib */,
@@ -770,8 +760,8 @@
 		29FCE6672754C69C003B0E7C /* circle */ = {
 			isa = PBXGroup;
 			children = (
-				29FCE6682754C69C003B0E7C /* MLMCircleView.m */,
 				29FCE6692754C69C003B0E7C /* MLMCircleView.h */,
+				29FCE6682754C69C003B0E7C /* MLMCircleView.m */,
 			);
 			path = circle;
 			sourceTree = "<group>";
@@ -805,19 +795,6 @@
 				29FCE6772754C69C003B0E7C /* UIView+TapAction.h */,
 			);
 			path = Help;
-			sourceTree = "<group>";
-		};
-		29FCE68A2754E408003B0E7C /* 自定义Slider */ = {
-			isa = PBXGroup;
-			children = (
-				29FCE68B2754E408003B0E7C /* CustomSliderView.h */,
-				29FCE68E2754E408003B0E7C /* CustomSliderView.m */,
-				29FCE68C2754E408003B0E7C /* UIColor+Extension.h */,
-				29FCE68F2754E408003B0E7C /* UIColor+Extension.m */,
-				29FCE6902754E408003B0E7C /* UIView+Extensionss.h */,
-				29FCE68D2754E408003B0E7C /* UIView+Extensionss.m */,
-			);
-			path = "自定义Slider";
 			sourceTree = "<group>";
 		};
 		AA102966D1664E36C1026528 /* Frameworks */ = {
@@ -990,7 +967,6 @@
 				2975A9D1275DA98F0097D72C /* CurrentRateModel.m in Sources */,
 				297396EB274CCAEE0030613D /* Reachability.m in Sources */,
 				2975A9D2275DA98F0097D72C /* WorkCountdownModel.m in Sources */,
-				29FCE6912754E408003B0E7C /* UIView+Extensionss.m in Sources */,
 				297396E6274CCADB0030613D /* LxRefreshFooter.m in Sources */,
 				297396C2274CCAC40030613D /* NSDecimalNumber+Addtion.m in Sources */,
 				297396D9274CCACE0030613D /* TXLimitedTextView.m in Sources */,
@@ -1022,7 +998,6 @@
 				297396B5274CCAC40030613D /* UIImage+None.m in Sources */,
 				297396F6274CCB3C0030613D /* LxEmptyView.m in Sources */,
 				2975A9CC275DA98F0097D72C /* ChargeStateModel.m in Sources */,
-				29FCE6922754E408003B0E7C /* CustomSliderView.m in Sources */,
 				2975A9F7275DA9980097D72C /* LaserPkg.m in Sources */,
 				2975A9D0275DA98F0097D72C /* CurrentLaserModel.m in Sources */,
 				29A560C62759FF840024847F /* NumberView.m in Sources */,
@@ -1035,7 +1010,6 @@
 				297396BD274CCAC40030613D /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				297396DF274CCAD40030613D /* WRNavigationBar.m in Sources */,
 				297396BC274CCAC40030613D /* UIButton+ImageTitleSpacing.m in Sources */,
-				29FCE6932754E408003B0E7C /* UIColor+Extension.m in Sources */,
 				29E42CA027576F9B00A8973A /* YTSliderSetting.m in Sources */,
 				2975A9F1275DA9980097D72C /* CurrentRatePkg.m in Sources */,
 				297396B4274CCAC40030613D /* MBProgressHUD+Add.m in Sources */,
@@ -1204,7 +1178,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V5HRKRDUCX;
-				GCC_PREFIX_HEADER = /Users/liuxiang/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
+				GCC_PREFIX_HEADER = /Users/flyliu/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
 				INFOPLIST_FILE = LightMoxibustion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1224,7 +1198,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V5HRKRDUCX;
-				GCC_PREFIX_HEADER = /Users/liuxiang/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
+				GCC_PREFIX_HEADER = /Users/flyliu/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
 				INFOPLIST_FILE = LightMoxibustion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

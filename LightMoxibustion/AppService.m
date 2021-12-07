@@ -64,7 +64,7 @@
     
     
     [SVProgressHUD setErrorImage:nil];
-//    [SVProgressHUD setBackgroundColor:[[UIColor colorWithHexString:@"#E6E9EA"] colorWithAlphaComponent:0.3]];
+    [SVProgressHUD setForegroundColor:[[UIColor colorWithHexString:@"#E6E9EA"] colorWithAlphaComponent:0.3]];
     [SVProgressHUD setBackgroundColor:[UIColor redColor]];
     
 }

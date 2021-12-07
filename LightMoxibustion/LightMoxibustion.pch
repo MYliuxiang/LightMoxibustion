@@ -119,6 +119,7 @@ typedef unsigned int U32;
 #import "VersionModel.h"
 #import "ChargeStateModel.h"
 #import "CurrentSetTimeModel.h"
+#import "RealTimeTemModel.h"
 
 
 

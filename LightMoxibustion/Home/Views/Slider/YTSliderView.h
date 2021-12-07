@@ -34,6 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) CGFloat anchorPercent;
 //当前百分比
 @property (assign, nonatomic) CGFloat currentPercent;
+
+@property (assign, nonatomic) CGFloat lastPercent;
+
 //总值（主要用于显示）
 @property (assign, nonatomic) NSInteger sumValue;
 //setting用于静态属性

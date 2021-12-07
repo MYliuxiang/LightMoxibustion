@@ -9,7 +9,6 @@
 
 #import "CRC16.h"
 #import "MLMProgressView.h"
-#import "CustomSliderView.h"
 #import "LxUnitSlider.h"
 #import "HRNumberUnitView.h"
 #import "ConnectedVC.h"
@@ -44,9 +43,15 @@
 
 @property (nonatomic, strong) UIView *meumView;
 @property (weak, nonatomic) IBOutlet UIButton *blueB;
+@property (weak, nonatomic) IBOutlet UIImageView *blueStateI;
 
 @property (nonatomic, assign) BOOL autoDisconnect;
 
+@property (nonatomic, assign) BOOL highTemTip;
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *quantityI;
+@property (weak, nonatomic) IBOutlet UIImageView *laserStateI;
 
 
 
@@ -83,6 +88,12 @@
 #pragma mark ----------- LxUnitSliderDelegate -----------
 - (void)unitSliderView:(LxUnitSlider *)slider didChangePercent:(NSInteger)percent
 {
+//    if (slider == self.temSlider) {
+//        if (!self.highTemTip) {
+//            self.highTemTip = YES;
+//            [self.progress hightTemTip];
+//        }
+//    }
 //    NSLog(@"percent:%ld",(long)percent);
     
 }
@@ -92,11 +103,7 @@
     HLBLEManager *manager = [HLBLEManager sharedInstance];
     manager.didDisconnectBlock = ^(CBPeripheral *peripheral, NSError *error) {
         NSLog(@"蓝牙断开连接了 %@",error);
-        self.rxcharacter = nil;
-        self.txcharacter = nil;
-        [self.timer setFireDate:[NSDate distantFuture]];
-//        [self scanDevice];
-
+        [self hanleConnectedState];
     };
     manager.receiveDataBlock = ^(NSData *data) {
         int cmd = [HandleData verificationData:data];
@@ -111,21 +118,21 @@
             case 3:
             {
                 NSLog(@"设置温度成功");
-                NSLog(@"第三位：%d,第四位：%d",mbuf[3],mbuf[4]);
+//                NSLog(@"第三位：%d,第四位：%d",mbuf[3],mbuf[4]);
                 
             }
                 break;
             case 4:
             {
                 NSLog(@"设置频率成功");
-                NSLog(@"第三位：%d,第四位：%d",mbuf[3],mbuf[4]);
+//                NSLog(@"第三位：%d,第四位：%d",mbuf[3],mbuf[4]);
 
             }
                 break;
             case 6:
             {
                 NSLog(@"设置激光档位成功");
-                NSLog(@"第三位：%d,第四位：%d",mbuf[3],mbuf[4]);
+//                NSLog(@"第三位：%d,第四位：%d",mbuf[3],mbuf[4]);
 
             }
                 break;
@@ -133,14 +140,41 @@
             case 8:
             {
                 QuantityModel *quantityModel = [[QuantityModel alloc] initWithData:data];
-                NSLog(@"更新电量:%d",quantityModel.quantity);
+                switch (quantityModel.quantity) {
+                    case 0:
+                    {
+                        self.quantityI.image = [UIImage imageNamed:@"bl0"];
+                    }
+                        break;
+                    case 1:
+                    {
+                        self.quantityI.image = [UIImage imageNamed:@"bl1"];
+
+                    }
+                        break;
+                    case 2:
+                    {
+                        self.quantityI.image = [UIImage imageNamed:@"bl2"];
+
+                    }
+                        break;
+                    case 3:
+                    {
+                        self.quantityI.image = [UIImage imageNamed:@"bl3"];
+
+                    }
+                        break;
+                        
+                    default:
+                        break;
+                }
 
             }
                 break;
             case 9:
             {
-//                CurrentTemModel *tem = [[CurrentTemModel alloc] initWithData:data];
-//                NSLog(@"实时温度:%d",tem.currentTem);
+                RealTimeTemModel *tem = [[RealTimeTemModel alloc] initWithData:data];
+                [self.progress configCurrentTem:tem.tem];
 
             }
                 break;
@@ -153,21 +187,32 @@
             case 11:
             {
                 CurrentLaserModel *currentLaser = [[CurrentLaserModel alloc] initWithData:data];
-                NSLog(@"获取激光设置档位:%d",currentLaser.laser);
+                self.redSlider.currentPercent = currentLaser.laser;
+                if (currentLaser.laser == 0) {
+                    self.laserStateI.image = [UIImage imageNamed:@"text_laser_off"];
+                }else{
+                    self.laserStateI.image = [UIImage imageNamed:@"text_laser_on"];
+                }
+
             }
                 break;
                 
             case 12:
             {
                 CurrentRateModel *currentRate = [[CurrentRateModel alloc] initWithData:data];
-                NSLog(@"获取当前灯光闪动频率档位:%d",currentRate.rate);
+                self.rateSlider.currentPercent = currentRate.rate;
+
             }
                 break;
                 
             case 13:
             {
                 CurrentTemModel *currentTem = [[CurrentTemModel alloc] initWithData:data];
-                NSLog(@"获取仪器当前的设置温度:%d",currentTem.currentTem);
+                self.temSlider.currentPercent = currentTem.currentTem - 29;
+                [self.progress configSetTem:currentTem.currentTem];
+                NSLog(@"当前设置温度：%d",currentTem.currentTem);
+                
+                
             }
                 break;
             case 15:
@@ -180,8 +225,8 @@
                 break;
             case 16:
             {
-                ChargeStateModel *stateModel = [[ChargeStateModel alloc] initWithData:data];
-                NSLog(@"CHG信号:%d,STANDBY信号:%d",stateModel.CHG,stateModel.STANDBY);
+//                ChargeStateModel *stateModel = [[ChargeStateModel alloc] initWithData:data];
+//                NSLog(@"CHG信号:%d,STANDBY信号:%d",stateModel.CHG,stateModel.STANDBY);
             }
                 break;
                 
@@ -317,6 +362,11 @@
 }
 
 - (void)connectDevice:(BleDevice *)device{
+    self.blueStateI.image = [[UIImage imageNamed:@"text_connecting"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    self.blueStateI.tintColor = [UIColor whiteColor];
+    [self blueStateIAnimation:NO];
+
+    
     HLBLEManager *manager = [HLBLEManager sharedInstance];
     [manager connectPeripheral:device.peripheral
                 connectOptions:@{CBConnectPeripheralOptionNotifyOnDisconnectionKey:@(YES)}
@@ -331,15 +381,7 @@
                                  [SVProgressHUD showErrorWithStatus:@"连接失败"];
                              } else {
                                  //连接成功
-                                 //需要每隔两秒发送心跳包
-                                 NSLog(@"连接成功");
-                                 [LxUserDefaults setObject:peripheral.identifier.UUIDString forKey:MACADRESS];
-                                 [[NSNotificationCenter defaultCenter] postNotificationName:DeviceChange object:@{@"devices":self.deviceArray}];
-                                 self.autoDisconnect = NO;
-//                                 if (self.navigationController.viewControllers.count > 1) {
-//                                     [self.navigationController popToRootViewControllerAnimated:YES];
-//                                 }
-
+                                 [self hanleConnectedState];
                              }
                              break;
                          }
@@ -349,7 +391,7 @@
                                  NSLog(@"查找服务失败");
                              } else {
                                
-                                 NSLog(@"查找服务成功");
+//                                 NSLog(@"查找服务成功");
 
                              }
                              break;
@@ -360,7 +402,7 @@
                              if (error) {
                                  NSLog(@"查找特性失败");
                              } else {
-                                  NSLog(@"查找特性成功");
+//                                  NSLog(@"查找特性成功");
                              }
                              break;
                          }
@@ -372,7 +414,7 @@
                                  NSLog(@"查找特性的描述失败");
                              } else {
                                  if ([character.UUID.UUIDString isEqualToString:[HLBLEManager txCharacteristicUUID].UUIDString]){
-                                     [self.timer setFireDate:[NSDate date]];
+                                     [self initBlue];
                                  }
                                  
                              }
@@ -392,45 +434,8 @@
 
 #pragma mark --------------发送蓝牙数据--------------
 
-
-- (IBAction)setTem:(id)sender {
-    
-    [SendData setTemperature:30];
-    
-}
-
-- (IBAction)setRate:(id)sender {
-    [SendData setRate:2];
-}
-
-- (IBAction)setLaser:(id)sender {
-    [SendData setLaser:2];
-}
-
-- (IBAction)updateQuantity:(id)sender {
-    
-    [SendData updateQuantiy];
-}
-
-- (IBAction)getCurrentLaser:(id)sender {
-    [SendData getCurrentLaser];
-}
-
-- (IBAction)getCurrentRate:(id)sender {
-    
-    [SendData getCurrentRate];
-}
-
-- (IBAction)getCurrentTem:(id)sender {
-    
-    [SendData getCurrentTem];
-}
-
-- (IBAction)getVersion:(id)sender {
-    [SendData getVersion];
-}
-
 - (IBAction)getChargeState:(id)sender {
+    
     [SendData getChargeState];
 }
 
@@ -438,26 +443,80 @@
     [SendData setCurrentWorkTime:5];
 }
 
-- (IBAction)GetCurrentSetTimePkg:(id)sender {
-    [SendData getCurrentSetTime];
-
-}
-
 
 - (IBAction)blueAC:(id)sender {
     [self annimationMenumIsHidden:NO];
 }
 
+- (void)initBlue{
+    //初试化蓝牙
+    [SendData sendHeartBeat];
+    [self.timer setFireDate:[NSDate date]];
+    [SendData updateQuantiy];
+    
+    [SendData getCurrentLaser];
+
+    [SendData getCurrentRate];
+    
+    [SendData getCurrentTem];
+    
+    [SendData getCurrentSetTime];
+
+}
+
+- (void)hanleConnectedState{
+    if ([HLBLEManager sharedInstance].connectedPerpheral == nil) {
+        //断开链接
+        self.highTemTip = NO;
+        self.quantityI.image = [UIImage imageNamed:@"bl3"];
+        self.rxcharacter = nil;
+        self.txcharacter = nil;
+        [self.timer setFireDate:[NSDate distantFuture]];
+        if (_autoDisconnect) {
+            [self scanDevice];
+        }
+        
+//        [self.blueB setImage:[UIImage imageNamed:@"ble_bmp"] forState:UIControlStateNormal];
+        self.blueStateI.image = [[UIImage imageNamed:@"text_no_connect"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        self.blueStateI.tintColor = [UIColor redColor];
+        [self blueStateIAnimation:YES];
+        self.laserStateI.image = [UIImage imageNamed:@"text_laser_off"];
+        
+        self.redSlider.currentPercent = 0;
+        self.temSlider.currentPercent = 0;
+        self.rateSlider.currentPercent = 0;
+        
+        [self.progress configSetTem:-1];
+        [self.progress configCurrentTem:-1];
+        
+        
+    }else{
+        
+        NSLog(@"连接成功");
+        [LxUserDefaults setObject:[HLBLEManager sharedInstance].connectedPerpheral.identifier.UUIDString forKey:MACADRESS];
+        [[NSNotificationCenter defaultCenter] postNotificationName:DeviceChange object:@{@"devices":self.deviceArray}];
+        self.autoDisconnect = NO;
+        //
+//        [self.blueB setImage:[UIImage imageNamed:@"ble_bmp"] forState:UIControlStateNormal];
+        self.blueStateI.image = [[UIImage imageNamed:@"text_bel_connected"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        self.blueStateI.tintColor = [UIColor whiteColor];
+        [self blueStateIAnimation:NO];
+
+
+    }
+}
+
 - (void)creatSubViews{
+    
     _progress = [[MLMProgressView alloc] initWithFrame:CGRectMake(LEFT_MAGAN , Height_StatusBar + 44 * WidthScale + 28 * WidthScale, (kScreenWidth - 2 * LEFT_MAGAN), kScreenWidth - 2 * LEFT_MAGAN)];
     [self.view addSubview:[_progress speedDialType]];
     __weak typeof(self) weakSelf = self;
 
-    [_progress tapHandle:^{
-        [weakSelf.progress.circle setProgress:1];
-        [weakSelf.progress.incircle setProgress:1];
-
-    }];
+//    [_progress tapHandle:^{
+//        [weakSelf.progress.circle setProgress:1];
+//        [weakSelf.progress.incircle setProgress:1];
+//
+//    }];
     
     
     _rateSlider = [[LxUnitSlider alloc]initWithFrame:CGRectMake(100, (kScreenHeight + 100) / 2.0 + 10 * WidthScale, 80 * WidthScale, kScreenHeight - (kScreenHeight + 100) / 2.0 - kBottomSafeHeight - 10 * WidthScale) titles:@[@"常亮",@"1",@"2",@"3",@"4",@"5"] total:5.0 thumbTitle:@"频率"];
@@ -465,11 +524,18 @@
     [self.view addSubview:_rateSlider];
     _rateSlider.centerX = kScreenWidth / 2.0;
     
-    _temSlider = [[LxUnitSlider alloc]initWithFrame:CGRectMake(100, (kScreenHeight + 100) / 2.0 + 10 * WidthScale, 80 * WidthScale , kScreenHeight - (kScreenHeight + 100) / 2.0 - kBottomSafeHeight - 10 * WidthScale) titles:@[@"关闭",@"1",@"2",@"3",@"4",@"5"] total:50.0 thumbTitle:@"温度"];
+    _temSlider = [[LxUnitSlider alloc]initWithFrame:CGRectMake(100, (kScreenHeight + 100) / 2.0 + 10 * WidthScale, 80 * WidthScale , kScreenHeight - (kScreenHeight + 100) / 2.0 - kBottomSafeHeight - 10 * WidthScale) titles:@[@"关闭",@"1",@"2",@"3",@"4",@"5"] total:21.0 thumbTitle:@"温度"];
     _temSlider.delegate = self;
     [self.view addSubview:_temSlider];
     
     _temSlider.right = kScreenWidth / 2.0 - 80 * WidthScale / 2;
+    
+    _temSlider.hightTemTipBlock = ^(int tem) {
+        if (!weakSelf.highTemTip) {
+            [weakSelf.progress hightTemTip:tem];
+            weakSelf.highTemTip = YES;
+        }
+    };
 
         
     _redSlider = [[LxUnitSlider alloc]initWithFrame:CGRectMake(100, (kScreenHeight + 100) / 2.0 + 10 * WidthScale, 80 * WidthScale, kScreenHeight - (kScreenHeight + 100) / 2.0 - kBottomSafeHeight - 10 * WidthScale)  titles:@[@"关闭",@"1",@"2",@"3",@"4",@"5"] total:5.0 thumbTitle:@"红光"];
@@ -591,6 +657,27 @@
         //退出代码
         exit(0);
     }
+}
+
+- (void)blueStateIAnimation:(BOOL)isStart{
+     
+    if (isStart) {
+        [self.blueStateI.layer removeAnimationForKey:@"opacity"];
+        CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+        scaleAnimation.fromValue=@1.f;
+        scaleAnimation.toValue=@0.1f;
+        scaleAnimation.autoreverses=YES;
+        scaleAnimation.repeatCount=MAXFLOAT;
+        scaleAnimation.duration=1.f;
+        scaleAnimation.removedOnCompletion = NO;
+        scaleAnimation.fillMode = kCAFillModeForwards;
+        [self.blueStateI.layer addAnimation:scaleAnimation forKey:@"opacity"];
+    }else{
+        [self.blueStateI.layer removeAnimationForKey:@"opacity"];
+
+    }
+    
+
 }
 
 @end

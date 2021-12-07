@@ -37,22 +37,28 @@
     TemperaturePkg *pkg = [[TemperaturePkg alloc] initWithTemperature:temperature];
     HLBLEManager *manger = [HLBLEManager sharedInstance];
     [manger writeValue:pkg.buf];
+    [self getCurrentTem];
     
 }
 
 + (void)setRate:(int)rate{
     
+    NSLog(@"设置频率:%d",rate);
     RatePkg *pkg = [[RatePkg alloc] initWithRate:rate];
     HLBLEManager *manger = [HLBLEManager sharedInstance];
     [manger writeValue:pkg.buf];
+    [self getCurrentRate];
     
 }
 
 + (void)setLaser:(int)laser{
     
+    NSLog(@"设置激光:%d",laser);
     LaserPkg *pkg = [[LaserPkg alloc] initWithLaser:laser];
     HLBLEManager *manger = [HLBLEManager sharedInstance];
     [manger writeValue:pkg.buf];
+    [self getCurrentLaser];
+
 }
 
 + (void)updateQuantiy{

@@ -21,7 +21,13 @@
 
 @property (assign, nonatomic) NSInteger currentPercent;
 @property (weak, nonatomic) id<LxUnitSliderDelegate> delegate;
+@property (nonatomic,copy) void (^hightTemTipBlock)(int tem);
+
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray *)titles total:(float)totalValue thumbTitle:(NSString *)thumbTitle;
+
+- (void)bluePercent:(NSInteger)percent;
+
+
 @end
 

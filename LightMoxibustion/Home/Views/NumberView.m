@@ -35,13 +35,13 @@
     _sencondImg = [[UIImageView alloc] initWithFrame:CGRectMake(self.width / 2.0 + 1,0, self.width / 2.0 - 2, self.height)];
     [self addSubview:_sencondImg];
     
-    self.number = 0;
+    self.number = -1;
 }
 
 - (void)setNumber:(int)number
 {
     _number = number;
-    if (_number == 0) {
+    if (_number == -1) {
            
         self.firstImg.image = [[UIImage imageNamed:@"b_seg_o" ] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
            
