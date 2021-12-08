@@ -23,6 +23,7 @@ PODS:
   - SDWebImage (4.2.3):
     - SDWebImage/Core (= 4.2.3)
   - SDWebImage/Core (4.2.3)
+  - SVProgressHUD (2.2.5)
   - "UITextView+Placeholder (1.4.0)"
   - YYCache (1.0.4)
   - YYCategories (1.0.4):
@@ -38,6 +39,7 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - SDWebImage (~> 4.2.2)
+  - SVProgressHUD
   - "UITextView+Placeholder"
   - YYCache
   - YYCategories
@@ -52,6 +54,7 @@ SPEC REPOS:
     - MJExtension
     - MJRefresh
     - SDWebImage
+    - SVProgressHUD
     - "UITextView+Placeholder"
     - YYCache
     - YYCategories
@@ -65,10 +68,11 @@ SPEC CHECKSUMS:
   MJExtension: 01704cca2b60a214c10761b6491eab74069d68a9
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: de54fae4c1232c94ad2a117d60796c0299c8cb7f
+PODFILE CHECKSUM: 7d1e2e29ff948ccd0a21774a115ac1e8059a1598
 
 COCOAPODS: 1.10.2

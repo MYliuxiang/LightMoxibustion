@@ -8,8 +8,8 @@
 	<false/>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>cn.zhifu.pos</key>
-		<string>Pos_HOC</string>
+		<key>com.lx.LightMoxibustion</key>
+		<string>blueHoc</string>
 	</dict>
 </dict>
 </plist>

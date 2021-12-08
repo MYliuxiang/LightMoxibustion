@@ -10,7 +10,7 @@
 #import "MLMProgressHeader.h"
 #import "NumberView.h"
 
-@interface MLMProgressView : UIView
+@interface MLMProgressView : UIView<MLMCircleViewDelegate>
 
 @property (nonatomic, strong) MLMCircleView *circle;
 @property (nonatomic, strong) MLMCalibrationView *calibra;

@@ -61,7 +61,7 @@
 @property (nonatomic, strong) UIImageView *dotImageView;//光标
 @property (nonatomic, strong) CAShapeLayer *bottomLayer;//弧度背景
 @property (nonatomic, strong) CAShapeLayer *progressLayer;//进度
-@property (nonatomic, strong) CAGradientLayer *gradientLayerRadarView;
+@property (nonatomic, strong) CAGradientLayer *gradientLayer;
 
 
 - (instancetype)initWithFrame:(CGRect)frame

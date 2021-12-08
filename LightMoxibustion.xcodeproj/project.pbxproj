@@ -94,11 +94,6 @@
 		2975A9FB275DA9980097D72C /* GetCurrentSetTimePkg.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975A9EB275DA9980097D72C /* GetCurrentSetTimePkg.m */; };
 		2975AA02275DA9A90097D72C /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2975A9FC275DA9A90097D72C /* DeviceCell.xib */; };
 		2975AA05275DA9A90097D72C /* DeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975AA01275DA9A90097D72C /* DeviceCell.m */; };
-		2975AA11275DA9EB0097D72C /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975AA07275DA9EB0097D72C /* SVRadialGradientLayer.m */; };
-		2975AA12275DA9EB0097D72C /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975AA0A275DA9EB0097D72C /* SVProgressAnimatedView.m */; };
-		2975AA13275DA9EB0097D72C /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975AA0D275DA9EB0097D72C /* SVProgressHUD.m */; };
-		2975AA14275DA9EB0097D72C /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2975AA0E275DA9EB0097D72C /* SVIndefiniteAnimatedView.m */; };
-		2975AA15275DA9EB0097D72C /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2975AA0F275DA9EB0097D72C /* SVProgressHUD.bundle */; };
 		297D556F2758651F00C1A385 /* HRNumberUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 297D556E2758651F00C1A385 /* HRNumberUnitView.m */; };
 		299157492756453400D17F66 /* LxUnitSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 299157472756453400D17F66 /* LxUnitSlider.m */; };
 		29A560C62759FF840024847F /* NumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A560C52759FF840024847F /* NumberView.m */; };
@@ -293,16 +288,6 @@
 		2975A9FC275DA9A90097D72C /* DeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
 		2975A9FF275DA9A90097D72C /* DeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceCell.h; sourceTree = "<group>"; };
 		2975AA01275DA9A90097D72C /* DeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceCell.m; sourceTree = "<group>"; };
-		2975AA07275DA9EB0097D72C /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
-		2975AA08275DA9EB0097D72C /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
-		2975AA09275DA9EB0097D72C /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
-		2975AA0A275DA9EB0097D72C /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
-		2975AA0B275DA9EB0097D72C /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
-		2975AA0C275DA9EB0097D72C /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
-		2975AA0D275DA9EB0097D72C /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
-		2975AA0E275DA9EB0097D72C /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
-		2975AA0F275DA9EB0097D72C /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
-		2975AA10275DA9EB0097D72C /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
 		297D556D2758651F00C1A385 /* HRNumberUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRNumberUnitView.h; sourceTree = "<group>"; };
 		297D556E2758651F00C1A385 /* HRNumberUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRNumberUnitView.m; sourceTree = "<group>"; };
 		299157452756453400D17F66 /* LxUnitSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxUnitSlider.h; sourceTree = "<group>"; };
@@ -421,7 +406,6 @@
 		29739674274CC95E0030613D /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				2975AA06275DA9EB0097D72C /* SVProgressHUD */,
 				297396F0274CCB3C0030613D /* LxCustomAlert.h */,
 				297396ED274CCB3C0030613D /* LxCustomAlert.m */,
 				297396F1274CCB3C0030613D /* LxDelayed.h */,
@@ -666,23 +650,6 @@
 			path = Pkg;
 			sourceTree = "<group>";
 		};
-		2975AA06275DA9EB0097D72C /* SVProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				2975AA07275DA9EB0097D72C /* SVRadialGradientLayer.m */,
-				2975AA08275DA9EB0097D72C /* SVIndefiniteAnimatedView.h */,
-				2975AA09275DA9EB0097D72C /* SVProgressHUD.h */,
-				2975AA0A275DA9EB0097D72C /* SVProgressAnimatedView.m */,
-				2975AA0B275DA9EB0097D72C /* SVProgressHUD-Prefix.pch */,
-				2975AA0C275DA9EB0097D72C /* SVRadialGradientLayer.h */,
-				2975AA0D275DA9EB0097D72C /* SVProgressHUD.m */,
-				2975AA0E275DA9EB0097D72C /* SVIndefiniteAnimatedView.m */,
-				2975AA0F275DA9EB0097D72C /* SVProgressHUD.bundle */,
-				2975AA10275DA9EB0097D72C /* SVProgressAnimatedView.h */,
-			);
-			path = SVProgressHUD;
-			sourceTree = "<group>";
-		};
 		297D556C2758651000C1A385 /* LEDView */ = {
 			isa = PBXGroup;
 			children = (
@@ -881,7 +848,6 @@
 				2973965D274CC44B0030613D /* Main.storyboard in Resources */,
 				29FCE67D2754C69C003B0E7C /* redDot.png in Resources */,
 				297396D3274CCACE0030613D /* LICENSE in Resources */,
-				2975AA15275DA9EB0097D72C /* SVProgressHUD.bundle in Resources */,
 				29FCE67A2754C69C003B0E7C /* blueDot.png in Resources */,
 				29739708274CCF9A0030613D /* HomeVC.xib in Resources */,
 				29FCE6782754C69C003B0E7C /* brightDot.png in Resources */,
@@ -958,7 +924,6 @@
 				297396B6274CCAC40030613D /* UIView+ViewController.m in Sources */,
 				297396C3274CCAC40030613D /* UIView+Corners.m in Sources */,
 				29739683274CC9780030613D /* BADataEntity.m in Sources */,
-				2975AA14275DA9EB0097D72C /* SVIndefiniteAnimatedView.m in Sources */,
 				2975A9F4275DA9980097D72C /* VersionPkg.m in Sources */,
 				29739691274CCABB0030613D /* UIView+LYExtension.m in Sources */,
 				29FCE67F2754C69C003B0E7C /* UIView+MLMBorderPath.m in Sources */,
@@ -981,16 +946,13 @@
 				2975A9F6275DA9980097D72C /* SetWorkTimePkg.m in Sources */,
 				2975A9F2275DA9980097D72C /* CurrentLaserPkg.m in Sources */,
 				22614481275E6F260029B1DE /* ConnectedVC.m in Sources */,
-				2975AA13275DA9EB0097D72C /* SVProgressHUD.m in Sources */,
 				2975A9C9275DA98F0097D72C /* CurrentTemModel.m in Sources */,
 				297396D5274CCACE0030613D /* TXMatchManager.m in Sources */,
 				2975A9F9275DA9980097D72C /* TemperaturePkg.m in Sources */,
 				2973968F274CCABB0030613D /* LYEmptyBaseView.m in Sources */,
 				29E42C9D27576EF600A8973A /* YTSliderView.m in Sources */,
-				2975AA12275DA9EB0097D72C /* SVProgressAnimatedView.m in Sources */,
 				297396D7274CCACE0030613D /* TXMatchConst.m in Sources */,
 				2975A9CF275DA98F0097D72C /* QuestTemModel.m in Sources */,
-				2975AA11275DA9EB0097D72C /* SVRadialGradientLayer.m in Sources */,
 				2975A9C8275DA98F0097D72C /* RealTimeTemModel.m in Sources */,
 				2975A9D3275DA98F0097D72C /* CurrentSetTimeModel.m in Sources */,
 				297396E7274CCADB0030613D /* LxResfreshHeader.m in Sources */,
@@ -1176,16 +1138,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V5HRKRDUCX;
-				GCC_PREFIX_HEADER = /Users/liuxiang/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = MDJMU7FU97;
+				GCC_PREFIX_HEADER = /Users/flyliu/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
 				INFOPLIST_FILE = LightMoxibustion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tenvine.LightMoxibustion;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lx.LightMoxibustion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = blueDev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1196,16 +1160,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V5HRKRDUCX;
-				GCC_PREFIX_HEADER = /Users/liuxiang/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = MDJMU7FU97;
+				GCC_PREFIX_HEADER = /Users/flyliu/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
 				INFOPLIST_FILE = LightMoxibustion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tenvine.LightMoxibustion;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lx.LightMoxibustion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = blueHoc;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

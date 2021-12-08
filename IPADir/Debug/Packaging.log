@@ -1,0 +1,789 @@
+2021-12-08 09:01:50 +0000 [MT] Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7f7fa8a3f6f0; archive(resolved)="<IDEArchive: 0x600002c59b00>", distributionTask(resolved)="2", distributionDestination(resolved)="1", distributionMethod(resolved)="<IDEDistributionMethodiOSAdHoc: 0x600000ada8a0>", team(resolved)="<IDEProvisioningBasicTeam: 0x6000009db400; teamID='MDJMU7FU97', teamName='Hunan Liangcha master Network Technology Co., LTD'>">
+	Chain (13, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7f7fa8a3f6f0; archive = "<IDEArchive: 0x600002c59b00>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600000ada8a0>", team="<IDEProvisioningBasicTeam: 0x6000009db400; teamID='MDJMU7FU97', teamName='Hunan Liangcha master Network Technology Co., LTD'>">
+	<IDEDistributionProcessingPipelineContext: 0x7f7fa8a3f4b0; archive = "<IDEArchive: 0x600002c59b00>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600000ada8a0>", team="<IDEProvisioningBasicTeam: 0x6000009db400; teamID='MDJMU7FU97', teamName='Hunan Liangcha master Network Technology Co., LTD'>">
+	<IDEDistributionContext: 0x7f7fa8a3eda0; archive = "<IDEArchive: 0x600002c59b00>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600000ada8a0>", team="<IDEProvisioningBasicTeam: 0x6000009db400; teamID='MDJMU7FU97', teamName='Hunan Liangcha master Network Technology Co., LTD'>">
+	<IDEDistributionContext: 0x7f7fab8e95b0; archive = "<IDEArchive: 0x600002c59b00>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600000ada8a0>", team="<IDEProvisioningBasicTeam: 0x6000009db400; teamID='MDJMU7FU97', teamName='Hunan Liangcha master Network Technology Co., LTD'>">
+	<IDEDistributionContext: 0x7f7fab8e8da0; archive = "<IDEArchive: 0x600002c59b00>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600000ada8a0>", team="<IDEProvisioningBasicTeam: 0x6000009db400; teamID='MDJMU7FU97', teamName='Hunan Liangcha master Network Technology Co., LTD'>">
+	<IDEDistributionContext: 0x7f7fab8e8640; archive = "<IDEArchive: 0x600002c59b00>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600000ada8a0>", team="<IDEProvisioningBasicTeam: 0x6000009db400; teamID='MDJMU7FU97', teamName='Hunan Liangcha master Network Technology Co., LTD'>">
+	<IDEDistributionContext: 0x7f7fab8e80b0; archive = "<IDEArchive: 0x600002c59b00>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600000ada8a0>", team="<IDEProvisioningBasicTeam: 0x6000009db400; teamID='MDJMU7FU97', teamName='Hunan Liangcha master Network Technology Co., LTD'>">
+	<IDEDistributionContext: 0x7f7fab8e7c60; archive = "<IDEArchive: 0x600002c59b00>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600000ada8a0>", team="<IDEProvisioningBasicTeam: 0x6000009db400; teamID='MDJMU7FU97', teamName='Hunan Liangcha master Network Technology Co., LTD'>">
+	<IDEDistributionContext: 0x7f7fab8bb270; archive = "<IDEArchive: 0x600002c59b00>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600000ada8a0>", team="<IDEProvisioningBasicTeam: 0x6000009db400; teamID='MDJMU7FU97', teamName='Hunan Liangcha master Network Technology Co., LTD'>">
+	<IDEDistributionContext: 0x7f7fab8b8d80; archive = "<IDEArchive: 0x600002c59b00>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600000ada8a0>", team="(null)">
+	<IDEDistributionContext: 0x7f7fa8a30a80; archive = "<IDEArchive: 0x600002c59b00>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600000ada8a0>", team="(null)">
+	<IDEDistributionContext: 0x7f7fa8e18920; archive = "<IDEArchive: 0x600002c59b00>", distributionMethod="<IDEDistributionMethodiOSAdHoc: 0x600000ada8a0>", team="(null)">
+	<IDEDistributionContext: 0x7f7fab8b8140; archive = "<IDEArchive: 0x600002c59b00>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0x7f7fa8a3f6f0>
+2021-12-08 09:01:50 +0000 [MT] Processing step: IDEDistributionCreateDestRootStep
+2021-12-08 09:01:50 +0000 [MT] Processing step: IDEDistributionCopyItemStep
+2021-12-08 09:01:50 +0000 [MT] Running /usr/bin/ditto '-V' '/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app'
+2021-12-08 09:01:50 +0000  >>> Copying /Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app 
+2021-12-08 09:01:50 +0000  copying file ./_CodeSignature/CodeResources ... 
+2021-12-08 09:01:50 +0000  23759 bytes for ./_CodeSignature/CodeResources
+2021-12-08 09:01:50 +0000  copying file ./LICENSE ... 
+2021-12-08 09:01:50 +0000  1065 bytes for ./LICENSE
+copying file ./brightDot.png ... 
+2021-12-08 09:01:50 +0000  24051 bytes for ./brightDot.png
+2021-12-08 09:01:50 +0000  copying file ./Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib ... 
+2021-12-08 09:01:50 +0000  916 bytes for ./Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib
+copying file ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib ... 
+2021-12-08 09:01:50 +0000  1197 bytes for ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
+copying file ./Base.lproj/Main.storyboardc/Info.plist ... 
+2021-12-08 09:01:50 +0000  258 bytes for ./Base.lproj/Main.storyboardc/Info.plist
+2021-12-08 09:01:50 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2021-12-08 09:01:50 +0000  1197 bytes for ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+2021-12-08 09:01:50 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2021-12-08 09:01:50 +0000  896 bytes for ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+2021-12-08 09:01:50 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2021-12-08 09:01:50 +0000  258 bytes for ./Base.lproj/LaunchScreen.storyboardc/Info.plist
+2021-12-08 09:01:50 +0000  copying file ./AboutVC.nib ... 
+2021-12-08 09:01:50 +0000  2520 bytes for ./AboutVC.nib
+2021-12-08 09:01:50 +0000  copying file ./README.md ... 
+2021-12-08 09:01:50 +0000  8180 bytes for ./README.md
+2021-12-08 09:01:50 +0000  copying file ./blueDot.png ... 
+2021-12-08 09:01:50 +0000  3668 bytes for ./blueDot.png
+2021-12-08 09:01:50 +0000  copying file ./Assets.car ... 
+2021-12-08 09:01:50 +0000  459999 bytes for ./Assets.car
+2021-12-08 09:01:50 +0000  copying file ./ConnectedVC.nib ... 
+2021-12-08 09:01:50 +0000  3161 bytes for ./ConnectedVC.nib
+2021-12-08 09:01:50 +0000  copying file ./HomeVC.nib ... 
+2021-12-08 09:01:50 +0000  6568 bytes for ./HomeVC.nib
+2021-12-08 09:01:50 +0000  copying file ./BaseViewController.nib ... 
+2021-12-08 09:01:50 +0000  1317 bytes for ./BaseViewController.nib
+2021-12-08 09:01:50 +0000  copying file ./LightMoxibustion ... 
+2021-12-08 09:01:50 +0000  4310048 bytes for ./LightMoxibustion
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/Masonry.framework/_CodeSignature/CodeResources ... 
+1798 bytes for ./Frameworks/Masonry.framework/_CodeSignature/CodeResources
+copying file ./Frameworks/Masonry.framework/Masonry ... 
+751360 bytes for ./Frameworks/Masonry.framework/Masonry
+copying file ./Frameworks/Masonry.framework/Info.plist ... 
+739 bytes for ./Frameworks/Masonry.framework/Info.plist
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/MJRefresh.framework/_CodeSignature/CodeResources ... 
+5212 bytes for ./Frameworks/MJRefresh.framework/_CodeSignature/CodeResources
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/MJRefresh.framework/MJRefresh.bundle/zh-Hans.lproj/Localizable.strings ... 
+2021-12-08 09:01:50 +0000  1368 bytes for ./Frameworks/MJRefresh.framework/MJRefresh.bundle/zh-Hans.lproj/Localizable.strings
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/MJRefresh.framework/MJRefresh.bundle/en.lproj/Localizable.strings ... 
+2021-12-08 09:01:50 +0000  1374 bytes for ./Frameworks/MJRefresh.framework/MJRefresh.bundle/en.lproj/Localizable.strings
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/MJRefresh.framework/MJRefresh.bundle/uk.lproj/Localizable.strings ... 
+2021-12-08 09:01:50 +0000  1534 bytes for ./Frameworks/MJRefresh.framework/MJRefresh.bundle/uk.lproj/Localizable.strings
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/MJRefresh.framework/MJRefresh.bundle/arrow@2x.png ... 
+2021-12-08 09:01:50 +0000  1033 bytes for ./Frameworks/MJRefresh.framework/MJRefresh.bundle/arrow@2x.png
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/MJRefresh.framework/MJRefresh.bundle/ko.lproj/Localizable.strings ... 
+2021-12-08 09:01:50 +0000  771 bytes for ./Frameworks/MJRefresh.framework/MJRefresh.bundle/ko.lproj/Localizable.strings
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/MJRefresh.framework/MJRefresh.bundle/zh-Hant.lproj/Localizable.strings ... 
+2021-12-08 09:01:50 +0000  891 bytes for ./Frameworks/MJRefresh.framework/MJRefresh.bundle/zh-Hant.lproj/Localizable.strings
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/MJRefresh.framework/MJRefresh.bundle/trail_arrow@2x.png ... 
+2021-12-08 09:01:50 +0000  2322 bytes for ./Frameworks/MJRefresh.framework/MJRefresh.bundle/trail_arrow@2x.png
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/MJRefresh.framework/MJRefresh.bundle/ru.lproj/Localizable.strings ... 
+2021-12-08 09:01:50 +0000  1502 bytes for ./Frameworks/MJRefresh.framework/MJRefresh.bundle/ru.lproj/Localizable.strings
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/MJRefresh.framework/MJRefresh ... 
+2021-12-08 09:01:50 +0000  1076320 bytes for ./Frameworks/MJRefresh.framework/MJRefresh
+copying file ./Frameworks/MJRefresh.framework/Info.plist ... 
+2021-12-08 09:01:50 +0000  743 bytes for ./Frameworks/MJRefresh.framework/Info.plist
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/YYCache.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:50 +0000  1798 bytes for ./Frameworks/YYCache.framework/_CodeSignature/CodeResources
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/YYCache.framework/YYCache ... 
+2021-12-08 09:01:50 +0000  681872 bytes for ./Frameworks/YYCache.framework/YYCache
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/YYCache.framework/Info.plist ... 
+2021-12-08 09:01:50 +0000  739 bytes for ./Frameworks/YYCache.framework/Info.plist
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/UITextView_Placeholder.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:50 +0000  1798 bytes for ./Frameworks/UITextView_Placeholder.framework/_CodeSignature/CodeResources
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/UITextView_Placeholder.framework/UITextView_Placeholder ... 
+2021-12-08 09:01:50 +0000  242576 bytes for ./Frameworks/UITextView_Placeholder.framework/UITextView_Placeholder
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/UITextView_Placeholder.framework/Info.plist ... 
+2021-12-08 09:01:50 +0000  771 bytes for ./Frameworks/UITextView_Placeholder.framework/Info.plist
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/YYCategories.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:50 +0000  1798 bytes for ./Frameworks/YYCategories.framework/_CodeSignature/CodeResources
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/YYCategories.framework/YYCategories ... 
+2021-12-08 09:01:50 +0000  1825360 bytes for ./Frameworks/YYCategories.framework/YYCategories
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/YYCategories.framework/Info.plist ... 
+749 bytes for ./Frameworks/YYCategories.framework/Info.plist
+copying file ./Frameworks/MJExtension.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:50 +0000  1798 bytes for ./Frameworks/MJExtension.framework/_CodeSignature/CodeResources
+copying file ./Frameworks/MJExtension.framework/MJExtension ... 
+2021-12-08 09:01:50 +0000  552592 bytes for ./Frameworks/MJExtension.framework/MJExtension
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/MJExtension.framework/Info.plist ... 
+2021-12-08 09:01:50 +0000  747 bytes for ./Frameworks/MJExtension.framework/Info.plist
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SVProgressHUD.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:50 +0000  5706 bytes for ./Frameworks/SVProgressHUD.framework/_CodeSignature/CodeResources
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD ... 
+2021-12-08 09:01:50 +0000  679168 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info.png ... 
+2021-12-08 09:01:50 +0000  365 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info.png
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@3x.png ... 
+2021-12-08 09:01:50 +0000  398 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@3x.png
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@3x.png ... 
+2021-12-08 09:01:50 +0000  8319 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@3x.png
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@2x.png ... 
+2021-12-08 09:01:50 +0000  4893 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@2x.png
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@2x.png ... 
+2021-12-08 09:01:50 +0000  306 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@2x.png
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@3x.png ... 
+2021-12-08 09:01:50 +0000  1200 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@3x.png
+copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@2x.png ... 
+2021-12-08 09:01:50 +0000  462 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@2x.png
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@3x.png ... 
+2021-12-08 09:01:50 +0000  714 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@3x.png
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@2x.png ... 
+2021-12-08 09:01:50 +0000  816 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@2x.png
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error.png ... 
+2021-12-08 09:01:50 +0000  184 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error.png
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success.png ... 
+2021-12-08 09:01:50 +0000  262 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success.png
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png ... 
+2021-12-08 09:01:50 +0000  1845 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SVProgressHUD.framework/Info.plist ... 
+2021-12-08 09:01:50 +0000  751 bytes for ./Frameworks/SVProgressHUD.framework/Info.plist
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/IQKeyboardManager.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:50 +0000  1798 bytes for ./Frameworks/IQKeyboardManager.framework/_CodeSignature/CodeResources
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/IQKeyboardManager.framework/IQKeyboardManager ... 
+2021-12-08 09:01:50 +0000  1303104 bytes for ./Frameworks/IQKeyboardManager.framework/IQKeyboardManager
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/IQKeyboardManager.framework/Info.plist ... 
+761 bytes for ./Frameworks/IQKeyboardManager.framework/Info.plist
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/MBProgressHUD.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:50 +0000  1798 bytes for ./Frameworks/MBProgressHUD.framework/_CodeSignature/CodeResources
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/MBProgressHUD.framework/MBProgressHUD ... 
+2021-12-08 09:01:50 +0000  509008 bytes for ./Frameworks/MBProgressHUD.framework/MBProgressHUD
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/MBProgressHUD.framework/Info.plist ... 
+2021-12-08 09:01:50 +0000  751 bytes for ./Frameworks/MBProgressHUD.framework/Info.plist
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/AxcAE_TabBar.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:50 +0000  1798 bytes for ./Frameworks/AxcAE_TabBar.framework/_CodeSignature/CodeResources
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/AxcAE_TabBar.framework/AxcAE_TabBar ... 
+2021-12-08 09:01:50 +0000  495216 bytes for ./Frameworks/AxcAE_TabBar.framework/AxcAE_TabBar
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/AxcAE_TabBar.framework/Info.plist ... 
+2021-12-08 09:01:50 +0000  749 bytes for ./Frameworks/AxcAE_TabBar.framework/Info.plist
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SDWebImage.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:50 +0000  1798 bytes for ./Frameworks/SDWebImage.framework/_CodeSignature/CodeResources
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SDWebImage.framework/SDWebImage ... 
+2021-12-08 09:01:50 +0000  1495264 bytes for ./Frameworks/SDWebImage.framework/SDWebImage
+2021-12-08 09:01:50 +0000  copying file ./Frameworks/SDWebImage.framework/Info.plist ... 
+745 bytes for ./Frameworks/SDWebImage.framework/Info.plist
+copying file ./Frameworks/AFNetworking.framework/_CodeSignature/CodeResources ... 
+1798 bytes for ./Frameworks/AFNetworking.framework/_CodeSignature/CodeResources
+copying file ./Frameworks/AFNetworking.framework/AFNetworking ... 
+1934816 bytes for ./Frameworks/AFNetworking.framework/AFNetworking
+copying file ./Frameworks/AFNetworking.framework/Info.plist ... 
+749 bytes for ./Frameworks/AFNetworking.framework/Info.plist
+copying file ./embedded.mobileprovision ... 
+25174 bytes for ./embedded.mobileprovision
+copying file ./redDot.png ... 
+3665 bytes for ./redDot.png
+copying file ./Info.plist ... 
+1225 bytes for ./Info.plist
+copying file ./DeviceCell.nib ... 
+4057 bytes for ./DeviceCell.nib
+copying file ./PkgInfo ... 
+2021-12-08 09:01:50 +0000 [MT] /usr/bin/ditto exited with 0
+2021-12-08 09:01:50 +0000  8 bytes for ./PkgInfo
+2021-12-08 09:01:50 +0000 [MT] Processing step: IDEDistributionEmbedProfileStep
+2021-12-08 09:01:50 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600002c4eee0; bundleID='com.alamofire.AFNetworking', path='<DVTFilePath:0x600002608b80:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AFNetworking.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c730; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003ffad60; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='com.alamofire.AFNetworking', executablePath='<DVTFilePath:0x60000234b250:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AFNetworking.framework/AFNetworking'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600002c272a0; bundleID='org.cocoapods.AxcAE-TabBar', path='<DVTFilePath:0x600002610c00:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c000; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003ffad60; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.AxcAE-TabBar', executablePath='<DVTFilePath:0x60000238a7d0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework/AxcAE_TabBar'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600002c4efa0; bundleID='org.cocoapods.IQKeyboardManager', path='<DVTFilePath:0x6000026e1600:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2cd70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003ffad60; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.IQKeyboardManager', executablePath='<DVTFilePath:0x6000026e1700:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework/IQKeyboardManager'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600002c4ee80; bundleID='org.cocoapods.MBProgressHUD', path='<DVTFilePath:0x6000026e1780:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MBProgressHUD.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c4b0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003ffad60; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.MBProgressHUD', executablePath='<DVTFilePath:0x60000234c000:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MBProgressHUD.framework/MBProgressHUD'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600002c21200; bundleID='org.cocoapods.MJExtension', path='<DVTFilePath:0x6000026e1300:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJExtension.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2cbe0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003ffad60; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.MJExtension', executablePath='<DVTFilePath:0x6000023e04d0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJExtension.framework/MJExtension'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600002c4ef40; bundleID='org.cocoapods.MJRefresh', path='<DVTFilePath:0x6000026e0380:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJRefresh.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c8c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003ffad60; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.MJRefresh', executablePath='<DVTFilePath:0x6000023435d0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600002c42760; bundleID='org.cocoapods.Masonry', path='<DVTFilePath:0x6000026e0c80:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/Masonry.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c3c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003ffad60; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.Masonry', executablePath='<DVTFilePath:0x600002342bc0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/Masonry.framework/Masonry'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600002c27240; bundleID='org.cocoapods.SDWebImage', path='<DVTFilePath:0x600002682100:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SDWebImage.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c0a0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003ffad60; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.SDWebImage', executablePath='<DVTFilePath:0x60000234b020:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SDWebImage.framework/SDWebImage'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600002c210e0; bundleID='org.cocoapods.SVProgressHUD', path='<DVTFilePath:0x6000026e1380:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SVProgressHUD.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2ca50; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd8000; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.SVProgressHUD', executablePath='<DVTFilePath:0x6000023e17a0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600002c5c900; bundleID='org.cocoapods.UITextView-Placeholder', path='<DVTFilePath:0x600003ae1680:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b20cd0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd4630; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.UITextView-Placeholder', executablePath='<DVTFilePath:0x6000026e1200:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework/UITextView_Placeholder'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600002c4ee20; bundleID='org.cocoapods.YYCache', path='<DVTFilePath:0x6000026e1180:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCache.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c410; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd8000; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.YYCache', executablePath='<DVTFilePath:0x6000023439c0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCache.framework/YYCache'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping profile for item: <IDEDistributionItem: 0x600002c4edc0; bundleID='org.cocoapods.YYCategories', path='<DVTFilePath:0x6000026e1280:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCategories.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c190; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd8000; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.YYCategories', executablePath='<DVTFilePath:0x6000023e16c0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCategories.framework/YYCategories'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Processing step: IDEDistributionInfoPlistStep
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Processing step: IDEDistributionAppThinningPlistStep
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Processing step: IDEDistributionCompileBitcodeStep
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Processing step: IDEDistributionCodeSlimmingStep
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/AFNetworking.framework/AFNetworking' '-r' '-keep_cs' '-o' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/AFNetworking.framework/AFNetworking'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework/AxcAE_TabBar' '-r' '-keep_cs' '-o' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework/AxcAE_TabBar'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework/IQKeyboardManager' '-r' '-keep_cs' '-o' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework/IQKeyboardManager'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MBProgressHUD.framework/MBProgressHUD' '-r' '-keep_cs' '-o' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MBProgressHUD.framework/MBProgressHUD'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MJExtension.framework/MJExtension' '-r' '-keep_cs' '-o' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MJExtension.framework/MJExtension'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh' '-r' '-keep_cs' '-o' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/Masonry.framework/Masonry' '-r' '-keep_cs' '-o' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/Masonry.framework/Masonry'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/SDWebImage.framework/SDWebImage' '-r' '-keep_cs' '-o' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/SDWebImage.framework/SDWebImage'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD' '-r' '-keep_cs' '-o' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework/UITextView_Placeholder' '-r' '-keep_cs' '-o' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework/UITextView_Placeholder'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/YYCache.framework/YYCache' '-r' '-keep_cs' '-o' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/YYCache.framework/YYCache'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/YYCategories.framework/YYCategories' '-r' '-keep_cs' '-o' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/YYCategories.framework/YYCategories'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/LightMoxibustion' '-r' '-keep_cs' '-o' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/LightMoxibustion'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-12-08 09:01:50 +0000 [MT] Processing step: IDEDistributionCopyBCSymbolMapsStep
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Processing step: IDEDistributionSymbolsStep
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Processing step: IDEDistributionAppThinningStep
+2021-12-08 09:01:50 +0000 [MT] Skipping step: IDEDistributionAppThinningStep because it said so
+2021-12-08 09:01:50 +0000 [MT] Processing step: IDEDistributionArchThinningStep
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/AFNetworking.framework/AFNetworking' '-verify_arch' 'arm64e'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-12-08 09:01:50 +0000 [MT] Skipping architecture thinning for item "AFNetworking" because arch "arm64e" wasn't found
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework/AxcAE_TabBar' '-verify_arch' 'arm64e'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-12-08 09:01:50 +0000 [MT] Skipping architecture thinning for item "AxcAE_TabBar" because arch "arm64e" wasn't found
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework/IQKeyboardManager' '-verify_arch' 'arm64e'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-12-08 09:01:50 +0000 [MT] Skipping architecture thinning for item "IQKeyboardManager" because arch "arm64e" wasn't found
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MBProgressHUD.framework/MBProgressHUD' '-verify_arch' 'arm64e'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-12-08 09:01:50 +0000 [MT] Skipping architecture thinning for item "MBProgressHUD" because arch "arm64e" wasn't found
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MJExtension.framework/MJExtension' '-verify_arch' 'arm64e'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-12-08 09:01:50 +0000 [MT] Skipping architecture thinning for item "MJExtension" because arch "arm64e" wasn't found
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh' '-verify_arch' 'arm64e'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-12-08 09:01:50 +0000 [MT] Skipping architecture thinning for item "MJRefresh" because arch "arm64e" wasn't found
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/Masonry.framework/Masonry' '-verify_arch' 'arm64e'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-12-08 09:01:50 +0000 [MT] Skipping architecture thinning for item "Masonry" because arch "arm64e" wasn't found
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/SDWebImage.framework/SDWebImage' '-verify_arch' 'arm64e'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-12-08 09:01:50 +0000 [MT] Skipping architecture thinning for item "SDWebImage" because arch "arm64e" wasn't found
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD' '-verify_arch' 'arm64e'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-12-08 09:01:50 +0000 [MT] Skipping architecture thinning for item "SVProgressHUD" because arch "arm64e" wasn't found
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework/UITextView_Placeholder' '-verify_arch' 'arm64e'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-12-08 09:01:50 +0000 [MT] Skipping architecture thinning for item "UITextView_Placeholder" because arch "arm64e" wasn't found
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/YYCache.framework/YYCache' '-verify_arch' 'arm64e'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-12-08 09:01:50 +0000 [MT] Skipping architecture thinning for item "YYCache" because arch "arm64e" wasn't found
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/YYCategories.framework/YYCategories' '-verify_arch' 'arm64e'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-12-08 09:01:50 +0000 [MT] Skipping architecture thinning for item "YYCategories" because arch "arm64e" wasn't found
+2021-12-08 09:01:50 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/LightMoxibustion' '-verify_arch' 'arm64e'
+2021-12-08 09:01:50 +0000 [MT] /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-12-08 09:01:50 +0000 [MT] Skipping architecture thinning for item "LightMoxibustion" because arch "arm64e" wasn't found
+2021-12-08 09:01:50 +0000 [MT] Processing step: IDEDistributionODRStep
+2021-12-08 09:01:50 +0000 [MT] Processing step: IDEDistributionStripXattrsStep
+2021-12-08 09:01:50 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600002c4eee0; bundleID='com.alamofire.AFNetworking', path='<DVTFilePath:0x600002608b80:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AFNetworking.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c730; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9130; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='com.alamofire.AFNetworking', executablePath='<DVTFilePath:0x60000234b250:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AFNetworking.framework/AFNetworking'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600002c272a0; bundleID='org.cocoapods.AxcAE-TabBar', path='<DVTFilePath:0x600002610c00:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c000; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9130; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.AxcAE-TabBar', executablePath='<DVTFilePath:0x60000238a7d0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework/AxcAE_TabBar'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600002c4efa0; bundleID='org.cocoapods.IQKeyboardManager', path='<DVTFilePath:0x6000026e1600:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2cd70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fe58c0; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.IQKeyboardManager', executablePath='<DVTFilePath:0x6000026e1700:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework/IQKeyboardManager'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600002c4ee80; bundleID='org.cocoapods.MBProgressHUD', path='<DVTFilePath:0x6000026e1780:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MBProgressHUD.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c4b0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9130; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.MBProgressHUD', executablePath='<DVTFilePath:0x60000234c000:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MBProgressHUD.framework/MBProgressHUD'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600002c21200; bundleID='org.cocoapods.MJExtension', path='<DVTFilePath:0x6000026e1300:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJExtension.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2cbe0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9130; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.MJExtension', executablePath='<DVTFilePath:0x6000023e04d0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJExtension.framework/MJExtension'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600002c4ef40; bundleID='org.cocoapods.MJRefresh', path='<DVTFilePath:0x6000026e0380:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJRefresh.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c8c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9130; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.MJRefresh', executablePath='<DVTFilePath:0x6000023435d0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600002c42760; bundleID='org.cocoapods.Masonry', path='<DVTFilePath:0x6000026e0c80:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/Masonry.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c3c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd51e0; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.Masonry', executablePath='<DVTFilePath:0x600002342bc0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/Masonry.framework/Masonry'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600002c27240; bundleID='org.cocoapods.SDWebImage', path='<DVTFilePath:0x600002682100:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SDWebImage.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c0a0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9130; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.SDWebImage', executablePath='<DVTFilePath:0x60000234b020:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SDWebImage.framework/SDWebImage'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600002c210e0; bundleID='org.cocoapods.SVProgressHUD', path='<DVTFilePath:0x6000026e1380:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SVProgressHUD.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2ca50; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9130; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.SVProgressHUD', executablePath='<DVTFilePath:0x6000023e17a0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600002c5c900; bundleID='org.cocoapods.UITextView-Placeholder', path='<DVTFilePath:0x600003ae1680:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b20cd0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fe9c30; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.UITextView-Placeholder', executablePath='<DVTFilePath:0x6000026e1200:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework/UITextView_Placeholder'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600002c4ee20; bundleID='org.cocoapods.YYCache', path='<DVTFilePath:0x6000026e1180:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCache.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c410; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9130; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.YYCache', executablePath='<DVTFilePath:0x6000023439c0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCache.framework/YYCache'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Skipping stripping extended attributes of item: <IDEDistributionItem: 0x600002c4edc0; bundleID='org.cocoapods.YYCategories', path='<DVTFilePath:0x6000026e1280:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCategories.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c190; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9130; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.YYCategories', executablePath='<DVTFilePath:0x6000023e16c0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCategories.framework/YYCategories'>', hardenedRuntime='0'>'>
+2021-12-08 09:01:50 +0000 [MT] Running /usr/bin/xattr '-crs' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app'
+2021-12-08 09:01:50 +0000 [MT] /usr/bin/xattr exited with 0
+2021-12-08 09:01:50 +0000 [MT] Processing step: IDEDistributionCodesignStep
+2021-12-08 09:01:50 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c4eee0; bundleID='com.alamofire.AFNetworking', path='<DVTFilePath:0x600002608b80:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AFNetworking.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c730; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9130; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='com.alamofire.AFNetworking', executablePath='<DVTFilePath:0x60000234b250:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AFNetworking.framework/AFNetworking'>', hardenedRuntime='0'>'>: {
+}
+2021-12-08 09:01:50 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c4eee0; bundleID='com.alamofire.AFNetworking', path='<DVTFilePath:0x600002608b80:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AFNetworking.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c730; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9340; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='com.alamofire.AFNetworking', executablePath='<DVTFilePath:0x60000234b250:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AFNetworking.framework/AFNetworking'>', hardenedRuntime='0'>'> are: {
+}
+2021-12-08 09:01:50 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600002c4eee0; bundleID='com.alamofire.AFNetworking', path='<DVTFilePath:0x600002608b80:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AFNetworking.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c730; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd94a0; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='com.alamofire.AFNetworking', executablePath='<DVTFilePath:0x60000234b250:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AFNetworking.framework/AFNetworking'>', hardenedRuntime='0'>'> to: /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~3CXPsN
+2021-12-08 09:01:50 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '623AC8E985F5051CA2F648525ADAAE4C0BCB182E' '--entitlements' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~3CXPsN' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/AFNetworking.framework'
+2021-12-08 09:01:50 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/AFNetworking.framework: replacing existing signature
+2021-12-08 09:01:50 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/AFNetworking.framework: signed bundle with Mach-O universal (arm64) [com.alamofire.AFNetworking]
+2021-12-08 09:01:50 +0000 [MT] /usr/bin/codesign exited with 0
+2021-12-08 09:01:50 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c272a0; bundleID='org.cocoapods.AxcAE-TabBar', path='<DVTFilePath:0x600002610c00:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c000; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003ff6050; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.AxcAE-TabBar', executablePath='<DVTFilePath:0x60000238a7d0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework/AxcAE_TabBar'>', hardenedRuntime='0'>'>: {
+}
+2021-12-08 09:01:50 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c272a0; bundleID='org.cocoapods.AxcAE-TabBar', path='<DVTFilePath:0x600002610c00:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c000; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd91e0; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.AxcAE-TabBar', executablePath='<DVTFilePath:0x60000238a7d0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework/AxcAE_TabBar'>', hardenedRuntime='0'>'> are: {
+}
+2021-12-08 09:01:50 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600002c272a0; bundleID='org.cocoapods.AxcAE-TabBar', path='<DVTFilePath:0x600002610c00:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c000; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9340; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.AxcAE-TabBar', executablePath='<DVTFilePath:0x60000238a7d0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework/AxcAE_TabBar'>', hardenedRuntime='0'>'> to: /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~2TVR0K
+2021-12-08 09:01:50 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '623AC8E985F5051CA2F648525ADAAE4C0BCB182E' '--entitlements' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~2TVR0K' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework'
+2021-12-08 09:01:50 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework: replacing existing signature
+2021-12-08 09:01:50 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.AxcAE-TabBar]
+2021-12-08 09:01:50 +0000 [MT] /usr/bin/codesign exited with 0
+2021-12-08 09:01:50 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c4efa0; bundleID='org.cocoapods.IQKeyboardManager', path='<DVTFilePath:0x6000026e1600:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2cd70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9130; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.IQKeyboardManager', executablePath='<DVTFilePath:0x6000026e1700:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework/IQKeyboardManager'>', hardenedRuntime='0'>'>: {
+}
+2021-12-08 09:01:50 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c4efa0; bundleID='org.cocoapods.IQKeyboardManager', path='<DVTFilePath:0x6000026e1600:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2cd70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9340; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.IQKeyboardManager', executablePath='<DVTFilePath:0x6000026e1700:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework/IQKeyboardManager'>', hardenedRuntime='0'>'> are: {
+}
+2021-12-08 09:01:50 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600002c4efa0; bundleID='org.cocoapods.IQKeyboardManager', path='<DVTFilePath:0x6000026e1600:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2cd70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd94a0; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.IQKeyboardManager', executablePath='<DVTFilePath:0x6000026e1700:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework/IQKeyboardManager'>', hardenedRuntime='0'>'> to: /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~E4vjuh
+2021-12-08 09:01:50 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '623AC8E985F5051CA2F648525ADAAE4C0BCB182E' '--entitlements' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~E4vjuh' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework'
+2021-12-08 09:01:50 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework: replacing existing signature
+2021-12-08 09:01:50 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.IQKeyboardManager]
+2021-12-08 09:01:50 +0000 [MT] /usr/bin/codesign exited with 0
+2021-12-08 09:01:50 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c4ee80; bundleID='org.cocoapods.MBProgressHUD', path='<DVTFilePath:0x6000026e1780:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MBProgressHUD.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c4b0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9130; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.MBProgressHUD', executablePath='<DVTFilePath:0x60000234c000:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MBProgressHUD.framework/MBProgressHUD'>', hardenedRuntime='0'>'>: {
+}
+2021-12-08 09:01:50 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c4ee80; bundleID='org.cocoapods.MBProgressHUD', path='<DVTFilePath:0x6000026e1780:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MBProgressHUD.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c4b0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9340; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.MBProgressHUD', executablePath='<DVTFilePath:0x60000234c000:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MBProgressHUD.framework/MBProgressHUD'>', hardenedRuntime='0'>'> are: {
+}
+2021-12-08 09:01:50 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600002c4ee80; bundleID='org.cocoapods.MBProgressHUD', path='<DVTFilePath:0x6000026e1780:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MBProgressHUD.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c4b0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd94a0; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.MBProgressHUD', executablePath='<DVTFilePath:0x60000234c000:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MBProgressHUD.framework/MBProgressHUD'>', hardenedRuntime='0'>'> to: /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~IplkNh
+2021-12-08 09:01:50 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '623AC8E985F5051CA2F648525ADAAE4C0BCB182E' '--entitlements' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~IplkNh' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MBProgressHUD.framework'
+2021-12-08 09:01:50 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MBProgressHUD.framework: replacing existing signature
+2021-12-08 09:01:50 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MBProgressHUD.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.MBProgressHUD]
+2021-12-08 09:01:50 +0000 [MT] /usr/bin/codesign exited with 0
+2021-12-08 09:01:50 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c21200; bundleID='org.cocoapods.MJExtension', path='<DVTFilePath:0x6000026e1300:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJExtension.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2cbe0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003ff6050; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.MJExtension', executablePath='<DVTFilePath:0x6000023e04d0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJExtension.framework/MJExtension'>', hardenedRuntime='0'>'>: {
+}
+2021-12-08 09:01:50 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c21200; bundleID='org.cocoapods.MJExtension', path='<DVTFilePath:0x6000026e1300:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJExtension.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2cbe0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd91e0; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.MJExtension', executablePath='<DVTFilePath:0x6000023e04d0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJExtension.framework/MJExtension'>', hardenedRuntime='0'>'> are: {
+}
+2021-12-08 09:01:50 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600002c21200; bundleID='org.cocoapods.MJExtension', path='<DVTFilePath:0x6000026e1300:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJExtension.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2cbe0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9340; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.MJExtension', executablePath='<DVTFilePath:0x6000023e04d0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJExtension.framework/MJExtension'>', hardenedRuntime='0'>'> to: /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~cfwhiM
+2021-12-08 09:01:50 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '623AC8E985F5051CA2F648525ADAAE4C0BCB182E' '--entitlements' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~cfwhiM' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MJExtension.framework'
+2021-12-08 09:01:50 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MJExtension.framework: replacing existing signature
+2021-12-08 09:01:50 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MJExtension.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.MJExtension]
+2021-12-08 09:01:50 +0000 [MT] /usr/bin/codesign exited with 0
+2021-12-08 09:01:50 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c4ef40; bundleID='org.cocoapods.MJRefresh', path='<DVTFilePath:0x6000026e0380:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJRefresh.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c8c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003ff6050; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.MJRefresh', executablePath='<DVTFilePath:0x6000023435d0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh'>', hardenedRuntime='0'>'>: {
+}
+2021-12-08 09:01:50 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c4ef40; bundleID='org.cocoapods.MJRefresh', path='<DVTFilePath:0x6000026e0380:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJRefresh.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c8c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd53f0; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.MJRefresh', executablePath='<DVTFilePath:0x6000023435d0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh'>', hardenedRuntime='0'>'> are: {
+}
+2021-12-08 09:01:50 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600002c4ef40; bundleID='org.cocoapods.MJRefresh', path='<DVTFilePath:0x6000026e0380:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJRefresh.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c8c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9130; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.MJRefresh', executablePath='<DVTFilePath:0x6000023435d0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh'>', hardenedRuntime='0'>'> to: /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~UEr6At
+2021-12-08 09:01:50 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '623AC8E985F5051CA2F648525ADAAE4C0BCB182E' '--entitlements' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~UEr6At' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework'
+2021-12-08 09:01:50 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework: replacing existing signature
+2021-12-08 09:01:50 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.MJRefresh]
+2021-12-08 09:01:50 +0000 [MT] /usr/bin/codesign exited with 0
+2021-12-08 09:01:50 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c42760; bundleID='org.cocoapods.Masonry', path='<DVTFilePath:0x6000026e0c80:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/Masonry.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c3c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003ff6050; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.Masonry', executablePath='<DVTFilePath:0x600002342bc0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/Masonry.framework/Masonry'>', hardenedRuntime='0'>'>: {
+}
+2021-12-08 09:01:50 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c42760; bundleID='org.cocoapods.Masonry', path='<DVTFilePath:0x6000026e0c80:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/Masonry.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c3c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd91e0; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.Masonry', executablePath='<DVTFilePath:0x600002342bc0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/Masonry.framework/Masonry'>', hardenedRuntime='0'>'> are: {
+}
+2021-12-08 09:01:50 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600002c42760; bundleID='org.cocoapods.Masonry', path='<DVTFilePath:0x6000026e0c80:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/Masonry.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c3c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9340; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.Masonry', executablePath='<DVTFilePath:0x600002342bc0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/Masonry.framework/Masonry'>', hardenedRuntime='0'>'> to: /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~ipCQH7
+2021-12-08 09:01:50 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '623AC8E985F5051CA2F648525ADAAE4C0BCB182E' '--entitlements' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~ipCQH7' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/Masonry.framework'
+2021-12-08 09:01:50 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/Masonry.framework: replacing existing signature
+2021-12-08 09:01:51 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/Masonry.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.Masonry]
+2021-12-08 09:01:51 +0000 [MT] /usr/bin/codesign exited with 0
+2021-12-08 09:01:51 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c27240; bundleID='org.cocoapods.SDWebImage', path='<DVTFilePath:0x600002682100:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SDWebImage.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c0a0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd8f20; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.SDWebImage', executablePath='<DVTFilePath:0x60000234b020:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SDWebImage.framework/SDWebImage'>', hardenedRuntime='0'>'>: {
+}
+2021-12-08 09:01:51 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c27240; bundleID='org.cocoapods.SDWebImage', path='<DVTFilePath:0x600002682100:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SDWebImage.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c0a0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9290; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.SDWebImage', executablePath='<DVTFilePath:0x60000234b020:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SDWebImage.framework/SDWebImage'>', hardenedRuntime='0'>'> are: {
+}
+2021-12-08 09:01:51 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600002c27240; bundleID='org.cocoapods.SDWebImage', path='<DVTFilePath:0x600002682100:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SDWebImage.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c0a0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd93f0; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.SDWebImage', executablePath='<DVTFilePath:0x60000234b020:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SDWebImage.framework/SDWebImage'>', hardenedRuntime='0'>'> to: /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~2mIQml
+2021-12-08 09:01:51 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '623AC8E985F5051CA2F648525ADAAE4C0BCB182E' '--entitlements' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~2mIQml' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/SDWebImage.framework'
+2021-12-08 09:01:51 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/SDWebImage.framework: replacing existing signature
+2021-12-08 09:01:51 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/SDWebImage.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.SDWebImage]
+2021-12-08 09:01:51 +0000 [MT] /usr/bin/codesign exited with 0
+2021-12-08 09:01:51 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c210e0; bundleID='org.cocoapods.SVProgressHUD', path='<DVTFilePath:0x6000026e1380:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SVProgressHUD.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2ca50; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003ff6050; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.SVProgressHUD', executablePath='<DVTFilePath:0x6000023e17a0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD'>', hardenedRuntime='0'>'>: {
+}
+2021-12-08 09:01:51 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c210e0; bundleID='org.cocoapods.SVProgressHUD', path='<DVTFilePath:0x6000026e1380:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SVProgressHUD.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2ca50; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9130; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.SVProgressHUD', executablePath='<DVTFilePath:0x6000023e17a0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD'>', hardenedRuntime='0'>'> are: {
+}
+2021-12-08 09:01:51 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600002c210e0; bundleID='org.cocoapods.SVProgressHUD', path='<DVTFilePath:0x6000026e1380:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SVProgressHUD.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2ca50; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9290; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.SVProgressHUD', executablePath='<DVTFilePath:0x6000023e17a0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD'>', hardenedRuntime='0'>'> to: /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~zkoYmv
+2021-12-08 09:01:51 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '623AC8E985F5051CA2F648525ADAAE4C0BCB182E' '--entitlements' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~zkoYmv' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework'
+2021-12-08 09:01:51 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework: replacing existing signature
+2021-12-08 09:01:51 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.SVProgressHUD]
+2021-12-08 09:01:51 +0000 [MT] /usr/bin/codesign exited with 0
+2021-12-08 09:01:51 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c5c900; bundleID='org.cocoapods.UITextView-Placeholder', path='<DVTFilePath:0x600003ae1680:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b20cd0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd4630; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.UITextView-Placeholder', executablePath='<DVTFilePath:0x6000026e1200:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework/UITextView_Placeholder'>', hardenedRuntime='0'>'>: {
+}
+2021-12-08 09:01:51 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c5c900; bundleID='org.cocoapods.UITextView-Placeholder', path='<DVTFilePath:0x600003ae1680:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b20cd0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd8f20; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.UITextView-Placeholder', executablePath='<DVTFilePath:0x6000026e1200:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework/UITextView_Placeholder'>', hardenedRuntime='0'>'> are: {
+}
+2021-12-08 09:01:51 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600002c5c900; bundleID='org.cocoapods.UITextView-Placeholder', path='<DVTFilePath:0x600003ae1680:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b20cd0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd91e0; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.UITextView-Placeholder', executablePath='<DVTFilePath:0x6000026e1200:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework/UITextView_Placeholder'>', hardenedRuntime='0'>'> to: /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~Gg5qzp
+2021-12-08 09:01:51 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '623AC8E985F5051CA2F648525ADAAE4C0BCB182E' '--entitlements' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~Gg5qzp' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework'
+2021-12-08 09:01:51 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework: replacing existing signature
+2021-12-08 09:01:51 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.UITextView-Placeholder]
+2021-12-08 09:01:51 +0000 [MT] /usr/bin/codesign exited with 0
+2021-12-08 09:01:51 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c4ee20; bundleID='org.cocoapods.YYCache', path='<DVTFilePath:0x6000026e1180:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCache.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c410; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd8790; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.YYCache', executablePath='<DVTFilePath:0x6000023439c0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCache.framework/YYCache'>', hardenedRuntime='0'>'>: {
+}
+2021-12-08 09:01:51 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c4ee20; bundleID='org.cocoapods.YYCache', path='<DVTFilePath:0x6000026e1180:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCache.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c410; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9130; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.YYCache', executablePath='<DVTFilePath:0x6000023439c0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCache.framework/YYCache'>', hardenedRuntime='0'>'> are: {
+}
+2021-12-08 09:01:51 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600002c4ee20; bundleID='org.cocoapods.YYCache', path='<DVTFilePath:0x6000026e1180:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCache.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c410; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9290; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.YYCache', executablePath='<DVTFilePath:0x6000023439c0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCache.framework/YYCache'>', hardenedRuntime='0'>'> to: /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~hgmnlN
+2021-12-08 09:01:51 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '623AC8E985F5051CA2F648525ADAAE4C0BCB182E' '--entitlements' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~hgmnlN' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/YYCache.framework'
+2021-12-08 09:01:51 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/YYCache.framework: replacing existing signature
+2021-12-08 09:01:51 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/YYCache.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.YYCache]
+2021-12-08 09:01:51 +0000 [MT] /usr/bin/codesign exited with 0
+2021-12-08 09:01:51 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c4edc0; bundleID='org.cocoapods.YYCategories', path='<DVTFilePath:0x6000026e1280:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCategories.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c190; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd8790; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.YYCategories', executablePath='<DVTFilePath:0x6000023e16c0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCategories.framework/YYCategories'>', hardenedRuntime='0'>'>: {
+}
+2021-12-08 09:01:51 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c4edc0; bundleID='org.cocoapods.YYCategories', path='<DVTFilePath:0x6000026e1280:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCategories.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c190; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9130; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.YYCategories', executablePath='<DVTFilePath:0x6000023e16c0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCategories.framework/YYCategories'>', hardenedRuntime='0'>'> are: {
+}
+2021-12-08 09:01:51 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600002c4edc0; bundleID='org.cocoapods.YYCategories', path='<DVTFilePath:0x6000026e1280:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCategories.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2c190; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd9290; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='(null)', teamID='MDJMU7FU97', identifier='org.cocoapods.YYCategories', executablePath='<DVTFilePath:0x6000023e16c0:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/Frameworks/YYCategories.framework/YYCategories'>', hardenedRuntime='0'>'> to: /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~XLQmQl
+2021-12-08 09:01:51 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '623AC8E985F5051CA2F648525ADAAE4C0BCB182E' '--entitlements' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~XLQmQl' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/YYCategories.framework'
+2021-12-08 09:01:51 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/YYCategories.framework: replacing existing signature
+2021-12-08 09:01:51 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/YYCategories.framework: signed bundle with Mach-O universal (arm64) [org.cocoapods.YYCategories]
+2021-12-08 09:01:51 +0000 [MT] /usr/bin/codesign exited with 0
+2021-12-08 09:01:51 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c4fea0; bundleID='com.lx.LightMoxibustion', path='<DVTFilePath:0x600002606280:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2cf00; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd8f20; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='{
+    "application-identifier" = "MDJMU7FU97.com.lx.LightMoxibustion";
+    "com.apple.developer.team-identifier" = MDJMU7FU97;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "MDJMU7FU97.com.lx.LightMoxibustion"
+    );
+}', teamID='MDJMU7FU97', identifier='com.lx.LightMoxibustion', executablePath='<DVTFilePath:0x6000026e0c00:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/LightMoxibustion'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "MDJMU7FU97.com.lx.LightMoxibustion";
+    "com.apple.developer.team-identifier" = MDJMU7FU97;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "MDJMU7FU97.com.lx.LightMoxibustion"
+    );
+}
+2021-12-08 09:01:51 +0000 [MT] Entitlements for <IDEDistributionItem: 0x600002c4fea0; bundleID='com.lx.LightMoxibustion', path='<DVTFilePath:0x600002606280:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2cf00; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd93f0; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='{
+    "application-identifier" = "MDJMU7FU97.com.lx.LightMoxibustion";
+    "com.apple.developer.team-identifier" = MDJMU7FU97;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "MDJMU7FU97.com.lx.LightMoxibustion"
+    );
+}', teamID='MDJMU7FU97', identifier='com.lx.LightMoxibustion', executablePath='<DVTFilePath:0x6000026e0c00:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/LightMoxibustion'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "MDJMU7FU97.com.lx.LightMoxibustion";
+    "com.apple.developer.team-identifier" = MDJMU7FU97;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "MDJMU7FU97.com.lx.LightMoxibustion"
+    );
+}
+2021-12-08 09:01:51 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x600002c4fea0; bundleID='com.lx.LightMoxibustion', path='<DVTFilePath:0x600002606280:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x600002b2cf00; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600003fd8210; name='iPhone Developer: 立 李 (Q8LVY87BZW)', hash='1F099DF9816A3C683005F8573A1FD5E7A5DD2276', serialNumber='7E216E7582360183159A07A4A2D498FF', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2021-12-08 03:25:08 +0000''>', entitlements='{
+    "application-identifier" = "MDJMU7FU97.com.lx.LightMoxibustion";
+    "com.apple.developer.team-identifier" = MDJMU7FU97;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "MDJMU7FU97.com.lx.LightMoxibustion"
+    );
+}', teamID='MDJMU7FU97', identifier='com.lx.LightMoxibustion', executablePath='<DVTFilePath:0x6000026e0c00:'/Users/flyliu/Desktop/LightMoxibustion/build/LightMoxibustion.xcarchive/Products/Applications/LightMoxibustion.app/LightMoxibustion'>', hardenedRuntime='0'>'> to: /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~G9kuIN
+2021-12-08 09:01:51 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '623AC8E985F5051CA2F648525ADAAE4C0BCB182E' '--entitlements' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/entitlements~~~G9kuIN' '--generate-entitlement-der' '--preserve-metadata=identifier,flags,runtime' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app'
+2021-12-08 09:01:51 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app: replacing existing signature
+2021-12-08 09:01:51 +0000  /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app: signed app bundle with Mach-O thin (arm64) [com.lx.LightMoxibustion]
+2021-12-08 09:01:51 +0000 [MT] /usr/bin/codesign exited with 0
+2021-12-08 09:01:51 +0000 [MT] Processing step: IDEDistributionZipODRItemStep
+2021-12-08 09:01:51 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-12-08 09:01:51 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-12-08 09:01:51 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-12-08 09:01:51 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-12-08 09:01:51 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-12-08 09:01:51 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-12-08 09:01:51 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-12-08 09:01:51 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-12-08 09:01:51 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-12-08 09:01:51 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-12-08 09:01:51 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-12-08 09:01:51 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-12-08 09:01:51 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-12-08 09:01:51 +0000 [MT] Processing step: IDEDistributionCreateIPAStep
+2021-12-08 09:01:51 +0000 [MT] Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root' '/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Packages/LightMoxibustion.ipa'
+2021-12-08 09:01:51 +0000  >>> Copying /var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root 
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:51 +0000  23759 bytes for ./Payload/LightMoxibustion.app/_CodeSignature/CodeResources
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/LICENSE ... 
+1065 bytes for ./Payload/LightMoxibustion.app/LICENSE
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/brightDot.png ... 
+2021-12-08 09:01:51 +0000  24051 bytes for ./Payload/LightMoxibustion.app/brightDot.png
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib ... 
+2021-12-08 09:01:51 +0000  916 bytes for ./Payload/LightMoxibustion.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib ... 
+2021-12-08 09:01:51 +0000  1197 bytes for ./Payload/LightMoxibustion.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib
+copying file ./Payload/LightMoxibustion.app/Base.lproj/Main.storyboardc/Info.plist ... 
+2021-12-08 09:01:51 +0000  258 bytes for ./Payload/LightMoxibustion.app/Base.lproj/Main.storyboardc/Info.plist
+copying file ./Payload/LightMoxibustion.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2021-12-08 09:01:51 +0000  1197 bytes for ./Payload/LightMoxibustion.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+copying file ./Payload/LightMoxibustion.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2021-12-08 09:01:51 +0000  896 bytes for ./Payload/LightMoxibustion.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./Payload/LightMoxibustion.app/Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2021-12-08 09:01:51 +0000  258 bytes for ./Payload/LightMoxibustion.app/Base.lproj/LaunchScreen.storyboardc/Info.plist
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/AboutVC.nib ... 
+2021-12-08 09:01:51 +0000  2520 bytes for ./Payload/LightMoxibustion.app/AboutVC.nib
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/README.md ... 
+2021-12-08 09:01:51 +0000  8180 bytes for ./Payload/LightMoxibustion.app/README.md
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/blueDot.png ... 
+2021-12-08 09:01:51 +0000  3668 bytes for ./Payload/LightMoxibustion.app/blueDot.png
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Assets.car ... 
+2021-12-08 09:01:51 +0000  459999 bytes for ./Payload/LightMoxibustion.app/Assets.car
+copying file ./Payload/LightMoxibustion.app/ConnectedVC.nib ... 
+2021-12-08 09:01:51 +0000  3161 bytes for ./Payload/LightMoxibustion.app/ConnectedVC.nib
+copying file ./Payload/LightMoxibustion.app/HomeVC.nib ... 
+2021-12-08 09:01:51 +0000  6568 bytes for ./Payload/LightMoxibustion.app/HomeVC.nib
+copying file ./Payload/LightMoxibustion.app/BaseViewController.nib ... 
+2021-12-08 09:01:51 +0000  1317 bytes for ./Payload/LightMoxibustion.app/BaseViewController.nib
+copying file ./Payload/LightMoxibustion.app/LightMoxibustion ... 
+2021-12-08 09:01:51 +0000  1073744 bytes for ./Payload/LightMoxibustion.app/LightMoxibustion
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/Masonry.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:51 +0000  1798 bytes for ./Payload/LightMoxibustion.app/Frameworks/Masonry.framework/_CodeSignature/CodeResources
+copying file ./Payload/LightMoxibustion.app/Frameworks/Masonry.framework/Masonry ... 
+2021-12-08 09:01:51 +0000  253936 bytes for ./Payload/LightMoxibustion.app/Frameworks/Masonry.framework/Masonry
+copying file ./Payload/LightMoxibustion.app/Frameworks/Masonry.framework/Info.plist ... 
+2021-12-08 09:01:51 +0000  739 bytes for ./Payload/LightMoxibustion.app/Frameworks/Masonry.framework/Info.plist
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:51 +0000  5212 bytes for ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/_CodeSignature/CodeResources
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh.bundle/zh-Hans.lproj/Localizable.strings ... 
+1368 bytes for ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh.bundle/zh-Hans.lproj/Localizable.strings
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh.bundle/en.lproj/Localizable.strings ... 
+1374 bytes for ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh.bundle/en.lproj/Localizable.strings
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh.bundle/uk.lproj/Localizable.strings ... 
+1534 bytes for ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh.bundle/uk.lproj/Localizable.strings
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh.bundle/arrow@2x.png ... 
+1033 bytes for ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh.bundle/arrow@2x.png
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh.bundle/ko.lproj/Localizable.strings ... 
+771 bytes for ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh.bundle/ko.lproj/Localizable.strings
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh.bundle/zh-Hant.lproj/Localizable.strings ... 
+891 bytes for ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh.bundle/zh-Hant.lproj/Localizable.strings
+copying file ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh.bundle/trail_arrow@2x.png ... 
+2021-12-08 09:01:51 +0000  2322 bytes for ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh.bundle/trail_arrow@2x.png
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh.bundle/ru.lproj/Localizable.strings ... 
+1502 bytes for ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh.bundle/ru.lproj/Localizable.strings
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh ... 
+2021-12-08 09:01:51 +0000  296832 bytes for ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/MJRefresh
+copying file ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/Info.plist ... 
+2021-12-08 09:01:51 +0000  743 bytes for ./Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework/Info.plist
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/YYCache.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:51 +0000  1798 bytes for ./Payload/LightMoxibustion.app/Frameworks/YYCache.framework/_CodeSignature/CodeResources
+copying file ./Payload/LightMoxibustion.app/Frameworks/YYCache.framework/YYCache ... 
+2021-12-08 09:01:51 +0000  234240 bytes for ./Payload/LightMoxibustion.app/Frameworks/YYCache.framework/YYCache
+copying file ./Payload/LightMoxibustion.app/Frameworks/YYCache.framework/Info.plist ... 
+2021-12-08 09:01:51 +0000  739 bytes for ./Payload/LightMoxibustion.app/Frameworks/YYCache.framework/Info.plist
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:51 +0000  1798 bytes for ./Payload/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework/_CodeSignature/CodeResources
+copying file ./Payload/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework/UITextView_Placeholder ... 
+2021-12-08 09:01:51 +0000  126768 bytes for ./Payload/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework/UITextView_Placeholder
+copying file ./Payload/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework/Info.plist ... 
+2021-12-08 09:01:51 +0000  771 bytes for ./Payload/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework/Info.plist
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/YYCategories.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:51 +0000  1798 bytes for ./Payload/LightMoxibustion.app/Frameworks/YYCategories.framework/_CodeSignature/CodeResources
+copying file ./Payload/LightMoxibustion.app/Frameworks/YYCategories.framework/YYCategories ... 
+2021-12-08 09:01:51 +0000  514944 bytes for ./Payload/LightMoxibustion.app/Frameworks/YYCategories.framework/YYCategories
+copying file ./Payload/LightMoxibustion.app/Frameworks/YYCategories.framework/Info.plist ... 
+2021-12-08 09:01:51 +0000  749 bytes for ./Payload/LightMoxibustion.app/Frameworks/YYCategories.framework/Info.plist
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/MJExtension.framework/_CodeSignature/CodeResources ... 
+1798 bytes for ./Payload/LightMoxibustion.app/Frameworks/MJExtension.framework/_CodeSignature/CodeResources
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/MJExtension.framework/MJExtension ... 
+2021-12-08 09:01:51 +0000  187920 bytes for ./Payload/LightMoxibustion.app/Frameworks/MJExtension.framework/MJExtension
+copying file ./Payload/LightMoxibustion.app/Frameworks/MJExtension.framework/Info.plist ... 
+2021-12-08 09:01:51 +0000  747 bytes for ./Payload/LightMoxibustion.app/Frameworks/MJExtension.framework/Info.plist
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:51 +0000  5706 bytes for ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/_CodeSignature/CodeResources
+copying file ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD ... 
+2021-12-08 09:01:51 +0000  231536 bytes for ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info.png ... 
+2021-12-08 09:01:51 +0000  365 bytes for ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info.png
+copying file ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@3x.png ... 
+2021-12-08 09:01:51 +0000  398 bytes for ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@3x.png
+copying file ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@3x.png ... 
+2021-12-08 09:01:51 +0000  8319 bytes for ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@3x.png
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@2x.png ... 
+2021-12-08 09:01:51 +0000  4893 bytes for ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@2x.png
+copying file ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@2x.png ... 
+306 bytes for ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@2x.png
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@3x.png ... 
+1200 bytes for ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@3x.png
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@2x.png ... 
+462 bytes for ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@2x.png
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@3x.png ... 
+714 bytes for ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@3x.png
+copying file ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@2x.png ... 
+2021-12-08 09:01:51 +0000  816 bytes for ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@2x.png
+copying file ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error.png ... 
+2021-12-08 09:01:51 +0000  184 bytes for ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error.png
+copying file ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success.png ... 
+2021-12-08 09:01:51 +0000  262 bytes for ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success.png
+copying file ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png ... 
+2021-12-08 09:01:51 +0000  1845 bytes for ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png
+copying file ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/Info.plist ... 
+2021-12-08 09:01:51 +0000  751 bytes for ./Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework/Info.plist
+copying file ./Payload/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:51 +0000  1798 bytes for ./Payload/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework/_CodeSignature/CodeResources
+copying file ./Payload/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework/IQKeyboardManager ... 
+2021-12-08 09:01:51 +0000  407472 bytes for ./Payload/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework/IQKeyboardManager
+copying file ./Payload/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework/Info.plist ... 
+2021-12-08 09:01:51 +0000  761 bytes for ./Payload/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework/Info.plist
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/MBProgressHUD.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:51 +0000  1798 bytes for ./Payload/LightMoxibustion.app/Frameworks/MBProgressHUD.framework/_CodeSignature/CodeResources
+copying file ./Payload/LightMoxibustion.app/Frameworks/MBProgressHUD.framework/MBProgressHUD ... 
+2021-12-08 09:01:51 +0000  194112 bytes for ./Payload/LightMoxibustion.app/Frameworks/MBProgressHUD.framework/MBProgressHUD
+copying file ./Payload/LightMoxibustion.app/Frameworks/MBProgressHUD.framework/Info.plist ... 
+2021-12-08 09:01:51 +0000  751 bytes for ./Payload/LightMoxibustion.app/Frameworks/MBProgressHUD.framework/Info.plist
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:51 +0000  1798 bytes for ./Payload/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework/_CodeSignature/CodeResources
+copying file ./Payload/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework/AxcAE_TabBar ... 
+2021-12-08 09:01:51 +0000  180320 bytes for ./Payload/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework/AxcAE_TabBar
+copying file ./Payload/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework/Info.plist ... 
+2021-12-08 09:01:51 +0000  749 bytes for ./Payload/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework/Info.plist
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/SDWebImage.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:51 +0000  1798 bytes for ./Payload/LightMoxibustion.app/Frameworks/SDWebImage.framework/_CodeSignature/CodeResources
+copying file ./Payload/LightMoxibustion.app/Frameworks/SDWebImage.framework/SDWebImage ... 
+2021-12-08 09:01:51 +0000  450320 bytes for ./Payload/LightMoxibustion.app/Frameworks/SDWebImage.framework/SDWebImage
+copying file ./Payload/LightMoxibustion.app/Frameworks/SDWebImage.framework/Info.plist ... 
+2021-12-08 09:01:51 +0000  745 bytes for ./Payload/LightMoxibustion.app/Frameworks/SDWebImage.framework/Info.plist
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Frameworks/AFNetworking.framework/_CodeSignature/CodeResources ... 
+2021-12-08 09:01:51 +0000  1798 bytes for ./Payload/LightMoxibustion.app/Frameworks/AFNetworking.framework/_CodeSignature/CodeResources
+copying file ./Payload/LightMoxibustion.app/Frameworks/AFNetworking.framework/AFNetworking ... 
+2021-12-08 09:01:51 +0000  607792 bytes for ./Payload/LightMoxibustion.app/Frameworks/AFNetworking.framework/AFNetworking
+copying file ./Payload/LightMoxibustion.app/Frameworks/AFNetworking.framework/Info.plist ... 
+2021-12-08 09:01:51 +0000  749 bytes for ./Payload/LightMoxibustion.app/Frameworks/AFNetworking.framework/Info.plist
+copying file ./Payload/LightMoxibustion.app/embedded.mobileprovision ... 
+2021-12-08 09:01:51 +0000  12851 bytes for ./Payload/LightMoxibustion.app/embedded.mobileprovision
+copying file ./Payload/LightMoxibustion.app/redDot.png ... 
+2021-12-08 09:01:51 +0000  3665 bytes for ./Payload/LightMoxibustion.app/redDot.png
+2021-12-08 09:01:51 +0000  copying file ./Payload/LightMoxibustion.app/Info.plist ... 
+2021-12-08 09:01:51 +0000  1225 bytes for ./Payload/LightMoxibustion.app/Info.plist
+copying file ./Payload/LightMoxibustion.app/DeviceCell.nib ... 
+2021-12-08 09:01:51 +0000  4057 bytes for ./Payload/LightMoxibustion.app/DeviceCell.nib
+copying file ./Payload/LightMoxibustion.app/PkgInfo ... 
+2021-12-08 09:01:51 +0000  8 bytes for ./Payload/LightMoxibustion.app/PkgInfo
+2021-12-08 09:01:51 +0000 [MT] /usr/bin/ditto exited with 0
+2021-12-08 09:01:51 +0000 [MT] Processing step: IDEDistributionAppStoreInformationStep
+2021-12-08 09:01:51 +0000 [MT] Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2021-12-08 09:01:51 +0000 [MT] Processing step: IDEDistributionGenerateProcessedDistributionItems
+2021-12-08 09:01:51 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000027dc080:'/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/SVProgressHUD.framework'>
+2021-12-08 09:01:51 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000027ee580:'/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/YYCategories.framework'>
+2021-12-08 09:01:51 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000027ee100:'/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/YYCache.framework'>
+2021-12-08 09:01:51 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000027dc000:'/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MJExtension.framework'>
+2021-12-08 09:01:51 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000027ecd00:'/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/Masonry.framework'>
+2021-12-08 09:01:51 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000027eca80:'/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MJRefresh.framework'>
+2021-12-08 09:01:51 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000027ef180:'/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/IQKeyboardManager.framework'>
+2021-12-08 09:01:51 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000027ecf80:'/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/SDWebImage.framework'>
+2021-12-08 09:01:51 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x600003adfd50:'/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/UITextView_Placeholder.framework'>
+2021-12-08 09:01:51 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000027edf00:'/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/AFNetworking.framework'>
+2021-12-08 09:01:51 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000027ec800:'/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/MBProgressHUD.framework'>
+2021-12-08 09:01:51 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000027eef00:'/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app/Frameworks/AxcAE_TabBar.framework'>
+2021-12-08 09:01:51 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x6000027a2080:'/var/folders/v7/p7bzpks9763bjq74_m615jd00000gn/T/XcodeDistPipeline.~~~yY1RO2/Root/Payload/LightMoxibustion.app'>
+2021-12-08 09:01:51 +0000 [MT] Processing step: IDEDistributionCreateManifestStep

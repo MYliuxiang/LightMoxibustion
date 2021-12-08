@@ -68,9 +68,6 @@
     [self creatSubViews];
     [self sizeofWidth];
         
-
-    
-        
     [self checkBluethState];
     //蓝牙模块
     [self scanDevice];
@@ -211,7 +208,7 @@
                 CurrentTemModel *currentTem = [[CurrentTemModel alloc] initWithData:data];
                 self.temSlider.currentPercent = currentTem.currentTem - 29;
                 [self.progress configSetTem:currentTem.currentTem];
-                NSLog(@"当前设置温度：%d",currentTem.currentTem);
+//                NSLog(@"当前设置温度：%d",currentTem.currentTem);
                 
             }
                 break;
@@ -232,19 +229,17 @@
                 
             case 18:
             {
-                NSLog(@"设置工作时间（弧形）成功");
-                NSLog(@"第三位：%d,第四位：%d",mbuf[3],mbuf[4]);
+//                NSLog(@"设置工作时间（弧形）成功");
+//                NSLog(@"第三位：%d,第四位：%d",mbuf[3],mbuf[4]);
             }
                 break;
                 
-            case 20:
+            case 19:
             {
                 CurrentSetTimeModel *setTime = [[CurrentSetTimeModel alloc] initWithData:data];
                 [self.progress configSetTime:setTime.second];
 
-                NSLog(@"获取仪器当前的设置时间:%d",setTime.second);
-                NSLog(@"获取仪器当前的设置时间:%@",data);
-
+             
             }
                 break;
                 
@@ -257,43 +252,36 @@
 
 - (void)checkBluethState{
     HLBLEManager *manager = [HLBLEManager sharedInstance];
-    __weak HLBLEManager *weakManager = manager;
     manager.stateUpdateBlock = ^(CBCentralManager *central) {
         NSString *info = nil;
         switch (central.state) {
             case CBManagerStatePoweredOn:
                 info = @"蓝牙已打开，并且可用";
-                //三种种方式
-                // 方式1
-                //                [weakManager scanForPeripheralsWithServiceUUIDs:@[[HLBLEManager devServiceUUID]] options:nil];
-//                [weakManager scanForPeripheralsWithServiceUUIDs:nil options:nil];
                 [self scanDevice];
                 break;
                 
             case CBManagerStatePoweredOff:
-                info = @"蓝牙可用，未打开";
-                [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-                [SVProgressHUD showInfoWithStatus:info ];
+                info = @"蓝牙未打开，请前往设置打开";
+                [SVProgressHUD showErrorWithStatus:info];
                 break;
             case CBManagerStateUnsupported:
                 info = @"SDK不支持";
-                [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-                [SVProgressHUD showInfoWithStatus:info ];
+                [SVProgressHUD showErrorWithStatus:info];
+
                 break;
             case CBManagerStateUnauthorized:
-                info = @"程序未授权";
-                [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-                [SVProgressHUD showInfoWithStatus:info ];
+                info = @"程序未授权，请前往设置种授权";
+                [SVProgressHUD showErrorWithStatus:info];
+
                 break;
             case CBManagerStateResetting:
                 info = @"CBCentralManagerStateResetting";
-                [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-                [SVProgressHUD showInfoWithStatus:info ];
+                [SVProgressHUD showErrorWithStatus:info];
+
                 break;
             case CBManagerStateUnknown:
                 info = @"CBCentralManagerStateUnknown";
-                [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-                [SVProgressHUD showInfoWithStatus:info ];
+                [SVProgressHUD showErrorWithStatus:info];
                 break;
         }
     };
@@ -438,17 +426,6 @@
 
 
 #pragma mark --------------发送蓝牙数据--------------
-
-- (IBAction)getChargeState:(id)sender {
-    
-    [SendData getChargeState];
-}
-
-- (IBAction)setCurrentWorkTime:(id)sender {
-    [SendData setCurrentWorkTime:5];
-}
-
-
 - (IBAction)blueAC:(id)sender {
     [self annimationMenumIsHidden:NO];
 }
@@ -495,7 +472,7 @@
         [self.progress configSetTem:-1];
         [self.progress configCurrentTem:-1];
         [self.progress configWorkDownSencond:0];
-        [self.progress configSetTime:0];
+        [self.progress configSetTime:10];
         
     }else{
         
@@ -521,14 +498,10 @@
     _progress.cancleBlock = ^{
         weakSelf.highTemTip = NO;
     };
-    
-    [_progress tapHandle:^{
-        [weakSelf.progress.incircle setProgress:0.6];
-    }];
    
     [self.view addSubview:[_progress speedDialType]];
     _progress.progress = 0.5;
-    [_progress configSetTime:10 * 60];
+    [_progress configSetTime:10];
     
     
     _rateSlider = [[LxUnitSlider alloc]initWithFrame:CGRectMake(100, (kScreenHeight + 100) / 2.0 + 10 * WidthScale, 80 * WidthScale, kScreenHeight - (kScreenHeight + 100) / 2.0 - kBottomSafeHeight - 10 * WidthScale) titles:@[@"常亮",@"1",@"2",@"3",@"4",@"5"] total:5.0 thumbTitle:@"频率"];
@@ -625,7 +598,6 @@
         {
             //关于
             if ([HLBLEManager sharedInstance].connectedPerpheral == nil){
-              
                 [SVProgressHUD showErrorWithStatus:@"请先连接蓝牙"];
             }else{
                 [SendData getVersion];
@@ -634,10 +606,7 @@
             break;
         case 3:
         {
-//            [self exitApplication];
             exit(0);
-
-            
         }
             break;
             
@@ -655,26 +624,7 @@
     }];
 }
 
-- (void)exitApplication {
-    //直接退，看起来好像是 crash 所以做个动画
-    [UIView beginAnimations:@"exitApplication" context:nil];
-    [UIView setAnimationDuration:0.5];
-    [UIView setAnimationDelegate:self];
-    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.view.window cache:NO];
-    [UIView setAnimationDidStopSelector:@selector(animationFinished:finished:context:)];
-    self.view.window.bounds = CGRectMake(0, 0, 0, 0);
-    [UIView commitAnimations];
-}
-
-- (void)animationFinished:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
-     if ([animationID compare:@"exitApplication"] == 0) {
-        //退出代码
-        exit(0);
-    }
-}
-
 - (void)blueStateIAnimation:(BOOL)isStart{
-     
     if (isStart) {
         [self.blueStateI.layer removeAnimationForKey:@"opacity"];
         CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
@@ -688,7 +638,7 @@
         [self.blueStateI.layer addAnimation:scaleAnimation forKey:@"opacity"];
     }else{
         [self.blueStateI.layer removeAnimationForKey:@"opacity"];
-
+        
     }
     
 
