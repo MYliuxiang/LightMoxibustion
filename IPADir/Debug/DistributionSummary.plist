@@ -7,6 +7,7 @@
 		<dict>
 			<key>architectures</key>
 			<array>
+				<string>armv7</string>
 				<string>arm64</string>
 			</array>
 			<key>buildNumber</key>
@@ -25,6 +26,7 @@
 				<dict>
 					<key>architectures</key>
 					<array>
+						<string>armv7</string>
 						<string>arm64</string>
 					</array>
 					<key>buildNumber</key>
@@ -53,6 +55,7 @@
 				<dict>
 					<key>architectures</key>
 					<array>
+						<string>armv7</string>
 						<string>arm64</string>
 					</array>
 					<key>buildNumber</key>
@@ -81,6 +84,7 @@
 				<dict>
 					<key>architectures</key>
 					<array>
+						<string>armv7</string>
 						<string>arm64</string>
 					</array>
 					<key>buildNumber</key>
@@ -109,6 +113,7 @@
 				<dict>
 					<key>architectures</key>
 					<array>
+						<string>armv7</string>
 						<string>arm64</string>
 					</array>
 					<key>buildNumber</key>
@@ -137,6 +142,7 @@
 				<dict>
 					<key>architectures</key>
 					<array>
+						<string>armv7</string>
 						<string>arm64</string>
 					</array>
 					<key>buildNumber</key>
@@ -165,6 +171,7 @@
 				<dict>
 					<key>architectures</key>
 					<array>
+						<string>armv7</string>
 						<string>arm64</string>
 					</array>
 					<key>buildNumber</key>
@@ -193,6 +200,7 @@
 				<dict>
 					<key>architectures</key>
 					<array>
+						<string>armv7</string>
 						<string>arm64</string>
 					</array>
 					<key>buildNumber</key>
@@ -221,6 +229,7 @@
 				<dict>
 					<key>architectures</key>
 					<array>
+						<string>armv7</string>
 						<string>arm64</string>
 					</array>
 					<key>buildNumber</key>
@@ -249,6 +258,7 @@
 				<dict>
 					<key>architectures</key>
 					<array>
+						<string>armv7</string>
 						<string>arm64</string>
 					</array>
 					<key>buildNumber</key>
@@ -277,6 +287,7 @@
 				<dict>
 					<key>architectures</key>
 					<array>
+						<string>armv7</string>
 						<string>arm64</string>
 					</array>
 					<key>buildNumber</key>
@@ -305,6 +316,7 @@
 				<dict>
 					<key>architectures</key>
 					<array>
+						<string>armv7</string>
 						<string>arm64</string>
 					</array>
 					<key>buildNumber</key>
@@ -333,6 +345,7 @@
 				<dict>
 					<key>architectures</key>
 					<array>
+						<string>armv7</string>
 						<string>arm64</string>
 					</array>
 					<key>buildNumber</key>
@@ -377,7 +390,7 @@
 			<key>profile</key>
 			<dict>
 				<key>UUID</key>
-				<string>11953208-f2a8-4854-b439-62c08eedb175</string>
+				<string>1d229008-3a9f-45f9-9df0-e31346a7442a</string>
 				<key>dateExpires</key>
 				<string>2022/12/8</string>
 				<key>name</key>

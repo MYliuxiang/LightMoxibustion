@@ -111,7 +111,6 @@
 		29FCE6802754C69C003B0E7C /* MLMStatisticalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FCE6722754C69C003B0E7C /* MLMStatisticalView.m */; };
 		29FCE6812754C69C003B0E7C /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FCE6742754C69C003B0E7C /* UIView+Extensions.m */; };
 		29FCE6822754C69C003B0E7C /* UIView+TapAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FCE6752754C69C003B0E7C /* UIView+TapAction.m */; };
-		4E5214042058755437F78350 /* Pods_LightMoxibustion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96AF237B8954F20D04CCA847 /* Pods_LightMoxibustion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -329,7 +328,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E5214042058755437F78350 /* Pods_LightMoxibustion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1143,6 +1141,7 @@
 				DEVELOPMENT_TEAM = MDJMU7FU97;
 				GCC_PREFIX_HEADER = /Users/flyliu/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
 				INFOPLIST_FILE = LightMoxibustion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1165,6 +1164,7 @@
 				DEVELOPMENT_TEAM = MDJMU7FU97;
 				GCC_PREFIX_HEADER = /Users/flyliu/Desktop/LightMoxibustion/LightMoxibustion/LightMoxibustion.pch;
 				INFOPLIST_FILE = LightMoxibustion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
