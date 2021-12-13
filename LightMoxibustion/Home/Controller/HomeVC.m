@@ -68,6 +68,7 @@
     [self creatSubViews];
     [self sizeofWidth];
         
+    [self hanleConnectedState];
     [self checkBluethState];
     //蓝牙模块
     [self scanDevice];
@@ -450,6 +451,7 @@
 - (void)hanleConnectedState{
     if ([HLBLEManager sharedInstance].connectedPerpheral == nil) {
         //断开链接
+                
         self.highTemTip = NO;
         self.quantityI.image = [UIImage imageNamed:@"bl3"];
         self.rxcharacter = nil;

@@ -42,6 +42,7 @@
         //默认数据
         [self initData];
         
+        
 
     }
     return self;
@@ -60,13 +61,11 @@
     _edgespace = 0;
     _progressSpace = 0;
 
-
 }
 
 
 #pragma mark - 计算光标的起始center
 - (void)dotCenter {
-
    
     if (_dotImageView) {
 //        [_dotImageView removeFromSuperview];
@@ -191,27 +190,26 @@
 
 - (void)drowProgress {
 
-    [self.progressLayer removeFromSuperlayer];
-    [self.gradientLayer removeFromSuperlayer];
+//    [self.progressLayer removeFromSuperlayer];
+//    [self.gradientLayer removeFromSuperlayer];
     UIBezierPath *progressPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.width/2, self.height/2)
                                                               radius:progressRadius
                                                           startAngle:DEGREES_TO_RADIANS(_startAngle)
-                                                            endAngle:DEGREES_TO_RADIANS(_startAngle + (_endAngle - _startAngle) * _progress)
+                                                            endAngle:DEGREES_TO_RADIANS(_endAngle)
                                                            clockwise:YES];
     self.progressLayer = [CAShapeLayer layer];
     self.progressLayer.frame = CGRectMake(0, 0, self.width, self.height);
     self.progressLayer.fillColor =  [UIColor clearColor].CGColor;
     self.progressLayer.strokeColor  = self.fillColor.CGColor;
+    self.progressLayer.strokeEnd = self.progress;
+
 
     if (_capRound) {
         self.progressLayer.lineCap = kCALineCapRound;
     }
     self.progressLayer.lineWidth = self.progressWidth;
     self.progressLayer.path = [progressPath CGPath];
-//    self.progressLayer.strokeEnd = 1;
-    
-    
-    
+        
     _gradientLayer = [[CAGradientLayer alloc] init];
     _gradientLayer.frame = self.progressLayer.bounds;
     _gradientLayer.startPoint = CGPointMake(0, 0.5);
@@ -222,6 +220,7 @@
     CGColorRef color6 = [UIColor colorWithRed:(72)/255.f green:(204)/255.f blue:(201)/255.f alpha:(0.95)].CGColor;
     _gradientLayer.colors = @[(__bridge id)color3, (__bridge id)color4, (__bridge id)color5, (__bridge id)color6];
     _gradientLayer.mask = self.progressLayer;
+    
     if (_isTransparent) {
         [self.layer addSublayer:_gradientLayer];
 
@@ -249,6 +248,7 @@
     pathAnimation.rotationMode = kCAAnimationRotateAuto;
     pathAnimation.duration = kAnimationTime;
     pathAnimation.repeatCount = 1;
+
     
     //设置动画路径
     CGMutablePathRef path = CGPathCreateMutable();
@@ -268,7 +268,24 @@
 #pragma mark - 弧度
 - (void)setProgress:(CGFloat)progress {
     _progress = progress;
-    [self setProgressAnimation:YES];
+//    self.progressLayer.strokeEnd = progress;
+    [self.progressLayer removeAnimationForKey:@"strokeEndAnimation"];
+    CABasicAnimation *pathAnima = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    pathAnima.duration = 0.001f;
+    pathAnima.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    pathAnima.fromValue = [NSNumber numberWithFloat:0.0f];
+    pathAnima.toValue = [NSNumber numberWithFloat:progress];
+    pathAnima.fillMode = kCAFillModeForwards;
+    pathAnima.removedOnCompletion = NO;
+    [self.progressLayer addAnimation:pathAnima forKey:@"strokeEndAnimation"];
+    
+    
+    
+    [self drawDot];
+
+//    self.progressLayer.strokeStart = 0;
+
+//    [self drawRect:self.bounds];
 }
 
 - (void)setProgressAnimation:(BOOL)animation {
@@ -276,9 +293,7 @@
 //        return;
 //    }
 //    [self drawProgress];
-    [self  drawDot];
-    [self drawRect:self.bounds];
-    
+   
 //    [self createAnimation];
 //    [self circleAnimation];
 }
