@@ -8,6 +8,7 @@
 #import "BaseViewController.h"
 #import "TemperaturePkg.h"
 #import "AboutVC.h"
+#import "AboutView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -122,6 +122,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BleDevice *device = self.deviceArray[indexPath.row];
+    [self.navigationController popViewControllerAnimated:YES];
     if (self.connetcBleDeviceblock) {
         self.connetcBleDeviceblock(device);
     }

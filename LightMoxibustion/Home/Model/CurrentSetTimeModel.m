@@ -13,7 +13,7 @@
     self = [super init];
     if (self) {
         U8 *mbuf = (U8 *)data.bytes;
-        self.second = ((mbuf[3] & 0xFF) + ((mbuf[4] & 0xFF) << 8)) / 10;
+        self.second = ((mbuf[3] & 0xFF) + ((mbuf[4] & 0xFF) << 8));
     }
     return self;
 }

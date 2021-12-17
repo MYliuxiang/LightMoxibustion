@@ -13,6 +13,7 @@
                 <outlet property="bgCE" destination="s5c-Yz-sLj" id="biU-ne-1HR"/>
                 <outlet property="blueB" destination="0Lc-IX-KWq" id="7F6-Tb-Uqm"/>
                 <outlet property="blueStateI" destination="WqH-XL-IJc" id="3tZ-WX-ELE"/>
+                <outlet property="laserB" destination="XMI-wo-Y9u" id="dzX-qN-65Y"/>
                 <outlet property="laserStateI" destination="MMJ-ku-BGD" id="nG3-mL-VFT"/>
                 <outlet property="navCH" destination="CN3-Xa-i07" id="6ij-4j-CLQ"/>
                 <outlet property="quantityHC" destination="oUO-yz-2FZ" id="O1c-tf-wyT"/>
@@ -31,6 +32,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="back_picture" translatesAutoresizingMaskIntoConstraints="NO" id="4G5-5t-U18">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="877"/>
                     <color key="backgroundColor" red="0.14117647058823529" green="0.27450980392156865" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="tintColor" red="0.59999999999999998" green="0.64313725490196072" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfC-Yl-dwO">
                     <rect key="frame" x="0.0" y="44" width="375" height="44"/>

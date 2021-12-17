@@ -33,7 +33,9 @@
 }
 
 + (void)setTemperature:(int)temperature{
-    
+    if (temperature < 30) {
+        temperature = 0;
+    }
     TemperaturePkg *pkg = [[TemperaturePkg alloc] initWithTemperature:temperature];
     HLBLEManager *manger = [HLBLEManager sharedInstance];
     [manger writeValue:pkg.buf];

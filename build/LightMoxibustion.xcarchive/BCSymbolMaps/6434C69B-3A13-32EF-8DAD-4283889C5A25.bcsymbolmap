@@ -1,0 +1,1517 @@
+BCSymbolMap Version: 2.0
+Apple clang version 13.0.0 (clang-1300.0.29.3)
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk
+iPhoneOS15.0.sdk
+/Users/flyliu/Library/Developer/Xcode/DerivedData/LightMoxibustion-eowyheacgajnxiedanbcbxvrmohp/Build/Intermediates.noindex/ArchiveIntermediates/LightMoxibustion/IntermediateBuildFilesPath/Pods.build/Debug-iphoneos/YYCategories.build/DerivedSources/YYCategories_vers.c
+/Users/flyliu/Desktop/LightMoxibustion/Pods
+-[CALayer(YYAdd) snapshotImage]
+-[CALayer(YYAdd) snapshotPDF]
+-[CALayer(YYAdd) setLayerShadow:offset:radius:]
+-[CALayer(YYAdd) removeAllSublayers]
+-[CALayer(YYAdd) left]
+-[CALayer(YYAdd) setLeft:]
+-[CALayer(YYAdd) top]
+-[CALayer(YYAdd) setTop:]
+-[CALayer(YYAdd) right]
+-[CALayer(YYAdd) setRight:]
+-[CALayer(YYAdd) bottom]
+-[CALayer(YYAdd) setBottom:]
+-[CALayer(YYAdd) width]
+-[CALayer(YYAdd) setWidth:]
+-[CALayer(YYAdd) height]
+-[CALayer(YYAdd) setHeight:]
+-[CALayer(YYAdd) center]
+_CGPointMake
+-[CALayer(YYAdd) setCenter:]
+-[CALayer(YYAdd) centerX]
+-[CALayer(YYAdd) setCenterX:]
+-[CALayer(YYAdd) centerY]
+-[CALayer(YYAdd) setCenterY:]
+-[CALayer(YYAdd) origin]
+-[CALayer(YYAdd) setOrigin:]
+-[CALayer(YYAdd) frameSize]
+-[CALayer(YYAdd) setFrameSize:]
+-[CALayer(YYAdd) transformRotation]
+-[CALayer(YYAdd) setTransformRotation:]
+-[CALayer(YYAdd) transformRotationX]
+-[CALayer(YYAdd) setTransformRotationX:]
+-[CALayer(YYAdd) transformRotationY]
+-[CALayer(YYAdd) setTransformRotationY:]
+-[CALayer(YYAdd) transformRotationZ]
+-[CALayer(YYAdd) setTransformRotationZ:]
+-[CALayer(YYAdd) transformScaleX]
+-[CALayer(YYAdd) setTransformScaleX:]
+-[CALayer(YYAdd) transformScaleY]
+-[CALayer(YYAdd) setTransformScaleY:]
+-[CALayer(YYAdd) transformScaleZ]
+-[CALayer(YYAdd) setTransformScaleZ:]
+-[CALayer(YYAdd) transformScale]
+-[CALayer(YYAdd) setTransformScale:]
+-[CALayer(YYAdd) transformTranslationX]
+-[CALayer(YYAdd) setTransformTranslationX:]
+-[CALayer(YYAdd) transformTranslationY]
+-[CALayer(YYAdd) setTransformTranslationY:]
+-[CALayer(YYAdd) transformTranslationZ]
+-[CALayer(YYAdd) setTransformTranslationZ:]
+-[CALayer(YYAdd) transformDepth]
+-[CALayer(YYAdd) setTransformDepth:]
+-[CALayer(YYAdd) contentMode]
+-[CALayer(YYAdd) setContentMode:]
+-[CALayer(YYAdd) addFadeAnimationWithDuration:curve:]
+-[CALayer(YYAdd) removePreviousFadeAnimation]
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_CALayer_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_CALayer_YYAdd
+_OBJC_SELECTOR_REFERENCES_
+_OBJC_SELECTOR_REFERENCES_.2
+_OBJC_SELECTOR_REFERENCES_.4
+_OBJC_CLASSLIST_REFERENCES_$_
+_OBJC_SELECTOR_REFERENCES_.6
+_OBJC_SELECTOR_REFERENCES_.8
+_OBJC_SELECTOR_REFERENCES_.10
+_OBJC_SELECTOR_REFERENCES_.12
+_OBJC_SELECTOR_REFERENCES_.14
+_OBJC_SELECTOR_REFERENCES_.16
+_OBJC_SELECTOR_REFERENCES_.18
+_OBJC_CLASSLIST_REFERENCES_$_.19
+_OBJC_SELECTOR_REFERENCES_.21
+_OBJC_SELECTOR_REFERENCES_.23
+_OBJC_SELECTOR_REFERENCES_.25
+_OBJC_SELECTOR_REFERENCES_.27
+_OBJC_SELECTOR_REFERENCES_.29
+_OBJC_SELECTOR_REFERENCES_.31
+_OBJC_SELECTOR_REFERENCES_.33
+_OBJC_SELECTOR_REFERENCES_.35
+_OBJC_SELECTOR_REFERENCES_.37
+_OBJC_SELECTOR_REFERENCES_.39
+_OBJC_SELECTOR_REFERENCES_.41
+_OBJC_CLASSLIST_REFERENCES_$_.42
+_OBJC_SELECTOR_REFERENCES_.44
+_OBJC_SELECTOR_REFERENCES_.46
+_OBJC_SELECTOR_REFERENCES_.68
+_OBJC_SELECTOR_REFERENCES_.70
+_OBJC_SELECTOR_REFERENCES_.72
+_OBJC_SELECTOR_REFERENCES_.74
+_OBJC_CLASSLIST_REFERENCES_$_.75
+_OBJC_SELECTOR_REFERENCES_.77
+_OBJC_SELECTOR_REFERENCES_.79
+_OBJC_CLASSLIST_REFERENCES_$_.80
+_OBJC_SELECTOR_REFERENCES_.82
+_OBJC_SELECTOR_REFERENCES_.84
+_OBJC_SELECTOR_REFERENCES_.86
+_OBJC_SELECTOR_REFERENCES_.90
+_OBJC_SELECTOR_REFERENCES_.92
+__OBJC_$_CATEGORY_INSTANCE_METHODS_CALayer_$_YYAdd
+__OBJC_$_PROP_LIST_CALayer_$_YYAdd
+__OBJC_$_CATEGORY_CALayer_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/Quartz/CALayer+YYAdd.m
+YYCategories/YYCategories/Quartz/CALayer+YYAdd.m
+CGPointMake
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGeometry.h
+llvm.loop.mustprogress
++[NSArray(YYAdd) arrayWithPlistData:]
++[NSArray(YYAdd) arrayWithPlistString:]
+-[NSArray(YYAdd) plistData]
+-[NSArray(YYAdd) plistString]
+-[NSArray(YYAdd) randomObject]
+-[NSArray(YYAdd) objectOrNilAtIndex:]
+-[NSArray(YYAdd) jsonStringEncoded]
+-[NSArray(YYAdd) jsonPrettyStringEncoded]
++[NSMutableArray(YYAdd) arrayWithPlistData:]
++[NSMutableArray(YYAdd) arrayWithPlistString:]
+-[NSMutableArray(YYAdd) removeFirstObject]
+-[NSMutableArray(YYAdd) removeLastObject]
+-[NSMutableArray(YYAdd) popFirstObject]
+-[NSMutableArray(YYAdd) popLastObject]
+-[NSMutableArray(YYAdd) appendObject:]
+-[NSMutableArray(YYAdd) prependObject:]
+-[NSMutableArray(YYAdd) appendObjects:]
+-[NSMutableArray(YYAdd) prependObjects:]
+-[NSMutableArray(YYAdd) insertObjects:atIndex:]
+-[NSMutableArray(YYAdd) reverse]
+-[NSMutableArray(YYAdd) shuffle]
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSArray_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSArray_YYAdd
+_OBJC_CLASSLIST_REFERENCES_$_.1
+_OBJC_SELECTOR_REFERENCES_.3
+_OBJC_SELECTOR_REFERENCES_.5
+_OBJC_SELECTOR_REFERENCES_.7
+_OBJC_SELECTOR_REFERENCES_.9
+_OBJC_SELECTOR_REFERENCES_.11
+_OBJC_SELECTOR_REFERENCES_.13
+_OBJC_SELECTOR_REFERENCES_.15
+_OBJC_SELECTOR_REFERENCES_.17
+_OBJC_CLASSLIST_REFERENCES_$_.18
+_OBJC_SELECTOR_REFERENCES_.20
+_OBJC_SELECTOR_REFERENCES_.22
+_OBJC_CLASSLIST_REFERENCES_$_.23
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSArray_$_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_NSArray_$_YYAdd
+__OBJC_$_CATEGORY_NSArray_$_YYAdd
+_OBJC_CLASSLIST_REFERENCES_$_.36
+_OBJC_SELECTOR_REFERENCES_.38
+_OBJC_SELECTOR_REFERENCES_.40
+_OBJC_SELECTOR_REFERENCES_.42
+_OBJC_SELECTOR_REFERENCES_.48
+_OBJC_SELECTOR_REFERENCES_.50
+_OBJC_SELECTOR_REFERENCES_.52
+_OBJC_SELECTOR_REFERENCES_.54
+_OBJC_SELECTOR_REFERENCES_.56
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSMutableArray_$_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_NSMutableArray_$_YYAdd
+__OBJC_$_CATEGORY_NSMutableArray_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/Foundation/NSArray+YYAdd.m
+YYCategories/YYCategories/Foundation/NSArray+YYAdd.m
++[NSBundle(YYAdd) preferredScales]
+___34+[NSBundle(YYAdd) preferredScales]_block_invoke
++[NSBundle(YYAdd) pathForScaledResource:ofType:inDirectory:]
+-[NSBundle(YYAdd) pathForScaledResource:ofType:]
+-[NSBundle(YYAdd) pathForScaledResource:ofType:inDirectory:]
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSBundle_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSBundle_YYAdd
+_preferredScales.scales
+_preferredScales.onceToken
+___block_descriptor_20_e5_v4?0l
+___block_literal_global
+_OBJC_CLASSLIST_REFERENCES_$_.3
+_OBJC_CLASSLIST_REFERENCES_$_.6
+_OBJC_SELECTOR_REFERENCES_.19
+_OBJC_CLASSLIST_REFERENCES_$_.30
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSBundle_$_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_NSBundle_$_YYAdd
+__OBJC_$_CATEGORY_NSBundle_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/Foundation/NSBundle+YYAdd.m
+YYCategories/YYCategories/Foundation/NSBundle+YYAdd.m
+__34+[NSBundle(YYAdd) preferredScales]_block_invoke
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/dispatch/once.h
+-[NSData(YYAdd) md2String]
+-[NSData(YYAdd) md2Data]
+-[NSData(YYAdd) md4String]
+-[NSData(YYAdd) md4Data]
+-[NSData(YYAdd) md5String]
+-[NSData(YYAdd) md5Data]
+-[NSData(YYAdd) sha1String]
+-[NSData(YYAdd) sha1Data]
+-[NSData(YYAdd) sha224String]
+-[NSData(YYAdd) sha224Data]
+-[NSData(YYAdd) sha256String]
+-[NSData(YYAdd) sha256Data]
+-[NSData(YYAdd) sha384String]
+-[NSData(YYAdd) sha384Data]
+-[NSData(YYAdd) sha512String]
+-[NSData(YYAdd) sha512Data]
+-[NSData(YYAdd) hmacStringUsingAlg:withKey:]
+-[NSData(YYAdd) hmacDataUsingAlg:withKey:]
+-[NSData(YYAdd) hmacMD5StringWithKey:]
+-[NSData(YYAdd) hmacMD5DataWithKey:]
+-[NSData(YYAdd) hmacSHA1StringWithKey:]
+-[NSData(YYAdd) hmacSHA1DataWithKey:]
+-[NSData(YYAdd) hmacSHA224StringWithKey:]
+-[NSData(YYAdd) hmacSHA224DataWithKey:]
+-[NSData(YYAdd) hmacSHA256StringWithKey:]
+-[NSData(YYAdd) hmacSHA256DataWithKey:]
+-[NSData(YYAdd) hmacSHA384StringWithKey:]
+-[NSData(YYAdd) hmacSHA384DataWithKey:]
+-[NSData(YYAdd) hmacSHA512StringWithKey:]
+-[NSData(YYAdd) hmacSHA512DataWithKey:]
+-[NSData(YYAdd) crc32String]
+-[NSData(YYAdd) crc32]
+-[NSData(YYAdd) aes256EncryptWithKey:iv:]
+-[NSData(YYAdd) aes256DecryptWithkey:iv:]
+-[NSData(YYAdd) utf8String]
+-[NSData(YYAdd) hexString]
++[NSData(YYAdd) dataWithHexString:]
+-[NSData(YYAdd) base64EncodedString]
++[NSData(YYAdd) dataWithBase64EncodedString:]
+-[NSData(YYAdd) jsonValueDecoded]
+-[NSData(YYAdd) gzipInflate]
+-[NSData(YYAdd) gzipDeflate]
+-[NSData(YYAdd) zlibInflate]
+-[NSData(YYAdd) zlibDeflate]
++[NSData(YYAdd) dataNamed:]
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSData_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSData_YYAdd
+_OBJC_CLASSLIST_REFERENCES_$_.5
+_OBJC_CLASSLIST_REFERENCES_$_.8
+_OBJC_SELECTOR_REFERENCES_.24
+_OBJC_SELECTOR_REFERENCES_.26
+_OBJC_SELECTOR_REFERENCES_.34
+_OBJC_SELECTOR_REFERENCES_.36
+_OBJC_CLASSLIST_REFERENCES_$_.39
+_OBJC_SELECTOR_REFERENCES_.43
+_base64EncodingTable
+_OBJC_SELECTOR_REFERENCES_.45
+_OBJC_SELECTOR_REFERENCES_.47
+_OBJC_SELECTOR_REFERENCES_.49
+_base64DecodingTable
+_OBJC_CLASSLIST_REFERENCES_$_.50
+_OBJC_SELECTOR_REFERENCES_.57
+_OBJC_SELECTOR_REFERENCES_.59
+_OBJC_SELECTOR_REFERENCES_.61
+_OBJC_CLASSLIST_REFERENCES_$_.62
+_OBJC_SELECTOR_REFERENCES_.64
+_OBJC_SELECTOR_REFERENCES_.66
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSData_$_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_NSData_$_YYAdd
+__OBJC_$_CATEGORY_NSData_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/Foundation/NSData+YYAdd.m
+YYCategories/YYCategories/Foundation/NSData+YYAdd.m
+NSMakeRange
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+-[NSDate(YYAdd) year]
+-[NSDate(YYAdd) month]
+-[NSDate(YYAdd) day]
+-[NSDate(YYAdd) hour]
+-[NSDate(YYAdd) minute]
+-[NSDate(YYAdd) second]
+-[NSDate(YYAdd) nanosecond]
+-[NSDate(YYAdd) weekday]
+-[NSDate(YYAdd) weekdayOrdinal]
+-[NSDate(YYAdd) weekOfMonth]
+-[NSDate(YYAdd) weekOfYear]
+-[NSDate(YYAdd) yearForWeekOfYear]
+-[NSDate(YYAdd) quarter]
+-[NSDate(YYAdd) isLeapMonth]
+-[NSDate(YYAdd) isLeapYear]
+-[NSDate(YYAdd) isToday]
+-[NSDate(YYAdd) isYesterday]
+-[NSDate(YYAdd) dateByAddingYears:]
+-[NSDate(YYAdd) dateByAddingMonths:]
+-[NSDate(YYAdd) dateByAddingWeeks:]
+-[NSDate(YYAdd) dateByAddingDays:]
+-[NSDate(YYAdd) dateByAddingHours:]
+-[NSDate(YYAdd) dateByAddingMinutes:]
+-[NSDate(YYAdd) dateByAddingSeconds:]
+-[NSDate(YYAdd) stringWithFormat:]
+-[NSDate(YYAdd) stringWithFormat:timeZone:locale:]
+-[NSDate(YYAdd) stringWithISOFormat]
+___36-[NSDate(YYAdd) stringWithISOFormat]_block_invoke
++[NSDate(YYAdd) dateWithString:format:]
++[NSDate(YYAdd) dateWithString:format:timeZone:locale:]
++[NSDate(YYAdd) dateWithISOFormatString:]
+___41+[NSDate(YYAdd) dateWithISOFormatString:]_block_invoke
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSDate_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSDate_YYAdd
+_OBJC_SELECTOR_REFERENCES_.28
+_OBJC_SELECTOR_REFERENCES_.30
+_OBJC_SELECTOR_REFERENCES_.32
+_OBJC_CLASSLIST_REFERENCES_$_.33
+_OBJC_CLASSLIST_REFERENCES_$_.40
+_OBJC_CLASSLIST_REFERENCES_$_.55
+_OBJC_CLASSLIST_REFERENCES_$_.58
+_OBJC_SELECTOR_REFERENCES_.60
+_OBJC_SELECTOR_REFERENCES_.62
+_stringWithISOFormat.formatter
+_stringWithISOFormat.onceToken
+_OBJC_SELECTOR_REFERENCES_.69
+_OBJC_SELECTOR_REFERENCES_.73
+_dateWithISOFormatString:.formatter
+_dateWithISOFormatString:.onceToken
+___block_literal_global.74
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSDate_$_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_NSDate_$_YYAdd
+__OBJC_$_PROP_LIST_NSDate_$_YYAdd
+__OBJC_$_CATEGORY_NSDate_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/Foundation/NSDate+YYAdd.m
+__41+[NSDate(YYAdd) dateWithISOFormatString:]_block_invoke
+YYCategories/YYCategories/Foundation/NSDate+YYAdd.m
+__36-[NSDate(YYAdd) stringWithISOFormat]_block_invoke
+-[_YYXMLDictionaryParser initWithData:]
+-[_YYXMLDictionaryParser initWithString:]
+-[_YYXMLDictionaryParser result]
+-[_YYXMLDictionaryParser textEnd]
+-[_YYXMLDictionaryParser parser:didStartElement:namespaceURI:qualifiedName:attributes:]
+-[_YYXMLDictionaryParser parser:didEndElement:namespaceURI:qualifiedName:]
+-[_YYXMLDictionaryParser parser:foundCharacters:]
+-[_YYXMLDictionaryParser parser:foundCDATA:]
+-[_YYXMLDictionaryParser .cxx_destruct]
++[NSDictionary(YYAdd) dictionaryWithPlistData:]
++[NSDictionary(YYAdd) dictionaryWithPlistString:]
+-[NSDictionary(YYAdd) plistData]
+-[NSDictionary(YYAdd) plistString]
+-[NSDictionary(YYAdd) allKeysSorted]
+-[NSDictionary(YYAdd) allValuesSortedByKeys]
+-[NSDictionary(YYAdd) containsObjectForKey:]
+-[NSDictionary(YYAdd) entriesForKeys:]
+-[NSDictionary(YYAdd) jsonStringEncoded]
+-[NSDictionary(YYAdd) jsonPrettyStringEncoded]
++[NSDictionary(YYAdd) dictionaryWithXML:]
+-[NSDictionary(YYAdd) boolValueForKey:default:]
+_NSNumberFromID
+-[NSDictionary(YYAdd) charValueForKey:default:]
+-[NSDictionary(YYAdd) unsignedCharValueForKey:default:]
+-[NSDictionary(YYAdd) shortValueForKey:default:]
+-[NSDictionary(YYAdd) unsignedShortValueForKey:default:]
+-[NSDictionary(YYAdd) intValueForKey:default:]
+-[NSDictionary(YYAdd) unsignedIntValueForKey:default:]
+-[NSDictionary(YYAdd) longValueForKey:default:]
+-[NSDictionary(YYAdd) unsignedLongValueForKey:default:]
+-[NSDictionary(YYAdd) longLongValueForKey:default:]
+-[NSDictionary(YYAdd) unsignedLongLongValueForKey:default:]
+-[NSDictionary(YYAdd) floatValueForKey:default:]
+-[NSDictionary(YYAdd) doubleValueForKey:default:]
+-[NSDictionary(YYAdd) integerValueForKey:default:]
+-[NSDictionary(YYAdd) unsignedIntegerValueForKey:default:]
+-[NSDictionary(YYAdd) numberValueForKey:default:]
+-[NSDictionary(YYAdd) stringValueForKey:default:]
++[NSMutableDictionary(YYAdd) dictionaryWithPlistData:]
++[NSMutableDictionary(YYAdd) dictionaryWithPlistString:]
+-[NSMutableDictionary(YYAdd) popObjectForKey:]
+-[NSMutableDictionary(YYAdd) popEntriesForKeys:]
+___NSNumberFromID_block_invoke
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSDictionary_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSDictionary_YYAdd
+_OBJC_CLASSLIST_REFERENCES_$_.32
+_OBJC_CLASSLIST_REFERENCES_$_.41
+_OBJC_SELECTOR_REFERENCES_.51
+_OBJC_SELECTOR_REFERENCES_.53
+_OBJC_SELECTOR_REFERENCES_.65
+_OBJC_SELECTOR_REFERENCES_.67
+_OBJC_CLASSLIST_REFERENCES_$_.70
+_OBJC_CLASSLIST_REFERENCES_$_.73
+_OBJC_SELECTOR_REFERENCES_.75
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject
+__OBJC_$_PROP_LIST_NSObject
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSObject
+__OBJC_PROTOCOL_$_NSObject
+__OBJC_LABEL_PROTOCOL_$_NSObject
+__OBJC_$_PROTOCOL_REFS_NSXMLParserDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSXMLParserDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSXMLParserDelegate
+__OBJC_PROTOCOL_$_NSXMLParserDelegate
+__OBJC_LABEL_PROTOCOL_$_NSXMLParserDelegate
+__OBJC_CLASS_PROTOCOLS_$__YYXMLDictionaryParser
+__OBJC_METACLASS_RO_$__YYXMLDictionaryParser
+__OBJC_$_INSTANCE_METHODS__YYXMLDictionaryParser
+_OBJC_IVAR_$__YYXMLDictionaryParser._root
+_OBJC_IVAR_$__YYXMLDictionaryParser._stack
+_OBJC_IVAR_$__YYXMLDictionaryParser._text
+__OBJC_$_INSTANCE_VARIABLES__YYXMLDictionaryParser
+__OBJC_$_PROP_LIST__YYXMLDictionaryParser
+__OBJC_CLASS_RO_$__YYXMLDictionaryParser
+_OBJC_CLASSLIST_REFERENCES_$_.163
+_OBJC_SELECTOR_REFERENCES_.165
+_OBJC_CLASSLIST_REFERENCES_$_.166
+_OBJC_SELECTOR_REFERENCES_.168
+_OBJC_SELECTOR_REFERENCES_.170
+_OBJC_SELECTOR_REFERENCES_.172
+_OBJC_SELECTOR_REFERENCES_.174
+_OBJC_SELECTOR_REFERENCES_.176
+_OBJC_SELECTOR_REFERENCES_.178
+_OBJC_CLASSLIST_REFERENCES_$_.179
+_OBJC_SELECTOR_REFERENCES_.181
+_OBJC_SELECTOR_REFERENCES_.183
+_OBJC_CLASSLIST_REFERENCES_$_.184
+_OBJC_SELECTOR_REFERENCES_.185
+_OBJC_CLASSLIST_REFERENCES_$_.186
+_OBJC_SELECTOR_REFERENCES_.187
+_OBJC_CLASSLIST_REFERENCES_$_.188
+_OBJC_SELECTOR_REFERENCES_.190
+_OBJC_CLASSLIST_REFERENCES_$_.191
+_OBJC_SELECTOR_REFERENCES_.193
+_OBJC_SELECTOR_REFERENCES_.195
+_OBJC_SELECTOR_REFERENCES_.197
+_OBJC_SELECTOR_REFERENCES_.199
+_OBJC_SELECTOR_REFERENCES_.201
+_OBJC_SELECTOR_REFERENCES_.203
+_OBJC_SELECTOR_REFERENCES_.205
+_OBJC_SELECTOR_REFERENCES_.207
+_OBJC_SELECTOR_REFERENCES_.209
+_OBJC_SELECTOR_REFERENCES_.211
+_OBJC_SELECTOR_REFERENCES_.213
+_OBJC_SELECTOR_REFERENCES_.215
+_OBJC_SELECTOR_REFERENCES_.217
+_OBJC_SELECTOR_REFERENCES_.219
+_OBJC_SELECTOR_REFERENCES_.221
+_OBJC_SELECTOR_REFERENCES_.222
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSDictionary_$_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_NSDictionary_$_YYAdd
+__OBJC_$_CATEGORY_NSDictionary_$_YYAdd
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSMutableDictionary_$_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_NSMutableDictionary_$_YYAdd
+__OBJC_$_CATEGORY_NSMutableDictionary_$_YYAdd
+_NSNumberFromID.dot
+_NSNumberFromID.onceToken
+_OBJC_CLASSLIST_REFERENCES_$_.266
+_OBJC_SELECTOR_REFERENCES_.268
+_OBJC_SELECTOR_REFERENCES_.270
+_OBJC_SELECTOR_REFERENCES_.274
+_OBJC_SELECTOR_REFERENCES_.278
+_OBJC_SELECTOR_REFERENCES_.288
+_OBJC_SELECTOR_REFERENCES_.290
+_OBJC_SELECTOR_REFERENCES_.292
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/Foundation/NSDictionary+YYAdd.m
+__NSNumberFromID_block_invoke
+YYCategories/YYCategories/Foundation/NSDictionary+YYAdd.m
+NSNumberFromID
++[NSKeyedUnarchiver(YYAdd) unarchiveObjectWithData:exception:]
++[NSKeyedUnarchiver(YYAdd) unarchiveObjectWithFile:exception:]
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSKeyedUnarchiver_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSKeyedUnarchiver_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_NSKeyedUnarchiver_$_YYAdd
+__OBJC_$_CATEGORY_NSKeyedUnarchiver_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/Foundation/NSKeyedUnarchiver+YYAdd.m
+YYCategories/YYCategories/Foundation/NSKeyedUnarchiver+YYAdd.m
+-[NSNotificationCenter(YYAdd) postNotificationOnMainThread:]
+-[NSNotificationCenter(YYAdd) postNotificationOnMainThread:waitUntilDone:]
+-[NSNotificationCenter(YYAdd) postNotificationOnMainThreadWithName:object:]
+-[NSNotificationCenter(YYAdd) postNotificationOnMainThreadWithName:object:userInfo:]
+-[NSNotificationCenter(YYAdd) postNotificationOnMainThreadWithName:object:userInfo:waitUntilDone:]
++[NSNotificationCenter(YYAdd) _yy_postNotification:]
++[NSNotificationCenter(YYAdd) _yy_postNotificationName:]
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSNotificationCenter_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSNotificationCenter_YYAdd
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSNotificationCenter_$_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_NSNotificationCenter_$_YYAdd
+__OBJC_$_CATEGORY_NSNotificationCenter_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/Foundation/NSNotificationCenter+YYAdd.m
+YYCategories/YYCategories/Foundation/NSNotificationCenter+YYAdd.m
++[NSNumber(YYAdd) numberWithString:]
+___36+[NSNumber(YYAdd) numberWithString:]_block_invoke
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSNumber_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSNumber_YYAdd
+_numberWithString:.dic
+_numberWithString:.onceToken
+_OBJC_CLASSLIST_REFERENCES_$_.16
+_OBJC_CLASSLIST_REFERENCES_$_.34
+__OBJC_$_CATEGORY_CLASS_METHODS_NSNumber_$_YYAdd
+__OBJC_$_CATEGORY_NSNumber_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/Foundation/NSNumber+YYAdd.m
+__36+[NSNumber(YYAdd) numberWithString:]_block_invoke
+YYCategories/YYCategories/Foundation/NSNumber+YYAdd.m
+-[NSObject(YYAdd) performSelectorWithArgs:]
+-[NSObject(YYAdd) performSelectorWithArgs:afterDelay:]
+-[NSObject(YYAdd) performSelectorWithArgsOnMainThread:waitUntilDone:]
+-[NSObject(YYAdd) performSelectorWithArgs:onThread:waitUntilDone:]
+-[NSObject(YYAdd) performSelectorWithArgsInBackground:]
++[NSObject(YYAdd) getReturnFromInv:withSig:]
++[NSObject(YYAdd) setInv:withSig:andArgs:]
+-[NSObject(YYAdd) performSelector:afterDelay:]
++[NSObject(YYAdd) swizzleInstanceMethod:with:]
++[NSObject(YYAdd) swizzleClassMethod:with:]
+-[NSObject(YYAdd) setAssociateValue:withKey:]
+-[NSObject(YYAdd) setAssociateWeakValue:withKey:]
+-[NSObject(YYAdd) removeAssociatedValues]
+-[NSObject(YYAdd) getAssociatedValueForKey:]
++[NSObject(YYAdd) className]
+-[NSObject(YYAdd) className]
+-[NSObject(YYAdd) deepCopy]
+-[NSObject(YYAdd) deepCopyWithArchiver:unarchiver:]
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSObject_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSObject_YYAdd
+_OBJC_CLASSLIST_REFERENCES_$_.9
+_OBJC_SELECTOR_REFERENCES_.63
+_OBJC_CLASSLIST_REFERENCES_$_.78
+_OBJC_CLASSLIST_REFERENCES_$_.79
+_OBJC_SELECTOR_REFERENCES_.81
+_OBJC_SELECTOR_REFERENCES_.83
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSObject_$_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_NSObject_$_YYAdd
+__OBJC_$_CATEGORY_NSObject_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/Foundation/NSObject+YYAdd.m
+YYCategories/YYCategories/Foundation/NSObject+YYAdd.m
+-[NSObject(YYAddForARC) arcDebugRetain]
+-[NSObject(YYAddForARC) arcDebugRelease]
+-[NSObject(YYAddForARC) arcDebugAutorelease]
+-[NSObject(YYAddForARC) arcDebugRetainCount]
+__OBJC_METACLASS_RO_$_NSObject_YYAddForARC
+__OBJC_CLASS_RO_$_NSObject_YYAddForARC
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSObject_$_YYAddForARC
+__OBJC_$_CATEGORY_NSObject_$_YYAddForARC
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/Foundation/NSObject+YYAddForARC.m
+YYCategories/YYCategories/Foundation/NSObject+YYAddForARC.m
+-[_YYNSObjectKVOBlockTarget initWithBlock:]
+-[_YYNSObjectKVOBlockTarget observeValueForKeyPath:ofObject:change:context:]
+-[_YYNSObjectKVOBlockTarget block]
+-[_YYNSObjectKVOBlockTarget setBlock:]
+-[_YYNSObjectKVOBlockTarget .cxx_destruct]
+-[NSObject(YYAddForKVO) addObserverBlockForKeyPath:block:]
+-[NSObject(YYAddForKVO) removeObserverBlocksForKeyPath:]
+___56-[NSObject(YYAddForKVO) removeObserverBlocksForKeyPath:]_block_invoke
+___copy_helper_block_e4_20s24s
+___destroy_helper_block_e4_20s24s
+-[NSObject(YYAddForKVO) removeObserverBlocks]
+___45-[NSObject(YYAddForKVO) removeObserverBlocks]_block_invoke
+___45-[NSObject(YYAddForKVO) removeObserverBlocks]_block_invoke_2
+___copy_helper_block_e4_20s
+___destroy_helper_block_e4_20s
+-[NSObject(YYAddForKVO) _yy_allNSObjectObserverBlocks]
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSObject_YYAddForKVO
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSObject_YYAddForKVO
+__OBJC_METACLASS_RO_$__YYNSObjectKVOBlockTarget
+__OBJC_$_INSTANCE_METHODS__YYNSObjectKVOBlockTarget
+_OBJC_IVAR_$__YYNSObjectKVOBlockTarget._block
+__OBJC_$_INSTANCE_VARIABLES__YYNSObjectKVOBlockTarget
+__OBJC_$_PROP_LIST__YYNSObjectKVOBlockTarget
+__OBJC_CLASS_RO_$__YYNSObjectKVOBlockTarget
+_OBJC_CLASSLIST_REFERENCES_$_.25
+_OBJC_CLASSLIST_REFERENCES_$_.31
+___block_descriptor_28_e4_20s24s_e14_v16?04I8^c12l
+___block_descriptor_24_e4_20s_e33_v16?0"NSString"4"NSArray"8^c12l
+_block_key
+_OBJC_CLASSLIST_REFERENCES_$_.51
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSObject_$_YYAddForKVO
+__OBJC_$_CATEGORY_NSObject_$_YYAddForKVO
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/Foundation/NSObject+YYAddForKVO.m
+YYCategories/YYCategories/Foundation/NSObject+YYAddForKVO.m
+__destroy_helper_block_e4_20s
+__copy_helper_block_e4_20s
+__45-[NSObject(YYAddForKVO) removeObserverBlocks]_block_invoke_2
+__45-[NSObject(YYAddForKVO) removeObserverBlocks]_block_invoke
+__destroy_helper_block_e4_20s24s
+__copy_helper_block_e4_20s24s
+__56-[NSObject(YYAddForKVO) removeObserverBlocksForKeyPath:]_block_invoke
+-[NSString(YYAdd) md2String]
+-[NSString(YYAdd) md4String]
+-[NSString(YYAdd) md5String]
+-[NSString(YYAdd) sha1String]
+-[NSString(YYAdd) sha224String]
+-[NSString(YYAdd) sha256String]
+-[NSString(YYAdd) sha384String]
+-[NSString(YYAdd) sha512String]
+-[NSString(YYAdd) crc32String]
+-[NSString(YYAdd) hmacMD5StringWithKey:]
+-[NSString(YYAdd) hmacSHA1StringWithKey:]
+-[NSString(YYAdd) hmacSHA224StringWithKey:]
+-[NSString(YYAdd) hmacSHA256StringWithKey:]
+-[NSString(YYAdd) hmacSHA384StringWithKey:]
+-[NSString(YYAdd) hmacSHA512StringWithKey:]
+-[NSString(YYAdd) base64EncodedString]
++[NSString(YYAdd) stringWithBase64EncodedString:]
+-[NSString(YYAdd) stringByURLEncode]
+-[NSString(YYAdd) stringByURLDecode]
+-[NSString(YYAdd) stringByEscapingHTML]
+-[NSString(YYAdd) sizeForFont:size:mode:]
+-[NSString(YYAdd) widthForFont:]
+_CGSizeMake
+-[NSString(YYAdd) heightForFont:width:]
+-[NSString(YYAdd) matchesRegex:options:]
+-[NSString(YYAdd) enumerateRegexMatches:options:usingBlock:]
+___60-[NSString(YYAdd) enumerateRegexMatches:options:usingBlock:]_block_invoke
+___copy_helper_block_e4_20b24s
+-[NSString(YYAdd) stringByReplacingRegex:options:withString:]
+-[NSString(YYAdd) charValue]
+-[NSString(YYAdd) unsignedCharValue]
+-[NSString(YYAdd) shortValue]
+-[NSString(YYAdd) unsignedShortValue]
+-[NSString(YYAdd) unsignedIntValue]
+-[NSString(YYAdd) longValue]
+-[NSString(YYAdd) unsignedLongValue]
+-[NSString(YYAdd) unsignedLongLongValue]
+-[NSString(YYAdd) unsignedIntegerValue]
++[NSString(YYAdd) stringWithUUID]
++[NSString(YYAdd) stringWithUTF32Char:]
++[NSString(YYAdd) stringWithUTF32Chars:length:]
+-[NSString(YYAdd) enumerateUTF32CharInRange:usingBlock:]
+-[NSString(YYAdd) stringByTrim]
+-[NSString(YYAdd) stringByAppendingNameScale:]
+-[NSString(YYAdd) stringByAppendingPathScale:]
+-[NSString(YYAdd) pathScale]
+___28-[NSString(YYAdd) pathScale]_block_invoke
+___copy_helper_block_e4_20r
+___destroy_helper_block_e4_20r
+-[NSString(YYAdd) isNotBlank]
+-[NSString(YYAdd) containsString:]
+-[NSString(YYAdd) containsCharacterSet:]
+-[NSString(YYAdd) numberValue]
+-[NSString(YYAdd) dataValue]
+-[NSString(YYAdd) rangeOfAll]
+-[NSString(YYAdd) jsonValueDecoded]
++[NSString(YYAdd) stringNamed:]
+_CFSwapInt32HostToLittle
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSString_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSString_YYAdd
+_OBJC_CLASSLIST_REFERENCES_$_.35
+_stringByURLEncode.kAFCharactersGeneralDelimitersToEncode
+_stringByURLEncode.kAFCharactersSubDelimitersToEncode
+_OBJC_CLASSLIST_REFERENCES_$_.44
+_stringByURLEncode.batchSize
+_OBJC_SELECTOR_REFERENCES_.58
+_OBJC_CLASSLIST_REFERENCES_$_.88
+_OBJC_CLASSLIST_REFERENCES_$_.93
+_OBJC_SELECTOR_REFERENCES_.95
+_OBJC_SELECTOR_REFERENCES_.97
+_OBJC_CLASSLIST_REFERENCES_$_.98
+_OBJC_SELECTOR_REFERENCES_.100
+_OBJC_SELECTOR_REFERENCES_.102
+_OBJC_SELECTOR_REFERENCES_.104
+_OBJC_CLASSLIST_REFERENCES_$_.105
+_OBJC_SELECTOR_REFERENCES_.107
+_OBJC_SELECTOR_REFERENCES_.109
+_OBJC_SELECTOR_REFERENCES_.111
+___block_descriptor_28_e4_20bs24s_e36_v16?0"NSTextCheckingResult"4I8^c12l
+_OBJC_SELECTOR_REFERENCES_.114
+_OBJC_SELECTOR_REFERENCES_.116
+_OBJC_SELECTOR_REFERENCES_.118
+_OBJC_SELECTOR_REFERENCES_.120
+_OBJC_SELECTOR_REFERENCES_.122
+_OBJC_SELECTOR_REFERENCES_.124
+_OBJC_SELECTOR_REFERENCES_.126
+_OBJC_SELECTOR_REFERENCES_.128
+_OBJC_SELECTOR_REFERENCES_.130
+_OBJC_SELECTOR_REFERENCES_.132
+_OBJC_SELECTOR_REFERENCES_.134
+_OBJC_SELECTOR_REFERENCES_.136
+_OBJC_SELECTOR_REFERENCES_.138
+_OBJC_SELECTOR_REFERENCES_.140
+_OBJC_SELECTOR_REFERENCES_.142
+_OBJC_SELECTOR_REFERENCES_.144
+_OBJC_SELECTOR_REFERENCES_.146
+_OBJC_SELECTOR_REFERENCES_.150
+_OBJC_SELECTOR_REFERENCES_.152
+_OBJC_CLASSLIST_REFERENCES_$_.155
+_OBJC_SELECTOR_REFERENCES_.157
+_OBJC_SELECTOR_REFERENCES_.159
+_OBJC_SELECTOR_REFERENCES_.161
+_OBJC_SELECTOR_REFERENCES_.163
+_OBJC_SELECTOR_REFERENCES_.167
+_OBJC_SELECTOR_REFERENCES_.171
+___block_descriptor_24_e4_20r_e36_v20?0"NSString"4{_NSRange=II}8^c16l
+_OBJC_SELECTOR_REFERENCES_.180
+_OBJC_SELECTOR_REFERENCES_.182
+_OBJC_SELECTOR_REFERENCES_.184
+_OBJC_SELECTOR_REFERENCES_.186
+_OBJC_SELECTOR_REFERENCES_.188
+_OBJC_CLASSLIST_REFERENCES_$_.189
+_OBJC_SELECTOR_REFERENCES_.191
+__OBJC_$_CATEGORY_INSTANCE_METHODS_NSString_$_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_NSString_$_YYAdd
+__OBJC_$_PROP_LIST_NSString_$_YYAdd
+__OBJC_$_CATEGORY_NSString_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/Foundation/NSString+YYAdd.m
+CFSwapInt32HostToLittle
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFByteOrder.h
+YYCategories/YYCategories/Foundation/NSString+YYAdd.m
+__destroy_helper_block_e4_20r
+__copy_helper_block_e4_20r
+__28-[NSString(YYAdd) pathScale]_block_invoke
+NSSwapHostIntToLittle
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSByteOrder.h
+__copy_helper_block_e4_20b24s
+__60-[NSString(YYAdd) enumerateRegexMatches:options:usingBlock:]_block_invoke
+CGSizeMake
++[NSThread(YYAdd) addAutoreleasePoolToCurrentRunloop]
+_YYRunloopAutoreleasePoolSetup
+_YYRunLoopAutoreleasePoolObserverCallBack
+_YYAutoreleasePoolPush
+_PoolStackRetainCallBack
+_PoolStackReleaseCallBack
+_YYAutoreleasePoolPop
+__OBJC_METACLASS_RO_$_NSThread_YYAdd
+__OBJC_CLASS_RO_$_NSThread_YYAdd
+_YYNSThreadAutoleasePoolKey
+__OBJC_$_CATEGORY_CLASS_METHODS_NSThread_$_YYAdd
+__OBJC_$_CATEGORY_NSThread_$_YYAdd
+_OBJC_CLASSLIST_REFERENCES_$_.13
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/Foundation/NSThread+YYAdd.m
+YYAutoreleasePoolPop
+YYCategories/YYCategories/Foundation/NSThread+YYAdd.m
+PoolStackReleaseCallBack
+PoolStackRetainCallBack
+YYAutoreleasePoolPush
+YYRunLoopAutoreleasePoolObserverCallBack
+YYRunloopAutoreleasePoolSetup
++[NSTimer(YYAdd) _yy_ExecBlock:]
++[NSTimer(YYAdd) scheduledTimerWithTimeInterval:block:repeats:]
++[NSTimer(YYAdd) timerWithTimeInterval:block:repeats:]
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSTimer_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_NSTimer_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_NSTimer_$_YYAdd
+__OBJC_$_CATEGORY_NSTimer_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/Foundation/NSTimer+YYAdd.m
+YYCategories/YYCategories/Foundation/NSTimer+YYAdd.m
+-[_YYUIApplicationNetworkIndicatorInfo count]
+-[_YYUIApplicationNetworkIndicatorInfo setCount:]
+-[_YYUIApplicationNetworkIndicatorInfo timer]
+-[_YYUIApplicationNetworkIndicatorInfo setTimer:]
+-[_YYUIApplicationNetworkIndicatorInfo .cxx_destruct]
+-[UIApplication(YYAdd) documentsURL]
+-[UIApplication(YYAdd) documentsPath]
+-[UIApplication(YYAdd) cachesURL]
+-[UIApplication(YYAdd) cachesPath]
+-[UIApplication(YYAdd) libraryURL]
+-[UIApplication(YYAdd) libraryPath]
+-[UIApplication(YYAdd) isPirated]
+-[UIApplication(YYAdd) _yy_fileExistInMainBundle:]
+-[UIApplication(YYAdd) appBundleName]
+-[UIApplication(YYAdd) appBundleID]
+-[UIApplication(YYAdd) appVersion]
+-[UIApplication(YYAdd) appBuildVersion]
+-[UIApplication(YYAdd) isBeingDebugged]
+-[UIApplication(YYAdd) memoryUsage]
+-[UIApplication(YYAdd) cpuUsage]
+-[UIApplication(YYAdd) setNetworkActivityInfo:]
+-[UIApplication(YYAdd) networkActivityInfo]
+-[UIApplication(YYAdd) _delaySetActivity:]
+-[UIApplication(YYAdd) _changeNetworkActivityCount:]
+_dispatch_async_on_main_queue
+___52-[UIApplication(YYAdd) _changeNetworkActivityCount:]_block_invoke
+-[UIApplication(YYAdd) incrementNetworkActivityCount]
+-[UIApplication(YYAdd) decrementNetworkActivityCount]
++[UIApplication(YYAdd) isAppExtension]
+___38+[UIApplication(YYAdd) isAppExtension]_block_invoke
++[UIApplication(YYAdd) sharedExtensionApplication]
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIApplication_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIApplication_YYAdd
+__OBJC_METACLASS_RO_$__YYUIApplicationNetworkIndicatorInfo
+__OBJC_$_INSTANCE_METHODS__YYUIApplicationNetworkIndicatorInfo
+_OBJC_IVAR_$__YYUIApplicationNetworkIndicatorInfo._count
+_OBJC_IVAR_$__YYUIApplicationNetworkIndicatorInfo._timer
+__OBJC_$_INSTANCE_VARIABLES__YYUIApplicationNetworkIndicatorInfo
+__OBJC_$_PROP_LIST__YYUIApplicationNetworkIndicatorInfo
+__OBJC_CLASS_RO_$__YYUIApplicationNetworkIndicatorInfo
+_OBJC_CLASSLIST_REFERENCES_$_.45
+_OBJC_SELECTOR_REFERENCES_.55
+_OBJC_SELECTOR_REFERENCES_.71
+_OBJC_CLASSLIST_REFERENCES_$_.84
+_OBJC_SELECTOR_REFERENCES_.87
+_OBJC_SELECTOR_REFERENCES_.88
+_OBJC_SELECTOR_REFERENCES_.89
+_OBJC_CLASSLIST_REFERENCES_$_.90
+_OBJC_SELECTOR_REFERENCES_.98
+_OBJC_CLASSLIST_REFERENCES_$_.99
+_OBJC_SELECTOR_REFERENCES_.101
+_OBJC_SELECTOR_REFERENCES_.103
+___block_descriptor_28_e4_20s_e5_v4?0l
+_OBJC_SELECTOR_REFERENCES_.106
+_isAppExtension.isAppExtension
+_isAppExtension.onceToken
+_OBJC_SELECTOR_REFERENCES_.110
+_OBJC_SELECTOR_REFERENCES_.112
+_OBJC_CLASSLIST_REFERENCES_$_.119
+_OBJC_SELECTOR_REFERENCES_.121
+__OBJC_$_CATEGORY_INSTANCE_METHODS_UIApplication_$_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_UIApplication_$_YYAdd
+__OBJC_$_PROP_LIST_UIApplication_$_YYAdd
+__OBJC_$_CATEGORY_UIApplication_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/UIKit/UIApplication+YYAdd.m
+YYCategories/YYCategories/UIKit/UIApplication+YYAdd.m
+__38+[UIApplication(YYAdd) isAppExtension]_block_invoke
+__52-[UIApplication(YYAdd) _changeNetworkActivityCount:]_block_invoke
+dispatch_async_on_main_queue
+YYCategories/YYCategories/YYCategoriesMacro.h
+dispatch_get_main_queue
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/dispatch/queue.h
+-[_YYUIBarButtonItemBlockTarget initWithBlock:]
+-[_YYUIBarButtonItemBlockTarget invoke:]
+-[_YYUIBarButtonItemBlockTarget block]
+-[_YYUIBarButtonItemBlockTarget setBlock:]
+-[_YYUIBarButtonItemBlockTarget .cxx_destruct]
+-[UIBarButtonItem(YYAdd) setActionBlock:]
+-[UIBarButtonItem(YYAdd) actionBlock]
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIBarButtonItem_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIBarButtonItem_YYAdd
+__OBJC_METACLASS_RO_$__YYUIBarButtonItemBlockTarget
+__OBJC_$_INSTANCE_METHODS__YYUIBarButtonItemBlockTarget
+_OBJC_IVAR_$__YYUIBarButtonItemBlockTarget._block
+__OBJC_$_INSTANCE_VARIABLES__YYUIBarButtonItemBlockTarget
+__OBJC_$_PROP_LIST__YYUIBarButtonItemBlockTarget
+__OBJC_CLASS_RO_$__YYUIBarButtonItemBlockTarget
+__OBJC_$_CATEGORY_INSTANCE_METHODS_UIBarButtonItem_$_YYAdd
+__OBJC_$_PROP_LIST_UIBarButtonItem_$_YYAdd
+__OBJC_$_CATEGORY_UIBarButtonItem_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/UIKit/UIBarButtonItem+YYAdd.m
+YYCategories/YYCategories/UIKit/UIBarButtonItem+YYAdd.m
++[UIBezierPath(YYAdd) bezierPathWithText:font:]
+_CFRangeMake
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIBezierPath_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIBezierPath_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_UIBezierPath_$_YYAdd
+__OBJC_$_CATEGORY_UIBezierPath_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/UIKit/UIBezierPath+YYAdd.m
+CFRangeMake
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBase.h
+YYCategories/YYCategories/UIKit/UIBezierPath+YYAdd.m
++[UIColor(YYAdd) colorWithHue:saturation:lightness:alpha:]
++[UIColor(YYAdd) colorWithCyan:magenta:yellow:black:alpha:]
++[UIColor(YYAdd) colorWithRGB:]
++[UIColor(YYAdd) colorWithRGBA:]
++[UIColor(YYAdd) colorWithRGB:alpha:]
+-[UIColor(YYAdd) rgbValue]
+-[UIColor(YYAdd) rgbaValue]
++[UIColor(YYAdd) colorWithHexString:]
+_hexStrToRGBA
+-[UIColor(YYAdd) hexString]
+-[UIColor(YYAdd) hexStringWithAlpha]
+-[UIColor(YYAdd) hexStringWithAlpha:]
+-[UIColor(YYAdd) colorByAddColor:blendMode:]
+_CGRectMake
+-[UIColor(YYAdd) colorByChangeHue:saturation:brightness:alpha:]
+-[UIColor(YYAdd) getHue:saturation:lightness:alpha:]
+-[UIColor(YYAdd) getCyan:magenta:yellow:black:alpha:]
+-[UIColor(YYAdd) red]
+-[UIColor(YYAdd) green]
+-[UIColor(YYAdd) blue]
+-[UIColor(YYAdd) alpha]
+-[UIColor(YYAdd) hue]
+-[UIColor(YYAdd) saturation]
+-[UIColor(YYAdd) brightness]
+-[UIColor(YYAdd) colorSpaceModel]
+-[UIColor(YYAdd) colorSpaceString]
+_hexStrToInt
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIColor_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIColor_YYAdd
+_hexStringWithAlpha:.stringFormat
+_OBJC_CLASSLIST_REFERENCES_$_.7
+__OBJC_$_CATEGORY_INSTANCE_METHODS_UIColor_$_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_UIColor_$_YYAdd
+__OBJC_$_PROP_LIST_UIColor_$_YYAdd
+__OBJC_$_CATEGORY_UIColor_$_YYAdd
+_OBJC_SELECTOR_REFERENCES_.85
+_OBJC_SELECTOR_REFERENCES_.91
+_OBJC_SELECTOR_REFERENCES_.93
+_OBJC_SELECTOR_REFERENCES_.99
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/UIKit/UIColor+YYAdd.m
+hexStrToInt
+YYCategories/YYCategories/UIKit/UIColor+YYAdd.m
+CGRectMake
+hexStrToRGBA
+YY_HSL2HSB
+YY_HSB2HSL
+YY_CMYK2RGB
+YY_RGB2CMYK
+YY_HSB2RGB
+YY_RGB2HSB
+YY_HSL2RGB
+YY_RGB2HSL
+-[_YYUIControlBlockTarget initWithBlock:events:]
+-[_YYUIControlBlockTarget invoke:]
+-[_YYUIControlBlockTarget block]
+-[_YYUIControlBlockTarget setBlock:]
+-[_YYUIControlBlockTarget events]
+-[_YYUIControlBlockTarget setEvents:]
+-[_YYUIControlBlockTarget .cxx_destruct]
+-[UIControl(YYAdd) removeAllTargets]
+___36-[UIControl(YYAdd) removeAllTargets]_block_invoke
+-[UIControl(YYAdd) setTarget:action:forControlEvents:]
+-[UIControl(YYAdd) addBlockForControlEvents:block:]
+-[UIControl(YYAdd) setBlockForControlEvents:block:]
+-[UIControl(YYAdd) removeAllBlocksForControlEvents:]
+-[UIControl(YYAdd) _yy_allUIControlBlockTargets]
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIControl_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIControl_YYAdd
+__OBJC_METACLASS_RO_$__YYUIControlBlockTarget
+__OBJC_$_INSTANCE_METHODS__YYUIControlBlockTarget
+_OBJC_IVAR_$__YYUIControlBlockTarget._block
+_OBJC_IVAR_$__YYUIControlBlockTarget._events
+__OBJC_$_INSTANCE_VARIABLES__YYUIControlBlockTarget
+__OBJC_$_PROP_LIST__YYUIControlBlockTarget
+__OBJC_CLASS_RO_$__YYUIControlBlockTarget
+___block_descriptor_24_e4_20s_e11_v12?04^c8l
+_OBJC_CLASSLIST_REFERENCES_$_.49
+__OBJC_$_CATEGORY_INSTANCE_METHODS_UIControl_$_YYAdd
+__OBJC_$_CATEGORY_UIControl_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/UIKit/UIControl+YYAdd.m
+YYCategories/YYCategories/UIKit/UIControl+YYAdd.m
+__36-[UIControl(YYAdd) removeAllTargets]_block_invoke
++[UIDevice(YYAdd) systemVersion]
+___32+[UIDevice(YYAdd) systemVersion]_block_invoke
+-[UIDevice(YYAdd) isPad]
+___24-[UIDevice(YYAdd) isPad]_block_invoke
+-[UIDevice(YYAdd) isSimulator]
+___30-[UIDevice(YYAdd) isSimulator]_block_invoke
+-[UIDevice(YYAdd) isJailbroken]
+-[UIDevice(YYAdd) canMakePhoneCalls]
+___36-[UIDevice(YYAdd) canMakePhoneCalls]_block_invoke
+-[UIDevice(YYAdd) ipAddressWithIfaName:]
+-[UIDevice(YYAdd) ipAddressWIFI]
+-[UIDevice(YYAdd) ipAddressCell]
+-[UIDevice(YYAdd) getNetworkTrafficBytes:]
+_yy_net_counter_get_by_type
+-[UIDevice(YYAdd) machineModel]
+___31-[UIDevice(YYAdd) machineModel]_block_invoke
+-[UIDevice(YYAdd) machineModelName]
+___35-[UIDevice(YYAdd) machineModelName]_block_invoke
+-[UIDevice(YYAdd) systemUptime]
+-[UIDevice(YYAdd) diskSpace]
+-[UIDevice(YYAdd) diskSpaceFree]
+-[UIDevice(YYAdd) diskSpaceUsed]
+-[UIDevice(YYAdd) memoryTotal]
+-[UIDevice(YYAdd) memoryUsed]
+-[UIDevice(YYAdd) memoryFree]
+-[UIDevice(YYAdd) memoryActive]
+-[UIDevice(YYAdd) memoryInactive]
+-[UIDevice(YYAdd) memoryWired]
+-[UIDevice(YYAdd) memoryPurgable]
+-[UIDevice(YYAdd) cpuCount]
+-[UIDevice(YYAdd) cpuUsage]
+-[UIDevice(YYAdd) cpuUsagePerProcessor]
+_UI_USER_INTERFACE_IDIOM
+_yy_get_net_interface_counter
+___yy_get_net_interface_counter_block_invoke
+_yy_net_counter_add
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIDevice_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIDevice_YYAdd
+_systemVersion.version
+_systemVersion.onceToken
+_isPad.one
+_isPad.pad
+___block_literal_global.5
+_isSimulator.one
+_isSimulator.simu
+___block_descriptor_24_e4_20s_e5_v4?0l
+_OBJC_CLASSLIST_REFERENCES_$_.21
+_OBJC_CLASSLIST_REFERENCES_$_.26
+_canMakePhoneCalls.onceToken
+_OBJC_CLASSLIST_REFERENCES_$_.46
+___block_descriptor_24_e4_20r_e5_v4?0l
+_machineModel.one
+_machineModel.model
+___block_literal_global.68
+_machineModelName.one
+_machineModelName.name
+_OBJC_CLASSLIST_REFERENCES_$_.314
+_OBJC_SELECTOR_REFERENCES_.316
+_OBJC_SELECTOR_REFERENCES_.318
+_OBJC_CLASSLIST_REFERENCES_$_.319
+_OBJC_SELECTOR_REFERENCES_.321
+_OBJC_SELECTOR_REFERENCES_.323
+_OBJC_CLASSLIST_REFERENCES_$_.324
+_OBJC_SELECTOR_REFERENCES_.326
+_OBJC_SELECTOR_REFERENCES_.328
+_OBJC_SELECTOR_REFERENCES_.330
+_OBJC_SELECTOR_REFERENCES_.332
+_OBJC_SELECTOR_REFERENCES_.334
+_OBJC_SELECTOR_REFERENCES_.336
+_OBJC_SELECTOR_REFERENCES_.338
+_OBJC_SELECTOR_REFERENCES_.340
+_OBJC_SELECTOR_REFERENCES_.342
+_OBJC_SELECTOR_REFERENCES_.344
+_OBJC_SELECTOR_REFERENCES_.346
+_OBJC_CLASSLIST_REFERENCES_$_.347
+_OBJC_SELECTOR_REFERENCES_.349
+_OBJC_SELECTOR_REFERENCES_.351
+_OBJC_CLASSLIST_REFERENCES_$_.352
+_OBJC_SELECTOR_REFERENCES_.354
+_OBJC_CLASSLIST_REFERENCES_$_.355
+_OBJC_SELECTOR_REFERENCES_.357
+_OBJC_SELECTOR_REFERENCES_.359
+_OBJC_SELECTOR_REFERENCES_.361
+__OBJC_$_CATEGORY_INSTANCE_METHODS_UIDevice_$_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_UIDevice_$_YYAdd
+__OBJC_$_PROP_LIST_UIDevice_$_YYAdd
+__OBJC_$_CATEGORY_UIDevice_$_YYAdd
+_OBJC_SELECTOR_REFERENCES_.416
+_OBJC_SELECTOR_REFERENCES_.418
+_yy_get_net_interface_counter.lock
+_yy_get_net_interface_counter.sharedInCounters
+_yy_get_net_interface_counter.sharedOutCounters
+_yy_get_net_interface_counter.onceToken
+___block_literal_global.419
+_OBJC_CLASSLIST_REFERENCES_$_.420
+_OBJC_SELECTOR_REFERENCES_.422
+_OBJC_SELECTOR_REFERENCES_.424
+_OBJC_SELECTOR_REFERENCES_.426
+_OBJC_SELECTOR_REFERENCES_.430
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/UIKit/UIDevice+YYAdd.m
+yy_net_counter_add
+YYCategories/YYCategories/UIKit/UIDevice+YYAdd.m
+__yy_get_net_interface_counter_block_invoke
+yy_get_net_interface_counter
+UI_USER_INTERFACE_IDIOM
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIDevice.h
+__35-[UIDevice(YYAdd) machineModelName]_block_invoke
+__31-[UIDevice(YYAdd) machineModel]_block_invoke
+yy_net_counter_get_by_type
+__36-[UIDevice(YYAdd) canMakePhoneCalls]_block_invoke
+__30-[UIDevice(YYAdd) isSimulator]_block_invoke
+__24-[UIDevice(YYAdd) isPad]_block_invoke
+__32+[UIDevice(YYAdd) systemVersion]_block_invoke
+-[UIFont(YYAdd) isBold]
+-[UIFont(YYAdd) isItalic]
+-[UIFont(YYAdd) isMonoSpace]
+-[UIFont(YYAdd) isColorGlyphs]
+-[UIFont(YYAdd) fontWeight]
+-[UIFont(YYAdd) fontWithBold]
+-[UIFont(YYAdd) fontWithItalic]
+-[UIFont(YYAdd) fontWithBoldItalic]
+-[UIFont(YYAdd) fontWithNormal]
++[UIFont(YYAdd) fontWithCTFont:]
++[UIFont(YYAdd) fontWithCGFont:size:]
+-[UIFont(YYAdd) CTFontRef]
+-[UIFont(YYAdd) CGFontRef]
++[UIFont(YYAdd) loadFontFromPath:]
++[UIFont(YYAdd) unloadFontFromPath:]
++[UIFont(YYAdd) loadFontFromData:]
++[UIFont(YYAdd) unloadFontFromData:]
++[UIFont(YYAdd) dataFromFont:]
++[UIFont(YYAdd) dataFromCGFont:]
+_CFSwapInt16HostToBig
+_CFSwapInt32HostToBig
+_CalcTableCheckSum
+__OSSwapInt16
+__OSSwapInt32
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIFont_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIFont_YYAdd
+__OBJC_$_CATEGORY_INSTANCE_METHODS_UIFont_$_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_UIFont_$_YYAdd
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSCoding
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSCoding
+__OBJC_PROTOCOL_$_NSCoding
+__OBJC_LABEL_PROTOCOL_$_NSCoding
+__OBJC_CATEGORY_PROTOCOLS_$_UIFont_$_YYAdd
+__OBJC_$_PROP_LIST_UIFont_$_YYAdd
+__OBJC_$_CATEGORY_UIFont_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/UIKit/UIFont+YYAdd.m
+_OSSwapInt32
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/libkern/arm/OSByteOrder.h
+_OSSwapInt16
+CalcTableCheckSum
+YYCategories/YYCategories/UIKit/UIFont+YYAdd.m
+CFSwapInt32HostToBig
+CFSwapInt16HostToBig
+-[_YYUIGestureRecognizerBlockTarget initWithBlock:]
+-[_YYUIGestureRecognizerBlockTarget invoke:]
+-[_YYUIGestureRecognizerBlockTarget block]
+-[_YYUIGestureRecognizerBlockTarget setBlock:]
+-[_YYUIGestureRecognizerBlockTarget .cxx_destruct]
+-[UIGestureRecognizer(YYAdd) initWithActionBlock:]
+-[UIGestureRecognizer(YYAdd) addActionBlock:]
+-[UIGestureRecognizer(YYAdd) removeAllActionBlocks]
+___51-[UIGestureRecognizer(YYAdd) removeAllActionBlocks]_block_invoke
+-[UIGestureRecognizer(YYAdd) _yy_allUIGestureRecognizerBlockTargets]
+__OBJC_METACLASS_RO_$__YYUIGestureRecognizerBlockTarget
+__OBJC_$_INSTANCE_METHODS__YYUIGestureRecognizerBlockTarget
+_OBJC_IVAR_$__YYUIGestureRecognizerBlockTarget._block
+__OBJC_$_INSTANCE_VARIABLES__YYUIGestureRecognizerBlockTarget
+__OBJC_$_PROP_LIST__YYUIGestureRecognizerBlockTarget
+__OBJC_CLASS_RO_$__YYUIGestureRecognizerBlockTarget
+___block_descriptor_24_e4_20s_e14_v16?04I8^c12l
+__OBJC_$_CATEGORY_INSTANCE_METHODS_UIGestureRecognizer_$_YYAdd
+__OBJC_$_CATEGORY_UIGestureRecognizer_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/UIKit/UIGestureRecognizer+YYAdd.m
+YYCategories/YYCategories/UIKit/UIGestureRecognizer+YYAdd.m
+__51-[UIGestureRecognizer(YYAdd) removeAllActionBlocks]_block_invoke
++[UIImage(YYAdd) imageWithSmallGIFData:scale:]
+__yy_CGImageSourceGetGIFFrameDelayAtIndex
++[UIImage(YYAdd) isAnimatedGIFData:]
++[UIImage(YYAdd) isAnimatedGIFFile:]
++[UIImage(YYAdd) imageWithPDF:]
++[UIImage(YYAdd) imageWithPDF:size:]
++[UIImage(YYAdd) imageWithEmoji:size:]
++[UIImage(YYAdd) _yy_imageWithPDF:resize:size:]
++[UIImage(YYAdd) imageWithColor:]
++[UIImage(YYAdd) imageWithColor:size:]
++[UIImage(YYAdd) imageWithSize:drawBlock:]
+-[UIImage(YYAdd) hasAlphaChannel]
+-[UIImage(YYAdd) drawInRect:withContentMode:clipsToBounds:]
+-[UIImage(YYAdd) imageByResizeToSize:]
+-[UIImage(YYAdd) imageByResizeToSize:contentMode:]
+-[UIImage(YYAdd) imageByCropToRect:]
+-[UIImage(YYAdd) imageByInsetEdge:withColor:]
+-[UIImage(YYAdd) imageByRoundCornerRadius:]
+-[UIImage(YYAdd) imageByRoundCornerRadius:borderWidth:borderColor:]
+-[UIImage(YYAdd) imageByRoundCornerRadius:corners:borderWidth:borderColor:borderLineJoin:]
+-[UIImage(YYAdd) imageByRotate:fitSize:]
+-[UIImage(YYAdd) _yy_flipHorizontal:vertical:]
+-[UIImage(YYAdd) imageByRotateLeft90]
+_DegreesToRadians
+-[UIImage(YYAdd) imageByRotateRight90]
+-[UIImage(YYAdd) imageByRotate180]
+-[UIImage(YYAdd) imageByFlipVertical]
+-[UIImage(YYAdd) imageByFlipHorizontal]
+-[UIImage(YYAdd) imageByTintColor:]
+-[UIImage(YYAdd) imageByGrayscale]
+-[UIImage(YYAdd) imageByBlurSoft]
+-[UIImage(YYAdd) imageByBlurLight]
+-[UIImage(YYAdd) imageByBlurExtraLight]
+-[UIImage(YYAdd) imageByBlurDark]
+-[UIImage(YYAdd) imageByBlurWithTint:]
+-[UIImage(YYAdd) imageByBlurRadius:tintColor:tintMode:saturation:maskImage:]
+__yy_cleanupBuffer
+-[UIImage(YYAdd) _yy_mergeImageRef:tintColor:tintBlendMode:maskImage:opaque:]
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIImage_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIImage_YYAdd
+_OBJC_CLASSLIST_REFERENCES_$_.20
+_OBJC_CLASSLIST_REFERENCES_$_.27
+_OBJC_CLASSLIST_REFERENCES_$_.43
+_OBJC_SELECTOR_REFERENCES_.76
+_OBJC_SELECTOR_REFERENCES_.78
+_OBJC_SELECTOR_REFERENCES_.80
+_OBJC_SELECTOR_REFERENCES_.94
+_OBJC_SELECTOR_REFERENCES_.108
+__OBJC_$_CATEGORY_INSTANCE_METHODS_UIImage_$_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_UIImage_$_YYAdd
+__OBJC_$_CATEGORY_UIImage_$_YYAdd
+_OBJC_SELECTOR_REFERENCES_.156
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/UIKit/UIImage+YYAdd.m
+YYCategories/YYCategories/UIKit/UIImage+YYAdd.m
+_yy_cleanupBuffer
+DegreesToRadians
+YYCategories/YYCategories/Quartz/YYCGUtilities.h
+_yy_CGImageSourceGetGIFFrameDelayAtIndex
++[UIScreen(YYAdd) screenScale]
+___30+[UIScreen(YYAdd) screenScale]_block_invoke
+___30+[UIScreen(YYAdd) screenScale]_block_invoke_2
+-[UIScreen(YYAdd) currentBounds]
+-[UIScreen(YYAdd) boundsForOrientation:]
+_UIInterfaceOrientationIsLandscape
+-[UIScreen(YYAdd) sizeInPixel]
+___CGSizeEqualToSize
+-[UIScreen(YYAdd) pixelsPerInch]
+___32-[UIScreen(YYAdd) pixelsPerInch]_block_invoke
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIScreen_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIScreen_YYAdd
+_screenScale.screenScale
+_screenScale.onceToken
+___block_literal_global.6
+_pixelsPerInch.ppi
+_pixelsPerInch.one
+_pixelsPerInch.name
+___block_literal_global.46
+_OBJC_CLASSLIST_REFERENCES_$_.168
+__OBJC_$_CATEGORY_INSTANCE_METHODS_UIScreen_$_YYAdd
+__OBJC_$_CATEGORY_CLASS_METHODS_UIScreen_$_YYAdd
+__OBJC_$_PROP_LIST_UIScreen_$_YYAdd
+__OBJC_$_CATEGORY_UIScreen_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/UIKit/UIScreen+YYAdd.m
+__32-[UIScreen(YYAdd) pixelsPerInch]_block_invoke
+YYCategories/YYCategories/UIKit/UIScreen+YYAdd.m
+__CGSizeEqualToSize
+UIInterfaceOrientationIsLandscape
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIApplication.h
+__30+[UIScreen(YYAdd) screenScale]_block_invoke_2
+__30+[UIScreen(YYAdd) screenScale]_block_invoke
+-[UIScrollView(YYAdd) scrollToTop]
+-[UIScrollView(YYAdd) scrollToBottom]
+-[UIScrollView(YYAdd) scrollToLeft]
+-[UIScrollView(YYAdd) scrollToRight]
+-[UIScrollView(YYAdd) scrollToTopAnimated:]
+-[UIScrollView(YYAdd) scrollToBottomAnimated:]
+-[UIScrollView(YYAdd) scrollToLeftAnimated:]
+-[UIScrollView(YYAdd) scrollToRightAnimated:]
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIScrollView_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIScrollView_YYAdd
+__OBJC_$_CATEGORY_INSTANCE_METHODS_UIScrollView_$_YYAdd
+__OBJC_$_CATEGORY_UIScrollView_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/UIKit/UIScrollView+YYAdd.m
+YYCategories/YYCategories/UIKit/UIScrollView+YYAdd.m
+-[UITableView(YYAdd) updateWithBlock:]
+-[UITableView(YYAdd) scrollToRow:inSection:atScrollPosition:animated:]
+-[UITableView(YYAdd) insertRowAtIndexPath:withRowAnimation:]
+-[UITableView(YYAdd) insertRow:inSection:withRowAnimation:]
+-[UITableView(YYAdd) reloadRowAtIndexPath:withRowAnimation:]
+-[UITableView(YYAdd) reloadRow:inSection:withRowAnimation:]
+-[UITableView(YYAdd) deleteRowAtIndexPath:withRowAnimation:]
+-[UITableView(YYAdd) deleteRow:inSection:withRowAnimation:]
+-[UITableView(YYAdd) insertSection:withRowAnimation:]
+-[UITableView(YYAdd) deleteSection:withRowAnimation:]
+-[UITableView(YYAdd) reloadSection:withRowAnimation:]
+-[UITableView(YYAdd) clearSelectedRowsAnimated:]
+___48-[UITableView(YYAdd) clearSelectedRowsAnimated:]_block_invoke
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_UITableView_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_UITableView_YYAdd
+_OBJC_CLASSLIST_REFERENCES_$_.22
+___block_descriptor_25_e4_20s_e27_v16?0"NSIndexPath"4I8^c12l
+__OBJC_$_CATEGORY_INSTANCE_METHODS_UITableView_$_YYAdd
+__OBJC_$_CATEGORY_UITableView_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/UIKit/UITableView+YYAdd.m
+__48-[UITableView(YYAdd) clearSelectedRowsAnimated:]_block_invoke
+YYCategories/YYCategories/UIKit/UITableView+YYAdd.m
+-[UITextField(YYAdd) selectAllText]
+-[UITextField(YYAdd) setSelectedRange:]
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_UITextField_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_UITextField_YYAdd
+__OBJC_$_CATEGORY_INSTANCE_METHODS_UITextField_$_YYAdd
+__OBJC_$_CATEGORY_UITextField_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/UIKit/UITextField+YYAdd.m
+YYCategories/YYCategories/UIKit/UITextField+YYAdd.m
+NSMaxRange
+-[UIView(YYAdd) snapshotImage]
+-[UIView(YYAdd) snapshotImageAfterScreenUpdates:]
+-[UIView(YYAdd) snapshotPDF]
+-[UIView(YYAdd) setLayerShadow:offset:radius:]
+-[UIView(YYAdd) removeAllSubviews]
+-[UIView(YYAdd) viewController]
+-[UIView(YYAdd) visibleAlpha]
+-[UIView(YYAdd) convertPoint:toViewOrWindow:]
+-[UIView(YYAdd) convertPoint:fromViewOrWindow:]
+-[UIView(YYAdd) convertRect:toViewOrWindow:]
+-[UIView(YYAdd) convertRect:fromViewOrWindow:]
+-[UIView(YYAdd) left]
+-[UIView(YYAdd) setLeft:]
+-[UIView(YYAdd) top]
+-[UIView(YYAdd) setTop:]
+-[UIView(YYAdd) right]
+-[UIView(YYAdd) setRight:]
+-[UIView(YYAdd) bottom]
+-[UIView(YYAdd) setBottom:]
+-[UIView(YYAdd) width]
+-[UIView(YYAdd) setWidth:]
+-[UIView(YYAdd) height]
+-[UIView(YYAdd) setHeight:]
+-[UIView(YYAdd) centerX]
+-[UIView(YYAdd) setCenterX:]
+-[UIView(YYAdd) centerY]
+-[UIView(YYAdd) setCenterY:]
+-[UIView(YYAdd) origin]
+-[UIView(YYAdd) setOrigin:]
+-[UIView(YYAdd) size]
+-[UIView(YYAdd) setSize:]
+__OBJC_METACLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIView_YYAdd
+__OBJC_CLASS_RO_$_YYSYNTH_DUMMY_CLASS_UIView_YYAdd
+__OBJC_$_CATEGORY_INSTANCE_METHODS_UIView_$_YYAdd
+__OBJC_$_PROP_LIST_UIView_$_YYAdd
+__OBJC_$_CATEGORY_UIView_$_YYAdd
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/UIKit/UIView+YYAdd.m
+YYCategories/YYCategories/UIKit/UIView+YYAdd.m
+__OBJC_METACLASS_RO_$_PodsDummy_YYCategories
+__OBJC_CLASS_RO_$_PodsDummy_YYCategories
+/Users/flyliu/Desktop/LightMoxibustion/Pods/Target Support Files/YYCategories/YYCategories-dummy.m
+___YYScreenScale_block_invoke
+___YYScreenSize_block_invoke
+_matrix_invert
+___CGAffineTransformMake
+___YYCAGravityToUIViewContentMode_block_invoke
+_YYScreenScale.scale
+_YYScreenScale.onceToken
+_YYScreenSize.size
+_YYScreenSize.onceToken
+___block_literal_global.3
+_YYCAGravityToUIViewContentMode.dic
+_YYCAGravityToUIViewContentMode.onceToken
+___block_literal_global.8
+_OBJC_CLASSLIST_REFERENCES_$_.12
+/Users/flyliu/Desktop/LightMoxibustion/Pods/YYCategories/YYCategories/Quartz/YYCGUtilities.m
+YYCGRectFitWithContentMode
+YYCategories/YYCategories/Quartz/YYCGUtilities.m
+YYUIViewContentModeToCAGravity
+__YYCAGravityToUIViewContentMode_block_invoke
+YYCAGravityToUIViewContentMode
+YYCGAffineTransformGetFromViews
+__CGAffineTransformMake
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGAffineTransform.h
+matrix_invert
+YYCGAffineTransformGetFromPoints
+__YYScreenSize_block_invoke
+YYScreenSize
+__YYScreenScale_block_invoke
+YYScreenScale
+YYCGContextCreateGrayBitmapContext
+YYCGContextCreateARGBBitmapContext
+__ZL15__ARCLite__loadv
+__ZL30add_image_hook_autoreleasepoolPK11mach_headerl
+__ZL34__arclite_objc_autoreleasePoolPushv
+__ZL33__arclite_objc_autoreleasePoolPopPv
+__ZL19patch_lazy_pointersPK11mach_headerP7patch_tm
+__ZL42__arclite_NSArray_objectAtIndexedSubscriptP7NSArrayP13objc_selectorj
+__ZL53__arclite_NSMutableArray_setObject_atIndexedSubscriptP14NSMutableArrayP13objc_selectorP11objc_objectj
+__ZL46__arclite_NSDictionary_objectForKeyedSubscriptP12NSDictionaryP13objc_selectorP11objc_object
+__ZL47__arclite_NSOrderedSet_objectAtIndexedSubscriptP12NSOrderedSetP13objc_selectorj
+__ZL58__arclite_NSMutableOrderedSet_setObject_atIndexedSubscriptP19NSMutableOrderedSetP13objc_selectorP11objc_objectj
+__ZL58__arclite_NSMutableDictionary__setObject_forKeyedSubscriptP19NSMutableDictionaryP13objc_selectorP11objc_objectS4_
+__ZL18add_image_hook_ARCPK11mach_headerl
+__ZL27__arclite_objc_loadClassrefPP10objc_class
+__ZL36__arclite_object_setInstanceVariableP11objc_objectPKcPv
+__ZL24__arclite_object_setIvarP11objc_objectP9objc_ivarS0_
+__ZL21__arclite_object_copyP11objc_objectm
+__ZL21__arclite_objc_retainP11objc_object
+__ZL26__arclite_objc_retainBlockP11objc_object
+__ZL22__arclite_objc_releaseP11objc_object
+__ZL26__arclite_objc_autoreleaseP11objc_object
+__ZL32__arclite_objc_retainAutoreleaseP11objc_object
+__ZL37__arclite_objc_autoreleaseReturnValueP11objc_object
+__ZL43__arclite_objc_retainAutoreleaseReturnValueP11objc_object
+__ZL44__arclite_objc_retainAutoreleasedReturnValueP11objc_object
+__ZL26__arclite_objc_storeStrongPP11objc_objectS0_
+__ZL22add_image_hook_swiftV1PK11mach_headerl
+__ZL42__arclite_NSUndoManagerProxy_isKindOfClassP11objc_objectP13objc_selectorP10objc_class
+__ZL30__arclite_NSManagedObject_initP11objc_objectP13objc_selector
+__ZL41__arclite_NSManagedObject_allocWithEntityP11objc_objectP13objc_selectorS0_
+__ZL36__arclite_NSManagedObject_allocBatchP11objc_objectP13objc_selectorPS0_S0_j
+__ZL37__arclite_NSKKMS_fastIndexForKnownKeyP11objc_objectP13objc_selectorS0_
+__ZL28__arclite_NSKKMS_indexForKeyP11objc_objectP13objc_selectorS0_
+__ZL29__arclite_NSKKsD_objectForKeyP11objc_objectP13objc_selectorS0_
+__ZL35__arclite_NSKKsD_removeObjectForKeyP11objc_objectP13objc_selectorS0_
+__ZL33__arclite_NSKKsD_setObject_forKeyP11objc_objectP13objc_selectorS0_S0_
+__ZL41__arclite_NSKKsD_addEntriesFromDictionaryP11objc_objectP13objc_selectorP12NSDictionary
+__ZL28__arclite_objc_readClassPairP10objc_classPK15objc_image_info
+__ZL32__arclite_objc_allocateClassPairP10objc_classPKcm
+__ZL32__arclite_object_getIndexedIvarsP11objc_object
+__ZL23__arclite_objc_getClassPKc
+__ZL27__arclite_objc_getMetaClassPKc
+__ZL31__arclite_objc_getRequiredClassPKc
+__ZL26__arclite_objc_lookUpClassPKc
+__ZL26__arclite_objc_getProtocolPKc
+__ZL23__arclite_class_getNameP10objc_class
+__ZL26__arclite_protocol_getNameP8Protocol
+__ZL37__arclite_objc_copyClassNamesForImagePKcPj
+__ZL17transcribeMethodsP10objc_classP15glue_class_ro_t
+__ZL19transcribeProtocolsP10objc_classP15glue_class_ro_t
+__ZL20transcribePropertiesP10objc_classP15glue_class_ro_t
+__ZL14initialize_impP11objc_objectP13objc_selector
+__ZL18allocateMaybeSwiftP18glue_swift_class_tm
+__ZL22copySwiftV1MangledNamePKcb
+__ZL13demangledNamePKcb
+__ZL16scanMangledFieldRPKcS0_S1_Ri
+__ZL30arclite_uninitialized_functionv
+__ZL12cxxConstructP11objc_object
+__ZL20fixStringForCoreDataP11objc_object
+_OBJC_METACLASS_$___ARCLite__
+__ZL24OBJC_CLASS_$___ARCLite__
+__ZL31OBJC_METACLASS_RO_$___ARCLite__
+__non_lazy_classes
+__ZL27OBJC_CLASS_RO_$___ARCLite__
+__ZL11_class_name
+__ZL32OBJC_$_CLASS_METHODS___ARCLite__
+__ZL17_load_method_name
+__ZL17_load_method_type
+__ZL23NSAutoreleasePool_class
+__ZZL30add_image_hook_autoreleasepoolPK11mach_headerlE7patches
+__ZGVZL30add_image_hook_autoreleasepoolPK11mach_headerlE7patches
+__OBJC_$_PROTOCOL_INSTANCE_METHODS___ARCLiteIndexedSubscripting__
+__OBJC_$_PROTOCOL_METHOD_TYPES___ARCLiteIndexedSubscripting__
+__OBJC_PROTOCOL_$___ARCLiteIndexedSubscripting__
+__OBJC_LABEL_PROTOCOL_$___ARCLiteIndexedSubscripting__
+__OBJC_PROTOCOL_REFERENCE_$___ARCLiteIndexedSubscripting__
+__OBJC_$_PROTOCOL_INSTANCE_METHODS___ARCLiteKeyedSubscripting__
+__OBJC_$_PROTOCOL_METHOD_TYPES___ARCLiteKeyedSubscripting__
+__OBJC_PROTOCOL_$___ARCLiteKeyedSubscripting__
+__OBJC_LABEL_PROTOCOL_$___ARCLiteKeyedSubscripting__
+__OBJC_PROTOCOL_REFERENCE_$___ARCLiteKeyedSubscripting__
+__ZZL18add_image_hook_ARCPK11mach_headerlE7patches
+__ZGVZL18add_image_hook_ARCPK11mach_headerlE7patches
+__ZL30NSUndoManagerProxy_targetClass
+__ZL29original_NSManagedObject_init
+__ZL40original_NSManagedObject_allocWithEntity
+__ZL35original_NSManagedObject_allocBatch
+__ZL25NSMutableDictionary_class
+__ZL22NSConstantString_class
+__ZL14NSString_class
+__ZL36original_NSKKMS_fastIndexForKnownKey
+__ZL27original_NSKKMS_indexForKey
+__ZL28original_NSKKsD_objectForKey
+__ZL34original_NSKKsD_removeObjectForKey
+__ZL32original_NSKKsD_setObject_forKey
+__ZL40original_NSKKsD_addEntriesFromDictionary
+__ZZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+__ZGVZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+__ZL31original_objc_allocateClassPair
+__ZL31original_object_getIndexedIvars
+__ZL22original_objc_getClass
+__ZL26original_objc_getMetaClass
+__ZL30original_objc_getRequiredClass
+__ZL25original_objc_lookUpClass
+__ZL25original_objc_getProtocol
+__ZL22original_class_getName
+__ZL25original_protocol_getName
+__ZL36original_objc_copyClassNamesForImage
+_OBJC_SELECTOR_REFERENCES_.96
+__ZL12demangleLock
+__ZL9Demangled
+_OBJC_SELECTOR_REFERENCES_.113
+_OBJC_SELECTOR_REFERENCES_.115
+_OBJC_SELECTOR_REFERENCES_.117
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ --target=armv7-apple-ios4.3 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c++11 -Wno-trigraphs -fno-exceptions -fno-rtti -fno-sanitize=vptr -mpascal-strings -Os -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-objc-interface-ivars -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -D NDEBUG=1 -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.Internal.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -g -fno-threadsafe-statics -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -fembed-bitcode=all -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-generated-files.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-own-target-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-all-target-headers.hmap -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-project-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/Symbols/BuiltProducts/include -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources-normal/armv7 -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources/armv7 -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources -F/Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/Symbols/BuiltProducts -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.Internal.sdk/System/Library/PrivateFrameworks -Wall -Wextra -Wno-gcc-compat -Wno-error=incomplete-umbrella -Wno-error=invalid-ios-deployment-target -Wno-error=deprecated-declarations -Wno-error=documentation -Wno-error=incomplete-umbrella -Wno-error=invalid-ios-deployment-target -Wno-error=deprecated-declarations -Wno-error=documentation -MMD -MT dependencies -MF /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.d --serialize-diagnostics /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.dia -c /Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-76/source/arclite.mm -o /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/install/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.o -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Xclang -clang-vendor-feature=+nullptrToBoolConversion -Xclang -clang-vendor-feature=+messageToSelfInClassMethodIdReturnType -Xclang -clang-vendor-feature=+disableInferNewAvailabilityFromInit -Xclang -clang-vendor-feature=+disableNeonImmediateRangeCheck -Xclang -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -Xclang -fno-odr-hash-protocols -Xclang -clang-vendor-feature=+revert09abecef7bbf -mlinker-version=711 -march=armv7a
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.Internal.sdk
+iPhoneOS15.0.Internal.sdk
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-76/source/arclite.mm
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-76
+fixStringForCoreData
+source/arclite.mm
+cxxConstruct
+arclite_uninitialized_function
+scanMangledField
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.Internal.sdk/usr/include/_ctype.h
+__isctype
+demangledName
+copySwiftV1DemangledName
+copySwiftV1MangledName
+allocateMaybeSwift
+word_align
+isSwift
+initialize_imp
+transcribeProperties
+property_list_nth
+transcribeProtocols
+transcribeMethods
+data
+method_list_nth
+__arclite_objc_copyClassNamesForImage
+__arclite_protocol_getName
+__arclite_class_getName
+__arclite_objc_getProtocol
+__arclite_objc_lookUpClass
+__arclite_objc_getRequiredClass
+__arclite_objc_getMetaClass
+__arclite_objc_getClass
+__arclite_object_getIndexedIvars
+__arclite_objc_allocateClassPair
+metaclass
+__arclite_objc_readClassPair
+transcribeIvars
+ivar_list_nth
+max
+alignment
+ro
+fastFlags
+__arclite_NSKKsD_addEntriesFromDictionary
+__arclite_NSKKsD_setObject_forKey
+__arclite_NSKKsD_removeObjectForKey
+__arclite_NSKKsD_objectForKey
+__arclite_NSKKMS_indexForKey
+__arclite_NSKKMS_fastIndexForKnownKey
+__arclite_NSManagedObject_allocBatch
+__arclite_NSManagedObject_allocWithEntity
+__arclite_NSManagedObject_init
+__arclite_NSUndoManagerProxy_isKindOfClass
+add_image_hook_swiftV1
+patch_t<const char **(const char *, unsigned int *)>
+patch_t<const char *(Protocol *)>
+patch_t<const char *(Class)>
+patch_t<Protocol *(const char *)>
+patch_t<Class (const char *)>
+patch_t<void *(id)>
+patch_t<Class (Class, const char *, unsigned long)>
+patch_t<Class (Class, const objc_image_info *)>
+__arclite_objc_storeStrong
+__arclite_objc_release
+__arclite_objc_retain
+__arclite_objc_retainAutoreleasedReturnValue
+__arclite_objc_retainAutoreleaseReturnValue
+__arclite_objc_autoreleaseReturnValue
+__arclite_objc_retainAutorelease
+__arclite_objc_autorelease
+__arclite_objc_retainBlock
+__arclite_object_copy
+fixupCopiedReferences
+_class_getInstanceStart
+alignedInstanceStart
+__arclite_class_usesAutomaticRetainRelease
+classOrSuperClassesUseARR
+__arclite_object_setIvar
+isScannedOffset
+_ivar_getClass
+__arclite_object_setInstanceVariable
+__arclite_objc_loadClassref
+add_image_hook_ARC
+patch_t<void (id *, id)>
+patch_t<id (id)>
+patch_t<void (id)>
+patch_t<id (id, unsigned long)>
+patch_t<void (id, objc_ivar *, id)>
+patch_t<objc_ivar *(id, const char *, void *)>
+patch_t<Class (Class *)>
+__arclite_NSMutableDictionary__setObject_forKeyedSubscript
+__arclite_NSMutableOrderedSet_setObject_atIndexedSubscript
+__arclite_NSOrderedSet_objectAtIndexedSubscript
+__arclite_NSDictionary_objectForKeyedSubscript
+__arclite_NSMutableArray_setObject_atIndexedSubscript
+__arclite_NSArray_objectAtIndexedSubscript
+patch_lazy_pointers
+__arclite_objc_autoreleasePoolPop
+__arclite_objc_autoreleasePoolPush
+add_image_hook_autoreleasepool
+patch_t<void (void *)>
+patch_t<void *()>
+__ARCLite__load
+install_swiftV1
+replaceMethod
+install_ARC
+install_dict_nil_value
+addOrReplaceMethod
+keyedGetter
+install_subscripting
+addMethod
+indexedGetter
+install_autoreleasepool

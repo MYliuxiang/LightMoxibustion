@@ -27,6 +27,9 @@
 @property (nonatomic, strong) UIColor *bgColor;
 ///弧度填充色
 @property (nonatomic, strong) UIColor *fillColor;
+///弧度渐变色
+@property (nonatomic, strong) UIColor *gradualColor;
+
 
 ///弧度线宽
 @property (nonatomic, assign) CGFloat bottomWidth;
@@ -58,10 +61,12 @@
 
 
 
+
+
 @property (nonatomic, strong) UIImageView *dotImageView;//光标
 @property (nonatomic, strong) CAShapeLayer *bottomLayer;//弧度背景
 @property (nonatomic, strong) CAShapeLayer *progressLayer;//进度
-@property (nonatomic, strong) CAGradientLayer *gradientLayerRadarView;
+@property (nonatomic, strong) CAGradientLayer *gradientLayer;
 
 
 - (instancetype)initWithFrame:(CGRect)frame

@@ -10,10 +10,10 @@ fi
 project_path=$(cd `dirname $0`; pwd)
 
 #工程名 将XXX替换成自己的工程名
-project_name=Pos
+project_name=LightMoxibustion
 
 #scheme名 将XXX替换成自己的sheme名
-scheme_name=Pos
+scheme_name=LightMoxibustion
 
 #打包模式 Debug/Release
 development_mode=Debug

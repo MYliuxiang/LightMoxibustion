@@ -51,6 +51,20 @@
     return view;
 }
 
+- (void)mLMCircleView:(MLMCircleView *)view didChangePercent:(CGFloat)percent{
+    self.circle.progress = percent;
+}
+
+- (void)mLMCircleViewDidBeginDrag:(MLMCircleView *)view{
+    
+}
+
+- (void)mLMCircleViewDidEndDrag:(MLMCircleView *)view{
+    
+    [self setWorkTime:roundf(view.progress * 20)];
+
+}
+
 //速度表盘
 - (UIView *)speedDialType {
     CGFloat startAngle = 180;
@@ -94,6 +108,7 @@
     _incircle.isTransparent = YES;
     _incircle.capRound = NO;
     _incircle.dotImage = [UIImage imageNamed:@"time_set_thumb"];
+    _incircle.delegate = self;
 
     [_incircle bottomNearProgress:YES];
     [self addSubview:_incircle];
@@ -101,7 +116,6 @@
     
     
     //中间
-    
     UIView *centerV = [[UIView alloc] init];
     centerV.frame = CGRectMake(44 * WidthScale, 44 * WidthScale, _incircle.width - 89 * WidthScale, _incircle.width -89 * WidthScale);
     centerV.layer.cornerRadius = (_incircle.width - 89 * WidthScale)/ 2.0;
@@ -278,7 +292,9 @@
 }
 
 - (void)setWorkTime:(int)time{
-    if ([HLBLEManager sharedInstance].connectedPerpheral == nil) {
+    
+    HLBLEManager *manger = [HLBLEManager sharedInstance];
+    if (manger.connectedPerpheral == nil) {
         return;
     }
     [SendData setCurrentWorkTime:time];
@@ -322,11 +338,21 @@
 
 - (void)configSetTime:(int)time{
     
-    CGFloat progress = time / (20 * 60.0);
+    CGFloat progress = time / 20.0;
     [self.circle setProgress:progress];
     [self.incircle setProgress:progress];
     self.progress = progress;
 }
+
+- (void)configIsTouch:(BOOL)touch{
+    self.userInteractionEnabled = touch;
+    if (touch) {
+        self.incircle.gradualColor = [UIColor greenColor];
+    }else{
+        self.incircle.gradualColor = [UIColor grayColor];
+    }
+}
+
 
 
 @end

@@ -41,6 +41,8 @@
         _endAngle = end;
         //默认数据
         [self initData];
+        
+        
 
     }
     return self;
@@ -56,23 +58,24 @@
     _capRound = YES;
     _dotImage = [UIImage imageNamed:@"redDot"];
     _dotDiameter = 20.f;
-    
     _edgespace = 0;
     _progressSpace = 0;
+
 }
 
 
 #pragma mark - 计算光标的起始center
 - (void)dotCenter {
-
+   
     if (_dotImageView) {
-        [_dotImageView removeFromSuperview];
+//        [_dotImageView removeFromSuperview];
     } else {
         _dotImageView = [[UIImageView alloc] init];
     }
     _dotImageView.frame = CGRectMake(0, 0, self.dotDiameter, self.dotDiameter);
-    CGFloat centerX = self.width/2 + progressRadius*cosf(DEGREES_TO_RADIANS(_startAngle));
-    CGFloat centerY = self.width/2 + progressRadius*sinf(DEGREES_TO_RADIANS(_startAngle));
+    CGFloat angle = (_endAngle - _startAngle) * self.progress + _startAngle;
+    CGFloat centerX = self.width/2 + progressRadius*cosf(DEGREES_TO_RADIANS(angle));
+    CGFloat centerY = self.width/2 + progressRadius*sinf(DEGREES_TO_RADIANS(angle));
     _dotImageView.center = CGPointMake(centerX, centerY);
     _dotImageView.layer.cornerRadius = self.dotDiameter/2;
     [_dotImageView setImage:self.dotImage];
@@ -102,18 +105,14 @@
             float cos = (self.width / 2.0 - x) / radius;
             float anle = acosf(cos);
             self.progress = anle / M_PI;
-            NSLog(@"%f",anle);
         }else{
             float cos = (x - self.width / 2.0) / radius;
             float anle = acosf(cos);
             self.progress = 1 - anle / M_PI;
-            NSLog(@"%f",anle);
-
         }
-        
             
         if([self.delegate respondsToSelector:@selector(mLMCircleView:didChangePercent:)]) {
-            ;
+            [self.delegate mLMCircleView:self didChangePercent:self.progress];
         }
         
     }
@@ -129,6 +128,7 @@
     
     [super drawRect:rect];
     [self drawProgress];
+    [self dotCenter];
     
 }
 
@@ -152,7 +152,13 @@
     
     //光标位置
     [self drowLayer];
-    [self dotCenter];
+}
+
+- (void)drawDot{
+    CGFloat angle = (_endAngle - _startAngle) * self.progress + _startAngle;
+    CGFloat centerX = self.width/2 + progressRadius*cosf(DEGREES_TO_RADIANS(angle));
+    CGFloat centerY = self.width/2 + progressRadius*sinf(DEGREES_TO_RADIANS(angle));
+    _dotImageView.center = CGPointMake(centerX, centerY);
 }
 
 #pragma mark - layer
@@ -184,44 +190,66 @@
 
 - (void)drowProgress {
 
+//    [self.progressLayer removeFromSuperlayer];
+//    [self.gradientLayer removeFromSuperlayer];
+    if (self.progressLayer) {
+        [self.progressLayer removeFromSuperlayer];
+    }else{
+        self.progressLayer = [CAShapeLayer layer];
+
+    }
+    
+    if (self.gradientLayer) {
+        [self.gradientLayer removeFromSuperlayer];
+    }
+
     UIBezierPath *progressPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.width/2, self.height/2)
                                                               radius:progressRadius
                                                           startAngle:DEGREES_TO_RADIANS(_startAngle)
                                                             endAngle:DEGREES_TO_RADIANS(_endAngle)
                                                            clockwise:YES];
-    self.progressLayer = [CAShapeLayer layer];
     self.progressLayer.frame = CGRectMake(0, 0, self.width, self.height);
     self.progressLayer.fillColor =  [UIColor clearColor].CGColor;
     self.progressLayer.strokeColor  = self.fillColor.CGColor;
+    self.progressLayer.strokeEnd = self.progress;
+
+
     if (_capRound) {
         self.progressLayer.lineCap = kCALineCapRound;
     }
     self.progressLayer.lineWidth = self.progressWidth;
     self.progressLayer.path = [progressPath CGPath];
-    self.progressLayer.strokeEnd = 0;
+        
+    _gradientLayer = [[CAGradientLayer alloc] init];
+    _gradientLayer.frame = self.progressLayer.bounds;
+    _gradientLayer.startPoint = CGPointMake(0, 0.5);
+    _gradientLayer.endPoint = CGPointMake(1, 0.5);
+    if (self.gradualColor == nil) {
+        self.gradualColor = [UIColor colorWithRed:(72)/255.f green:(133)/255.f blue:(241)/255.f alpha:1];
+    }
+    CGColorRef color1 = [self.gradualColor colorWithAlphaComponent:0].CGColor;
+    CGColorRef color2 = [self.gradualColor colorWithAlphaComponent:0.75].CGColor;
+    CGColorRef color3 = [self.gradualColor colorWithAlphaComponent:0.85].CGColor;
+    CGColorRef color4 = [self.gradualColor colorWithAlphaComponent:0.95].CGColor;
+   
+    _gradientLayer.colors = @[(__bridge id)color1, (__bridge id)color2, (__bridge id)color3, (__bridge id)color4];
+    _gradientLayer.mask = self.progressLayer;
     
-    
-    
-    CAGradientLayer *gradientLayerRadarView = [[CAGradientLayer alloc] init];
-    gradientLayerRadarView.frame = self.progressLayer.bounds;
-    gradientLayerRadarView.startPoint = CGPointMake(0, 0.5);
-    gradientLayerRadarView.endPoint = CGPointMake(1, 0.5);
-    CGColorRef color3 = [UIColor colorWithRed:(1)/255.f green:(133)/255.f blue:(241)/255.f alpha:(0)].CGColor;
-    CGColorRef color4 = [UIColor colorWithRed:(72)/255.f green:(204)/255.f blue:(201)/255.f alpha:(0.75)].CGColor;
-    CGColorRef color5 = [UIColor colorWithRed:(72)/255.f green:(204)/255.f blue:(201)/255.f alpha:(0.85)].CGColor;
-    CGColorRef color6 = [UIColor colorWithRed:(72)/255.f green:(204)/255.f blue:(201)/255.f alpha:(1)].CGColor;
-    gradientLayerRadarView.colors = @[(__bridge id)color3, (__bridge id)color4, (__bridge id)color5, (__bridge id)color6];
-    gradientLayerRadarView.mask = self.progressLayer;
     if (_isTransparent) {
-        [self.layer addSublayer:gradientLayerRadarView];
+        [self.layer insertSublayer:_gradientLayer atIndex:0];
 
     }else{
         [self.layer addSublayer:self.progressLayer];
     }
+    
             
 }
 
-
+- (void)setGradualColor:(UIColor *)gradualColor
+{
+    _gradualColor = gradualColor;
+    [self drawProgress];
+}
 
 #pragma mark - 动画
 - (void)createAnimation {
@@ -238,6 +266,7 @@
     pathAnimation.rotationMode = kCAAnimationRotateAuto;
     pathAnimation.duration = kAnimationTime;
     pathAnimation.repeatCount = 1;
+
     
     //设置动画路径
     CGMutablePathRef path = CGPathCreateMutable();
@@ -257,15 +286,32 @@
 #pragma mark - 弧度
 - (void)setProgress:(CGFloat)progress {
     _progress = progress;
-    [self setProgressAnimation:YES];
+//    self.progressLayer.strokeEnd = progress;
+    [self.progressLayer removeAnimationForKey:@"strokeEndAnimation"];
+    CABasicAnimation *pathAnima = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    pathAnima.duration = 0.001f;
+    pathAnima.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    pathAnima.fromValue = [NSNumber numberWithFloat:0.0f];
+    pathAnima.toValue = [NSNumber numberWithFloat:progress];
+    pathAnima.fillMode = kCAFillModeForwards;
+    pathAnima.removedOnCompletion = NO;
+    [self.progressLayer addAnimation:pathAnima forKey:@"strokeEndAnimation"];
+        
+    [self drawDot];
+
+//    self.progressLayer.strokeStart = 0;
+
+//    [self drawRect:self.bounds];
 }
 
 - (void)setProgressAnimation:(BOOL)animation {
-    if (_progress == lastProgress) {
-        return;
-    }
-    [self createAnimation];
-    [self circleAnimation];
+//    if (_progress == lastProgress) {
+//        return;
+//    }
+//    [self drawProgress];
+   
+//    [self createAnimation];
+//    [self circleAnimation];
 }
 
 

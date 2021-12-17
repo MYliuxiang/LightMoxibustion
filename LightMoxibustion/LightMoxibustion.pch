@@ -97,6 +97,9 @@ typedef unsigned int U32;
 
 #define MACADRESS @"macAdress"
 
+#define BlueVersion @"blueVersion"
+
+
 
 
 #import "BleDevice.h"
@@ -130,6 +133,7 @@ typedef unsigned int U32;
 #import <Masonry/Masonry.h>
 #import "MJExtension.h"
 #import <YYCategories/YYCategories.h>
+#import "SDAutoLayout.h"
 
 //工具
 #import "NSObject+XWAdd.h"

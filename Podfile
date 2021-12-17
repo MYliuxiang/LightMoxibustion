@@ -16,6 +16,9 @@ target 'LightMoxibustion' do
    pod 'UITextView+Placeholder'
    pod 'YYCategories'
    pod 'YYCache'
+   pod 'SVProgressHUD'
+   pod 'SDAutoLayout', '~> 2.1.3'
+
 
 
 
