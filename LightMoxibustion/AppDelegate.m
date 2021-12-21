@@ -41,6 +41,13 @@
     exit(0);
 }
 
+- (void)applicationWillResignActive:(UIApplication *)application
+{
+    exit(0);
+}
+
+
+
 
 
 @end

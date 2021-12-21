@@ -72,7 +72,7 @@
     
     BleDevice *device = [self.deviceArray objectAtIndex:indexPath.row];
     cell.titleL.text = [NSString stringWithFormat:@"名称:%@",device.deviceName];
-    cell.macL.text = [NSString stringWithFormat:@"MAC:%@ Rssi %@ ",device.uuidString, device.RSSI];
+    cell.macL.text = [NSString stringWithFormat:@"MAC:%@ Rssi %@ ",device.macAddress, device.RSSI];
     if (device.peripheral.state == CBPeripheralStateConnected) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
@@ -122,6 +122,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BleDevice *device = self.deviceArray[indexPath.row];
+    
+    [LxUserDefaults setObject:device.macAddress forKey:MACADRESS];
     [self.navigationController popViewControllerAnimated:YES];
     if (self.connetcBleDeviceblock) {
         self.connetcBleDeviceblock(device);

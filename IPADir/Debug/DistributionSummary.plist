@@ -244,6 +244,35 @@
 						<string>iOS Distribution</string>
 					</dict>
 					<key>name</key>
+					<string>SDAutoLayout.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>MDJMU7FU97</string>
+						<key>name</key>
+						<string>Hunan Liangcha master Network Technology Co., LTD</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>2.1.9</string>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>1</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>623AC8E985F5051CA2F648525ADAAE4C0BCB182E</string>
+						<key>dateExpires</key>
+						<string>2022/12/8</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
 					<string>SDWebImage.framework</string>
 					<key>team</key>
 					<dict>

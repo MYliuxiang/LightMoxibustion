@@ -136,6 +136,8 @@
             {
 //                NSLog(@"设置激光档位成功");
 //                NSLog(@"第三位：%d,第四位：%d",mbuf[3],mbuf[4]);
+//                NSLog(@"%@",data);
+
 
             }
                 break;
@@ -184,15 +186,18 @@
             case 10:
             {
                 WorkCountdownModel *workCuountdown = [[WorkCountdownModel alloc] initWithData:data];
-                if (workCuountdown.second == 0) {
-                    [SendData getCurrentSetTime];
-                }
-                [self.progress configWorkDownSencond:workCuountdown.second];
+//                if (workCuountdown.second == 0) {
+//                    [SendData getCurrentSetTime];
+//                }
+                [self.progress configWorkDownSencond:workCuountdown.second withTintColor:[UIColor blackColor]];
+                NSLog(@"倒计时%d",workCuountdown.second);
+                
                 
             }
                 break;
             case 11:
             {
+
                 CurrentLaserModel *currentLaser = [[CurrentLaserModel alloc] initWithData:data];
                 self.redSlider.currentPercent = currentLaser.laser;
                 if (currentLaser.laser == 0) {
@@ -227,7 +232,6 @@
 
                 }
                 [self.progress configSetTem:currentTem.currentTem];
-                
             }
                 break;
             case 15:
@@ -255,7 +259,8 @@
             {
                 CurrentSetTimeModel *setTime = [[CurrentSetTimeModel alloc] initWithData:data];
                 [self.progress configSetTime:setTime.second];
-                [self.progress configWorkDownSencond:setTime.second * 60];
+                [self.progress configWorkDownSencond:setTime.second * 60 withTintColor:[UIColor blueColor]];
+                NSLog(@"设置时间%d",setTime.second);
 
              
             }
@@ -339,13 +344,14 @@
         per.deviceName = peripheral.name;
         per.uuidString = peripheral.identifier.UUIDString;
         NSData *data = [advertisementData objectForKey:@"kCBAdvDataManufacturerData"];
-        NSString *mac =[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        mac = [mac stringByReplacingOccurrencesOfString:@" " withString:@""];
+        U8 *mbuf = (U8 *)data.bytes;
+       
+        NSString *mac =[[NSString alloc] initWithFormat:@"%.2x:%.2x:%.2x:%.2x:%.2x:%.2x",mbuf[0],mbuf[1],mbuf[2],mbuf[3],mbuf[4],mbuf[5]];
         per.macAddress = mac;
         per.RSSI = RSSI;
         
         NSString *lastMac = [NSString stringWithFormat:@"%@",[LxUserDefaults objectForKey:MACADRESS]];
-        if ([lastMac isEqualToString:per.uuidString] && weakManager.connectedPerpheral == nil && !self.autoDisconnect ) {
+        if ([lastMac isEqualToString:per.macAddress] && weakManager.connectedPerpheral == nil && !self.autoDisconnect ) {
                
             [self connectDevice:per];
         }
@@ -492,7 +498,7 @@
         
         [self.progress configSetTem:-1];
         [self.progress configCurrentTem:-1];
-        [self.progress configWorkDownSencond:0];
+        [self.progress configWorkDownSencond:0 withTintColor:[UIColor blueColor]];
         [self.progress configSetTime:0];
         
         self.progress.userInteractionEnabled = NO;
@@ -505,7 +511,7 @@
         
         NSLog(@"连接成功");
         _blueConnectedV.hidden = NO;
-        [LxUserDefaults setObject:[HLBLEManager sharedInstance].connectedPerpheral.identifier.UUIDString forKey:MACADRESS];
+     
         [[NSNotificationCenter defaultCenter] postNotificationName:DeviceChange object:@{@"devices":self.deviceArray}];
         self.autoDisconnect = NO;
         //

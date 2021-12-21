@@ -25,7 +25,6 @@
 
         _buf = [NSData dataWithBytes:buf length:COMMON_PKG_LENGTH];
         
-        NSLog(@"设置时间%@",_buf);
     }
     return self;
 }

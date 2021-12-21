@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TimeView : UIView
 @property(nonatomic,assign)int time;
+@property(nonatomic,strong) UIColor *tintColor;
+
 - (id)initWithFrame:(CGRect)frame;
 @end
 

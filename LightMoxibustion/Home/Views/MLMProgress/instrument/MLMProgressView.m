@@ -32,6 +32,8 @@
 
 
 
+
+
 @end
 
 @implementation MLMProgressView
@@ -190,7 +192,7 @@
     chacterI2.centerX = _currentTemV.centerX;
     [_incircle addSubview:chacterI2];
 
-    self.tipV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80 * 2.5 * WidthScale, 54 * 2.5 * WidthScale)];
+    self.tipV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80 * 2.5 * WidthScale * 1.2, 54 * 2.5 * WidthScale * 1.2)];
     self.tipV.left = _leftB.centerX - 25 * WidthScale;
     self.tipV.top = _leftB.centerY + 5 * WidthScale;
 
@@ -207,22 +209,23 @@
 
 
     UIImageView *tipI = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"waring_dilog_out_temp"]];
-    tipI.size = CGSizeMake(80 * 2.5 * WidthScale, 54 * 2.5 * WidthScale);
+    tipI.size = CGSizeMake(80 * 2.5 * WidthScale * 1.2, 54 * 2.5 * WidthScale * 1.2);
     tipI.left = 0;
     tipI.top = 0;
     tipI.userInteractionEnabled = YES;
     [self.tipV addSubview:tipI];
+    
 
     _cancleB = [UIButton buttonWithType:UIButtonTypeCustom];
-    _cancleB.frame = CGRectMake(0, 54 * 2.5 * WidthScale - 30 * WidthScale, 30 * WidthScale, 14 * WidthScale);
-    _cancleB.right = self.tipV.width / 2.0 - 20 * WidthScale;
+    _cancleB.frame = CGRectMake(0, 54 * 2.5 * WidthScale  - 10 * WidthScale, 30 * WidthScale * 1.5, 14 * WidthScale * 1.5);
+    _cancleB.left = self.tipV.width / 2.0 + 20 * WidthScale;
     [_cancleB setImage:[UIImage imageNamed:@"btn_no_red_back"] forState:UIControlStateNormal];
     [_cancleB addTarget:self action:@selector(cancleAC:) forControlEvents:UIControlEventTouchUpInside];
     [self.tipV addSubview:_cancleB];
 
     _doneB = [UIButton buttonWithType:UIButtonTypeCustom];
-    _doneB.frame = CGRectMake(0, 54 * 2.5 * WidthScale - 30 * WidthScale, 30 * WidthScale, 14 * WidthScale);
-    _doneB.left = self.tipV.width / 2.0 + 20 * WidthScale;
+    _doneB.frame = CGRectMake(0, 54 * 2.5 * WidthScale  - 10 * WidthScale, 30 * WidthScale * 1.5, 14 * WidthScale * 1.5);
+    _doneB.right = self.tipV.width / 2.0 - 20 * WidthScale;
     [_doneB setImage:[UIImage imageNamed:@"btn_yes_red_back"] forState:UIControlStateNormal];
     [_doneB addTarget:self action:@selector(doneAC:) forControlEvents:UIControlEventTouchUpInside];
     [self.tipV addSubview:_doneB];
@@ -324,10 +327,9 @@
 
 }
 
-- (void)configWorkDownSencond:(int)sencond{
+- (void)configWorkDownSencond:(int)sencond withTintColor:(UIColor *)tintColor{
+    self.timeV.tintColor = tintColor;
     self.timeV.time = sencond;
-   
-    
 }
 
 - (void)setProgress:(CGFloat)progress{

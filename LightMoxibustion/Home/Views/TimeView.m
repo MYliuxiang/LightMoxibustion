@@ -22,6 +22,7 @@
     self = [super initWithFrame:frame];
     if(self){
         [self creatSubView];
+        self.tintColor = [UIColor blueColor];
 
     }
     
@@ -40,7 +41,8 @@
     
     _colonI = [[UIImageView alloc] initWithFrame:CGRectMake(self.width /6.0 * 3, self.height / 4.0, self.height / 4.0, self.height / 2.0)];
     _colonI.centerX = self.width / 2.0;
-    _colonI.image = [UIImage imageNamed:@"b_num_seg_point"];
+    _colonI.image = [[UIImage imageNamed:@"b_num_seg_point"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    _colonI.tintColor = self.tintColor;
     [self addSubview:_colonI];
     
     _second1I = [[UIImageView alloc] initWithFrame:CGRectMake(self.width /6.0 * 4, 0, width, self.height)];
@@ -124,9 +126,14 @@
             break;
     }
     
-    imageView.image = image;
-    
-    
+    imageView.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    imageView.tintColor = self.tintColor;
+}
+
+- (void)setTintColor:(UIColor *)tintColor{
+    _tintColor = tintColor;
+    _colonI.tintColor = _tintColor;
+
 }
 
 @end
