@@ -24,6 +24,8 @@
 
 @property (strong, nonatomic)   NSMutableArray              *deviceArray;  /**< 蓝牙设备个数 */
 @property(nonatomic,strong) NSTimer *timer;
+@property(nonatomic,strong) NSTimer *animationTimer;
+
 
 @property(nonatomic,strong) CBCharacteristic *txcharacter;
 @property(nonatomic,strong) CBCharacteristic *rxcharacter;
@@ -54,9 +56,18 @@
 
 @property (nonatomic, assign) BOOL highTemTip;
 
+@property (nonatomic, assign) BOOL menumIsHidden;
+
+
 
 @property (weak, nonatomic) IBOutlet UIImageView *quantityI;
 @property (weak, nonatomic) IBOutlet UIImageView *laserStateI;
+
+
+@property (nonatomic, strong) UIView *blueTapV;
+
+
+
 
 
 
@@ -83,6 +94,14 @@
                                                    userInfo:nil
                                                   repeats:YES];
     [self.timer setFireDate:[NSDate distantFuture]];
+    
+    
+    self.animationTimer =  [NSTimer scheduledTimerWithTimeInterval:0.35
+                                                   target:self
+                                                 selector:@selector(animationAC)
+                                                   userInfo:nil
+                                                  repeats:YES];
+
 
     [self setBlueCallBack];
 
@@ -91,13 +110,7 @@
 #pragma mark ----------- LxUnitSliderDelegate -----------
 - (void)unitSliderView:(LxUnitSlider *)slider didChangePercent:(NSInteger)percent
 {
-//    if (slider == self.temSlider) {
-//        if (!self.highTemTip) {
-//            self.highTemTip = YES;
-//            [self.progress hightTemTip];
-//        }
-//    }
-//    NSLog(@"percent:%ld",(long)percent);
+
     
 }
 
@@ -190,7 +203,7 @@
 //                    [SendData getCurrentSetTime];
 //                }
                 [self.progress configWorkDownSencond:workCuountdown.second withTintColor:[UIColor blackColor]];
-                NSLog(@"倒计时%d",workCuountdown.second);
+//                NSLog(@"倒计时%d",workCuountdown.second);
                 
                 
             }
@@ -231,13 +244,22 @@
                     [self.progress configIsTouch:NO];
 
                 }
-                [self.progress configSetTem:currentTem.currentTem];
+                if (currentTem.currentTem > 45) {
+                    [self.progress configSetTem:currentTem.currentTem withTintColor:[UIColor yellowColor]];
+
+                }else{
+                    [self.progress configSetTem:currentTem.currentTem withTintColor:[UIColor blackColor]];
+
+                }
             }
-                break;
+                break;   
             case 15:
             {
                 VersionModel *version = [[VersionModel alloc] initWithData:data];
                 [LxUserDefaults setObject:version.version forKey:BlueVersion];
+                
+                AboutView *view = [[AboutView alloc] initAlert];
+                [view show];
                
             }
                 break;
@@ -272,7 +294,7 @@
         
     };
 }
-
+#pragma mark ----------- 蓝牙链接状态处理 -----------
 - (void)checkBluethState{
     HLBLEManager *manager = [HLBLEManager sharedInstance];
     manager.stateUpdateBlock = ^(CBCentralManager *central) {
@@ -310,6 +332,7 @@
     };
 }
 
+#pragma mark ----------- 扫描蓝牙设备 -----------
 - (void)scanDevice{
     //开始扫描
     HLBLEManager *manager = [HLBLEManager sharedInstance];
@@ -378,6 +401,7 @@
     };
 }
 
+#pragma mark ----------- 链接蓝牙 -----------
 - (void)connectDevice:(BleDevice *)device{
     self.blueStateI.image = [[UIImage imageNamed:@"text_connecting"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     self.blueStateI.tintColor = [UIColor whiteColor];
@@ -444,16 +468,19 @@
                  }];
 }
 
+#pragma mark ----------- 发送心跳包 -----------
 - (void)sendHeartBeat:(NSTimer *)timer{
     [SendData sendHeartBeat];
 }
 
 
-#pragma mark --------------发送蓝牙数据--------------
 - (IBAction)blueAC:(id)sender {
-    [self annimationMenumIsHidden:NO];
+    self.menumIsHidden = !self.menumIsHidden;
+    [self annimationMenumIsHidden:self.menumIsHidden];
+    
 }
 
+#pragma mark ----------- 链接成功之后初始化蓝牙 -----------
 - (void)initBlue{
     //初试化蓝牙
     [SendData sendHeartBeat];
@@ -471,6 +498,7 @@
 
 }
 
+#pragma mark ----------- 蓝牙链接状态UI处理逻辑 -----------
 - (void)hanleConnectedState{
     if ([HLBLEManager sharedInstance].connectedPerpheral == nil) {
         //断开链接
@@ -489,14 +517,14 @@
 //        [self.blueB setImage:[UIImage imageNamed:@"ble_bmp"] forState:UIControlStateNormal];
         self.blueStateI.image = [[UIImage imageNamed:@"text_no_connect"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         self.blueStateI.tintColor = [UIColor redColor];
-        [self blueStateIAnimation:YES];
+//        [self blueStateIAnimation:YES];
         self.laserStateI.image = [UIImage imageNamed:@"text_laser_off"];
         
         self.redSlider.currentPercent = 0;
         self.temSlider.currentPercent = 0;
         self.rateSlider.currentPercent = 0;
         
-        [self.progress configSetTem:-1];
+        [self.progress configSetTem:-1 withTintColor:[UIColor blackColor]];
         [self.progress configCurrentTem:-1];
         [self.progress configWorkDownSencond:0 withTintColor:[UIColor blueColor]];
         [self.progress configSetTime:0];
@@ -505,7 +533,7 @@
         self.redSlider.userInteractionEnabled = NO;
         self.rateSlider.userInteractionEnabled = NO;
         self.temSlider.userInteractionEnabled = NO;
-        
+        [self.animationTimer setFireDate:[NSDate date]];
         
     }else{
         
@@ -518,17 +546,21 @@
 //        [self.blueB setImage:[UIImage imageNamed:@"ble_bmp"] forState:UIControlStateNormal];
         self.blueStateI.image = [[UIImage imageNamed:@"text_bel_connected"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         self.blueStateI.tintColor = [UIColor whiteColor];
-        [self blueStateIAnimation:NO];
+//        [self blueStateIAnimation:NO];
         
         self.progress.userInteractionEnabled = YES;
         self.redSlider.userInteractionEnabled = YES;
         self.rateSlider.userInteractionEnabled = YES;
         self.temSlider.userInteractionEnabled = YES;
+        [self.animationTimer setFireDate:[NSDate distantFuture]];
+        self.blueStateI.hidden = NO;
 
 
     }
 }
 
+
+#pragma mark ----------- 创建试图 -----------
 - (void)creatSubViews{
     
     __weak typeof(self) weakSelf = self;
@@ -548,19 +580,19 @@
     [self.view addSubview:_rateSlider];
     _rateSlider.centerX = kScreenWidth / 2.0;
     
-    _temSlider = [[LxUnitSlider alloc]initWithFrame:CGRectMake(100, (kScreenHeight + 100) / 2.0 + 10 * WidthScale, 80 * WidthScale , kScreenHeight - (kScreenHeight + 100) / 2.0 - kBottomSafeHeight - 10 * WidthScale) titles:@[@"关闭",@"1",@"2",@"3",@"4",@"5"] total:21.0 thumbTitle:@"温度"];
+    _temSlider = [[LxUnitSlider alloc]initWithFrame:CGRectMake(100, (kScreenHeight + 100) / 2.0 + 10 * WidthScale, 80 * WidthScale , kScreenHeight - (kScreenHeight + 100) / 2.0 - kBottomSafeHeight - 10 * WidthScale) titles:@[@"关闭",@"1",@"2",@"3",@"4",@"5"] total:22.0 thumbTitle:@"温度"];
     _temSlider.delegate = self;
     [self.view addSubview:_temSlider];
     
     _temSlider.right = kScreenWidth / 2.0 - 80 * WidthScale / 2;
     
     _temSlider.hightTemTipBlock = ^(int tem) {
-        if (!weakSelf.highTemTip) {
+//        if (!weakSelf.highTemTip) {
             [weakSelf.progress hightTemTip:tem];
             weakSelf.highTemTip = YES;
-        }else{
-            [SendData setTemperature:tem];
-        }
+//        }else{
+//            [SendData setTemperature:tem];
+//        }
     };
 
         
@@ -606,7 +638,22 @@
     _blueConnectedV.hidden = YES;
     [self.blueB addSubview:_blueConnectedV];
     
+    _blueTapV = [[UIView alloc] initWithFrame:CGRectMake(self.blueB.left, self.blueB.top - 5, 100, 30)];
+    _blueTapV.backgroundColor = [UIColor clearColor];
+    [self.view insertSubview:_blueTapV belowSubview:self.blueStateI];
+    [_blueTapV mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.blueB.mas_left);
+        make.right.equalTo(self.blueStateI.mas_right);
+        make.height.mas_equalTo(30);
+        make.centerY.equalTo(self.blueB.mas_centerY);
+
+    }];
     
+
+    [_blueTapV tapHandle:^{
+        weakSelf.menumIsHidden = !weakSelf.menumIsHidden;
+        [self annimationMenumIsHidden:weakSelf.menumIsHidden];
+    }];
   
     
 }
@@ -661,8 +708,11 @@
 //            [self.navigationController pushViewController:vc animated:YES];
             [SendData getVersion];
 
-            AboutView *view = [[AboutView alloc] initAlert];
-            [view show];
+            if ([HLBLEManager sharedInstance].connectedPerpheral == nil) {
+                AboutView *view = [[AboutView alloc] initAlert];
+                [view show];
+            }
+           
             
             
 //            if ([HLBLEManager sharedInstance].connectedPerpheral == nil){
@@ -691,18 +741,27 @@
     }];
 }
 
+#pragma mark ----------- 闪烁动画 -----------
+- (void)animationAC{
+  
+    self.blueStateI.hidden = !self.blueStateI.hidden;
+}
+
+
 - (void)blueStateIAnimation:(BOOL)isStart{
     if (isStart) {
         [self.blueStateI.layer removeAnimationForKey:@"opacity"];
         CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
         scaleAnimation.fromValue=@1.f;
-        scaleAnimation.toValue=@0.1f;
+        scaleAnimation.toValue=@0;
         scaleAnimation.autoreverses=YES;
         scaleAnimation.repeatCount=MAXFLOAT;
-        scaleAnimation.duration=1.f;
+        scaleAnimation.duration=.35f;
         scaleAnimation.removedOnCompletion = NO;
         scaleAnimation.fillMode = kCAFillModeForwards;
         [self.blueStateI.layer addAnimation:scaleAnimation forKey:@"opacity"];
+        
+        
     }else{
         [self.blueStateI.layer removeAnimationForKey:@"opacity"];
         

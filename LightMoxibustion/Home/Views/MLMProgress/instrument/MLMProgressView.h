@@ -30,7 +30,7 @@
 
 - (void)configCurrentTem:(int)tem;
 
-- (void)configSetTem:(int)tem;
+- (void)configSetTem:(int)tem withTintColor:(UIColor *)tintColor;
 
 - (void)configWorkDownSencond:(int)sencond withTintColor:(UIColor *)tintColor;
 

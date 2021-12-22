@@ -173,15 +173,19 @@
 
 - (void)clickPlusBtn{
 
-    if (_slider.currentPercent * _totalValue >= _maxCouldSliderNumber) {
-        return;
-    }else if(_slider.currentPercent * _totalValue + _minSliderUnit >= _maxCouldSliderNumber){
-        _slider.currentPercent = _maxCouldSliderNumber / _totalValue;
+    if ([self.thumbTitle isEqualToString:@"温度"] && roundf(_slider.currentPercent * _totalValue) + _minSliderUnit > 16) {
+        [self bluePercent:roundf(_slider.currentPercent * _totalValue + _minSliderUnit)];
     }else{
-        _slider.currentPercent = (_slider.currentPercent * _totalValue + _minSliderUnit) / _totalValue;
+        if (_slider.currentPercent * _totalValue >= _maxCouldSliderNumber) {
+            return;
+        }else if(_slider.currentPercent * _totalValue + _minSliderUnit >= _maxCouldSliderNumber){
+            _slider.currentPercent = _maxCouldSliderNumber / _totalValue;
+        }else{
+            _slider.currentPercent = (_slider.currentPercent * _totalValue + _minSliderUnit) / _totalValue;
+        }
+        
+        [self bluePercent:roundf(_slider.currentPercent * _totalValue)];
     }
-    
-    [self bluePercent:_slider.currentPercent * _totalValue];
 
 }
 
@@ -192,6 +196,7 @@
         return;
     }
     if ([self.thumbTitle isEqualToString:@"温度"]) {
+        NSLog(@"温度slider：%d",percent);
         if ((percent + 29) < 45) {
           [SendData setTemperature:(int)(percent + 29)];
         }else{
@@ -209,15 +214,19 @@
 #pragma mark - 点击积分减少按钮
 - (void)clickMinBtn{
       
-    if (_slider.currentPercent * _totalValue <= 0 ) {
-        return;
-    }else if(_slider.currentPercent * _totalValue - _minSliderUnit <= 0){
-        _slider.currentPercent = 0;
+    if ([self.thumbTitle isEqualToString:@"温度"] && roundf(_slider.currentPercent * _totalValue) - _minSliderUnit > 16) {
+        [self bluePercent:roundf(_slider.currentPercent * _totalValue - _minSliderUnit)];
     }else{
-        _slider.currentPercent = (_slider.currentPercent * _totalValue - _minSliderUnit) / _totalValue;
+        if (_slider.currentPercent * _totalValue <= 0 ) {
+            return;
+        }else if(_slider.currentPercent * _totalValue - _minSliderUnit <= 0){
+            _slider.currentPercent = 0;
+        }else{
+            _slider.currentPercent = (_slider.currentPercent * _totalValue - _minSliderUnit) / _totalValue;
+        }
+        
+        [self bluePercent:roundf(_slider.currentPercent * _totalValue)];
     }
-    
-    [self bluePercent:_slider.currentPercent * _totalValue];
        
 }
 

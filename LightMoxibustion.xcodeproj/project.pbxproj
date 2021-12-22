@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		22614481275E6F260029B1DE /* ConnectedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2261447F275E6F260029B1DE /* ConnectedVC.m */; };
 		22614482275E6F260029B1DE /* ConnectedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22614480275E6F260029B1DE /* ConnectedVC.xib */; };
-		22614487275E89CA0029B1DE /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22614485275E89CA0029B1DE /* AboutVC.m */; };
-		22614488275E89CA0029B1DE /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22614486275E89CA0029B1DE /* AboutVC.xib */; };
 		22A9A467276CDB1D00587039 /* LxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9A466276CDB1D00587039 /* LxView.m */; };
 		22A9A46A276CEBB300587039 /* AboutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9A469276CEBB300587039 /* AboutView.m */; };
 		22A9A46C276CEBC400587039 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A9A46B276CEBC400587039 /* AboutView.xib */; };
@@ -121,9 +119,6 @@
 		2261447E275E6F260029B1DE /* ConnectedVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectedVC.h; sourceTree = "<group>"; };
 		2261447F275E6F260029B1DE /* ConnectedVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectedVC.m; sourceTree = "<group>"; };
 		22614480275E6F260029B1DE /* ConnectedVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectedVC.xib; sourceTree = "<group>"; };
-		22614484275E89CA0029B1DE /* AboutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutVC.h; sourceTree = "<group>"; };
-		22614485275E89CA0029B1DE /* AboutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutVC.m; sourceTree = "<group>"; };
-		22614486275E89CA0029B1DE /* AboutVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutVC.xib; sourceTree = "<group>"; };
 		22A9A465276CDB1D00587039 /* LxView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LxView.h; sourceTree = "<group>"; };
 		22A9A466276CDB1D00587039 /* LxView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LxView.m; sourceTree = "<group>"; };
 		22A9A468276CEBB300587039 /* AboutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutView.h; sourceTree = "<group>"; };
@@ -353,9 +348,6 @@
 				2261447E275E6F260029B1DE /* ConnectedVC.h */,
 				2261447F275E6F260029B1DE /* ConnectedVC.m */,
 				22614480275E6F260029B1DE /* ConnectedVC.xib */,
-				22614484275E89CA0029B1DE /* AboutVC.h */,
-				22614485275E89CA0029B1DE /* AboutVC.m */,
-				22614486275E89CA0029B1DE /* AboutVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -854,7 +846,6 @@
 			files = (
 				22614482275E6F260029B1DE /* ConnectedVC.xib in Resources */,
 				297396D4274CCACE0030613D /* README.md in Resources */,
-				22614488275E89CA0029B1DE /* AboutVC.xib in Resources */,
 				29739662274CC44C0030613D /* LaunchScreen.storyboard in Resources */,
 				29739671274CC9240030613D /* BaseViewController.xib in Resources */,
 				2973965F274CC44C0030613D /* Assets.xcassets in Resources */,
@@ -930,7 +921,6 @@
 				2975A9F3275DA9980097D72C /* QuestChargeStatePkg.m in Sources */,
 				29739707274CCF9A0030613D /* HomeVC.m in Sources */,
 				2975A9AD275DA9630097D72C /* HLBLEManager.m in Sources */,
-				22614487275E89CA0029B1DE /* AboutVC.m in Sources */,
 				2975A9CD275DA98F0097D72C /* QuantityModel.m in Sources */,
 				297396BB274CCAC40030613D /* UITextView+WZB.m in Sources */,
 				29739665274CC44C0030613D /* main.m in Sources */,

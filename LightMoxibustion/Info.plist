@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>WKBackgroundModes</key>
+	<array>
+		<string>App plays audio</string>
+	</array>
 </dict>
 </plist>

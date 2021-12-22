@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NumberView : UIView
 @property(nonatomic,assign)int  number;
+@property(nonatomic,strong) UIColor *tintColor;
+
 - (id)initWithFrame:(CGRect)frame withTemType:(TemperatureType)type;
 @end
 

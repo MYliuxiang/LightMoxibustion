@@ -17,6 +17,9 @@
 @property(nonatomic,strong) UIImageView *symbolI1;
 @property(nonatomic,strong) UIImageView *symbolI2;
 
+@property(nonatomic,strong) UIImageView *chacterI1;
+
+
 @property(nonatomic,strong) TimeView *timeV;
 
 @property(nonatomic,strong) UIView *tipV;
@@ -90,7 +93,7 @@
     
 //    //进度
     _circle = [[MLMCircleView alloc] initWithFrame:CGRectMake(- 15 * WidthScale, - 15 * WidthScale, _calibra.width + 30 * WidthScale, _calibra.height + 30 * WidthScale) startAngle:startAngle endAngle:endAngle];
-    _circle.bottomWidth = 11 * WidthScale;
+    _circle.bottomWidth = 10 * WidthScale;
     _circle.progressWidth = 10 * WidthScale;
     _circle.fillColor = [UIColor colorWithHexString:@"2446A0"];
     _circle.bgColor = [UIColor colorWithHexString:@"D8DDFC"];
@@ -164,7 +167,7 @@
     [_incircle addSubview:_currentTemV];
 
     _symbolI1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 18 * WidthScale, 14 * WidthScale)];
-    _symbolI1.image = [UIImage imageNamed:@"temp_unit_symbo2"];
+    _symbolI1.image = [[UIImage imageNamed:@"temp_unit_symbo2"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     _symbolI1.top = _setTemV.top;
     _symbolI1.left = _setTemV.right + 2;
     _symbolI1.hidden = YES;
@@ -180,11 +183,11 @@
     [_incircle addSubview:_symbolI2];
 
 
-    UIImageView *chacterI1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 55 * WidthScale, 15 * WidthScale)];
-    chacterI1.image = [UIImage imageNamed:@"text_set_temp"];
-    chacterI1.top = _setTemV.bottom + 10 * WidthScale;
-    chacterI1.centerX = _setTemV.centerX;
-    [_incircle addSubview:chacterI1];
+    _chacterI1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 55 * WidthScale, 15 * WidthScale)];
+    _chacterI1.image = [[UIImage imageNamed:@"text_set_temp"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    _chacterI1.top = _setTemV.bottom + 10 * WidthScale;
+    _chacterI1.centerX = _setTemV.centerX;
+    [_incircle addSubview:_chacterI1];
 
     UIImageView *chacterI2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 55 * WidthScale, 15 * WidthScale)];
     chacterI2.image = [UIImage imageNamed:@"text_cure_temp"];
@@ -192,10 +195,8 @@
     chacterI2.centerX = _currentTemV.centerX;
     [_incircle addSubview:chacterI2];
 
-    self.tipV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80 * 2.5 * WidthScale * 1.2, 54 * 2.5 * WidthScale * 1.2)];
-    self.tipV.left = _leftB.centerX - 25 * WidthScale;
+    self.tipV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80 * 2.5 * WidthScale * 1.5, 54 * 2.5 * WidthScale * 1.5)];
     self.tipV.top = _leftB.centerY + 5 * WidthScale;
-
 //    [_incircle addSubview:self.tipV];
     self.tipV.hidden = YES;
 
@@ -204,12 +205,14 @@
     self.tipV.left = point.x;
     self.tipV.top = point.y;
     [lxWindow addSubview:self.tipV];
+    self.tipV.centerX = kScreenWidth / 2.0;
+
 
 
 
 
     UIImageView *tipI = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"waring_dilog_out_temp"]];
-    tipI.size = CGSizeMake(80 * 2.5 * WidthScale * 1.2, 54 * 2.5 * WidthScale * 1.2);
+    tipI.size = CGSizeMake(80 * 2.5 * WidthScale * 1.5, 54 * 2.5 * WidthScale * 1.5);
     tipI.left = 0;
     tipI.top = 0;
     tipI.userInteractionEnabled = YES;
@@ -217,14 +220,14 @@
     
 
     _cancleB = [UIButton buttonWithType:UIButtonTypeCustom];
-    _cancleB.frame = CGRectMake(0, 54 * 2.5 * WidthScale  - 10 * WidthScale, 30 * WidthScale * 1.5, 14 * WidthScale * 1.5);
+    _cancleB.frame = CGRectMake(0, 54 * 2.5 * WidthScale  + 20 * WidthScale , 30 * WidthScale * 2, 14 * WidthScale * 2);
     _cancleB.left = self.tipV.width / 2.0 + 20 * WidthScale;
     [_cancleB setImage:[UIImage imageNamed:@"btn_no_red_back"] forState:UIControlStateNormal];
     [_cancleB addTarget:self action:@selector(cancleAC:) forControlEvents:UIControlEventTouchUpInside];
     [self.tipV addSubview:_cancleB];
 
     _doneB = [UIButton buttonWithType:UIButtonTypeCustom];
-    _doneB.frame = CGRectMake(0, 54 * 2.5 * WidthScale  - 10 * WidthScale, 30 * WidthScale * 1.5, 14 * WidthScale * 1.5);
+    _doneB.frame = CGRectMake(0, 54 * 2.5 * WidthScale  + 20 * WidthScale, 30 * WidthScale * 2, 14 * WidthScale * 2);
     _doneB.right = self.tipV.width / 2.0 - 20 * WidthScale;
     [_doneB setImage:[UIImage imageNamed:@"btn_yes_red_back"] forState:UIControlStateNormal];
     [_doneB addTarget:self action:@selector(doneAC:) forControlEvents:UIControlEventTouchUpInside];
@@ -314,7 +317,7 @@
 
 }
 
-- (void)configSetTem:(int)tem{
+- (void)configSetTem:(int)tem withTintColor:(UIColor *)tintColor{
     
     if (tem < 30) {
         self.symbolI1.hidden = YES;
@@ -323,8 +326,10 @@
         self.setTemV.number = tem;
         self.symbolI1.hidden = NO;
     }
-   
-
+    self.setTemV.tintColor =tintColor;
+    self.symbolI1.tintColor = tintColor;
+    self.chacterI1.tintColor = tintColor;
+    
 }
 
 - (void)configWorkDownSencond:(int)sencond withTintColor:(UIColor *)tintColor{

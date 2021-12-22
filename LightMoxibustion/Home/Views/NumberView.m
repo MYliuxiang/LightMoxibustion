@@ -127,6 +127,12 @@
     
 }
 
+- (void)setTintColor:(UIColor *)tintColor{
+    _tintColor = tintColor;
+    self.firstImg.tintColor = tintColor;
+    self.sencondImg.tintColor = tintColor;
+}
+
 
 
 
