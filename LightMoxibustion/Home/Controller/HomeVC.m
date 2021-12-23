@@ -16,7 +16,7 @@
 
 
 #define PROGRESS_HEIGHT 200
-#define LEFT_MAGAN 55 * WidthScale
+#define LEFT_MAGAN 60 * WidthScale
 
 
 
@@ -25,6 +25,14 @@
 @property (strong, nonatomic)   NSMutableArray              *deviceArray;  /**< 蓝牙设备个数 */
 @property(nonatomic,strong) NSTimer *timer;
 @property(nonatomic,strong) NSTimer *animationTimer;
+@property(nonatomic,strong) NSTimer *chargeAnimationTimer;
+
+@property(nonatomic,strong) NSTimer *temAnimationTimer;
+
+@property(nonatomic,strong) NSTimer *quantityAnimationTimer;
+
+@property(nonatomic,strong) UILabel *quantityTemL;
+@property(nonatomic,strong) UILabel *temTipL;
 
 
 @property(nonatomic,strong) CBCharacteristic *txcharacter;
@@ -66,6 +74,9 @@
 
 @property (nonatomic, strong) UIView *blueTapV;
 
+@property (nonatomic, assign) BOOL isLower;
+
+
 
 
 
@@ -101,7 +112,31 @@
                                                  selector:@selector(animationAC)
                                                    userInfo:nil
                                                   repeats:YES];
+    
+    
+    
 
+    self.chargeAnimationTimer =  [NSTimer scheduledTimerWithTimeInterval:0.5
+                                                   target:self
+                                                 selector:@selector(chargeAnimation)
+                                                   userInfo:nil
+                                                  repeats:YES];
+    [self.chargeAnimationTimer setFireDate:[NSDate distantFuture]];
+    
+    self.temAnimationTimer =  [NSTimer scheduledTimerWithTimeInterval:0.5
+                                                   target:self
+                                                 selector:@selector(temAnimation)
+                                                   userInfo:nil
+                                                  repeats:YES];
+    [self.temAnimationTimer setFireDate:[NSDate distantFuture]];
+    
+    
+    self.quantityAnimationTimer =  [NSTimer scheduledTimerWithTimeInterval:0.5
+                                                   target:self
+                                                 selector:@selector(quantityAnimation)
+                                                   userInfo:nil
+                                                  repeats:YES];
+    [self.quantityAnimationTimer setFireDate:[NSDate distantFuture]];
 
     [self setBlueCallBack];
 
@@ -113,6 +148,36 @@
 
     
 }
+
+#pragma mark ----------- 动画 -----------
+static int imageindex = 0;
+
+- (void)chargeAnimation{
+    imageindex++;
+    if (imageindex >= 4) {
+        imageindex = 0;
+    }
+    
+    NSArray *imageArr = @[[UIImage imageNamed:@"bl0"],[UIImage imageNamed:@"bl1"],[UIImage imageNamed:@"bl2"],[UIImage imageNamed:@"bl3"]];
+    self.quantityI.image = imageArr[imageindex];
+    
+}
+
+- (void)temAnimation{
+    self.temTipL.hidden = !self.temTipL.hidden;
+}
+
+- (void)quantityAnimation{
+    self.quantityTemL.hidden = !self.quantityTemL.hidden;
+
+}
+
+- (void)animationAC{
+  
+    self.blueStateI.hidden = !self.blueStateI.hidden;
+}
+
+
 
 #pragma mark --------------蓝牙回调处理--------------
 - (void)setBlueCallBack{
@@ -162,23 +227,33 @@
                     case 0:
                     {
                         self.quantityI.image = [UIImage imageNamed:@"bl0"];
+                        [self.quantityAnimationTimer setFireDate:[NSDate date]];
+
+                        self.isLower = YES;
                     }
                         break;
                     case 1:
                     {
                         self.quantityI.image = [UIImage imageNamed:@"bl1"];
+                        [self.quantityAnimationTimer setFireDate:[NSDate distantFuture]];
+                        self.isLower = NO;
 
                     }
                         break;
                     case 2:
                     {
                         self.quantityI.image = [UIImage imageNamed:@"bl2"];
+                        [self.quantityAnimationTimer setFireDate:[NSDate distantFuture]];
+                        self.isLower = NO;
 
                     }
                         break;
                     case 3:
                     {
                         self.quantityI.image = [UIImage imageNamed:@"bl3"];
+                        [self.quantityAnimationTimer setFireDate:[NSDate distantFuture]];
+                        self.isLower = NO;
+                     
 
                     }
                         break;
@@ -246,9 +321,14 @@
                 }
                 if (currentTem.currentTem > 45) {
                     [self.progress configSetTem:currentTem.currentTem withTintColor:[UIColor yellowColor]];
+                    if(!self.isLower){
+                      [self.temAnimationTimer setFireDate:[NSDate date]];
+                    }
 
                 }else{
                     [self.progress configSetTem:currentTem.currentTem withTintColor:[UIColor blackColor]];
+                    [self.temAnimationTimer setFireDate:[NSDate distantFuture]];
+
 
                 }
             }
@@ -265,8 +345,15 @@
                 break;
             case 16:
             {
-//                ChargeStateModel *stateModel = [[ChargeStateModel alloc] initWithData:data];
-//                NSLog(@"CHG信号:%d,STANDBY信号:%d",stateModel.CHG,stateModel.STANDBY);
+                ChargeStateModel *stateModel = [[ChargeStateModel alloc] initWithData:data];
+//                当CHG为0 与SATANDBY 为1时表示正在充电，CHG为1与STANDBY为0表示充电完成。其它情况表示没有插入充电器。
+                if (stateModel.CHG == 0 && stateModel.STANDBY == 1) {
+                    [self.chargeAnimationTimer setFireDate:[NSDate date]];
+                }else{
+                    [self.chargeAnimationTimer setFireDate:[NSDate distantFuture]];
+
+                }
+                NSLog(@"CHG信号:%d,STANDBY信号:%d",stateModel.CHG,stateModel.STANDBY);
             }
                 break;
                 
@@ -376,7 +463,10 @@
         NSString *lastMac = [NSString stringWithFormat:@"%@",[LxUserDefaults objectForKey:MACADRESS]];
         if ([lastMac isEqualToString:per.macAddress] && weakManager.connectedPerpheral == nil && !self.autoDisconnect ) {
                
-            [self connectDevice:per];
+            UIApplicationState state = [UIApplication sharedApplication].applicationState;
+            if(state == UIApplicationStateActive){
+                [self connectDevice:per];
+             }
         }
 
         if (self.deviceArray.count == 0) {
@@ -494,6 +584,7 @@
     [SendData getCurrentTem];
     
     [SendData getCurrentSetTime];
+    
             
 
 }
@@ -506,18 +597,19 @@
         _blueConnectedV.hidden = YES;
 
         self.highTemTip = NO;
-        self.quantityI.image = [UIImage imageNamed:@"bl3"];
         self.rxcharacter = nil;
         self.txcharacter = nil;
         [self.timer setFireDate:[NSDate distantFuture]];
         if (_autoDisconnect) {
-            [self scanDevice];
+            UIApplicationState state = [UIApplication sharedApplication].applicationState;
+            if(state == UIApplicationStateActive){
+                [self scanDevice];
+                    
+             }
         }
         
-//        [self.blueB setImage:[UIImage imageNamed:@"ble_bmp"] forState:UIControlStateNormal];
         self.blueStateI.image = [[UIImage imageNamed:@"text_no_connect"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         self.blueStateI.tintColor = [UIColor redColor];
-//        [self blueStateIAnimation:YES];
         self.laserStateI.image = [UIImage imageNamed:@"text_laser_off"];
         
         self.redSlider.currentPercent = 0;
@@ -535,6 +627,16 @@
         self.temSlider.userInteractionEnabled = NO;
         [self.animationTimer setFireDate:[NSDate date]];
         
+        [self.chargeAnimationTimer setFireDate:[NSDate distantFuture]];
+        self.quantityI.image = [UIImage imageNamed:@"bl3"];
+        
+        [self.temAnimationTimer setFireDate:[NSDate distantFuture]];
+        [self.quantityAnimationTimer setFireDate:[NSDate distantFuture]];
+
+        self.temTipL.hidden = YES;
+        self.quantityTemL.hidden = YES;
+        self.isLower = NO;
+        
     }else{
         
         NSLog(@"连接成功");
@@ -542,11 +644,8 @@
      
         [[NSNotificationCenter defaultCenter] postNotificationName:DeviceChange object:@{@"devices":self.deviceArray}];
         self.autoDisconnect = NO;
-        //
-//        [self.blueB setImage:[UIImage imageNamed:@"ble_bmp"] forState:UIControlStateNormal];
         self.blueStateI.image = [[UIImage imageNamed:@"text_bel_connected"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         self.blueStateI.tintColor = [UIColor whiteColor];
-//        [self blueStateIAnimation:NO];
         
         self.progress.userInteractionEnabled = YES;
         self.redSlider.userInteractionEnabled = YES;
@@ -564,8 +663,43 @@
 - (void)creatSubViews{
     
     __weak typeof(self) weakSelf = self;
+    
+    _quantityTemL = [[UILabel alloc] init];
+    _quantityTemL.text = @"光灸仪电量过低，无法启动工作";
+    _quantityTemL.font = [UIFont systemFontOfSize:16 * WidthScale];
+    _quantityTemL.textColor = [UIColor redColor];
+    _quantityTemL.numberOfLines = 0;
+    _quantityTemL.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:_quantityTemL];
+    [_quantityTemL mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(40);
+        make.right.equalTo(self.view).offset(-40);
+        make.top.mas_equalTo(Height_StatusBar + 14 * WidthScale);
+    }];
+    _quantityTemL.hidden = YES;
+    
 
-    _progress = [[MLMProgressView alloc] initWithFrame:CGRectMake(LEFT_MAGAN , Height_StatusBar + 44 * WidthScale + 28 * WidthScale, (kScreenWidth - 2 * LEFT_MAGAN), kScreenWidth - 2 * LEFT_MAGAN)];
+   
+    
+    
+    _temTipL = [[UILabel alloc] init];
+    _temTipL.text = @"温度设置过高，因人而异，请注意是否会灼伤您的皮肤！";
+    _temTipL.font = [UIFont systemFontOfSize:14 * WidthScale];
+    _temTipL.textColor = [UIColor redColor];
+    _temTipL.numberOfLines = 0;
+    _temTipL.textAlignment = NSTextAlignmentCenter;
+
+    [self.view addSubview:_temTipL];
+    
+    [_temTipL mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(40);
+        make.right.equalTo(self.view).offset(-40);
+        make.top.mas_equalTo(Height_StatusBar + 34 * WidthScale);
+    }];
+    _temTipL.hidden = YES;
+   
+    
+    _progress = [[MLMProgressView alloc] initWithFrame:CGRectMake(LEFT_MAGAN , Height_StatusBar + 44 * WidthScale + 60 * WidthScale, (kScreenWidth - 2 * LEFT_MAGAN), kScreenWidth - 2 * LEFT_MAGAN)];
     _progress.cancleBlock = ^{
         weakSelf.highTemTip = NO;
     };
@@ -742,10 +876,7 @@
 }
 
 #pragma mark ----------- 闪烁动画 -----------
-- (void)animationAC{
-  
-    self.blueStateI.hidden = !self.blueStateI.hidden;
-}
+
 
 
 - (void)blueStateIAnimation:(BOOL)isStart{
