@@ -13,6 +13,7 @@
 #import "HRNumberUnitView.h"
 #import "ConnectedVC.h"
 #import "LxView.h"
+#import "DisconnectedAlert.h"
 
 
 #define PROGRESS_HEIGHT 200
@@ -62,7 +63,7 @@
 
 @property (nonatomic, assign) BOOL autoDisconnect;
 
-@property (nonatomic, assign) BOOL highTemTip;
+//@property (nonatomic, assign) BOOL highTemTip;
 
 @property (nonatomic, assign) BOOL menumIsHidden;
 
@@ -75,6 +76,7 @@
 @property (nonatomic, strong) UIView *blueTapV;
 
 @property (nonatomic, assign) BOOL isLower;
+
 
 
 
@@ -324,13 +326,16 @@ static int imageindex = 0;
                     if(!self.isLower){
                       [self.temAnimationTimer setFireDate:[NSDate date]];
                     }
+                    
 
                 }else{
                     [self.progress configSetTem:currentTem.currentTem withTintColor:[UIColor blackColor]];
                     [self.temAnimationTimer setFireDate:[NSDate distantFuture]];
-
-
                 }
+                
+                NSLog(@"当前设置温度：%d",currentTem.currentTem);
+//                NSLog(@"highTemTip：%d",self.highTemTip);
+
             }
                 break;   
             case 15:
@@ -369,9 +374,7 @@ static int imageindex = 0;
                 CurrentSetTimeModel *setTime = [[CurrentSetTimeModel alloc] initWithData:data];
                 [self.progress configSetTime:setTime.second];
                 [self.progress configWorkDownSencond:setTime.second * 60 withTintColor:[UIColor blueColor]];
-                NSLog(@"设置时间%d",setTime.second);
-
-             
+//                NSLog(@"设置时间%d",setTime.second);             
             }
                 break;
                 
@@ -394,6 +397,7 @@ static int imageindex = 0;
                 
             case CBManagerStatePoweredOff:
                 info = @"蓝牙未打开，请前往设置打开";
+//                [HLBLEManager sharedInstance].connectedPerpheral = nil;
                 [SVProgressHUD showErrorWithStatus:info];
                 break;
             case CBManagerStateUnsupported:
@@ -404,7 +408,6 @@ static int imageindex = 0;
             case CBManagerStateUnauthorized:
                 info = @"程序未授权，请前往设置种授权";
                 [SVProgressHUD showErrorWithStatus:info];
-
                 break;
             case CBManagerStateResetting:
                 info = @"CBCentralManagerStateResetting";
@@ -416,6 +419,7 @@ static int imageindex = 0;
                 [SVProgressHUD showErrorWithStatus:info];
                 break;
         }
+        [self hanleConnectedState];
     };
 }
 
@@ -596,7 +600,7 @@ static int imageindex = 0;
                 
         _blueConnectedV.hidden = YES;
 
-        self.highTemTip = NO;
+//        self.highTemTip = NO;
         self.rxcharacter = nil;
         self.txcharacter = nil;
         [self.timer setFireDate:[NSDate distantFuture]];
@@ -674,7 +678,7 @@ static int imageindex = 0;
     [_quantityTemL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(40);
         make.right.equalTo(self.view).offset(-40);
-        make.top.mas_equalTo(Height_StatusBar + 14 * WidthScale);
+        make.top.mas_equalTo(Height_StatusBar + 34 * WidthScale);
     }];
     _quantityTemL.hidden = YES;
     
@@ -701,7 +705,7 @@ static int imageindex = 0;
     
     _progress = [[MLMProgressView alloc] initWithFrame:CGRectMake(LEFT_MAGAN , Height_StatusBar + 44 * WidthScale + 60 * WidthScale, (kScreenWidth - 2 * LEFT_MAGAN), kScreenWidth - 2 * LEFT_MAGAN)];
     _progress.cancleBlock = ^{
-        weakSelf.highTemTip = NO;
+//        weakSelf.highTemTip = NO;
     };
    
     [self.view addSubview:[_progress speedDialType]];
@@ -721,14 +725,14 @@ static int imageindex = 0;
     _temSlider.right = kScreenWidth / 2.0 - 80 * WidthScale / 2;
     
     _temSlider.hightTemTipBlock = ^(int tem) {
-//        if (!weakSelf.highTemTip) {
+        if (tem > 45) {
             [weakSelf.progress hightTemTip:tem];
-            weakSelf.highTemTip = YES;
-//        }else{
-//            [SendData setTemperature:tem];
-//        }
+        }else{
+            [SendData setTemperature:tem];
+        }
+//        weakSelf.highTemTip = tem > 45 ?  YES : NO;
+                    
     };
-
         
     _redSlider = [[LxUnitSlider alloc]initWithFrame:CGRectMake(100, (kScreenHeight + 100) / 2.0 + 10 * WidthScale, 80 * WidthScale, kScreenHeight - (kScreenHeight + 100) / 2.0 - kBottomSafeHeight - 10 * WidthScale)  titles:@[@"关闭",@"1",@"2",@"3",@"4",@"5"] total:5.0 thumbTitle:@"红光"];
     _redSlider.delegate = self;
@@ -807,21 +811,32 @@ static int imageindex = 0;
     switch (index) {
         case 0:
         {
-            //连接设备
-            ConnectedVC *vc = [[ConnectedVC alloc] init];
-            vc.deviceArray = self.deviceArray;
+            
             if ([HLBLEManager sharedInstance].connectedPerpheral == nil) {
-                [self scanDevice];
-            }
+                //连接设备
+                ConnectedVC *vc = [[ConnectedVC alloc] init];
+                vc.deviceArray = self.deviceArray;
+                if ([HLBLEManager sharedInstance].connectedPerpheral == nil) {
+                    [self scanDevice];
+                }
 
-            __weak typeof(self) weakSelf = self;
-            vc.connetcBleDeviceblock = ^(BleDevice * _Nonnull device) {
-                [weakSelf connectDevice:device];
-            };
-            vc.reScanBleDeviceblock = ^{
-                [weakSelf scanDevice];
-            };
-            [self.navigationController pushViewController:vc animated:YES];
+                __weak typeof(self) weakSelf = self;
+                vc.connetcBleDeviceblock = ^(BleDevice * _Nonnull device) {
+                    [weakSelf connectDevice:device];
+                };
+                vc.reScanBleDeviceblock = ^{
+                    [weakSelf scanDevice];
+                };
+                [self.navigationController pushViewController:vc animated:YES];
+            }else{
+                DisconnectedAlert *alert = [[DisconnectedAlert alloc] initAlert];
+                [alert show];
+            }
+            
+            
+            
+            
+            
         }
             break;
         case 1:
@@ -876,8 +891,6 @@ static int imageindex = 0;
 }
 
 #pragma mark ----------- 闪烁动画 -----------
-
-
 
 - (void)blueStateIAnimation:(BOOL)isStart{
     if (isStart) {

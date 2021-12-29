@@ -76,7 +76,7 @@ static HLBLEManager *instance = nil;
     dispatch_once(&onceToken, ^{
         instance = [super init];
         //蓝牙没打开时alert提示框
-        NSDictionary *options = @{CBCentralManagerOptionShowPowerAlertKey:@NO};
+        NSDictionary *options = @{CBCentralManagerOptionShowPowerAlertKey:@(NO)};
         _centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:dispatch_get_main_queue() options:options];
         _limitLength = kLimitLength;
     });
@@ -231,6 +231,17 @@ static HLBLEManager *instance = nil;
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:kCentralManagerStateUpdateNoticiation object:@{@"central":central}];
+    
+    switch (central.state) {
+        case CBManagerStatePoweredOn:
+           
+            break;
+        default:{
+            self.connectedPerpheral = nil;
+        }
+            
+ 
+    }
     
     if (_stateUpdateBlock) {
         _stateUpdateBlock(central);

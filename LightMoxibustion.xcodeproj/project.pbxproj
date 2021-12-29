@@ -99,6 +99,8 @@
 		299157492756453400D17F66 /* LxUnitSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 299157472756453400D17F66 /* LxUnitSlider.m */; };
 		29A560C62759FF840024847F /* NumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A560C52759FF840024847F /* NumberView.m */; };
 		29A560C9275A0E610024847F /* TimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A560C8275A0E610024847F /* TimeView.m */; };
+		29B884A127795A0E006712FF /* DisconnectedAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B884A027795A0E006712FF /* DisconnectedAlert.m */; };
+		29B884A327795A1F006712FF /* DisconnectedAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29B884A227795A1F006712FF /* DisconnectedAlert.xib */; };
 		29E42C9D27576EF600A8973A /* YTSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E42C9B27576EF600A8973A /* YTSliderView.m */; };
 		29E42CA027576F9B00A8973A /* YTSliderSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E42C9E27576F9B00A8973A /* YTSliderSetting.m */; };
 		29FCE6782754C69C003B0E7C /* brightDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 29FCE6612754C69C003B0E7C /* brightDot.png */; };
@@ -299,6 +301,9 @@
 		29A560C52759FF840024847F /* NumberView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberView.m; sourceTree = "<group>"; };
 		29A560C7275A0E610024847F /* TimeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeView.h; sourceTree = "<group>"; };
 		29A560C8275A0E610024847F /* TimeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeView.m; sourceTree = "<group>"; };
+		29B8849F27795A0E006712FF /* DisconnectedAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisconnectedAlert.h; sourceTree = "<group>"; };
+		29B884A027795A0E006712FF /* DisconnectedAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisconnectedAlert.m; sourceTree = "<group>"; };
+		29B884A227795A1F006712FF /* DisconnectedAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisconnectedAlert.xib; sourceTree = "<group>"; };
 		29E42C9B27576EF600A8973A /* YTSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTSliderView.m; sourceTree = "<group>"; };
 		29E42C9C27576EF600A8973A /* YTSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTSliderView.h; sourceTree = "<group>"; };
 		29E42C9E27576F9B00A8973A /* YTSliderSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTSliderSetting.m; sourceTree = "<group>"; };
@@ -690,6 +695,9 @@
 				22A9A468276CEBB300587039 /* AboutView.h */,
 				22A9A469276CEBB300587039 /* AboutView.m */,
 				22A9A46B276CEBC400587039 /* AboutView.xib */,
+				29B8849F27795A0E006712FF /* DisconnectedAlert.h */,
+				29B884A027795A0E006712FF /* DisconnectedAlert.m */,
+				29B884A227795A1F006712FF /* DisconnectedAlert.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -849,6 +857,7 @@
 				29739662274CC44C0030613D /* LaunchScreen.storyboard in Resources */,
 				29739671274CC9240030613D /* BaseViewController.xib in Resources */,
 				2973965F274CC44C0030613D /* Assets.xcassets in Resources */,
+				29B884A327795A1F006712FF /* DisconnectedAlert.xib in Resources */,
 				2973965D274CC44B0030613D /* Main.storyboard in Resources */,
 				29FCE67D2754C69C003B0E7C /* redDot.png in Resources */,
 				22A9A46C276CEBC400587039 /* AboutView.xib in Resources */,
@@ -982,6 +991,7 @@
 				2975A9F1275DA9980097D72C /* CurrentRatePkg.m in Sources */,
 				297396B4274CCAC40030613D /* MBProgressHUD+Add.m in Sources */,
 				2975A9FB275DA9980097D72C /* GetCurrentSetTimePkg.m in Sources */,
+				29B884A127795A0E006712FF /* DisconnectedAlert.m in Sources */,
 				2975A9CA275DA98F0097D72C /* BleDevice.m in Sources */,
 				29739682274CC9780030613D /* UIImage+CompressImage.m in Sources */,
 				29739681274CC9780030613D /* BANetManager.m in Sources */,

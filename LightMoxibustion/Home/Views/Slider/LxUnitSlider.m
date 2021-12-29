@@ -196,13 +196,9 @@
         return;
     }
     if ([self.thumbTitle isEqualToString:@"温度"]) {
-        NSLog(@"温度slider：%d",percent);
-        if ((percent + 29) < 45) {
-          [SendData setTemperature:(int)(percent + 29)];
-        }else{
-            if (self.hightTemTipBlock) {
-                self.hightTemTipBlock((int)(percent + 29));
-            }
+        
+        if (self.hightTemTipBlock) {
+            self.hightTemTipBlock((int)((percent + 29) > 51 ? (percent + 29):51));
         }
     }else if ([self.thumbTitle isEqualToString:@"频率"]){
         [SendData setRate:(int)percent];

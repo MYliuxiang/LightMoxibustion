@@ -31,7 +31,7 @@
     self.window.rootViewController = navVC;
     [self.window makeKeyAndVisible];
 
-//    [[AppService shareInstance] registerAppService:application didFinishLaunchingWithOptions:launchOptions];
+    [[AppService shareInstance] registerAppService:application didFinishLaunchingWithOptions:launchOptions];
 //
 //    NSError *activationErr =nil;
 //

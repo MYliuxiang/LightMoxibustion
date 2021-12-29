@@ -10,6 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DisconnectedAlert : LxCustomAlert
+@property (weak, nonatomic) IBOutlet UIButton *doneB;
+
+- (instancetype)initAlert;
 
 @end
 

@@ -65,6 +65,7 @@
     
     [SVProgressHUD setErrorImage:nil];
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleLight];
+    [SVProgressHUD setMaximumDismissTimeInterval:0.35];
 
     
     
