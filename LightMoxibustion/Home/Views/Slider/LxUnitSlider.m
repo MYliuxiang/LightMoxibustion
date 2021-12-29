@@ -174,7 +174,16 @@
 - (void)clickPlusBtn{
 
     if ([self.thumbTitle isEqualToString:@"温度"] && roundf(_slider.currentPercent * _totalValue) + _minSliderUnit > 16) {
-        [self bluePercent:roundf(_slider.currentPercent * _totalValue + _minSliderUnit)];
+        
+        float tem = roundf(_slider.currentPercent * _totalValue + _minSliderUnit);
+        if (tem + 29 > 51) {
+            return;
+        }
+        NSLog(@"tem=%f",tem);
+        [self bluePercent:tem];
+        
+        
+        
     }else{
         if (_slider.currentPercent * _totalValue >= _maxCouldSliderNumber) {
             return;
@@ -197,8 +206,9 @@
     }
     if ([self.thumbTitle isEqualToString:@"温度"]) {
         
+        int tem = (int)(percent + 29);
         if (self.hightTemTipBlock) {
-            self.hightTemTipBlock((int)((percent + 29) > 51 ? (percent + 29):51));
+            self.hightTemTipBlock(tem);
         }
     }else if ([self.thumbTitle isEqualToString:@"频率"]){
         [SendData setRate:(int)percent];
