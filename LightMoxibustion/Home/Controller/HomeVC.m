@@ -459,9 +459,11 @@ static int imageindex = 0;
         per.uuidString = peripheral.identifier.UUIDString;
         NSData *data = [advertisementData objectForKey:@"kCBAdvDataManufacturerData"];
         U8 *mbuf = (U8 *)data.bytes;
+        if (mbuf != NULL) {
+            NSString *mac =[[NSString alloc] initWithFormat:@"%.2x:%.2x:%.2x:%.2x:%.2x:%.2x",mbuf[0],mbuf[1],mbuf[2],mbuf[3],mbuf[4],mbuf[5]];
+            per.macAddress = mac;
+        }
        
-        NSString *mac =[[NSString alloc] initWithFormat:@"%.2x:%.2x:%.2x:%.2x:%.2x:%.2x",mbuf[0],mbuf[1],mbuf[2],mbuf[3],mbuf[4],mbuf[5]];
-        per.macAddress = mac;
         per.RSSI = RSSI;
         
         NSString *lastMac = [NSString stringWithFormat:@"%@",[LxUserDefaults objectForKey:MACADRESS]];
@@ -588,6 +590,10 @@ static int imageindex = 0;
     [SendData getCurrentTem];
     
     [SendData getCurrentSetTime];
+    
+    [SendData getChargeState];
+
+    
     
             
 
