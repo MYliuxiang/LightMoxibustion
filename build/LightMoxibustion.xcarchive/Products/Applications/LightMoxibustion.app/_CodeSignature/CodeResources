@@ -66,7 +66,7 @@
 		</data>
 		<key>Frameworks/AFNetworking.framework/AFNetworking</key>
 		<data>
-		fgaUSJG4ufkBmoq6ViANEkwIozw=
+		0+YHaEmKJDfj3v0dwXVEXnFFdBs=
 		</data>
 		<key>Frameworks/AFNetworking.framework/Info.plist</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>Frameworks/AxcAE_TabBar.framework/AxcAE_TabBar</key>
 		<data>
-		M2TuMf59PkK6ttS7/oiM4ikVa8s=
+		MK6ospiCWEz3sbGXEYu+KhyM7SI=
 		</data>
 		<key>Frameworks/AxcAE_TabBar.framework/Info.plist</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Frameworks/IQKeyboardManager.framework/IQKeyboardManager</key>
 		<data>
-		r12+/EM1KfGAStwNtV8kuDCG8xM=
+		8NUjVHO1AUVzbjpy82TPA/I2Bv4=
 		</data>
 		<key>Frameworks/IQKeyboardManager.framework/Info.plist</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Frameworks/MBProgressHUD.framework/MBProgressHUD</key>
 		<data>
-		mN4owE3da2S09CWNTJlb4AoSJJk=
+		Zf1+PtjfDdmfpzAR9H70pILiG2Y=
 		</data>
 		<key>Frameworks/MBProgressHUD.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>Frameworks/MJExtension.framework/MJExtension</key>
 		<data>
-		3tU3EwRiqScX09Nc7XWtiZNro0w=
+		bjHU292vm6phODWZQGIUsPgkSCo=
 		</data>
 		<key>Frameworks/MJExtension.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -130,7 +130,7 @@
 		</data>
 		<key>Frameworks/MJRefresh.framework/MJRefresh</key>
 		<data>
-		tVvKzRmtr5VRTn4CrGPQ67c/IQA=
+		rjOmkZg5EMAJ272vNt8gxY/6sPg=
 		</data>
 		<key>Frameworks/MJRefresh.framework/MJRefresh.bundle/arrow@2x.png</key>
 		<data>
@@ -204,7 +204,7 @@
 		</data>
 		<key>Frameworks/Masonry.framework/Masonry</key>
 		<data>
-		JkawxkMu6xextuN1kh4DBA0O/L4=
+		74QP54z7bOfmVQtE+bNLEefSCFo=
 		</data>
 		<key>Frameworks/Masonry.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -216,7 +216,7 @@
 		</data>
 		<key>Frameworks/SDAutoLayout.framework/SDAutoLayout</key>
 		<data>
-		cESFJe194ER+ymU4GjMyhpgZG0Q=
+		k3uIco1P7M0BNpNrVopO9ce87kA=
 		</data>
 		<key>Frameworks/SDAutoLayout.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -228,7 +228,7 @@
 		</data>
 		<key>Frameworks/SDWebImage.framework/SDWebImage</key>
 		<data>
-		+rIiPfMOlJcGaWQzJWyiO4JCQAQ=
+		jiXcjAwfys+lNc0zW0C1WVLsU7U=
 		</data>
 		<key>Frameworks/SDWebImage.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -240,7 +240,7 @@
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD</key>
 		<data>
-		I7Sd4gtUWmJdfkEYbkXmMBwxRRM=
+		J/r63Q1R6IqLeUJIu/xBPYgBg+A=
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png</key>
 		<data>
@@ -300,7 +300,7 @@
 		</data>
 		<key>Frameworks/UITextView_Placeholder.framework/UITextView_Placeholder</key>
 		<data>
-		UIStlQckVlxscHQOA/1wLc+9Pws=
+		cDj+ZD3Ako5MFOc5du0uk7lDDnY=
 		</data>
 		<key>Frameworks/UITextView_Placeholder.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -312,7 +312,7 @@
 		</data>
 		<key>Frameworks/YYCache.framework/YYCache</key>
 		<data>
-		8GtQ3vKGVivfk4YE+q98Su1ue7s=
+		IV7uqKbviI5dj61YOB0xJNYOUN8=
 		</data>
 		<key>Frameworks/YYCache.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -324,7 +324,7 @@
 		</data>
 		<key>Frameworks/YYCategories.framework/YYCategories</key>
 		<data>
-		X/nIFmlYSQVerukbGlL9MXUzyP4=
+		pzOIhGl/XMsQzVU3UpMWq3CopYU=
 		</data>
 		<key>Frameworks/YYCategories.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -332,15 +332,15 @@
 		</data>
 		<key>HomeVC.nib/objects-11.0+.nib</key>
 		<data>
-		MJGEimmmlJVnebGDz/JG/NUpZDQ=
+		S5bX/kQjW3DCRJvQjNw/7RmGUgI=
 		</data>
 		<key>HomeVC.nib/runtime.nib</key>
 		<data>
-		Zp0tXeZvS+pjfPIOIbqdSgNxheg=
+		p6PpAy+Iecbk492XIs+93tTh9hU=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		nQuv0WVLrd+xGtavmWf6YgW0xxw=
+		GD9rQHXrLCwLCRfkeD2Bb8A/sx8=
 		</data>
 		<key>LICENSE</key>
 		<data>
@@ -542,11 +542,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fgaUSJG4ufkBmoq6ViANEkwIozw=
+			0+YHaEmKJDfj3v0dwXVEXnFFdBs=
 			</data>
 			<key>hash2</key>
 			<data>
-			DiNyQhP7w3oeuOuYAs5028HApKJI87nY4U4tdvjzKgQ=
+			Tre+PXrcNBvSLtWTCBhb7dLeA/iqTcwB76esPhuiCqs=
 			</data>
 		</dict>
 		<key>Frameworks/AFNetworking.framework/Info.plist</key>
@@ -575,11 +575,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			M2TuMf59PkK6ttS7/oiM4ikVa8s=
+			MK6ospiCWEz3sbGXEYu+KhyM7SI=
 			</data>
 			<key>hash2</key>
 			<data>
-			4KK3l5dEGBm7QzZg+G4EZwrChqLJiG0igM3CnozNWw8=
+			6U73K0wN6TT1y3vZP2tJEtaL6Ht8noFZPdhnTcvm0Pk=
 			</data>
 		</dict>
 		<key>Frameworks/AxcAE_TabBar.framework/Info.plist</key>
@@ -608,11 +608,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			r12+/EM1KfGAStwNtV8kuDCG8xM=
+			8NUjVHO1AUVzbjpy82TPA/I2Bv4=
 			</data>
 			<key>hash2</key>
 			<data>
-			1F+KVs9iChCknuAD0cenv9hoXDAMUhRcMRg+rzwrClE=
+			jTFkLysTLCQJPvUWF8B+Tr4mXjH/V9gmnGSbzhPWiK4=
 			</data>
 		</dict>
 		<key>Frameworks/IQKeyboardManager.framework/Info.plist</key>
@@ -652,11 +652,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mN4owE3da2S09CWNTJlb4AoSJJk=
+			Zf1+PtjfDdmfpzAR9H70pILiG2Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			INmYWwamkN6IX4j0yFbFXe5SGJEY9bQHpTGns48zsDg=
+			FUXmUPsm5Omt+s2lwfftWa8zwmtxfHHT8lGFtVx6ewU=
 			</data>
 		</dict>
 		<key>Frameworks/MBProgressHUD.framework/_CodeSignature/CodeResources</key>
@@ -685,11 +685,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3tU3EwRiqScX09Nc7XWtiZNro0w=
+			bjHU292vm6phODWZQGIUsPgkSCo=
 			</data>
 			<key>hash2</key>
 			<data>
-			A3d2T76OBRZFtXq8fTZacyxDN0ov6xJC1HFRsu/Y+QY=
+			YZD69112vs3r4cG+cpe6yAxs7Eri4HybYez2uJ/GE6c=
 			</data>
 		</dict>
 		<key>Frameworks/MJExtension.framework/_CodeSignature/CodeResources</key>
@@ -718,11 +718,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tVvKzRmtr5VRTn4CrGPQ67c/IQA=
+			rjOmkZg5EMAJ272vNt8gxY/6sPg=
 			</data>
 			<key>hash2</key>
 			<data>
-			SJIDUsNySrwFFr8kFmcyOFGkYNLNeJsJNJCNfilBMeA=
+			K5p8S1iWyYvAKQQGuVZVC9Cm7aQ7TQH//EK9K1R3KdY=
 			</data>
 		</dict>
 		<key>Frameworks/MJRefresh.framework/MJRefresh.bundle/arrow@2x.png</key>
@@ -851,11 +851,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JkawxkMu6xextuN1kh4DBA0O/L4=
+			74QP54z7bOfmVQtE+bNLEefSCFo=
 			</data>
 			<key>hash2</key>
 			<data>
-			BrbNNCU7W3VrwkNvoIaxetKTXKlPx40QnMZPd3vK0lM=
+			qj91IEH95EEM7dAnRwoo9x/6jFFmnG6zqsG/UGRbfIM=
 			</data>
 		</dict>
 		<key>Frameworks/Masonry.framework/_CodeSignature/CodeResources</key>
@@ -884,11 +884,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cESFJe194ER+ymU4GjMyhpgZG0Q=
+			k3uIco1P7M0BNpNrVopO9ce87kA=
 			</data>
 			<key>hash2</key>
 			<data>
-			CHONwzvQUzvV+yoM1v5AWXCBjf9MmEDzV5w2zV21UQw=
+			mD8QpaC1CRv5w61Rp/DSWmLflMOzlWkCpw1iYAZFynI=
 			</data>
 		</dict>
 		<key>Frameworks/SDAutoLayout.framework/_CodeSignature/CodeResources</key>
@@ -917,11 +917,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+rIiPfMOlJcGaWQzJWyiO4JCQAQ=
+			jiXcjAwfys+lNc0zW0C1WVLsU7U=
 			</data>
 			<key>hash2</key>
 			<data>
-			6rkE1xjdaaZuAUM2KknAVzcmu4rjw0Obm6hD6/52RaA=
+			VASkckFFHPMiRQdGfDsirO37O3mEkppH02u2ZKRyZCI=
 			</data>
 		</dict>
 		<key>Frameworks/SDWebImage.framework/_CodeSignature/CodeResources</key>
@@ -950,11 +950,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			I7Sd4gtUWmJdfkEYbkXmMBwxRRM=
+			J/r63Q1R6IqLeUJIu/xBPYgBg+A=
 			</data>
 			<key>hash2</key>
 			<data>
-			74309V/dVhf4tPzYWVYdGIxPCpRf8rKb3dpHbXYOIOI=
+			mRrP8HyN1lineZv2HKMgCCnjIN4Ta1b1RQTXStdJpu4=
 			</data>
 		</dict>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png</key>
@@ -1115,11 +1115,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UIStlQckVlxscHQOA/1wLc+9Pws=
+			cDj+ZD3Ako5MFOc5du0uk7lDDnY=
 			</data>
 			<key>hash2</key>
 			<data>
-			j8tN9bhEENvXlnuSecESHZ6AkPcfur9QTYbTnXaVExs=
+			3ZMLxjn3q7C7NA/yk1PIDhfpXPRKb/T6SxotISSlUsw=
 			</data>
 		</dict>
 		<key>Frameworks/UITextView_Placeholder.framework/_CodeSignature/CodeResources</key>
@@ -1148,11 +1148,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8GtQ3vKGVivfk4YE+q98Su1ue7s=
+			IV7uqKbviI5dj61YOB0xJNYOUN8=
 			</data>
 			<key>hash2</key>
 			<data>
-			73Wu4nyox3O66IBY3V1ng4OPg8V+LQ6yYUGC//I2TI8=
+			kT/yaaRcbIult9NOVOGXqhwtqS+zgU+38Spwx37P9+E=
 			</data>
 		</dict>
 		<key>Frameworks/YYCache.framework/_CodeSignature/CodeResources</key>
@@ -1181,11 +1181,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			X/nIFmlYSQVerukbGlL9MXUzyP4=
+			pzOIhGl/XMsQzVU3UpMWq3CopYU=
 			</data>
 			<key>hash2</key>
 			<data>
-			JCM4nBTh+EdUiJNVDUXyk+yTh7EjbslXx0tSwbyq4rU=
+			am/XHQY8Zb7UK5RMSUAAm+MYbap+1g0brQLthcEFE/Q=
 			</data>
 		</dict>
 		<key>Frameworks/YYCategories.framework/_CodeSignature/CodeResources</key>
@@ -1203,22 +1203,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MJGEimmmlJVnebGDz/JG/NUpZDQ=
+			S5bX/kQjW3DCRJvQjNw/7RmGUgI=
 			</data>
 			<key>hash2</key>
 			<data>
-			sG9aSSALpp7pbjOsUb4TB5wayR4FeBKnIV6sGhI17e8=
+			j3352olP2P4+bI5z0aVXNSySb2Po+DQdUERt8umO3vc=
 			</data>
 		</dict>
 		<key>HomeVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Zp0tXeZvS+pjfPIOIbqdSgNxheg=
+			p6PpAy+Iecbk492XIs+93tTh9hU=
 			</data>
 			<key>hash2</key>
 			<data>
-			tvOyFLhxLePjR0v7Of4X8AHZz4LacjYaLJHJ8bwclVY=
+			CtzP2nWfNgB2uaHeYnBqmVyWb7wO1mCnpRtdJwt5qoE=
 			</data>
 		</dict>
 		<key>LICENSE</key>
