@@ -156,6 +156,12 @@
 
 - (void)ytSliderView:(YTSliderView *)view didChangePercent:(CGFloat)percent{
 //    _currentPercent = roundf(percent * _totalValue);
+    
+    if ([self.delegate respondsToSelector:@selector(unitSliderView:didChangePercent:)] && [self.thumbTitle isEqualToString:@"温度"]) {
+        NSInteger tem = roundf(_slider.currentPercent * _totalValue) + 29;
+        [self.delegate unitSliderView:self didChangePercent:tem];
+    }
+        
 }
 
 - (void)ytSliderViewDidBeginDrag:(YTSliderView *)view{
@@ -179,11 +185,8 @@
         if (tem + 29 > 51) {
             return;
         }
-        NSLog(@"tem=%f",tem);
         [self bluePercent:tem];
-        
-        
-        
+                
     }else{
         if (_slider.currentPercent * _totalValue >= _maxCouldSliderNumber) {
             return;

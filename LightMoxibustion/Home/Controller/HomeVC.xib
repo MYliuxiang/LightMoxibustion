@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC">
             <connections>
                 <outlet property="bgCE" destination="s5c-Yz-sLj" id="biU-ne-1HR"/>
-                <outlet property="blueB" destination="0Lc-IX-KWq" id="7F6-Tb-Uqm"/>
+                <outlet property="blueI" destination="JPi-ij-DuG" id="owi-7a-yzt"/>
                 <outlet property="blueStateI" destination="WqH-XL-IJc" id="3tZ-WX-ELE"/>
                 <outlet property="laserB" destination="XMI-wo-Y9u" id="dzX-qN-65Y"/>
                 <outlet property="laserStateI" destination="MMJ-ku-BGD" id="nG3-mL-VFT"/>
@@ -83,39 +83,32 @@
                     </constraints>
                     <state key="normal" image="laser_bmp"/>
                 </button>
-                <button opaque="NO" contentMode="center" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Lc-IX-KWq">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ble_bmp" translatesAutoresizingMaskIntoConstraints="NO" id="JPi-ij-DuG">
                     <rect key="frame" x="290" y="98" width="25" height="25"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="25" id="Uf1-fs-B17"/>
-                        <constraint firstAttribute="height" constant="25" id="u3U-Ec-UJT"/>
+                        <constraint firstAttribute="width" constant="25" id="ofe-cm-gpp"/>
+                        <constraint firstAttribute="height" constant="25" id="qSH-XO-ICI"/>
                     </constraints>
-                    <color key="tintColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" image="ble_bmp">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="blueAC:" destination="-1" eventType="touchUpInside" id="b9O-hw-mna"/>
-                    </connections>
-                </button>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" red="0.53333333333333333" green="0.59607843137254901" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="0Lc-IX-KWq" secondAttribute="trailing" constant="60" id="3iC-zk-xXj"/>
                 <constraint firstItem="XMI-wo-Y9u" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="DBz-CR-V4M"/>
-                <constraint firstItem="0Lc-IX-KWq" firstAttribute="top" secondItem="RfC-Yl-dwO" secondAttribute="bottom" constant="20" id="GYs-53-Eab"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="4G5-5t-U18" secondAttribute="trailing" id="Kzl-6p-s5Z"/>
                 <constraint firstItem="RfC-Yl-dwO" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="LJe-Jd-NkO"/>
                 <constraint firstItem="4G5-5t-U18" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="MR1-9y-MrV"/>
                 <constraint firstItem="4G5-5t-U18" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Rs6-UO-LWQ"/>
                 <constraint firstItem="MMJ-ku-BGD" firstAttribute="centerY" secondItem="XMI-wo-Y9u" secondAttribute="centerY" id="Sug-Vc-Mx4"/>
-                <constraint firstItem="WqH-XL-IJc" firstAttribute="centerY" secondItem="0Lc-IX-KWq" secondAttribute="centerY" id="XTA-yh-kkA"/>
                 <constraint firstItem="RfC-Yl-dwO" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="aMV-nv-yGp"/>
                 <constraint firstItem="MMJ-ku-BGD" firstAttribute="leading" secondItem="XMI-wo-Y9u" secondAttribute="trailing" id="dK6-0y-ZGI"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="JPi-ij-DuG" secondAttribute="trailing" constant="60" id="jzB-yx-bBx"/>
+                <constraint firstItem="WqH-XL-IJc" firstAttribute="leading" secondItem="JPi-ij-DuG" secondAttribute="trailing" id="meP-0C-2tv"/>
+                <constraint firstItem="JPi-ij-DuG" firstAttribute="top" secondItem="RfC-Yl-dwO" secondAttribute="bottom" constant="20" id="oGk-dn-n2d"/>
                 <constraint firstItem="XMI-wo-Y9u" firstAttribute="top" secondItem="RfC-Yl-dwO" secondAttribute="bottom" constant="20" id="onZ-c5-V4t"/>
+                <constraint firstItem="WqH-XL-IJc" firstAttribute="centerY" secondItem="JPi-ij-DuG" secondAttribute="centerY" id="qHG-Bk-b3w"/>
                 <constraint firstAttribute="bottom" secondItem="4G5-5t-U18" secondAttribute="bottom" constant="-100" id="s5c-Yz-sLj"/>
                 <constraint firstItem="RfC-Yl-dwO" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="x2q-eI-JGB"/>
-                <constraint firstItem="WqH-XL-IJc" firstAttribute="leading" secondItem="0Lc-IX-KWq" secondAttribute="trailing" id="y5O-7u-y6g"/>
             </constraints>
             <point key="canvasLocation" x="-434.39999999999998" y="88.669950738916256"/>
         </view>

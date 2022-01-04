@@ -32,6 +32,10 @@
 
 @property(nonatomic,strong) NSTimer *quantityAnimationTimer;
 
+@property(nonatomic,assign) BOOL chargeRun;
+
+
+
 @property(nonatomic,strong) UILabel *quantityTemL;
 @property(nonatomic,strong) UILabel *temTipL;
 
@@ -54,12 +58,14 @@
 @property (nonatomic, strong) MLMProgressView *progress;
 
 @property (nonatomic, strong) UIView *meumView;
-@property (weak, nonatomic) IBOutlet UIButton *blueB;
+@property (weak, nonatomic) IBOutlet UIImageView *blueI;
+
+
 @property (weak, nonatomic) IBOutlet UIImageView *blueStateI;
 @property (weak, nonatomic) IBOutlet UIButton *laserB;
 
 @property (nonatomic, strong) LxView *laserConnectedV;
-@property (nonatomic, strong) LxView *blueConnectedV;
+@property (nonatomic, strong) UIView *blueConnectedV;
 
 @property (nonatomic, assign) BOOL autoDisconnect;
 
@@ -77,6 +83,8 @@
 
 @property (nonatomic, assign) BOOL isLower;
 
+@property(nonatomic, assign) BOOL canBlue;
+
 
 
 
@@ -87,6 +95,16 @@
 @end
 
 @implementation HomeVC
+
+//- (void)viewDidAppear:(BOOL)animated
+//{
+//    [super viewDidAppear:animated];
+//    if (self.canBlue) {
+//        if ([HLBLEManager sharedInstance].connectedPerpheral == nil) {
+//            [self scanDevice];
+//        }
+//    }
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -124,6 +142,7 @@
                                                    userInfo:nil
                                                   repeats:YES];
     [self.chargeAnimationTimer setFireDate:[NSDate distantFuture]];
+    self.chargeRun = NO;
     
     self.temAnimationTimer =  [NSTimer scheduledTimerWithTimeInterval:0.5
                                                    target:self
@@ -147,8 +166,11 @@
 #pragma mark ----------- LxUnitSliderDelegate -----------
 - (void)unitSliderView:(LxUnitSlider *)slider didChangePercent:(NSInteger)percent
 {
-
-    
+    if (percent > 45) {
+        [self.progress configSetTem:percent withTintColor:[UIColor yellowColor]];
+    }else{
+        [self.progress configSetTem:percent withTintColor:[UIColor blackColor]];
+    }    
 }
 
 #pragma mark ----------- 动画 -----------
@@ -175,11 +197,8 @@ static int imageindex = 0;
 }
 
 - (void)animationAC{
-  
     self.blueStateI.hidden = !self.blueStateI.hidden;
 }
-
-
 
 #pragma mark --------------蓝牙回调处理--------------
 - (void)setBlueCallBack{
@@ -187,6 +206,7 @@ static int imageindex = 0;
     manager.didDisconnectBlock = ^(CBPeripheral *peripheral, NSError *error) {
         NSLog(@"蓝牙断开连接了 %@",error);
         [self hanleConnectedState];
+        
     };
     manager.receiveDataBlock = ^(NSData *data) {
         int cmd = [HandleData verificationData:data];
@@ -353,12 +373,19 @@ static int imageindex = 0;
                 ChargeStateModel *stateModel = [[ChargeStateModel alloc] initWithData:data];
 //                当CHG为0 与SATANDBY 为1时表示正在充电，CHG为1与STANDBY为0表示充电完成。其它情况表示没有插入充电器。
                 if (stateModel.CHG == 0 && stateModel.STANDBY == 1) {
-                    [self.chargeAnimationTimer setFireDate:[NSDate date]];
+                    if (!self.chargeRun) {
+                        [self.chargeAnimationTimer setFireDate:[NSDate date]];
+                        self.chargeRun = YES;
+                    }
                 }else{
-                    [self.chargeAnimationTimer setFireDate:[NSDate distantFuture]];
+                    if (self.chargeRun) {
+                        [self.chargeAnimationTimer setFireDate:[NSDate distantFuture]];
+                        self.chargeRun = NO;
+                    }
+                    [SendData updateQuantiy];
 
                 }
-                NSLog(@"CHG信号:%d,STANDBY信号:%d",stateModel.CHG,stateModel.STANDBY);
+//                NSLog(@"CHG信号:%d,STANDBY信号:%d",stateModel.CHG,stateModel.STANDBY);
             }
                 break;
                 
@@ -392,6 +419,7 @@ static int imageindex = 0;
         switch (central.state) {
             case CBManagerStatePoweredOn:
                 info = @"蓝牙已打开，并且可用";
+                self.canBlue = YES;
                 [self scanDevice];
                 break;
                 
@@ -567,13 +595,14 @@ static int imageindex = 0;
 #pragma mark ----------- 发送心跳包 -----------
 - (void)sendHeartBeat:(NSTimer *)timer{
     [SendData sendHeartBeat];
+    [SendData getChargeState];
+
 }
 
 
 - (IBAction)blueAC:(id)sender {
     self.menumIsHidden = !self.menumIsHidden;
     [self annimationMenumIsHidden:self.menumIsHidden];
-    
 }
 
 #pragma mark ----------- 链接成功之后初始化蓝牙 -----------
@@ -590,12 +619,6 @@ static int imageindex = 0;
     [SendData getCurrentTem];
     
     [SendData getCurrentSetTime];
-    
-    [SendData getChargeState];
-
-    
-    
-            
 
 }
 
@@ -605,17 +628,15 @@ static int imageindex = 0;
         //断开链接
                 
         _blueConnectedV.hidden = YES;
-
 //        self.highTemTip = NO;
         self.rxcharacter = nil;
         self.txcharacter = nil;
         [self.timer setFireDate:[NSDate distantFuture]];
-        if (_autoDisconnect) {
+        if (self.autoDisconnect) {
             UIApplicationState state = [UIApplication sharedApplication].applicationState;
             if(state == UIApplicationStateActive){
                 [self scanDevice];
-                    
-             }
+            }
         }
         
         self.blueStateI.image = [[UIImage imageNamed:@"text_no_connect"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
@@ -638,6 +659,7 @@ static int imageindex = 0;
         [self.animationTimer setFireDate:[NSDate date]];
         
         [self.chargeAnimationTimer setFireDate:[NSDate distantFuture]];
+        self.chargeRun = NO;
         self.quantityI.image = [UIImage imageNamed:@"bl3"];
         
         [self.temAnimationTimer setFireDate:[NSDate distantFuture]];
@@ -745,7 +767,7 @@ static int imageindex = 0;
     [self.view addSubview:_redSlider];
     _redSlider.left = kScreenWidth / 2.0 + 80 * WidthScale / 2;
     
-    _meumView = [[UIView alloc] initWithFrame:CGRectMake(kScreenWidth - 135 * WidthScale, self.blueB.bottom + 20 * WidthScale, 135 * WidthScale, 193 * WidthScale)];
+    _meumView = [[UIView alloc] initWithFrame:CGRectMake(kScreenWidth - 135 * WidthScale, self.blueI.bottom + 20 * WidthScale, 135 * WidthScale, 193 * WidthScale)];
     _meumView.backgroundColor = [UIColor colorWithHexString:@"#FAFAFA"];
     _meumView.layer.cornerRadius = 2;
     [self.view addSubview:_meumView];
@@ -780,16 +802,16 @@ static int imageindex = 0;
     _blueConnectedV.layer.masksToBounds = YES;
     _blueConnectedV.backgroundColor = [[UIColor colorWithHexString:@"#00ff00"] colorWithAlphaComponent:0.3];
     _blueConnectedV.hidden = YES;
-    [self.blueB addSubview:_blueConnectedV];
+    [self.blueI addSubview:_blueConnectedV];
     
-    _blueTapV = [[UIView alloc] initWithFrame:CGRectMake(self.blueB.left, self.blueB.top - 5, 100, 30)];
+    _blueTapV = [[UIView alloc] initWithFrame:CGRectMake(self.blueI.left - 10, self.blueI.top - 10, 110, 40)];
     _blueTapV.backgroundColor = [UIColor clearColor];
     [self.view insertSubview:_blueTapV belowSubview:self.blueStateI];
     [_blueTapV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.blueB.mas_left);
+        make.left.equalTo(self.blueI.mas_left);
         make.right.equalTo(self.blueStateI.mas_right);
         make.height.mas_equalTo(30);
-        make.centerY.equalTo(self.blueB.mas_centerY);
+        make.centerY.equalTo(self.blueI.mas_centerY);
 
     }];
     
