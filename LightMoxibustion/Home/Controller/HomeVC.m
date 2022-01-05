@@ -497,10 +497,7 @@ static int imageindex = 0;
         NSString *lastMac = [NSString stringWithFormat:@"%@",[LxUserDefaults objectForKey:MACADRESS]];
         if ([lastMac isEqualToString:per.macAddress] && weakManager.connectedPerpheral == nil && !self.autoDisconnect ) {
                
-            UIApplicationState state = [UIApplication sharedApplication].applicationState;
-            if(state == UIApplicationStateActive){
                 [self connectDevice:per];
-             }
         }
 
         if (self.deviceArray.count == 0) {
@@ -632,11 +629,8 @@ static int imageindex = 0;
         self.rxcharacter = nil;
         self.txcharacter = nil;
         [self.timer setFireDate:[NSDate distantFuture]];
-        if (self.autoDisconnect) {
-            UIApplicationState state = [UIApplication sharedApplication].applicationState;
-            if(state == UIApplicationStateActive){
-                [self scanDevice];
-            }
+        if (!self.autoDisconnect) {
+            [self scanDevice];
         }
         
         self.blueStateI.image = [[UIImage imageNamed:@"text_no_connect"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
