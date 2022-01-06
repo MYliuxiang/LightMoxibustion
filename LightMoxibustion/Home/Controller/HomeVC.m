@@ -299,7 +299,10 @@ static int imageindex = 0;
 //                if (workCuountdown.second == 0) {
 //                    [SendData getCurrentSetTime];
 //                }
-                [self.progress configWorkDownSencond:workCuountdown.second withTintColor:[UIColor blackColor]];
+                if(workCuountdown.second != 0){
+                    [self.progress configWorkDownSencond:workCuountdown.second withTintColor:[UIColor blackColor]];
+
+                }
 //                NSLog(@"倒计时%d",workCuountdown.second);
                 
                 
@@ -353,7 +356,7 @@ static int imageindex = 0;
                     [self.temAnimationTimer setFireDate:[NSDate distantFuture]];
                 }
                 
-                NSLog(@"当前设置温度：%d",currentTem.currentTem);
+//                NSLog(@"当前设置温度：%d",currentTem.currentTem);
 //                NSLog(@"highTemTip：%d",self.highTemTip);
 
             }
@@ -401,7 +404,7 @@ static int imageindex = 0;
                 CurrentSetTimeModel *setTime = [[CurrentSetTimeModel alloc] initWithData:data];
                 [self.progress configSetTime:setTime.second];
                 [self.progress configWorkDownSencond:setTime.second * 60 withTintColor:[UIColor blueColor]];
-//                NSLog(@"设置时间%d",setTime.second);             
+                NSLog(@"设置时间%d",setTime.second);
             }
                 break;
                 
