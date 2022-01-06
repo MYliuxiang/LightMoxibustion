@@ -1189,7 +1189,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lx.LightMoxibustion1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lx.LightMoxibustion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = blueHoc;
 				TARGETED_DEVICE_FAMILY = "1,2";
