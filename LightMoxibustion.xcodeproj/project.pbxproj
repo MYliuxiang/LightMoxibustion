@@ -99,6 +99,7 @@
 		299157492756453400D17F66 /* LxUnitSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 299157472756453400D17F66 /* LxUnitSlider.m */; };
 		29A560C62759FF840024847F /* NumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A560C52759FF840024847F /* NumberView.m */; };
 		29A560C9275A0E610024847F /* TimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A560C8275A0E610024847F /* TimeView.m */; };
+		29A57DF227881777003CBAF7 /* Lxtimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A57DF127881777003CBAF7 /* Lxtimer.m */; };
 		29B884A127795A0E006712FF /* DisconnectedAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B884A027795A0E006712FF /* DisconnectedAlert.m */; };
 		29B884A327795A1F006712FF /* DisconnectedAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29B884A227795A1F006712FF /* DisconnectedAlert.xib */; };
 		29E42C9D27576EF600A8973A /* YTSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E42C9B27576EF600A8973A /* YTSliderView.m */; };
@@ -301,6 +302,8 @@
 		29A560C52759FF840024847F /* NumberView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberView.m; sourceTree = "<group>"; };
 		29A560C7275A0E610024847F /* TimeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeView.h; sourceTree = "<group>"; };
 		29A560C8275A0E610024847F /* TimeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeView.m; sourceTree = "<group>"; };
+		29A57DF027881777003CBAF7 /* Lxtimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lxtimer.h; sourceTree = "<group>"; };
+		29A57DF127881777003CBAF7 /* Lxtimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lxtimer.m; sourceTree = "<group>"; };
 		29B8849F27795A0E006712FF /* DisconnectedAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisconnectedAlert.h; sourceTree = "<group>"; };
 		29B884A027795A0E006712FF /* DisconnectedAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisconnectedAlert.m; sourceTree = "<group>"; };
 		29B884A227795A1F006712FF /* DisconnectedAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisconnectedAlert.xib; sourceTree = "<group>"; };
@@ -428,6 +431,8 @@
 				29739675274CC9780030613D /* BANetManager */,
 				29739700274CCE6D0030613D /* HandTool.h */,
 				29739701274CCE6D0030613D /* HandTool.m */,
+				29A57DF027881777003CBAF7 /* Lxtimer.h */,
+				29A57DF127881777003CBAF7 /* Lxtimer.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -979,6 +984,7 @@
 				2975A9D0275DA98F0097D72C /* CurrentLaserModel.m in Sources */,
 				29A560C62759FF840024847F /* NumberView.m in Sources */,
 				29A560C9275A0E610024847F /* TimeView.m in Sources */,
+				29A57DF227881777003CBAF7 /* Lxtimer.m in Sources */,
 				2975A9CE275DA98F0097D72C /* TemperatureModel.m in Sources */,
 				297396B9274CCAC40030613D /* UIWindow+JXSafeArea.m in Sources */,
 				29FCE67E2754C69C003B0E7C /* MLMWaveWaterView.m in Sources */,
@@ -1154,9 +1160,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V5HRKRDUCX;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = MDJMU7FU97;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LightMoxibustion/LightMoxibustion.pch";
 				INFOPLIST_FILE = LightMoxibustion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1165,9 +1171,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lx.LightMoxibustion4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lx.LightMoxibustion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = blueDev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
