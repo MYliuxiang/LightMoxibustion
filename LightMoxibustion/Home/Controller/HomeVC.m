@@ -14,6 +14,7 @@
 #import "ConnectedVC.h"
 #import "LxView.h"
 #import "DisconnectedAlert.h"
+#import "Lxtimer.h"
 
 
 #define PROGRESS_HEIGHT 200
@@ -24,13 +25,13 @@
 @interface HomeVC ()<LxUnitSliderDelegate>
 
 @property (strong, nonatomic)   NSMutableArray              *deviceArray;  /**< 蓝牙设备个数 */
-@property(nonatomic,strong) NSTimer *timer;
-@property(nonatomic,strong) NSTimer *animationTimer;
-@property(nonatomic,strong) NSTimer *chargeAnimationTimer;
+@property(nonatomic,strong) Lxtimer *timer;
+@property(nonatomic,strong) Lxtimer *animationTimer;
+@property(nonatomic,strong) Lxtimer *chargeAnimationTimer;
 
-@property(nonatomic,strong) NSTimer *temAnimationTimer;
+@property(nonatomic,strong) Lxtimer *temAnimationTimer;
 
-@property(nonatomic,strong) NSTimer *quantityAnimationTimer;
+@property(nonatomic,strong) Lxtimer *quantityAnimationTimer;
 
 @property(nonatomic,assign) BOOL chargeRun;
 
@@ -119,15 +120,15 @@
     [self checkBluethState];
     //蓝牙模块
     [self scanDevice];
-    self.timer =  [NSTimer scheduledTimerWithTimeInterval:1
+    self.timer =  [Lxtimer scheduledTimerWithTimeInterval:1
                                                    target:self
                                                  selector:@selector(sendHeartBeat:)
                                                    userInfo:nil
                                                   repeats:YES];
-    [self.timer setFireDate:[NSDate distantFuture]];
+    [self.timer stop];
     
     
-    self.animationTimer =  [NSTimer scheduledTimerWithTimeInterval:0.35
+    self.animationTimer =  [Lxtimer scheduledTimerWithTimeInterval:0.35
                                                    target:self
                                                  selector:@selector(animationAC)
                                                    userInfo:nil
@@ -136,28 +137,28 @@
     
     
 
-    self.chargeAnimationTimer =  [NSTimer scheduledTimerWithTimeInterval:0.5
+    self.chargeAnimationTimer =  [Lxtimer scheduledTimerWithTimeInterval:0.5
                                                    target:self
                                                  selector:@selector(chargeAnimation)
                                                    userInfo:nil
                                                   repeats:YES];
-    [self.chargeAnimationTimer setFireDate:[NSDate distantFuture]];
-    self.chargeRun = NO;
+    [self.chargeAnimationTimer stop];
+//    [self.chargeAnimationTimer setFireDate:[NSDate distantFuture]];
     
-    self.temAnimationTimer =  [NSTimer scheduledTimerWithTimeInterval:0.5
+    self.temAnimationTimer =  [Lxtimer scheduledTimerWithTimeInterval:0.5
                                                    target:self
                                                  selector:@selector(temAnimation)
                                                    userInfo:nil
                                                   repeats:YES];
-    [self.temAnimationTimer setFireDate:[NSDate distantFuture]];
+    [self.temAnimationTimer stop];
     
     
-    self.quantityAnimationTimer =  [NSTimer scheduledTimerWithTimeInterval:0.5
+    self.quantityAnimationTimer =  [Lxtimer scheduledTimerWithTimeInterval:0.5
                                                    target:self
                                                  selector:@selector(quantityAnimation)
                                                    userInfo:nil
                                                   repeats:YES];
-    [self.quantityAnimationTimer setFireDate:[NSDate distantFuture]];
+    [self.quantityAnimationTimer stop];
 
     [self setBlueCallBack];
 
@@ -249,7 +250,7 @@ static int imageindex = 0;
                     case 0:
                     {
                         self.quantityI.image = [UIImage imageNamed:@"bl0"];
-                        [self.quantityAnimationTimer setFireDate:[NSDate date]];
+                        [self.quantityAnimationTimer start];
 
                         self.isLower = YES;
                     }
@@ -257,7 +258,8 @@ static int imageindex = 0;
                     case 1:
                     {
                         self.quantityI.image = [UIImage imageNamed:@"bl1"];
-                        [self.quantityAnimationTimer setFireDate:[NSDate distantFuture]];
+                        [self.quantityAnimationTimer stop];
+                        self.quantityTemL.hidden = YES;
                         self.isLower = NO;
 
                     }
@@ -265,7 +267,9 @@ static int imageindex = 0;
                     case 2:
                     {
                         self.quantityI.image = [UIImage imageNamed:@"bl2"];
-                        [self.quantityAnimationTimer setFireDate:[NSDate distantFuture]];
+                        [self.quantityAnimationTimer stop];
+                        self.quantityTemL.hidden = YES;
+
                         self.isLower = NO;
 
                     }
@@ -273,7 +277,9 @@ static int imageindex = 0;
                     case 3:
                     {
                         self.quantityI.image = [UIImage imageNamed:@"bl3"];
-                        [self.quantityAnimationTimer setFireDate:[NSDate distantFuture]];
+                        [self.quantityAnimationTimer stop];
+                        self.quantityTemL.hidden = YES;
+
                         self.isLower = NO;
                      
 
@@ -347,13 +353,14 @@ static int imageindex = 0;
                 if (currentTem.currentTem > 45) {
                     [self.progress configSetTem:currentTem.currentTem withTintColor:[UIColor yellowColor]];
                     if(!self.isLower){
-                      [self.temAnimationTimer setFireDate:[NSDate date]];
+                      [self.temAnimationTimer start];
                     }
                     
 
                 }else{
                     [self.progress configSetTem:currentTem.currentTem withTintColor:[UIColor blackColor]];
-                    [self.temAnimationTimer setFireDate:[NSDate distantFuture]];
+                    [self.temAnimationTimer stop];
+                    self.temTipL.hidden = YES;
                 }
                 
 //                NSLog(@"当前设置温度：%d",currentTem.currentTem);
@@ -376,15 +383,9 @@ static int imageindex = 0;
                 ChargeStateModel *stateModel = [[ChargeStateModel alloc] initWithData:data];
 //                当CHG为0 与SATANDBY 为1时表示正在充电，CHG为1与STANDBY为0表示充电完成。其它情况表示没有插入充电器。
                 if (stateModel.CHG == 0 && stateModel.STANDBY == 1) {
-                    if (!self.chargeRun) {
-                        [self.chargeAnimationTimer setFireDate:[NSDate date]];
-                        self.chargeRun = YES;
-                    }
+                    [self.chargeAnimationTimer start];
                 }else{
-                    if (self.chargeRun) {
-                        [self.chargeAnimationTimer setFireDate:[NSDate distantFuture]];
-                        self.chargeRun = NO;
-                    }
+                    [self.chargeAnimationTimer stop];
                     [SendData updateQuantiy];
 
                 }
@@ -404,7 +405,7 @@ static int imageindex = 0;
                 CurrentSetTimeModel *setTime = [[CurrentSetTimeModel alloc] initWithData:data];
                 [self.progress configSetTime:setTime.second];
                 [self.progress configWorkDownSencond:setTime.second * 60 withTintColor:[UIColor blueColor]];
-                NSLog(@"设置时间%d",setTime.second);
+//                NSLog(@"设置时间%d",setTime.second);
             }
                 break;
                 
@@ -609,7 +610,7 @@ static int imageindex = 0;
 - (void)initBlue{
     //初试化蓝牙
     [SendData sendHeartBeat];
-    [self.timer setFireDate:[NSDate date]];
+    [self.timer start];
     [SendData updateQuantiy];
     
     [SendData getCurrentLaser];
@@ -631,7 +632,7 @@ static int imageindex = 0;
 //        self.highTemTip = NO;
         self.rxcharacter = nil;
         self.txcharacter = nil;
-        [self.timer setFireDate:[NSDate distantFuture]];
+        [self.timer stop];
         if (!self.autoDisconnect) {
             [self scanDevice];
         }
@@ -646,21 +647,22 @@ static int imageindex = 0;
         
         [self.progress configSetTem:-1 withTintColor:[UIColor blackColor]];
         [self.progress configCurrentTem:-1];
-        [self.progress configWorkDownSencond:0 withTintColor:[UIColor blueColor]];
-        [self.progress configSetTime:0];
+        [self.progress configWorkDownSencond:600 withTintColor:[UIColor blueColor]];
+        [self.progress configSetTime:10];
+        [self.progress configIsTouch:NO];
         
         self.progress.userInteractionEnabled = NO;
         self.redSlider.userInteractionEnabled = NO;
         self.rateSlider.userInteractionEnabled = NO;
         self.temSlider.userInteractionEnabled = NO;
-        [self.animationTimer setFireDate:[NSDate date]];
+        [self.animationTimer start];
         
-        [self.chargeAnimationTimer setFireDate:[NSDate distantFuture]];
+        [self.chargeAnimationTimer stop];
         self.chargeRun = NO;
         self.quantityI.image = [UIImage imageNamed:@"bl3"];
         
-        [self.temAnimationTimer setFireDate:[NSDate distantFuture]];
-        [self.quantityAnimationTimer setFireDate:[NSDate distantFuture]];
+        [self.temAnimationTimer stop];
+        [self.quantityAnimationTimer stop];
 
         self.temTipL.hidden = YES;
         self.quantityTemL.hidden = YES;
@@ -680,7 +682,7 @@ static int imageindex = 0;
         self.redSlider.userInteractionEnabled = YES;
         self.rateSlider.userInteractionEnabled = YES;
         self.temSlider.userInteractionEnabled = YES;
-        [self.animationTimer setFireDate:[NSDate distantFuture]];
+        [self.animationTimer stop];
         self.blueStateI.hidden = NO;
 
 
