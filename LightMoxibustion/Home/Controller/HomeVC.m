@@ -161,6 +161,8 @@
     [self.quantityAnimationTimer stop];
 
     [self setBlueCallBack];
+    
+    
 
 }
 
@@ -803,13 +805,13 @@ static int imageindex = 0;
     _blueConnectedV.hidden = YES;
     [self.blueI addSubview:_blueConnectedV];
     
-    _blueTapV = [[UIView alloc] initWithFrame:CGRectMake(self.blueI.left - 10, self.blueI.top - 10, 110, 40)];
+    _blueTapV = [[UIView alloc] initWithFrame:CGRectMake(self.blueI.left - 40, self.blueI.top - 20, 130, 60)];
     _blueTapV.backgroundColor = [UIColor clearColor];
     [self.view insertSubview:_blueTapV belowSubview:self.blueStateI];
     [_blueTapV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.blueI.mas_left);
-        make.right.equalTo(self.blueStateI.mas_right);
-        make.height.mas_equalTo(30);
+        make.left.equalTo(self.blueI.mas_left).offset(-10);
+        make.right.equalTo(self.blueStateI.mas_right).offset(10);
+        make.height.mas_equalTo(50);
         make.centerY.equalTo(self.blueI.mas_centerY);
 
     }];
