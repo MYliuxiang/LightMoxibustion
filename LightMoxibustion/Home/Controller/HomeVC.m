@@ -754,8 +754,15 @@ static int imageindex = 0;
     _temSlider.right = kScreenWidth / 2.0 - 80 * WidthScale / 2;
     
     _temSlider.hightTemTipBlock = ^(int tem) {
+        
+        
         if (tem > 45) {
-            [weakSelf.progress hightTemTip:tem];
+            if(_temSlider.currentPercent + 29 < tem){
+                [weakSelf.progress hightTemTip:tem];
+            }else{
+                [SendData setTemperature:tem];
+            }
+
         }else{
             [SendData setTemperature:tem];
         }
