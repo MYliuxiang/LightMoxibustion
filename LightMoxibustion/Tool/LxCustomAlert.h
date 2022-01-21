@@ -6,6 +6,10 @@
 //  Copyright © 2018年 刘翔. All rights reserved.
 //
 
+/*
+ 弹框基类
+ */
+
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, LxCustomAlertType)

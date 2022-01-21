@@ -5,6 +5,10 @@
 //  Created by flyliu on 2021/12/3.
 //
 
+/*
+ 时间led显示效果
+ */
+
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN

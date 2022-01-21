@@ -5,6 +5,10 @@
 //  Created by 刘翔 on 2021/12/7.
 //
 
+/*
+蓝牙链接控制器
+ */
+
 #import "BaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN

@@ -5,6 +5,10 @@
 //  Created by 刘翔 on 2021/12/17.
 //
 
+/*
+ 忽略点击事件的View
+ */
+
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN

@@ -309,11 +309,6 @@
     
 };
 
-- (LxEmptyView *)nodataView{
-    if (_nodataView == nil) {
-        _nodataView = [LxEmptyView noDataEmptyWith:@"没有数据"];
-    }
-    return _nodataView;
-}
+
 
 @end

@@ -145,7 +145,6 @@ typedef unsigned int U32;
 #import "MBProgressHUD+Add.h"
 #import "UITextView+Placeholder.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
-#import "BANetManager_OC.h"
 #import "NSString+Handel.h"
 #import "LxRefreshFooter.h"
 #import "LxResfreshHeader.h"

@@ -4,6 +4,7 @@
 //
 //  Created by flyliu on 2022/1/7.
 //
+/*计时器实现暂停开始功能*/
 
 #import <Foundation/Foundation.h>
 

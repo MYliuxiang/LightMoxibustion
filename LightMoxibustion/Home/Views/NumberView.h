@@ -5,6 +5,10 @@
 //  Created by flyliu on 2021/12/3.
 //
 
+/*
+ 温度Led灯显示效果
+ */
+
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, TemperatureType)

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LxEmptyView.h"
 
 @interface BaseViewController : UIViewController
 
@@ -20,7 +19,6 @@
 @property (nonatomic, strong) NSString *rightImageName;
 
 
-@property (nonatomic, strong)LxEmptyView *nodataView;
 
 
 //是否显示NavigationBar

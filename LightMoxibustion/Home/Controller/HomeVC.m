@@ -10,7 +10,6 @@
 #import "CRC16.h"
 #import "MLMProgressView.h"
 #import "LxUnitSlider.h"
-#import "HRNumberUnitView.h"
 #import "ConnectedVC.h"
 #import "LxView.h"
 #import "DisconnectedAlert.h"

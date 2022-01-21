@@ -5,6 +5,8 @@
 //  Created by 刘翔 on 2021/12/4.
 //
 
+/*设备的cell*/
+
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN

@@ -6,6 +6,8 @@
 //  Copyright © 2019 PaiPai Lian. All rights reserved.
 //
 
+/*下方进度条类*/
+
 #import <UIKit/UIKit.h>
 @class LxUnitSlider;
 @protocol LxUnitSliderDelegate <NSObject>

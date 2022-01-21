@@ -6,6 +6,8 @@
 //  Copyright © 2020 liuxiang. All rights reserved.
 //
 
+/*自定义xib类*/
+
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN

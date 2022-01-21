@@ -25,6 +25,10 @@
  POSSIBILITY OF SUCH DAMAGE. 
  */
 
+/*
+ 网络监听类
+ */
+
 #import "Reachability.h"
 
 #import <sys/socket.h>

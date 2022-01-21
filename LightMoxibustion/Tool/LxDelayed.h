@@ -6,6 +6,8 @@
 //  Copyright © 2018年 刘翔. All rights reserved.
 //
 
+/*延时调用类*/
+
 #import <Foundation/Foundation.h>
 typedef void(^BackTimeBlock) ();
 
